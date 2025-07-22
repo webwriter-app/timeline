@@ -1,6 +1,8 @@
-#ignore node_modules files for git
+# MacOS
+.DS_Store
+
+# NPM
 node_modules/
-#ignore all dist files 
+
+# Build output
 dist/
-#ignore vscode settings
-.vscode/

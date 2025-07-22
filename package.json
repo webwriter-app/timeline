@@ -1,7 +1,29 @@
 {
     "name": "@webwriter/timeline",
-    "version": "1.0.5",
+    "version": "2.0.0-dev.1",
     "description": "Create/learn with a digital timeline and test your knowledge.",
+    "scripts": {
+        "prepublishOnly": "npx @webwriter/build",
+        "dev": "npx @webwriter/build dev",
+        "localize": "lit-localize extract && npx @webwriter/build localize && lit-localize build",
+        "format": "prettier --write \"src/**/*\""
+    },
+    "dependencies": {
+        "@webwriter/lit": "^2",
+        "lit": "^3"
+    },
+    "devDependencies": {
+        "@lit/localize-tools": "^0.8",
+        "prettier": "^3.6.2"
+    },
+    "exports": {
+        "./widgets/webwriter-timeline.*": {
+            "source": "./src/webwriter-timeline.ts",
+            "default": "./dist/webwriter-timeline.*"
+        },
+        "./package.json": "./package.json",
+        "./icon": "./icon.svg"
+    },
     "keywords": [
         "webwriter-widget",
         "widget-contextual",
@@ -30,46 +52,5 @@
         "history"
     ],
     "license": "MIT",
-    "author": "Nura Zimmermann <nura.zimmermann@rwth-aachen.de>",
-    "scripts": {
-        "prepublishOnly": "npx @webwriter/build",
-        "dev": "npx @webwriter/build dev"
-    },
-    "dependencies": {
-        "@popperjs/core": "^2.11.8",
-        "@shoelace-style/shoelace": "^2.17.1",
-        "@tabler/icons": "^3.21.0",
-        "@webwriter/lit": "^2.0.0",
-        "@webwriter/wui": "^0.0.3",
-        "lit": "^3.2.1",
-        "moment": "^2.30.1"
-    },
-    "exports": {
-        "./widgets/webwriter-timeline.*": {
-            "source": "./widgets/webwriter-timeline.ts",
-            "default": "./dist/webwriter-timeline.*"
-        },
-        "./widgets/event-container.*": {
-            "source": "./event-container.ts",
-            "default": "./dist/event-container.*"
-        },
-        "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
-        "./snippets/history-of-olympic-games.html": "./snippets/history-of-olympic-games.html",
-        "./package.json": "./package.json",
-        "./icon": "./icon.svg"
-    },
-    "editingConfig": {
-        ".": {
-            "description": {
-                "de": "Erstellen/Lernen Sie mit einer digitalen Zeitleiste und testen Sie Ihr Wissen."
-            }
-        },
-        "./widgets/webwriter-timeline": {
-            "content": "event-container*"
-        },
-        "./widgets/event-container": {
-            "content": "flow*",
-            "uninsertable": true
-        }
-    }
+    "author": ""
 }
