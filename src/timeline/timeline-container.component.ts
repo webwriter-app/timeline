@@ -74,7 +74,7 @@ export class TimelineContainer extends LitElement {
         }
     `;
 
-    @property({ type: Boolean, attribute: "editview" })
+    @property({ type: Boolean, attribute: "edit-view" })
     isInEditView: boolean = true;
 
     addEvent() {

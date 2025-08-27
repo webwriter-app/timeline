@@ -36,12 +36,6 @@ export class WebWriterTimelineWidget extends LitElementWw {
         event.stopPropagation();
         const newEvent = document.createElement("webwriter-timeline-event");
         this.appendChild(newEvent);
-
-        setTimeout(() => {
-            const dateInput = newEvent.shadowRoot?.querySelector('input[name="date"]') as HTMLInputElement | null;
-            console.log(dateInput);
-            dateInput?.click();
-        });
     }
 
     private dateChanged(event: Event) {
@@ -78,7 +72,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
             <sl-tab-panel name="timeline">
                 <timeline-container
-                    ?editView=${this.isInEditView}
+                    ?edit-view=${this.isInEditView}
                     @add-event=${this.addEvent}
                     @date-changed=${this.dateChanged}
                     ><slot></slot
