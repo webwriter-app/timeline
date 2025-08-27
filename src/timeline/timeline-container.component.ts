@@ -17,6 +17,9 @@ export class TimelineContainer extends LitElement {
             gap: 10px var(--line-spacing);
 
             position: relative; /* For positioning the line */
+
+            box-sizing: border-box;
+            padding-bottom: 10px;
         }
 
         .line {
@@ -27,6 +30,27 @@ export class TimelineContainer extends LitElement {
             width: var(--line-width);
 
             background-color: black;
+        }
+
+        /* Arrow tip at the end (bottom) of the line */
+        .line::after {
+            --size: 8px;
+
+            content: "";
+            display: block;
+            position: absolute;
+
+            width: var(--size);
+            height: var(--size);
+
+            right: calc(var(--line-width) / 2);
+            bottom: calc(var(--line-width) / -2);
+            transform-origin: bottom right;
+            transform: rotate(45deg);
+
+            border-color: black;
+            border-style: solid;
+            border-width: 0 var(--line-width) var(--line-width) 0;
         }
 
         .add-event {
