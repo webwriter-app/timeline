@@ -1,0 +1,17 @@
+{
+    "./widgets/webwriter-timeline": {
+        "content": "webwriter-timeline-event*"
+    },
+    "./widgets/webwriter-timeline-event": {
+        "content": "webwriter-timeline-event-title webwriter-timeline-event-details",
+        "uninsertable": true
+    },
+    "./widgets/webwriter-timeline-event-title": {
+        "content": "text*",
+        "uninsertable": true
+    },
+    "./widgets/webwriter-timeline-event-details": {
+        "content": "flow+",
+        "uninsertable": true
+    }
+}

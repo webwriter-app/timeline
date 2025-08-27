@@ -9,6 +9,7 @@
         "format": "prettier --write \"src/**/*\""
     },
     "dependencies": {
+        "@shoelace-style/shoelace": "^2.20.1",
         "@webwriter/lit": "^2",
         "lit": "^3"
     },
@@ -18,11 +19,24 @@
     },
     "exports": {
         "./widgets/webwriter-timeline.*": {
-            "source": "./src/webwriter-timeline.ts",
+            "source": "./src/webwriter-timeline.widget.ts",
             "default": "./dist/webwriter-timeline.*"
         },
+        "./widgets/webwriter-timeline-event.*": {
+            "source": "./src/timeline/webwriter-timeline-event.widget.ts",
+            "default": "./dist/webwriter-timeline-event.*"
+        },
+        "./widgets/webwriter-timeline-event-title.*": {
+            "source": "./src/timeline/webwriter-timeline-event-title.widget.ts",
+            "default": "./dist/webwriter-timeline-event-title.*"
+        },
+        "./widgets/webwriter-timeline-event-details.*": {
+            "source": "./src/timeline/webwriter-timeline-event-details.widget.ts",
+            "default": "./dist/webwriter-timeline-event-details.*"
+        },
         "./package.json": "./package.json",
-        "./icon": "./icon.svg"
+        "./icon": "./icon.svg",
+        "./editing-config.json": "./editing-config.json"
     },
     "keywords": [
         "webwriter-widget",
