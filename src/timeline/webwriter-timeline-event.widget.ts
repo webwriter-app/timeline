@@ -1,8 +1,11 @@
 import SlIconButton from "@shoelace-style/shoelace/dist/components/icon-button/icon-button.component.js";
+import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
+import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.component.js";
 import { LitElementWw } from "@webwriter/lit";
 import { css, html, nothing } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
+import ExclamationCircleIcon from "../../assets/icons/exclamation-circle.svg";
 import TrashIcon from "../../assets/icons/trash.svg";
 import { DateInput } from "./date-input.component";
 
@@ -10,6 +13,8 @@ import { DateInput } from "./date-input.component";
 export class WebWriterTimelineEventWidget extends LitElementWw {
     static scopedElements = {
         "sl-icon-button": SlIconButton,
+        "sl-icon": SlIcon,
+        "sl-tooltip": SlTooltip,
         "date-input": DateInput,
     };
 
@@ -57,12 +62,20 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             align-items: flex-end;
         }
 
+        sl-icon {
+            margin: auto;
+        }
+
         .spacer {
             flex: 1;
         }
 
         .gray-out {
             color: var(--sl-color-gray-500);
+        }
+
+        .hide {
+            display: none;
         }
     `;
 
@@ -76,7 +89,35 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
     @property({ type: String, attribute: true, reflect: true })
     accessor endDate: string;
 
+    @state()
+    accessor titleEmpty: boolean = true;
+
+    private titleElement = null;
+    private titleMutationObserver = new MutationObserver(() => this.checkIfTitleIsEmpty());
+
+    private checkIfTitleIsEmpty() {
+        this.titleEmpty = this.titleElement?.textContent === "";
+    }
+
+    private onSlotChange(event: Event) {
+        this.titleMutationObserver.disconnect();
+        this.titleElement = (event.target as HTMLSlotElement)
+            .assignedElements()
+            .find((e) => e.tagName === "WEBWRITER-TIMELINE-EVENT-TITLE");
+
+        if (this.titleElement) {
+            this.checkIfTitleIsEmpty();
+            this.titleMutationObserver.observe(this.titleElement, { childList: true });
+        }
+    }
+
     render() {
+        const isValid = this.date && !this.titleEmpty;
+
+        // Do not render invalid events when not in edit view
+        // However, we still need to mount the slot to be able to observe changes
+        if (!isValid && !this.isInEditView) return html`<slot @slotchange=${this.onSlotChange} class="hide"></slot>`;
+
         return html`
             <div class="dot"></div>
             <div>
@@ -108,16 +149,21 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                                   }}
                               ></date-input>`
                         : nothing}
+                    <span class="spacer"></span>
+                    ${!isValid
+                        ? html`<sl-tooltip content="An event needs a date and a title" placement="bottom">
+                              <sl-icon src=${ExclamationCircleIcon}></sl-icon>
+                          </sl-tooltip>`
+                        : nothing}
                     ${this.isInEditView
-                        ? html`<span class="spacer"></span>
-                              <sl-icon-button
-                                  src=${TrashIcon}
-                                  label="Remove"
-                                  @click=${() => this.remove()}
-                              ></sl-icon-button>`
+                        ? html`<sl-icon-button
+                              src=${TrashIcon}
+                              label="Remove"
+                              @click=${() => this.remove()}
+                          ></sl-icon-button>`
                         : nothing}
                 </div>
-                <slot></slot>
+                <slot @slotchange=${this.onSlotChange}></slot>
             </div>
         `;
     }
