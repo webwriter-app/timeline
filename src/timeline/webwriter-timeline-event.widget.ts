@@ -4,11 +4,13 @@ import { css, html, nothing } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import TrashIcon from "../../assets/icons/trash.svg";
+import { DateInput } from "./date-input.component";
 
 @customElement("webwriter-timeline-event")
 export class WebWriterTimelineEventWidget extends LitElementWw {
     static scopedElements = {
         "sl-icon-button": SlIconButton,
+        "date-input": DateInput,
     };
 
     static styles = css`
@@ -79,11 +81,9 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             <div class="dot"></div>
             <div>
                 <div class="controls">
-                    <input
-                        type="date"
-                        name="date"
+                    <date-input
+                        placeholder="Date"
                         .value=${this.date}
-                        class=${classMap({ "gray-out": !this.date })}
                         ?disabled=${!this.isInEditView}
                         @change=${(e: Event) => {
                             if (this.date === (e.target as HTMLInputElement).value) return;
@@ -96,19 +96,17 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                                 this.dispatchEvent(new CustomEvent("date-changed", { bubbles: true, composed: true })),
                             );
                         }}
-                    />
+                    ></date-input>
                     ${this.isInEditView || !!this.endDate
-                        ? html`<span class=${classMap({ "gray-out": !this.endDate })}>to</span>
-                              <input
-                                  type="date"
-                                  name="endDate"
+                        ? html`<span class=${classMap({ "gray-out": !this.endDate })}> — </span>
+                              <date-input
+                                  placeholder="End date"
                                   .value=${this.endDate}
-                                  class=${classMap({ "gray-out": !this.endDate })}
                                   ?disabled=${!this.isInEditView}
                                   @change=${(event: Event) => {
                                       this.endDate = (event.target as HTMLInputElement).value;
                                   }}
-                              />`
+                              ></date-input>`
                         : nothing}
                     ${this.isInEditView
                         ? html`<span class="spacer"></span>
