@@ -62,7 +62,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         }
 
         .gray-out {
-            color: #757575;
+            color: var(--sl-color-gray-500);
         }
     `;
 

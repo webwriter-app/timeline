@@ -22,6 +22,10 @@ export class DateInput extends LitElement {
             color: black;
         }
 
+        input::placeholder {
+            color: var(--sl-color-gray-500);
+        }
+
         /* Use an invisible span to measure the length of the text */
         span {
             position: absolute;
