@@ -21,6 +21,10 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
             left: 0;
             color: var(--sl-color-gray-500);
         }
+
+        ::slotted(iframe) {
+            box-sizing: border-box;
+        }
     `;
 
     @state()

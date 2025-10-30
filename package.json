@@ -34,6 +34,7 @@
             "source": "./src/timeline/webwriter-timeline-event-details.widget.ts",
             "default": "./dist/webwriter-timeline-event-details.*"
         },
+        "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
         "./package.json": "./package.json",
         "./icon": "./icon.svg",
         "./editing-config.json": "./editing-config.json"
