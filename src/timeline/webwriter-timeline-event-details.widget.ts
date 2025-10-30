@@ -26,10 +26,16 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
     @state()
     private accessor showPlaceholder = false;
 
-    private observedElement = null;
-    private mutationObserver = new MutationObserver(
-        () => (this.showPlaceholder = this.observedElement.textContent === ""),
-    );
+    private observedElement: HTMLElement = null;
+    private mutationObserver = new MutationObserver(() => {
+        let empty = this.observedElement.childNodes.length === 0;
+        // If the only child is a trailing break, consider it empty
+        if (this.observedElement.children.length === 1) {
+            const child = this.observedElement.children[0];
+            empty = child.tagName === "BR" && child.classList.contains("ProseMirror-trailingBreak");
+        }
+        this.showPlaceholder = empty;
+    });
 
     private handleSlotChange(event: Event) {
         const assignedNodes = (event.target as HTMLSlotElement).assignedNodes();
@@ -37,7 +43,7 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
         if (assignedNodes.length === 1) {
             // If the slot contains exactly one node, we need to check if it's empty,
             // and observe it for changes.
-            this.observedElement = assignedNodes[0];
+            this.observedElement = assignedNodes[0] as HTMLElement;
             this.showPlaceholder = this.observedElement.textContent === "";
             this.mutationObserver.observe(this.observedElement, { childList: true });
         } else {
