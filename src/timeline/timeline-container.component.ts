@@ -1,9 +1,16 @@
-import { css, html, LitElement } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
+import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
+import { LitElementWw } from "@webwriter/lit";
+import { css, html } from "lit";
+import { property } from "lit/decorators.js";
 import PlusCircleFillIcon from "../../assets/icons/plus-circle-fill.svg";
 
-@customElement("timeline-container")
-export class TimelineContainer extends LitElement {
+export class TimelineContainer extends LitElementWw {
+    static scopedElements = {
+        "sl-button": SlButton,
+        "sl-icon": SlIcon,
+    };
+
     static styles = css`
         :host {
             width: 100%;

@@ -5,8 +5,9 @@ import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-p
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import { LitElementWw } from "@webwriter/lit";
-import { css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { css, html, PropertyValues } from "lit";
+import { customElement, property } from "lit/decorators.js";
+import { createRef, ref } from "lit/directives/ref.js";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
 
@@ -30,6 +31,24 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     get isInEditView() {
         return this.contentEditable === "true" || this.contentEditable === "";
+    }
+
+    private tabGroup = createRef<SlTabGroup>();
+
+    @property({ type: String, reflect: true, attribute: "panel" })
+    accessor currentPanel: "timeline" | "quiz" = "timeline";
+
+    protected async firstUpdated(changed: PropertyValues) {
+        if (this.tabGroup.value && changed.has("currentPanel")) {
+            await this.tabGroup.value.updateComplete;
+            this.tabGroup.value.show(this.currentPanel);
+        }
+    }
+
+    protected updated(changed: PropertyValues): void {
+        if (changed.has("currentPanel")) {
+            this.tabGroup.value?.show(this.currentPanel);
+        }
     }
 
     private addEvent(event: CustomEvent) {
@@ -66,7 +85,11 @@ export class WebWriterTimelineWidget extends LitElementWw {
     }
 
     render() {
-        return html`<sl-tab-group>
+        return html`<sl-tab-group
+            ${ref(this.tabGroup)}
+            @sl-tab-show=${(e: CustomEvent) => (this.currentPanel = e.detail.name)}
+            activation="manual"
+        >
             <sl-tab slot="nav" panel="timeline">Timeline</sl-tab>
             <sl-tab slot="nav" panel="quiz">Quiz</sl-tab>
 
