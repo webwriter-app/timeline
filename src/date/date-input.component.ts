@@ -150,8 +150,8 @@ export class DateInput extends LitElementWw {
                 @change=${this.inputChanged}
                 @keydown=${(e: KeyboardEvent) => {
                     if (e.key === "Enter") {
+                        e.preventDefault();
                         this.inputElement.value?.blur();
-                        this.inputBlurred(e);
                     }
                 }}
                 @blur=${this.inputBlurred}

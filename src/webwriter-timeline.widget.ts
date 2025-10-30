@@ -64,23 +64,39 @@ export class WebWriterTimelineWidget extends LitElementWw {
         // When the date of an event changes, we need to reorder the events.
         const target = event.target as WebWriterTimelineEventWidget;
 
+        let oldPos = Array.from(this.children).indexOf(target);
+        let inserted = false;
+
         for (const child of this.children) {
             if ("date" in child && child.date) {
                 // Move the target before the first event with a date greater than the target's date
                 // (i.e. at the end of all events with a date less than or equal to the target's date)
                 if (target.date.compare(child.date as TimelineDate) < 0) {
                     this.insertBefore(target, child);
-                    return;
+                    inserted = true;
+                    break;
                 }
             } else {
                 // Once we reach an event without a date, we can insert the target before it
                 // as all previous events have a date less than or equal to the target's date
                 this.insertBefore(target, child);
-                return;
+                inserted = true;
+                break;
             }
         }
         // If no event was found with a date greater than the target's date, append it to the end
-        this.appendChild(target);
+        if (!inserted) this.appendChild(target);
+
+        if (oldPos !== Array.from(this.children).indexOf(target)) {
+            // For some reason, the element instance actually changes during reordering,
+            // so we need to use a timeout and search for the updated instance to trigger the animation.
+            setTimeout(() => {
+                const updatedTarget = Array.from(this.children).find(
+                    (child) => child.id === target.id,
+                ) as WebWriterTimelineEventWidget;
+                updatedTarget?.showMovedAnimation();
+            }, 0);
+        }
     }
 
     render() {

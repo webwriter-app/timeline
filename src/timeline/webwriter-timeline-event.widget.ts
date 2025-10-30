@@ -5,6 +5,7 @@ import { LitElementWw } from "@webwriter/lit";
 import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
+import { createRef, ref } from "lit/directives/ref.js";
 import ExclamationCircleIcon from "../../assets/icons/exclamation-circle.svg";
 import TrashIcon from "../../assets/icons/trash.svg";
 import { DateInput } from "../date/date-input.component";
@@ -30,6 +31,10 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             aspect-ratio: 1 / 1;
         }
 
+        .dot.pulse::before {
+            animation: dot-pulse 600ms ease;
+        }
+
         .dot::before {
             content: "";
             display: block;
@@ -46,6 +51,21 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             /* Ensures that the dot is above the timeline line */
             position: relative;
             z-index: 1;
+        }
+
+        @keyframes dot-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                background-color: var(--sl-color-primary-600);
+                transform: scale(1.4);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         input {
@@ -84,6 +104,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
+    private dotElement = createRef<HTMLElement>();
+
     @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
     accessor date: TimelineDate | null = null;
 
@@ -112,6 +134,22 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         }
     }
 
+    async showMovedAnimation() {
+        const dot = this.dotElement.value;
+        if (!dot) return;
+
+        dot.classList.remove("pulse");
+        // Trigger reflow to restart the animation
+        void dot.offsetWidth;
+        dot.classList.add("pulse");
+
+        const removePulse = () => {
+            dot.classList.remove("pulse");
+            dot.removeEventListener("animationend", removePulse);
+        };
+        dot.addEventListener("animationend", removePulse);
+    }
+
     render() {
         const isValid = this.date && !this.titleEmpty;
 
@@ -120,7 +158,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         if (!isValid && !this.isInEditView) return html`<slot @slotchange=${this.onSlotChange} class="hide"></slot>`;
 
         return html`
-            <div class="dot"></div>
+            <div class="dot" ${ref(this.dotElement)}></div>
             <div>
                 <div class="controls">
                     <date-input
@@ -132,9 +170,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
 
                             this.date = (e.target as DateInput).value;
                             // Notify the webwriter-timeline widget that the date has changed
-                            // so it can reorder the events. The timeout is needed to ensure that the
-                            // date property is updated before the event is handled.
-                            setTimeout(() =>
+                            // so it can reorder the events.
+                            this.updateComplete.then(() =>
                                 this.dispatchEvent(new CustomEvent("date-changed", { bubbles: true, composed: true })),
                             );
                         }}
