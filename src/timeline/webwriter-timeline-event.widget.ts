@@ -95,6 +95,17 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             color: var(--sl-color-gray-500);
         }
 
+        .show-on-focus {
+            opacity: 0;
+        }
+
+        .controls:hover .show-on-focus,
+        .controls:focus-within .show-on-focus,
+        :host:hover .show-on-focus,
+        :host(:focus-within) .show-on-focus {
+            opacity: 1;
+        }
+
         .hide {
             display: none;
         }
@@ -177,8 +188,11 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                         }}
                     ></date-input>
                     ${this.isInEditView || !!this.endDate
-                        ? html`<span class=${classMap({ "gray-out": !this.endDate })}> — </span>
+                        ? html`<span class=${classMap({ "gray-out": !this.endDate, "show-on-focus": !this.endDate })}>
+                                  —
+                              </span>
                               <date-input
+                                  class=${classMap({ "show-on-focus": !this.endDate })}
                                   placeholder="End date"
                                   .value=${this.endDate}
                                   ?disabled=${!this.isInEditView}
