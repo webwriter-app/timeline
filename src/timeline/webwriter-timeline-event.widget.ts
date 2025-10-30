@@ -7,7 +7,8 @@ import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import ExclamationCircleIcon from "../../assets/icons/exclamation-circle.svg";
 import TrashIcon from "../../assets/icons/trash.svg";
-import { DateInput } from "./date-input.component";
+import { DateInput } from "../date/date-input.component";
+import { TimelineDate, timelineDateConverter } from "../date/timeline-date";
 
 @customElement("webwriter-timeline-event")
 export class WebWriterTimelineEventWidget extends LitElementWw {
@@ -83,11 +84,11 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
-    @property({ type: String, attribute: true, reflect: true })
-    accessor date: string;
+    @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
+    accessor date: TimelineDate | null = null;
 
-    @property({ type: String, attribute: true, reflect: true })
-    accessor endDate: string;
+    @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
+    accessor endDate: TimelineDate | null = null;
 
     @state()
     accessor titleEmpty: boolean = true;
@@ -127,9 +128,9 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                         .value=${this.date}
                         ?disabled=${!this.isInEditView}
                         @change=${(e: Event) => {
-                            if (this.date === (e.target as HTMLInputElement).value) return;
+                            if (this.date === (e.target as DateInput).value) return;
 
-                            this.date = (e.target as HTMLInputElement).value;
+                            this.date = (e.target as DateInput).value;
                             // Notify the webwriter-timeline widget that the date has changed
                             // so it can reorder the events. The timeout is needed to ensure that the
                             // date property is updated before the event is handled.
@@ -144,8 +145,9 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                                   placeholder="End date"
                                   .value=${this.endDate}
                                   ?disabled=${!this.isInEditView}
+                                  optional
                                   @change=${(event: Event) => {
-                                      this.endDate = (event.target as HTMLInputElement).value;
+                                      this.endDate = (event.target as DateInput).value;
                                   }}
                               ></date-input>`
                         : nothing}

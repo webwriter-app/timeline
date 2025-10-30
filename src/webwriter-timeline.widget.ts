@@ -8,6 +8,7 @@ import { LitElementWw } from "@webwriter/lit";
 import { css, html, PropertyValues } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
+import { TimelineDate } from "./date/timeline-date";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
 
@@ -62,14 +63,12 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
         // When the date of an event changes, we need to reorder the events.
         const target = event.target as WebWriterTimelineEventWidget;
-        const targetDate = new Date(target.date);
 
         for (const child of this.children) {
             if ("date" in child && child.date) {
                 // Move the target before the first event with a date greater than the target's date
                 // (i.e. at the end of all events with a date less than or equal to the target's date)
-                const childDate = new Date((child as WebWriterTimelineEventWidget).date);
-                if (childDate > targetDate) {
+                if (target.date.compare(child.date as TimelineDate) < 0) {
                     this.insertBefore(target, child);
                     return;
                 }
