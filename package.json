@@ -35,6 +35,7 @@
             "default": "./dist/webwriter-timeline-event-details.*"
         },
         "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
+        "./snippets/history-of-olympic-games.html": "./snippets/history-of-olympic-games.html",
         "./package.json": "./package.json",
         "./icon": "./icon.svg",
         "./editing-config.json": "./editing-config.json"
