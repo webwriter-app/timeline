@@ -128,8 +128,9 @@ export class TimelineDate {
     }
 
     static fromEuropeanString(euroString: string): TimelineDate {
+        if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("Invalid European date string");
+
         const parts = euroString.split(".").reverse();
-        if (parts.length < 1 || parts.length > 3) throw new Error("Invalid European date string");
 
         let year = parseInt(parts[0], 10);
         let month = parts.length >= 2 ? parseInt(parts[1], 10) : null;

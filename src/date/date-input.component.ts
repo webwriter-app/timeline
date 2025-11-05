@@ -66,52 +66,53 @@ export class DateInput extends LitElementWw {
     @property({ type: String, attribute: true })
     accessor lang: string = "en-US";
 
-    private inputFocused(event: InputEvent) {
+    private onInputFocus(event: InputEvent) {
         this.internalValue = this.value?.toEuropeanString() ?? "";
         this.updateComplete.then(() => this.inputElement.value?.select());
     }
 
-    private inputChanged(event: InputEvent) {
+    private blurCausedByKeydown = false;
+
+    private onInputKeydown(event: KeyboardEvent) {
+        if (event.key !== "Enter") return;
         event.preventDefault();
+
         if (this.optional && this.internalValue.trim() === "") {
             this.value = null;
-            this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
-            this.inputElement.value?.setCustomValidity("");
             return;
         }
 
         try {
-            const parsedDate = TimelineDate.fromEuropeanString(this.internalValue);
-            if (this.value !== parsedDate) {
-                this.value = parsedDate;
-                this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
-            }
+            this.value = TimelineDate.fromEuropeanString(this.internalValue);
             this.inputElement.value?.setCustomValidity("");
+            this.blurCausedByKeydown = true;
+            this.inputElement.value?.blur();
         } catch (e) {
             this.inputElement.value?.setCustomValidity((e as Error).message);
             this.inputElement.value?.reportValidity();
         }
     }
 
-    private inputBlurred(event: Event) {
+    private onInputBlur(event: Event) {
+        // If the blur was caused by pressing Enter, we have already handled it
+        if (this.blurCausedByKeydown) {
+            this.blurCausedByKeydown = false;
+            return;
+        }
+
         event.preventDefault();
+
         if (this.optional && this.internalValue.trim() === "") {
             this.value = null;
-            this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
-            this.inputElement.value?.setCustomValidity("");
             return;
         }
 
         try {
-            const parsedDate = TimelineDate.fromEuropeanString(this.internalValue);
-            if (this.value !== parsedDate) {
-                this.value = parsedDate;
-                this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
-            } else {
-                this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
-            }
-            this.inputElement.value?.setCustomValidity("");
-        } catch (e) {}
+            this.value = TimelineDate.fromEuropeanString(this.internalValue);
+        } catch (e) {
+            // Even if the date is invalid, revert to the last valid date on blur
+            this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+        }
     }
 
     private resizeInput() {
@@ -131,6 +132,15 @@ export class DateInput extends LitElementWw {
     protected updated(_changedProperties: PropertyValues): void {
         if (_changedProperties.has("value") || _changedProperties.has("lang")) {
             this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+
+            // Send update event if the value actually changed
+            const oldValue = _changedProperties.get("value") as TimelineDate | null;
+            const valueNotChanged =
+                (oldValue === null && this.value === null) ||
+                (oldValue && this.value && oldValue.compare(this.value) === 0);
+            if (!valueNotChanged) {
+                this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+            }
         }
         if (_changedProperties.has("internalValue")) {
             this.updateComplete.then(() => this.resizeInput());
@@ -145,16 +155,14 @@ export class DateInput extends LitElementWw {
                 placeholder=${this.placeholder}
                 .value=${this.internalValue}
                 ?disabled=${this.disabled}
-                @focus=${this.inputFocused}
-                @input=${(e: Event) => (this.internalValue = (e.target as HTMLInputElement).value)}
-                @change=${this.inputChanged}
-                @keydown=${(e: KeyboardEvent) => {
-                    if (e.key === "Enter") {
-                        e.preventDefault();
-                        this.inputElement.value?.blur();
-                    }
+                @focus=${this.onInputFocus}
+                @input=${(e: Event) => {
+                    this.internalValue = (e.target as HTMLInputElement).value;
+                    // Required, otherwise the validation popup would re-appear on every keystroke
+                    this.inputElement.value?.setCustomValidity("");
                 }}
-                @blur=${this.inputBlurred}
+                @keydown=${this.onInputKeydown}
+                @blur=${this.onInputBlur}
             />`;
     }
 }
