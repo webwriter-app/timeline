@@ -13,6 +13,10 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
             overflow: hidden;
         }
 
+        .hide {
+            display: none;
+        }
+
         .show-placeholder::after {
             content: "Details";
             pointer-events: none;
@@ -28,7 +32,7 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
     `;
 
     @state()
-    private accessor showPlaceholder = false;
+    private accessor isEmpty = false;
 
     private observedElement: HTMLElement = null;
     private mutationObserver = new MutationObserver(() => {
@@ -38,29 +42,36 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
             const child = this.observedElement.children[0];
             empty = child.tagName === "BR" && child.classList.contains("ProseMirror-trailingBreak");
         }
-        this.showPlaceholder = empty;
+        this.isEmpty = empty;
     });
 
     private handleSlotChange(event: Event) {
-        const assignedNodes = (event.target as HTMLSlotElement).assignedNodes();
+        const assignedNodes = (event.target as HTMLSlotElement).assignedElements();
         this.mutationObserver.disconnect();
         if (assignedNodes.length === 1) {
             // If the slot contains exactly one node, we need to check if it's empty,
             // and observe it for changes.
             this.observedElement = assignedNodes[0] as HTMLElement;
-            this.showPlaceholder = this.observedElement.textContent === "";
+            this.isEmpty = this.observedElement.textContent === "";
             this.mutationObserver.observe(this.observedElement, { childList: true });
         } else {
             // If the slot contains more than one node, there is at least some content,
             // so we don't need to show the placeholder.
-            this.showPlaceholder = false;
+            this.isEmpty = false;
             this.observedElement = null;
         }
     }
 
+    get isInEditView() {
+        return this.contentEditable === "true" || this.contentEditable === "";
+    }
+
     render() {
         return html`<slot
-            class=${classMap({ "show-placeholder": this.showPlaceholder })}
+            class=${classMap({
+                "show-placeholder": this.isInEditView && this.isEmpty,
+                hide: !this.isInEditView && this.isEmpty,
+            })}
             @slotchange=${this.handleSlotChange}
         ></slot>`;
     }
