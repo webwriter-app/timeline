@@ -39,7 +39,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             content: "";
             display: block;
             justify-self: center;
-            margin-top: 12px;
+            margin-top: 9px;
 
             height: 0.5em;
             aspect-ratio: 1 / 1;
@@ -80,11 +80,15 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         .controls {
             display: flex;
             gap: var(--sl-spacing-x-small);
-            align-items: flex-end;
+            align-items: center;
         }
 
         sl-icon {
             margin: auto;
+        }
+
+        sl-icon-button::part(base) {
+            margin: calc(var(--sl-spacing-x-small) * -1) 0;
         }
 
         .spacer {

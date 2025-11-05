@@ -17,7 +17,7 @@ export class TimelineContainer extends LitElementWw {
 
             --line-container-width: 1em; /* Width of the container centering the line */
             --line-width: 0.125rem; /* Width of the vertical line */
-            --line-spacing: var(--sl-spacing-small); /* Space between the line container and the content */
+            --line-spacing: var(--sl-spacing-x-small); /* Space between the line container and the content */
 
             display: grid;
             grid-template-columns: var(--line-container-width) 1fr;
