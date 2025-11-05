@@ -2,7 +2,7 @@ import SlIconButton from "@shoelace-style/shoelace/dist/components/icon-button/i
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.component.js";
 import { LitElementWw } from "@webwriter/lit";
-import { css, html, nothing } from "lit";
+import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
@@ -163,6 +163,17 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             dot.removeEventListener("animationend", removePulse);
         };
         dot.addEventListener("animationend", removePulse);
+    }
+
+    protected firstUpdated(_changedProperties: PropertyValues): void {
+        // Check if either date attribute is not yet obfuscated
+        // If so, set it to a clone to force an update which will obfuscate the attribute value
+        if (this.date && !this.getAttribute("date").startsWith("$")) {
+            this.date = this.date.clone();
+        }
+        if (this.endDate && !this.getAttribute("enddate")?.startsWith("$")) {
+            this.endDate = this.endDate.clone();
+        }
     }
 
     render() {

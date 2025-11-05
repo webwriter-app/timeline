@@ -112,7 +112,6 @@ export class TimelineDate {
 
     /**
      * Converts the date to a European formatted string (DD.MM.YYYY).
-     *
      */
     toEuropeanString(): string {
         let result = "";
@@ -127,6 +126,9 @@ export class TimelineDate {
         return result;
     }
 
+    /**
+     * Converts a European formatted date string (DD.MM.YYYY) to a TimelineDate instance.
+     */
     static fromEuropeanString(euroString: string): TimelineDate {
         if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("Invalid European date string");
 
@@ -142,24 +144,71 @@ export class TimelineDate {
         return new TimelineDate(year, month, day);
     }
 
+    /**
+     * Converts the date to an obfuscated string representation by XORing
+     * the binary data with a random seed and encoding it in base64. This ensures
+     * that the date is not easily readable or comparable in its string form.
+     *
+     * This is not secure, no confidentiality or integrity guarantees are provided.
+     */
+    toObfuscatedString(): string {
+        const buffer = new Uint8Array(6);
+        const view = new DataView(buffer.buffer);
+        view.setInt32(0, this.year, true);
+        view.setUint8(4, this.month ?? 0);
+        view.setUint8(5, this.day ?? 0);
+
+        const seed = crypto.getRandomValues(new Uint8Array(6));
+        for (let i = 0; i < 6; i++) buffer[i] = buffer[i] ^ seed[i];
+        return btoa(String.fromCharCode(...[...seed, ...buffer]));
+    }
+
+    /**
+     * Converts an obfuscated string representation back to a TimelineDate instance.
+     */
+    static fromObfuscatedString(obfString: string): TimelineDate {
+        const bufferString = atob(obfString);
+        if (bufferString.length !== 12) throw new Error("Invalid obfuscated date string");
+        const buffer = new Uint8Array(6);
+        for (let i = 0; i < 6; i++) buffer[i] = bufferString.charCodeAt(i + 6) ^ bufferString.charCodeAt(i);
+
+        const view = new DataView(buffer.buffer);
+        const year = view.getInt32(0, true);
+        const month = view.getUint8(4) === 0 ? null : view.getUint8(4);
+        const day = view.getUint8(5) === 0 ? null : view.getUint8(5);
+
+        return new TimelineDate(year, month, day);
+    }
+
     compare(other: TimelineDate): number {
         if (this.year !== other.year) return this.year - other.year;
         if ((this.month ?? 0) !== (other.month ?? 0)) return (this.month ?? 0) - (other.month ?? 0);
         return (this.day ?? 0) - (other.day ?? 0);
     }
+
+    clone(): TimelineDate {
+        return new TimelineDate(this.year, this.month, this.day);
+    }
 }
 
+/**
+ *
+ */
 export const timelineDateConverter: ComplexAttributeConverter<TimelineDate> = {
     fromAttribute(value: string | null): TimelineDate | null {
         try {
             if (!value) return null;
-            return TimelineDate.fromISOString(value);
+            if (value.startsWith("$")) {
+                return TimelineDate.fromObfuscatedString(value.slice(1));
+            } else {
+                return TimelineDate.fromISOString(value);
+            }
         } catch {
             return null;
         }
     },
     toAttribute(value: TimelineDate | null): string | null {
         if (!value) return null;
-        return value.toISOString();
+        return "$" + value.toObfuscatedString();
     },
 };
