@@ -1,8 +1,9 @@
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import { LitElementWw } from "@webwriter/lit";
-import { css, html } from "lit";
-import { property } from "lit/decorators.js";
+import { css, html, nothing, PropertyValues } from "lit";
+import { property, state } from "lit/decorators.js";
+import { createRef, ref } from "lit/directives/ref.js";
 import PlusCircleFillIcon from "../../assets/icons/plus-circle-fill.svg";
 
 export class TimelineContainer extends LitElementWw {
@@ -60,6 +61,11 @@ export class TimelineContainer extends LitElementWw {
             border-width: 0 var(--line-width) var(--line-width) 0;
         }
 
+        .no-events {
+            grid-column: 2;
+            color: var(--sl-color-neutral-500);
+        }
+
         .add-event {
             display: contents;
 
@@ -82,7 +88,15 @@ export class TimelineContainer extends LitElementWw {
     `;
 
     @property({ type: Boolean, attribute: "edit-view" })
-    isInEditView: boolean = true;
+    accessor isInEditView: boolean = true;
+
+    private slotRef = createRef<HTMLSlotElement>();
+    @state()
+    private accessor noEvents: boolean = false;
+
+    protected firstUpdated(_changedProperties: PropertyValues): void {
+        this.noEvents = this.slotRef.value?.assignedElements({ flatten: true }).length === 0;
+    }
 
     addEvent() {
         // Since the slot containing the timeline events is managed by the parent widget,
@@ -92,12 +106,18 @@ export class TimelineContainer extends LitElementWw {
 
     render() {
         return html`<div class="line"></div>
-            <slot></slot>
+            ${this.noEvents ? html`<div class="no-events">No events</div>` : nothing}
+            <slot
+                ${ref(this.slotRef)}
+                @slotchange=${(e: Event) => {
+                    this.noEvents = (e.target as HTMLSlotElement).assignedElements({ flatten: true }).length === 0;
+                }}
+            ></slot>
             ${this.isInEditView
                 ? html`<div class="add-event">
                       <sl-icon src=${PlusCircleFillIcon}></sl-icon>
                       <sl-button variant="default" size="medium" @click=${this.addEvent}>Add event</sl-button>
                   </div>`
-                : ""}`;
+                : nothing}`;
     }
 }
