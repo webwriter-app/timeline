@@ -34,6 +34,7 @@
             "source": "./src/timeline/webwriter-timeline-event-details.widget.ts",
             "default": "./dist/webwriter-timeline-event-details.*"
         },
+        "./snippets/webwriter-timeline.html": "./snippets/webwriter-timeline.html",
         "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
         "./snippets/history-of-olympic-games.html": "./snippets/history-of-olympic-games.html",
         "./package.json": "./package.json",

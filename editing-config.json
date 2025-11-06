@@ -1,6 +1,7 @@
 {
     "./widgets/webwriter-timeline": {
-        "content": "webwriter-timeline-event*"
+        "content": "webwriter-timeline-event*",
+        "uninsertable": true
     },
     "./widgets/webwriter-timeline-event": {
         "content": "webwriter-timeline-event-title webwriter-timeline-event-details",
