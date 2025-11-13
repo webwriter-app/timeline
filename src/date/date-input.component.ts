@@ -79,6 +79,8 @@ export class DateInput extends LitElementWw {
 
         if (this.optional && this.internalValue.trim() === "") {
             this.value = null;
+            this.blurCausedByKeydown = true;
+            this.inputElement.value?.blur();
             return;
         }
 
