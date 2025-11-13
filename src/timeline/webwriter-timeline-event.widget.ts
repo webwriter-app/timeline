@@ -103,10 +103,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             opacity: 0;
         }
 
-        .controls:hover .show-on-focus,
-        .controls:focus-within .show-on-focus,
-        :host:hover .show-on-focus,
-        :host(:focus-within) .show-on-focus {
+        :hover .show-on-focus,
+        :focus-within .show-on-focus {
             opacity: 1;
         }
 
