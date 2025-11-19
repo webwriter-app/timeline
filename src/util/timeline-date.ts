@@ -30,16 +30,16 @@ export class TimelineDate {
     readonly day: number | null;
 
     constructor(year: number, month: number | null = null, day: number | null = null) {
-        if (!Number.isInteger(year)) throw new Error("Invalid year");
+        if (!Number.isInteger(year)) throw new Error("Ungültiges Jahr");
         if (month !== null) {
-            if (!Number.isInteger(month)) throw new Error("Invalid month");
-            if (month < 1 || month > 12) throw new Error("Month out of range");
+            if (!Number.isInteger(month)) throw new Error("Ungültiger Monat");
+            if (month < 1 || month > 12) throw new Error("Monat außerhalb des Bereichs");
         }
         if (day !== null) {
-            if (!Number.isInteger(day)) throw new Error("Invalid day");
-            if (month === null) throw new Error("Day provided without month");
+            if (!Number.isInteger(day)) throw new Error("Ungültiger Tag");
+            if (month === null) throw new Error("Tag ohne Monat angegeben");
             const dim = TimelineDate.daysInMonth(year, month);
-            if (day < 1 || day > dim) throw new Error("Day out of range");
+            if (day < 1 || day > dim) throw new Error("Tag außerhalb des Bereichs");
         }
 
         this.year = year;
@@ -130,7 +130,7 @@ export class TimelineDate {
      * Converts a European formatted date string (DD.MM.YYYY) to a TimelineDate instance.
      */
     static fromEuropeanString(euroString: string): TimelineDate {
-        if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("Invalid European date string");
+        if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("Ungültiger europäischer Datumsstring");
 
         const parts = euroString.split(".").reverse();
 
@@ -138,7 +138,7 @@ export class TimelineDate {
         let month = parts.length >= 2 ? parseInt(parts[1], 10) : null;
         let day = parts.length === 3 ? parseInt(parts[2], 10) : null;
 
-        if (year === 0) throw new Error("Year 0 does not exist");
+        if (year === 0) throw new Error("Jahr 0 existiert nicht");
         if (year < 0) year++;
 
         return new TimelineDate(year, month, day);

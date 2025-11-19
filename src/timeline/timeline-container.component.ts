@@ -5,62 +5,16 @@ import { css, html, nothing, PropertyValues } from "lit";
 import { property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
 import PlusCircleFillIcon from "../../assets/icons/plus-circle-fill.svg";
+import { TimelineTemplate } from "../util/timeline-template.component";
 
 export class TimelineContainer extends LitElementWw {
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,
+        "timeline-template": TimelineTemplate,
     };
 
     static styles = css`
-        :host {
-            width: 100%;
-
-            --line-container-width: 1em; /* Width of the container centering the line */
-            --line-width: 0.125rem; /* Width of the vertical line */
-            --line-spacing: var(--sl-spacing-x-small); /* Space between the line container and the content */
-
-            display: grid;
-            grid-template-columns: var(--line-container-width) 1fr;
-            gap: 10px var(--line-spacing);
-
-            position: relative; /* For positioning the line */
-
-            box-sizing: border-box;
-            padding-bottom: 10px;
-        }
-
-        .line {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: calc((var(--line-container-width) - var(--line-width)) / 2);
-            width: var(--line-width);
-
-            background-color: black;
-        }
-
-        /* Arrow tip at the end (bottom) of the line */
-        .line::after {
-            --size: 8px;
-
-            content: "";
-            display: block;
-            position: absolute;
-
-            width: var(--size);
-            height: var(--size);
-
-            right: calc(var(--line-width) / 2);
-            bottom: calc(var(--line-width) / -2);
-            transform-origin: bottom right;
-            transform: rotate(45deg);
-
-            border-color: black;
-            border-style: solid;
-            border-width: 0 var(--line-width) var(--line-width) 0;
-        }
-
         .no-events {
             grid-column: 2;
             color: var(--sl-color-neutral-500);
@@ -105,7 +59,7 @@ export class TimelineContainer extends LitElementWw {
     }
 
     render() {
-        return html`<div class="line"></div>
+        return html`<timeline-template>
             ${this.noEvents ? html`<div class="no-events">No events</div>` : nothing}
             <slot
                 ${ref(this.slotRef)}
@@ -116,8 +70,9 @@ export class TimelineContainer extends LitElementWw {
             ${this.isInEditView
                 ? html`<div class="add-event">
                       <sl-icon src=${PlusCircleFillIcon}></sl-icon>
-                      <sl-button variant="default" size="medium" @click=${this.addEvent}>Add event</sl-button>
+                      <sl-button variant="default" size="medium" @click=${this.addEvent}>Add Event</sl-button>
                   </div>`
-                : nothing}`;
+                : nothing}</timeline-template
+        >`;
     }
 }

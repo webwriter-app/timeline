@@ -8,8 +8,8 @@ import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
 import ExclamationCircleIcon from "../../assets/icons/exclamation-circle.svg";
 import TrashIcon from "../../assets/icons/trash.svg";
-import { DateInput } from "../date/date-input.component";
-import { TimelineDate, timelineDateConverter } from "../date/timeline-date";
+import { DateInput } from "../util/date-input.component";
+import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
 
 @customElement("webwriter-timeline-event")
 export class WebWriterTimelineEventWidget extends LitElementWw {
@@ -38,7 +38,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         .dot::before {
             content: "";
             display: block;
-            justify-self: center;
+            margin: 0 auto;
             margin-top: 9px;
 
             height: 0.5em;
@@ -206,7 +206,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                               </span>
                               <date-input
                                   class=${classMap({ "show-on-focus": !this.endDate })}
-                                  placeholder="End date"
+                                  placeholder="End Date"
                                   .value=${this.endDate}
                                   ?disabled=${!this.isInEditView}
                                   optional
@@ -217,14 +217,14 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                         : nothing}
                     <span class="spacer"></span>
                     ${!isValid
-                        ? html`<sl-tooltip content="An event needs a date and a title" placement="bottom">
+                        ? html`<sl-tooltip content="An event requires a date and a title" placement="bottom">
                               <sl-icon src=${ExclamationCircleIcon}></sl-icon>
                           </sl-tooltip>`
                         : nothing}
                     ${this.isInEditView
                         ? html`<sl-icon-button
                               src=${TrashIcon}
-                              label="Remove"
+                              label="Delete"
                               @click=${() => this.remove()}
                           ></sl-icon-button>`
                         : nothing}

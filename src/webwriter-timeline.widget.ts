@@ -1,26 +1,33 @@
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
+import SlRadioGroup from "@shoelace-style/shoelace/dist/components/radio-group/radio-group.component.js";
+import SlRadio from "@shoelace-style/shoelace/dist/components/radio/radio.component.js";
 import SlTabGroup from "@shoelace-style/shoelace/dist/components/tab-group/tab-group.component.js";
 import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-panel.component.js";
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import { LitElementWw } from "@webwriter/lit";
-import { css, html, PropertyValues } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { css, html, nothing, PropertyValues } from "lit";
+import { customElement, property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import { TimelineDate } from "./date/timeline-date";
+import EyeSlash from "../assets/icons/eye-slash.svg";
+import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
+import { TimelineDate } from "./util/timeline-date";
 
 @customElement("webwriter-timeline")
 export class WebWriterTimelineWidget extends LitElementWw {
     static scopedElements = {
-        "sl-tab-group": SlTabGroup,
-        "sl-tab": SlTab,
-        "sl-tab-panel": SlTabPanel,
-        "sl-icon": SlIcon,
         "sl-button": SlButton,
+        "sl-icon": SlIcon,
+        "sl-radio-group": SlRadioGroup,
+        "sl-radio": SlRadio,
+        "sl-tab-group": SlTabGroup,
+        "sl-tab-panel": SlTabPanel,
+        "sl-tab": SlTab,
         "timeline-container": TimelineContainer,
+        "quiz-container": QuizContainer,
     };
 
     static styles = css`
@@ -28,28 +35,46 @@ export class WebWriterTimelineWidget extends LitElementWw {
             display: block;
             width: 100%;
         }
+
+        sl-icon {
+            margin-left: var(--sl-spacing-x-small);
+        }
+
+        :host(:not([contenteditable="true"]):not([contenteditable=""])) aside {
+            display: none;
+        }
+
+        sl-tab-panel::part(base) {
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
     `;
 
     get isInEditView() {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
-    private tabGroup = createRef<SlTabGroup>();
+    private tabGroupRef = createRef<SlTabGroup>();
 
-    @property({ type: String, reflect: true, attribute: "panel" })
-    accessor currentPanel: "timeline" | "quiz" = "timeline";
+    @property({ type: String, reflect: true, attribute: "panels" })
+    accessor enabledPanels: "timeline" | "quiz" | "timeline+quiz" = "timeline+quiz";
 
-    protected async firstUpdated(changed: PropertyValues) {
-        if (this.tabGroup.value && changed.has("currentPanel")) {
-            await this.tabGroup.value.updateComplete;
-            this.tabGroup.value.show(this.currentPanel);
-        }
-    }
+    @state()
+    private accessor eventsForQuiz: QuizEvent[] = [];
 
-    protected updated(changed: PropertyValues): void {
-        if (changed.has("currentPanel")) {
-            this.tabGroup.value?.show(this.currentPanel);
-        }
+    private updateEventsForQuiz() {
+        this.eventsForQuiz = Array.from(this.children)
+            .filter((c) => c instanceof HTMLElement && c.tagName === "WEBWRITER-TIMELINE-EVENT")
+            .map((event: WebWriterTimelineEventWidget) => ({
+                id: event.id,
+                titleHtml: event.querySelector("webwriter-timeline-event-title").innerHTML.trim(),
+                date: event.date,
+                endDate: event.endDate,
+            }))
+            .filter((event) => event.date && event.titleHtml);
     }
 
     private addEvent(event: CustomEvent) {
@@ -99,24 +124,77 @@ export class WebWriterTimelineWidget extends LitElementWw {
         }
     }
 
-    render() {
-        return html`<sl-tab-group
-            ${ref(this.tabGroup)}
-            @sl-tab-show=${(e: CustomEvent) => (this.currentPanel = e.detail.name)}
-            activation="manual"
-        >
-            <sl-tab slot="nav" panel="timeline">Timeline</sl-tab>
-            <sl-tab slot="nav" panel="quiz">Quiz</sl-tab>
+    protected firstUpdated(_changedProperties: PropertyValues): void {
+        // It is not entirely clear why this is necessary, but without this,
+        // no tab is selected when the widget is first rendered in export mode.
+        this.tabGroupRef.value?.updateComplete.then(() => this.tabGroupRef.value?.show("timeline"));
+    }
 
-            <sl-tab-panel name="timeline">
-                <timeline-container
-                    ?edit-view=${this.isInEditView}
-                    @add-event=${this.addEvent}
-                    @date-changed=${this.dateChanged}
-                    ><slot></slot
-                ></timeline-container>
-            </sl-tab-panel>
-            <sl-tab-panel name="quiz">Quiz functionality is not yet implemented. </sl-tab-panel>
+    private Options() {
+        return html`<aside part="options">
+            <sl-radio-group
+                value=${this.enabledPanels}
+                @sl-change=${(e: CustomEvent) =>
+                    (this.enabledPanels = (e.target as SlRadioGroup).value as "timeline" | "quiz" | "timeline+quiz")}
+                help-text="Which panels will be visible to readers"
+            >
+                <sl-radio value="timeline+quiz">Timeline and Quiz</sl-radio>
+                <sl-radio value="timeline">Timeline only</sl-radio>
+                <sl-radio value="quiz">Quiz only</sl-radio>
+            </sl-radio-group>
+        </aside>`;
+    }
+
+    private Quiz() {
+        return html`<quiz-container .events=${this.eventsForQuiz}></quiz-container>`;
+    }
+
+    private Timeline() {
+        return html`<timeline-container
+            ?edit-view=${this.isInEditView}
+            @add-event=${this.addEvent}
+            @date-changed=${this.dateChanged}
+            @slotchange=${() => this.updateEventsForQuiz()}
+        >
+            <slot></slot>
+        </timeline-container>`;
+    }
+
+    private PanelIcon(panelName: string) {
+        if (!this.enabledPanels.includes(panelName)) {
+            return html`<sl-icon src=${EyeSlash} label="(disabled)"></sl-icon>`;
+        } else {
+            return nothing;
+        }
+    }
+
+    private TabGroup() {
+        if (!this.isInEditView && this.enabledPanels !== "timeline+quiz") {
+            if (this.enabledPanels === "timeline") {
+                return this.Timeline();
+            }
+            if (this.enabledPanels === "quiz") {
+                // We still need to mount the slot to get a list of events for the quiz
+                return html`<slot class="hide" @slotchange=${() => this.updateEventsForQuiz()}></slot>${this.Quiz()}`;
+            }
+        }
+
+        return html`<sl-tab-group
+            ${ref(this.tabGroupRef)}
+            tabindex="0"
+            activation="manual"
+            @sl-tab-show=${(event: CustomEvent) => {
+                if (event.detail.name === "quiz") this.updateEventsForQuiz();
+            }}
+        >
+            <sl-tab slot="nav" panel="timeline">Timeline${this.PanelIcon("timeline")}</sl-tab>
+            <sl-tab slot="nav" panel="quiz">Quiz${this.PanelIcon("quiz")}</sl-tab>
+            <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>
+            <sl-tab-panel name="quiz">${this.Quiz()}</sl-tab-panel>
         </sl-tab-group>`;
+    }
+
+    render() {
+        return html`${this.Options()}${this.TabGroup()}`;
     }
 }

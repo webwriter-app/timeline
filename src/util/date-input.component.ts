@@ -22,6 +22,9 @@ export class DateInput extends LitElementWw {
 
         input:disabled {
             color: black;
+            /* https://stackoverflow.com/questions/262158/disabled-input-text-color-on-ios */
+            opacity: 1;
+            -webkit-text-fill-color: black;
         }
 
         input::placeholder {
@@ -42,6 +45,7 @@ export class DateInput extends LitElementWw {
 
     private measureElement = createRef<HTMLSpanElement>();
     private inputElement = createRef<HTMLInputElement>();
+    private resizeObserver?: ResizeObserver;
 
     @property({
         type: TimelineDate,
@@ -122,13 +126,15 @@ export class DateInput extends LitElementWw {
         this.inputElement.value.style.width = `${this.measureElement.value.offsetWidth + 1}px`;
     }
 
-    protected firstUpdated(_changedProperties: PropertyValues): void {
-        this.resizeInput();
-    }
-
     connectedCallback(): void {
         super.connectedCallback();
-        setTimeout(() => this.resizeInput(), 0);
+        this.resizeObserver = new ResizeObserver(() => this.resizeInput());
+        this.resizeObserver.observe(this);
+    }
+
+    disconnectedCallback(): void {
+        this.resizeObserver?.disconnect();
+        super.disconnectedCallback();
     }
 
     protected updated(_changedProperties: PropertyValues): void {
@@ -144,8 +150,9 @@ export class DateInput extends LitElementWw {
                 this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
             }
         }
+
         if (_changedProperties.has("internalValue")) {
-            this.updateComplete.then(() => this.resizeInput());
+            this.resizeInput();
         }
     }
 
