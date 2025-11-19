@@ -1,6 +1,6 @@
 {
   "name": "@webwriter/timeline",
-  "version": "2.0.0-dev.1",
+  "version": "2.0.0",
   "description": "Create/learn with a digital timeline and test your knowledge.",
   "scripts": {
     "prepublishOnly": "npx @webwriter/build",

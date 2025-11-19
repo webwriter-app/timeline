@@ -1,5 +1,5 @@
-# Timeline (`@webwriter/timeline@2.0.0-dev.1`)
-[License: MIT](LICENSE) | Version: 2.0.0-dev.1
+# Timeline (`@webwriter/timeline@2.0.0`)
+[License: MIT](LICENSE) | Version: 2.0.0
 
 Create/learn with a digital timeline and test your knowledge.
 
