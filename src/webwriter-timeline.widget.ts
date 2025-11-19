@@ -1,3 +1,4 @@
+import { localized, msg } from "@lit/localize";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import SlRadioGroup from "@shoelace-style/shoelace/dist/components/radio-group/radio-group.component.js";
@@ -11,13 +12,17 @@ import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
 import EyeSlash from "../assets/icons/eye-slash.svg";
+import LOCALIZE from "../localization/generated";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
 import { TimelineDate } from "./util/timeline-date";
 
+@localized()
 @customElement("webwriter-timeline")
 export class WebWriterTimelineWidget extends LitElementWw {
+    localize = LOCALIZE;
+
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,
@@ -136,21 +141,22 @@ export class WebWriterTimelineWidget extends LitElementWw {
                 value=${this.enabledPanels}
                 @sl-change=${(e: CustomEvent) =>
                     (this.enabledPanels = (e.target as SlRadioGroup).value as "timeline" | "quiz" | "timeline+quiz")}
-                help-text="Which panels will be visible to readers"
+                help-text=${msg("Which panels will be visible to readers")}
             >
-                <sl-radio value="timeline+quiz">Timeline and Quiz</sl-radio>
-                <sl-radio value="timeline">Timeline only</sl-radio>
-                <sl-radio value="quiz">Quiz only</sl-radio>
+                <sl-radio value="timeline+quiz">${msg("Timeline and Quiz")}</sl-radio>
+                <sl-radio value="timeline">${msg("Timeline only")}</sl-radio>
+                <sl-radio value="quiz">${msg("Quiz only")}</sl-radio>
             </sl-radio-group>
         </aside>`;
     }
 
     private Quiz() {
-        return html`<quiz-container .events=${this.eventsForQuiz}></quiz-container>`;
+        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz}></quiz-container>`;
     }
 
     private Timeline() {
         return html`<timeline-container
+            lang=${this.lang}
             ?edit-view=${this.isInEditView}
             @add-event=${this.addEvent}
             @date-changed=${this.dateChanged}
@@ -162,7 +168,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private PanelIcon(panelName: string) {
         if (!this.enabledPanels.includes(panelName)) {
-            return html`<sl-icon src=${EyeSlash} label="(disabled)"></sl-icon>`;
+            return html`<sl-icon src=${EyeSlash} label=${msg("(disabled)")}></sl-icon>`;
         } else {
             return nothing;
         }
@@ -187,8 +193,8 @@ export class WebWriterTimelineWidget extends LitElementWw {
                 if (event.detail.name === "quiz") this.updateEventsForQuiz();
             }}
         >
-            <sl-tab slot="nav" panel="timeline">Timeline${this.PanelIcon("timeline")}</sl-tab>
-            <sl-tab slot="nav" panel="quiz">Quiz${this.PanelIcon("quiz")}</sl-tab>
+            <sl-tab slot="nav" panel="timeline">${msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
+            <sl-tab slot="nav" panel="quiz">${msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
             <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>
             <sl-tab-panel name="quiz">${this.Quiz()}</sl-tab-panel>
         </sl-tab-group>`;

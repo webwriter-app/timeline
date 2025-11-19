@@ -1,0 +1,117 @@
+<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="id">
+    <body>
+      <trans-unit id="h84e1bc2032e6a3ca">
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+        <target>Anda mendapatkan 
+          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> dari 
+          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> acara dengan benar.
+        </target>
+      </trans-unit>
+      <trans-unit id="s8cdcbe65c5e46f7a">
+        <source>Try Again</source>
+        <target>Coba Lagi</target>
+      </trans-unit>
+      <trans-unit id="s6431645dad89d68e">
+        <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
+        <target>Sesuaikan peristiwa dengan tanggal yang benar dengan menyeret dan melepaskannya ke garis waktu.</target>
+      </trans-unit>
+      <trans-unit id="s8ae42ce9d674b6ce">
+        <source>Submit answers</source>
+        <target>Kirimkan jawaban</target>
+      </trans-unit>
+      <trans-unit id="s255857544a9d5ec0">
+        <source>Reset</source>
+        <target>Reset</target>
+      </trans-unit>
+      <trans-unit id="s9cb70d37f84f7c24">
+        <source>No events available for this quiz.</source>
+        <target>Tidak ada acara yang tersedia untuk kuis ini.</target>
+      </trans-unit>
+      <trans-unit id="s1b14eab64a60306b">
+        <source>No events</source>
+        <target>Tidak ada acara</target>
+      </trans-unit>
+      <trans-unit id="s1a445bc371e19b14">
+        <source>Add Event</source>
+        <target>Tambahkan Acara</target>
+      </trans-unit>
+      <trans-unit id="s39f5885d883e91d9">
+        <source>Invalid year</source>
+        <target>Tahun tidak valid</target>
+      </trans-unit>
+      <trans-unit id="sb3b1ba3205c4733e">
+        <source>Invalid month</source>
+        <target>Bulan tidak valid</target>
+      </trans-unit>
+      <trans-unit id="s07c0dacf93b42c9a">
+        <source>Invalid day</source>
+        <target>Hari tidak valid</target>
+      </trans-unit>
+      <trans-unit id="s1fa60442ead25459">
+        <source>Year zero does not exist</source>
+        <target>Tahun nol tidak ada.</target>
+      </trans-unit>
+      <trans-unit id="s1e1a1d080e3b4053">
+        <source>Invalid format</source>
+        <target>Format tidak valid</target>
+      </trans-unit>
+      <trans-unit id="se0baa9b7fb0768e4">
+        <source>Invalid date</source>
+        <target>Tanggal tidak valid</target>
+      </trans-unit>
+      <trans-unit id="sac8252732f2edb19">
+        <source>Date</source>
+        <target>Tanggal</target>
+      </trans-unit>
+      <trans-unit id="s1d449f9f444e532a">
+        <source>End date</source>
+        <target>Tanggal akhir</target>
+      </trans-unit>
+      <trans-unit id="sb971373f2f92a03f">
+        <source>An event requires a date and a title</source>
+        <target>Sebuah acara memerlukan tanggal dan judul.</target>
+      </trans-unit>
+      <trans-unit id="scc342eb1f2b3826a">
+        <source>Delete event</source>
+        <target>Hapus acara</target>
+      </trans-unit>
+      <trans-unit id="s1c417ec19e8605bf">
+        <source>Which panels will be visible to readers</source>
+        <target>Panel mana yang akan terlihat oleh pembaca?</target>
+      </trans-unit>
+      <trans-unit id="s782f69ab5dd839e0">
+        <source>Timeline and Quiz</source>
+        <target>Jadwal dan Kuis</target>
+      </trans-unit>
+      <trans-unit id="s7d775183a3896b44">
+        <source>Timeline only</source>
+        <target>Jadwal saja</target>
+      </trans-unit>
+      <trans-unit id="sfe03165961812f36">
+        <source>Quiz only</source>
+        <target>Kuis saja</target>
+      </trans-unit>
+      <trans-unit id="s9a3d950ed0f37bea">
+        <source>(disabled)</source>
+        <target>(dinonaktifkan)</target>
+      </trans-unit>
+      <trans-unit id="s680fc90489553ed6">
+        <source>Timeline</source>
+        <target>Jadwal Waktu</target>
+      </trans-unit>
+      <trans-unit id="s45156c13b0fb3494">
+        <source>Quiz</source>
+        <target>Kuis</target>
+      </trans-unit>
+      <trans-unit id="s355b21b89ce5d9c5">
+        <source>Details</source>
+        <target>Rincian</target>
+      </trans-unit>
+      <trans-unit id="s99f110d27e30b289">
+        <source>Title</source>
+        <target>Judul</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

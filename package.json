@@ -9,6 +9,7 @@
         "format": "prettier --write \"src/**/*\""
     },
     "dependencies": {
+        "@lit/localize": "^0.12.2",
         "@shoelace-style/shoelace": "^2.20.1",
         "@webwriter/lit": "^2",
         "lit": "^3"

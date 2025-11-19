@@ -30,16 +30,16 @@ export class TimelineDate {
     readonly day: number | null;
 
     constructor(year: number, month: number | null = null, day: number | null = null) {
-        if (!Number.isInteger(year)) throw new Error("Ungültiges Jahr");
+        if (!Number.isInteger(year)) throw new Error("INVALID_YEAR");
         if (month !== null) {
-            if (!Number.isInteger(month)) throw new Error("Ungültiger Monat");
-            if (month < 1 || month > 12) throw new Error("Monat außerhalb des Bereichs");
+            if (!Number.isInteger(month)) throw new Error("INVALID_MONTH");
+            if (month < 1 || month > 12) throw new Error("INVALID_MONTH");
         }
         if (day !== null) {
-            if (!Number.isInteger(day)) throw new Error("Ungültiger Tag");
-            if (month === null) throw new Error("Tag ohne Monat angegeben");
+            if (!Number.isInteger(day)) throw new Error("INVALID_DAY");
+            if (month === null) throw new Error("INVALID_DAY");
             const dim = TimelineDate.daysInMonth(year, month);
-            if (day < 1 || day > dim) throw new Error("Tag außerhalb des Bereichs");
+            if (day < 1 || day > dim) throw new Error("INVALID_DAY");
         }
 
         this.year = year;
@@ -130,7 +130,7 @@ export class TimelineDate {
      * Converts a European formatted date string (DD.MM.YYYY) to a TimelineDate instance.
      */
     static fromEuropeanString(euroString: string): TimelineDate {
-        if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("Ungültiger europäischer Datumsstring");
+        if (!/^(\d+.)?(\d+.)?(-?\d+)$/.test(euroString)) throw new Error("INVALID_FORMAT");
 
         const parts = euroString.split(".").reverse();
 
@@ -138,7 +138,7 @@ export class TimelineDate {
         let month = parts.length >= 2 ? parseInt(parts[1], 10) : null;
         let day = parts.length === 3 ? parseInt(parts[2], 10) : null;
 
-        if (year === 0) throw new Error("Jahr 0 existiert nicht");
+        if (year === 0) throw new Error("YEAR_ZERO_INVALID");
         if (year < 0) year++;
 
         return new TimelineDate(year, month, day);

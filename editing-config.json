@@ -1,4 +1,9 @@
 {
+    "./snippets/webwriter-timeline": {
+        "label": {
+            "_": "Timeline"
+        }
+    },
     "./widgets/webwriter-timeline": {
         "content": "webwriter-timeline-event*",
         "uninsertable": true

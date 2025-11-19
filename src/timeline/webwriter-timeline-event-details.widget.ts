@@ -1,10 +1,15 @@
+import { localized, msg } from "@lit/localize";
 import { LitElementWw } from "@webwriter/lit";
 import { css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
+import LOCALIZE from "../../localization/generated";
 
+@localized()
 @customElement("webwriter-timeline-event-details")
 export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
+    localize = LOCALIZE;
+
     static styles = css`
         :host {
             position: relative;
@@ -18,7 +23,7 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
         }
 
         .show-placeholder::after {
-            content: "Details";
+            content: var(--placeholder-text);
             pointer-events: none;
             position: absolute;
             top: 0;
@@ -68,6 +73,7 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
 
     render() {
         return html`<slot
+            style="--placeholder-text: '${msg("Details")}'"
             class=${classMap({
                 "show-placeholder": this.isInEditView && this.isEmpty,
                 hide: !this.isInEditView && this.isEmpty,

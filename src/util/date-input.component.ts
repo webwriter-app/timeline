@@ -1,10 +1,15 @@
+import { localized, msg } from "@lit/localize";
 import { LitElementWw } from "@webwriter/lit";
 import { css, html, PropertyValues } from "lit";
 import { property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
+import LOCALIZE from "../../localization/generated";
 import { TimelineDate, timelineDateConverter } from "./timeline-date";
 
+@localized()
 export class DateInput extends LitElementWw {
+    localize = LOCALIZE;
+
     static styles = css`
         :host {
             display: inline-block;
@@ -70,6 +75,23 @@ export class DateInput extends LitElementWw {
     @property({ type: String, attribute: true })
     accessor lang: string = "en-US";
 
+    private localizeErrorMessage(key: string): string {
+        switch (key) {
+            case "INVALID_YEAR":
+                return msg("Invalid year");
+            case "INVALID_MONTH":
+                return msg("Invalid month");
+            case "INVALID_DAY":
+                return msg("Invalid day");
+            case "YEAR_ZERO_INVALID":
+                return msg("Year zero does not exist");
+            case "INVALID_FORMAT":
+                return msg("Invalid format");
+            default:
+                return msg("Invalid date");
+        }
+    }
+
     private onInputFocus(event: InputEvent) {
         this.internalValue = this.value?.toEuropeanString() ?? "";
         this.updateComplete.then(() => this.inputElement.value?.select());
@@ -94,7 +116,7 @@ export class DateInput extends LitElementWw {
             this.blurCausedByKeydown = true;
             this.inputElement.value?.blur();
         } catch (e) {
-            this.inputElement.value?.setCustomValidity((e as Error).message);
+            this.inputElement.value?.setCustomValidity(this.localizeErrorMessage((e as Error).message));
             this.inputElement.value?.reportValidity();
         }
     }

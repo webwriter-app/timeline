@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="el">
+<file id="." original=".">
+<unit id="description"><segment><source>Create/learn with a digital timeline and test your knowledge.</source><target>Δημιουργήστε/μάθετε με ένα ψηφιακό χρονοδιάγραμμα και δοκιμάστε τις γνώσεις σας.</target></segment></unit>
+</file>
+<file id="./widgets/webwriter-timeline" original="./widgets/webwriter-timeline">
+<unit id="label"><segment><source>Timeline</source><target>Χρονοδιάγραμμα</target></segment></unit>
+</file>
+</xliff>

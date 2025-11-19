@@ -1,3 +1,4 @@
+import { localized, msg } from "@lit/localize";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlProgressRing from "@shoelace-style/shoelace/dist/components/progress-ring/progress-ring.component.js";
 import { LitElementWw } from "@webwriter/lit";
@@ -5,6 +6,7 @@ import { css, PropertyValues } from "lit";
 import { html, nothing } from "lit-html";
 import { property, state } from "lit/decorators.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
+import LOCALIZE from "../../localization/generated";
 import { TimelineDate } from "../util/timeline-date";
 import { TimelineTemplate } from "../util/timeline-template.component";
 
@@ -15,7 +17,10 @@ export type QuizEvent = {
     endDate: TimelineDate | null;
 };
 
+@localized()
 export class QuizContainer extends LitElementWw {
+    localize = LOCALIZE;
+
     // We cannot use a custom application/x- MIME type here because
     // mobile browsers do not support them in drag-and-drop operations.
     private static DRAG_DATA_TYPE = "text/plain";
@@ -202,9 +207,11 @@ export class QuizContainer extends LitElementWw {
 
         return html`<div class="results-container">
             <sl-progress-ring value=${percentage}>${Math.round(percentage)}%</sl-progress-ring>
-            <div>You got <strong>${correct}</strong> out of <strong>${total}</strong> events correct.</div>
+            <div>
+                ${msg(html`You got <strong>${correct}</strong> out of <strong>${total}</strong> events correct.`)}
+            </div>
 
-            <sl-button @click=${() => this.resetAssignments()}>Try Again</sl-button>
+            <sl-button @click=${() => this.resetAssignments()}>${msg("Try Again")}</sl-button>
         </div>`;
     }
 
@@ -234,13 +241,13 @@ export class QuizContainer extends LitElementWw {
             ${cards}
 
             <div class="help-text">
-                Match the events to their correct dates by dragging and dropping them onto the timeline.
+                ${msg("Match the events to their correct dates by dragging and dropping them onto the timeline.")}
             </div>
             <div class="buttons">
                 <sl-button variant="primary" @click=${() => (this.checkAnswers = true)} ?disabled=${this.checkAnswers}>
-                    Submit answers
+                    ${msg("Submit answers")}
                 </sl-button>
-                <sl-button variant="danger" outline @click=${() => this.resetAssignments()}>Reset</sl-button>
+                <sl-button variant="danger" outline @click=${() => this.resetAssignments()}>${msg("Reset")}</sl-button>
             </div>
         </div>`;
     }
@@ -287,8 +294,8 @@ export class QuizContainer extends LitElementWw {
                     }}
                 >
                     <div>
-                        ${event.date.toLocalizedString(this.lang ?? "en-US")}
-                        ${event.endDate ? `- ${event.endDate.toLocalizedString(this.lang ?? "en-US")}` : nothing}
+                        ${event.date.toLocalizedString(this.lang || "en-US")}
+                        ${event.endDate ? `- ${event.endDate.toLocalizedString(this.lang || "en-US")}` : nothing}
                     </div>
                     ${assignedEvent
                         ? this.EventCard(assignedEvent, assignedToThis.id === assignedToThis.assignedToId)
@@ -302,7 +309,7 @@ export class QuizContainer extends LitElementWw {
 
     render() {
         if (this.events.length === 0) {
-            return html`<div class="empty-quiz">No events available for this quiz.</div>`;
+            return html`<div class="empty-quiz">${msg("No events available for this quiz.")}</div>`;
         }
 
         return html`${this.UnassignedEventsContainer()}${this.AssignedEventsTimeline()}`;
