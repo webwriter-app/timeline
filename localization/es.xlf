@@ -1,0 +1,117 @@
+<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="es">
+    <body>
+      <trans-unit id="h84e1bc2032e6a3ca">
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+        <target>Tienes 
+          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> de 
+          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> los acontecimientos correctamente.
+        </target>
+      </trans-unit>
+      <trans-unit id="s8cdcbe65c5e46f7a">
+        <source>Try Again</source>
+        <target>Inténtalo de nuevo</target>
+      </trans-unit>
+      <trans-unit id="s6431645dad89d68e">
+        <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
+        <target>Empareja los eventos con sus fechas correctas arrastrándolos y soltándolos en la línea de tiempo.</target>
+      </trans-unit>
+      <trans-unit id="s8ae42ce9d674b6ce">
+        <source>Submit answers</source>
+        <target>Enviar respuestas</target>
+      </trans-unit>
+      <trans-unit id="s255857544a9d5ec0">
+        <source>Reset</source>
+        <target>Restablecer</target>
+      </trans-unit>
+      <trans-unit id="s9cb70d37f84f7c24">
+        <source>No events available for this quiz.</source>
+        <target>No hay eventos disponibles para este cuestionario.</target>
+      </trans-unit>
+      <trans-unit id="s1b14eab64a60306b">
+        <source>No events</source>
+        <target>No hay eventos</target>
+      </trans-unit>
+      <trans-unit id="s1a445bc371e19b14">
+        <source>Add Event</source>
+        <target>Añadir evento</target>
+      </trans-unit>
+      <trans-unit id="s39f5885d883e91d9">
+        <source>Invalid year</source>
+        <target>Año no válido</target>
+      </trans-unit>
+      <trans-unit id="sb3b1ba3205c4733e">
+        <source>Invalid month</source>
+        <target>Mes no válido</target>
+      </trans-unit>
+      <trans-unit id="s07c0dacf93b42c9a">
+        <source>Invalid day</source>
+        <target>Día no válido</target>
+      </trans-unit>
+      <trans-unit id="s1fa60442ead25459">
+        <source>Year zero does not exist</source>
+        <target>El año cero no existe.</target>
+      </trans-unit>
+      <trans-unit id="s1e1a1d080e3b4053">
+        <source>Invalid format</source>
+        <target>Formato no válido</target>
+      </trans-unit>
+      <trans-unit id="se0baa9b7fb0768e4">
+        <source>Invalid date</source>
+        <target>Fecha no válida</target>
+      </trans-unit>
+      <trans-unit id="sac8252732f2edb19">
+        <source>Date</source>
+        <target>Fecha</target>
+      </trans-unit>
+      <trans-unit id="s1d449f9f444e532a">
+        <source>End date</source>
+        <target>Fecha de finalización</target>
+      </trans-unit>
+      <trans-unit id="sb971373f2f92a03f">
+        <source>An event requires a date and a title</source>
+        <target>Un evento requiere una fecha y un título.</target>
+      </trans-unit>
+      <trans-unit id="scc342eb1f2b3826a">
+        <source>Delete event</source>
+        <target>Eliminar evento</target>
+      </trans-unit>
+      <trans-unit id="s1c417ec19e8605bf">
+        <source>Which panels will be visible to readers</source>
+        <target>¿Qué paneles serán visibles para los lectores?</target>
+      </trans-unit>
+      <trans-unit id="s782f69ab5dd839e0">
+        <source>Timeline and Quiz</source>
+        <target>Cronología y cuestionario</target>
+      </trans-unit>
+      <trans-unit id="s7d775183a3896b44">
+        <source>Timeline only</source>
+        <target>Solo cronología</target>
+      </trans-unit>
+      <trans-unit id="sfe03165961812f36">
+        <source>Quiz only</source>
+        <target>Solo cuestionario</target>
+      </trans-unit>
+      <trans-unit id="s9a3d950ed0f37bea">
+        <source>(disabled)</source>
+        <target>(desactivado)</target>
+      </trans-unit>
+      <trans-unit id="s680fc90489553ed6">
+        <source>Timeline</source>
+        <target>Cronología</target>
+      </trans-unit>
+      <trans-unit id="s45156c13b0fb3494">
+        <source>Quiz</source>
+        <target>Cuestionario</target>
+      </trans-unit>
+      <trans-unit id="s355b21b89ce5d9c5">
+        <source>Details</source>
+        <target>Detalles</target>
+      </trans-unit>
+      <trans-unit id="s99f110d27e30b289">
+        <source>Title</source>
+        <target>Título</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

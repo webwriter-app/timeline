@@ -1,0 +1,199 @@
+import { localized, msg } from "@lit/localize";
+import { LitElementWw } from "@webwriter/lit";
+import { css, html, PropertyValues } from "lit";
+import { property, state } from "lit/decorators.js";
+import { createRef, ref } from "lit/directives/ref.js";
+import LOCALIZE from "../../localization/generated";
+import { TimelineDate, timelineDateConverter } from "./timeline-date";
+
+@localized()
+export class DateInput extends LitElementWw {
+    protected localize = LOCALIZE;
+
+    static styles = css`
+        :host {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input {
+            border: none;
+            background: none;
+            padding: 0;
+            font: inherit;
+            outline: none;
+        }
+
+        input:disabled {
+            color: black;
+            /* https://stackoverflow.com/questions/262158/disabled-input-text-color-on-ios */
+            opacity: 1;
+            -webkit-text-fill-color: black;
+        }
+
+        input::placeholder {
+            color: var(--sl-color-gray-500);
+        }
+
+        /* Use an invisible span to measure the length of the text */
+        span {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            z-index: -1;
+
+            /* Prevent wrapping and ensure spaces are counted */
+            white-space: pre;
+        }
+    `;
+
+    private measureElement = createRef<HTMLSpanElement>();
+    private inputElement = createRef<HTMLInputElement>();
+    private resizeObserver?: ResizeObserver;
+
+    @property({
+        type: TimelineDate,
+        reflect: true,
+        attribute: true,
+        converter: timelineDateConverter,
+    })
+    accessor value: TimelineDate | null = null;
+
+    @state()
+    private accessor internalValue = "";
+
+    @property({ type: Boolean, attribute: true })
+    accessor disabled: boolean = false;
+
+    @property({ type: Boolean, attribute: true })
+    accessor optional: boolean = false;
+
+    @property({ type: String, attribute: true })
+    accessor placeholder: string = "";
+
+    @property({ type: String, attribute: true })
+    accessor lang: string = "en-US";
+
+    private localizeErrorMessage(key: string): string {
+        switch (key) {
+            case "INVALID_YEAR":
+                return msg("Invalid year");
+            case "INVALID_MONTH":
+                return msg("Invalid month");
+            case "INVALID_DAY":
+                return msg("Invalid day");
+            case "YEAR_ZERO_INVALID":
+                return msg("Year zero does not exist");
+            case "INVALID_FORMAT":
+                return msg("Invalid format");
+            default:
+                return msg("Invalid date");
+        }
+    }
+
+    private onInputFocus(event: InputEvent) {
+        this.internalValue = this.value?.toEuropeanString() ?? "";
+        this.updateComplete.then(() => this.inputElement.value?.select());
+    }
+
+    private blurCausedByKeydown = false;
+
+    private onInputKeydown(event: KeyboardEvent) {
+        if (event.key !== "Enter") return;
+        event.preventDefault();
+
+        if (this.optional && this.internalValue.trim() === "") {
+            this.value = null;
+            this.blurCausedByKeydown = true;
+            this.inputElement.value?.blur();
+            return;
+        }
+
+        try {
+            this.value = TimelineDate.fromEuropeanString(this.internalValue);
+            this.inputElement.value?.setCustomValidity("");
+            this.blurCausedByKeydown = true;
+            this.inputElement.value?.blur();
+        } catch (e) {
+            this.inputElement.value?.setCustomValidity(this.localizeErrorMessage((e as Error).message));
+            this.inputElement.value?.reportValidity();
+        }
+    }
+
+    private onInputBlur(event: Event) {
+        // If the blur was caused by pressing Enter, we have already handled it
+        if (this.blurCausedByKeydown) {
+            this.blurCausedByKeydown = false;
+            return;
+        }
+
+        event.preventDefault();
+
+        if (this.optional && this.internalValue.trim() === "") {
+            this.value = null;
+            return;
+        }
+
+        try {
+            this.value = TimelineDate.fromEuropeanString(this.internalValue);
+        } catch (e) {
+            // Even if the date is invalid, revert to the last valid date on blur
+            this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+        }
+    }
+
+    private resizeInput() {
+        if (!this.inputElement.value || !this.measureElement.value) return;
+        this.inputElement.value.style.width = `${this.measureElement.value.offsetWidth + 1}px`;
+    }
+
+    connectedCallback(): void {
+        super.connectedCallback();
+        this.resizeObserver = new ResizeObserver(() => this.resizeInput());
+        this.resizeObserver.observe(this);
+    }
+
+    disconnectedCallback(): void {
+        this.resizeObserver?.disconnect();
+        super.disconnectedCallback();
+    }
+
+    protected updated(_changedProperties: PropertyValues): void {
+        if (_changedProperties.has("value") || _changedProperties.has("lang")) {
+            this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+
+            // Send update event if the value actually changed
+            const oldValue = _changedProperties.get("value") as TimelineDate | null;
+            const valueNotChanged =
+                (oldValue === null && this.value === null) ||
+                (oldValue && this.value && oldValue.compare(this.value) === 0);
+            if (!valueNotChanged) {
+                this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+            }
+        }
+
+        if (_changedProperties.has("internalValue")) {
+            this.resizeInput();
+        }
+    }
+
+    render() {
+        return html`<span ${ref(this.measureElement)}>${this.internalValue || this.placeholder}</span
+            ><input
+                ${ref(this.inputElement)}
+                type="text"
+                placeholder=${this.placeholder}
+                .value=${this.internalValue}
+                ?disabled=${this.disabled}
+                @focus=${this.onInputFocus}
+                @input=${(e: Event) => {
+                    this.internalValue = (e.target as HTMLInputElement).value;
+                    // Required, otherwise the validation popup would re-appear on every keystroke
+                    this.inputElement.value?.setCustomValidity("");
+                }}
+                @keydown=${this.onInputKeydown}
+                @blur=${this.onInputBlur}
+            />`;
+    }
+}

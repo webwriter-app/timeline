@@ -1,0 +1,117 @@
+<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="ko">
+    <body>
+      <trans-unit id="h84e1bc2032e6a3ca">
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+        <target>당신은 
+          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> 정확히 
+          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> 사건을 정확히 파악하셨군요.
+        </target>
+      </trans-unit>
+      <trans-unit id="s8cdcbe65c5e46f7a">
+        <source>Try Again</source>
+        <target>다시 시도해 보세요</target>
+      </trans-unit>
+      <trans-unit id="s6431645dad89d68e">
+        <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
+        <target>이벤트를 타임라인에 드래그 앤 드롭하여 올바른 날짜에 맞추세요.</target>
+      </trans-unit>
+      <trans-unit id="s8ae42ce9d674b6ce">
+        <source>Submit answers</source>
+        <target>답변 제출</target>
+      </trans-unit>
+      <trans-unit id="s255857544a9d5ec0">
+        <source>Reset</source>
+        <target>재설정</target>
+      </trans-unit>
+      <trans-unit id="s9cb70d37f84f7c24">
+        <source>No events available for this quiz.</source>
+        <target>이 퀴즈에 대한 이벤트가 없습니다.</target>
+      </trans-unit>
+      <trans-unit id="s1b14eab64a60306b">
+        <source>No events</source>
+        <target>이벤트 없음</target>
+      </trans-unit>
+      <trans-unit id="s1a445bc371e19b14">
+        <source>Add Event</source>
+        <target>이벤트 추가</target>
+      </trans-unit>
+      <trans-unit id="s39f5885d883e91d9">
+        <source>Invalid year</source>
+        <target>잘못된 연도</target>
+      </trans-unit>
+      <trans-unit id="sb3b1ba3205c4733e">
+        <source>Invalid month</source>
+        <target>잘못된 월</target>
+      </trans-unit>
+      <trans-unit id="s07c0dacf93b42c9a">
+        <source>Invalid day</source>
+        <target>잘못된 날짜</target>
+      </trans-unit>
+      <trans-unit id="s1fa60442ead25459">
+        <source>Year zero does not exist</source>
+        <target>0년은 존재하지 않는다</target>
+      </trans-unit>
+      <trans-unit id="s1e1a1d080e3b4053">
+        <source>Invalid format</source>
+        <target>잘못된 형식</target>
+      </trans-unit>
+      <trans-unit id="se0baa9b7fb0768e4">
+        <source>Invalid date</source>
+        <target>잘못된 날짜</target>
+      </trans-unit>
+      <trans-unit id="sac8252732f2edb19">
+        <source>Date</source>
+        <target>날짜</target>
+      </trans-unit>
+      <trans-unit id="s1d449f9f444e532a">
+        <source>End date</source>
+        <target>종료일</target>
+      </trans-unit>
+      <trans-unit id="sb971373f2f92a03f">
+        <source>An event requires a date and a title</source>
+        <target>이벤트에는 날짜와 제목이 필요합니다.</target>
+      </trans-unit>
+      <trans-unit id="scc342eb1f2b3826a">
+        <source>Delete event</source>
+        <target>이벤트 삭제</target>
+      </trans-unit>
+      <trans-unit id="s1c417ec19e8605bf">
+        <source>Which panels will be visible to readers</source>
+        <target>어떤 패널이 독자에게 표시될 것인가</target>
+      </trans-unit>
+      <trans-unit id="s782f69ab5dd839e0">
+        <source>Timeline and Quiz</source>
+        <target>타임라인과 퀴즈</target>
+      </trans-unit>
+      <trans-unit id="s7d775183a3896b44">
+        <source>Timeline only</source>
+        <target>타임라인만</target>
+      </trans-unit>
+      <trans-unit id="sfe03165961812f36">
+        <source>Quiz only</source>
+        <target>퀴즈만</target>
+      </trans-unit>
+      <trans-unit id="s9a3d950ed0f37bea">
+        <source>(disabled)</source>
+        <target>(사용 불가)</target>
+      </trans-unit>
+      <trans-unit id="s680fc90489553ed6">
+        <source>Timeline</source>
+        <target>타임라인</target>
+      </trans-unit>
+      <trans-unit id="s45156c13b0fb3494">
+        <source>Quiz</source>
+        <target>퀴즈</target>
+      </trans-unit>
+      <trans-unit id="s355b21b89ce5d9c5">
+        <source>Details</source>
+        <target>상세 정보</target>
+      </trans-unit>
+      <trans-unit id="s99f110d27e30b289">
+        <source>Title</source>
+        <target>제목</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

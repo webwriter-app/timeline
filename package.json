@@ -1,75 +1,76 @@
 {
-    "name": "@webwriter/timeline",
-    "version": "1.0.5",
-    "description": "Create/learn with a digital timeline and test your knowledge.",
-    "keywords": [
-        "webwriter-widget",
-        "widget-contextual",
-        "widget-practical",
-        "widget-informational",
-        "widget-lang-en",
-        "iscedf2013-01",
-        "iscedf2013-02",
-        "iscedf2013-03",
-        "iscedf2013-04",
-        "iscedf2013-05",
-        "iscedf2013-06",
-        "iscedf2013-07",
-        "iscedf2013-08",
-        "iscedf2013-09",
-        "iscedf2013-10",
-        "isced2011-1",
-        "isced2011-2",
-        "isced2011-3",
-        "isced2011-4",
-        "isced2011-5",
-        "isced2011-6",
-        "isced2011-7",
-        "isced2011-8",
-        "timeline",
-        "history"
-    ],
-    "license": "MIT",
-    "author": "Nura Zimmermann <nura.zimmermann@rwth-aachen.de>",
-    "scripts": {
-        "prepublishOnly": "npx @webwriter/build",
-        "dev": "npx @webwriter/build dev"
+  "name": "@webwriter/timeline",
+  "version": "2.0.0",
+  "description": "Create/learn with a digital timeline and test your knowledge.",
+  "scripts": {
+    "prepublishOnly": "npx @webwriter/build",
+    "dev": "npx @webwriter/build dev",
+    "localize": "lit-localize extract && npx @webwriter/build localize && lit-localize build",
+    "format": "prettier --write \"src/**/*\""
+  },
+  "dependencies": {
+    "@lit/localize": "^0.12.2",
+    "@shoelace-style/shoelace": "^2.20.1",
+    "@webwriter/lit": "^2",
+    "lit": "^3"
+  },
+  "devDependencies": {
+    "@lit/localize-tools": "^0.8",
+    "prettier": "^3.6.2"
+  },
+  "exports": {
+    "./widgets/webwriter-timeline.*": {
+      "source": "./src/webwriter-timeline.widget.ts",
+      "default": "./dist/webwriter-timeline.*"
     },
-    "dependencies": {
-        "@popperjs/core": "^2.11.8",
-        "@shoelace-style/shoelace": "^2.17.1",
-        "@tabler/icons": "^3.21.0",
-        "@webwriter/lit": "^2.0.0",
-        "@webwriter/wui": "^0.0.3",
-        "lit": "^3.2.1",
-        "moment": "^2.30.1"
+    "./widgets/webwriter-timeline-event.*": {
+      "source": "./src/timeline/webwriter-timeline-event.widget.ts",
+      "default": "./dist/webwriter-timeline-event.*"
     },
-    "exports": {
-        "./widgets/webwriter-timeline.*": {
-            "source": "./widgets/webwriter-timeline.ts",
-            "default": "./dist/webwriter-timeline.*"
-        },
-        "./widgets/event-container.*": {
-            "source": "./event-container.ts",
-            "default": "./dist/event-container.*"
-        },
-        "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
-        "./snippets/history-of-olympic-games.html": "./snippets/history-of-olympic-games.html",
-        "./package.json": "./package.json",
-        "./icon": "./icon.svg"
+    "./widgets/webwriter-timeline-event-title.*": {
+      "source": "./src/timeline/webwriter-timeline-event-title.widget.ts",
+      "default": "./dist/webwriter-timeline-event-title.*"
     },
-    "editingConfig": {
-        ".": {
-            "description": {
-                "de": "Erstellen/Lernen Sie mit einer digitalen Zeitleiste und testen Sie Ihr Wissen."
-            }
-        },
-        "./widgets/webwriter-timeline": {
-            "content": "event-container*"
-        },
-        "./widgets/event-container": {
-            "content": "flow*",
-            "uninsertable": true
-        }
-    }
+    "./widgets/webwriter-timeline-event-details.*": {
+      "source": "./src/timeline/webwriter-timeline-event-details.widget.ts",
+      "default": "./dist/webwriter-timeline-event-details.*"
+    },
+    "./snippets/webwriter-timeline.html": "./snippets/webwriter-timeline.html",
+    "./snippets/women-in-tech.html": "./snippets/women-in-tech.html",
+    "./snippets/history-of-olympic-games.html": "./snippets/history-of-olympic-games.html",
+    "./package.json": "./package.json",
+    "./icon": "./icon.svg",
+    "./editing-config.json": "./editing-config.json",
+    "./custom-elements.json": "./custom-elements.json"
+  },
+  "keywords": [
+    "webwriter-widget",
+    "widget-contextual",
+    "widget-practical",
+    "widget-informational",
+    "widget-lang-en",
+    "iscedf2013-01",
+    "iscedf2013-02",
+    "iscedf2013-03",
+    "iscedf2013-04",
+    "iscedf2013-05",
+    "iscedf2013-06",
+    "iscedf2013-07",
+    "iscedf2013-08",
+    "iscedf2013-09",
+    "iscedf2013-10",
+    "isced2011-1",
+    "isced2011-2",
+    "isced2011-3",
+    "isced2011-4",
+    "isced2011-5",
+    "isced2011-6",
+    "isced2011-7",
+    "isced2011-8",
+    "timeline",
+    "history"
+  ],
+  "license": "MIT",
+  "author": "",
+  "customElements": "custom-elements.json"
 }
