@@ -8,7 +8,7 @@ import { TimelineDate, timelineDateConverter } from "./timeline-date";
 
 @localized()
 export class DateInput extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
     static styles = css`
         :host {

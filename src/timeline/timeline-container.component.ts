@@ -11,8 +11,9 @@ import { TimelineTemplate } from "../util/timeline-template.component";
 
 @localized()
 export class TimelineContainer extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
+    /** @internal */
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,

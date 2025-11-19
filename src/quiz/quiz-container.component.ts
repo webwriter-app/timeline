@@ -19,12 +19,13 @@ export type QuizEvent = {
 
 @localized()
 export class QuizContainer extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
     // We cannot use a custom application/x- MIME type here because
     // mobile browsers do not support them in drag-and-drop operations.
     private static DRAG_DATA_TYPE = "text/plain";
 
+    /** @internal */
     static scopedElements = {
         "timeline-template": TimelineTemplate,
         "sl-button": SlButton,

@@ -13,11 +13,17 @@ import LOCALIZE from "../../localization/generated";
 import { DateInput } from "../util/date-input.component";
 import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
 
+/**
+ * A single event in a `webwriter-timeline` component. Should not be used independently.
+ * As children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,
+ * which contain the title and details of the event, respectively.
+ */
 @localized()
 @customElement("webwriter-timeline-event")
 export class WebWriterTimelineEventWidget extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
+    /** @internal */
     static scopedElements = {
         "sl-icon-button": SlIconButton,
         "sl-icon": SlIcon,
@@ -118,20 +124,30 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         }
     `;
 
-    get isInEditView() {
+    private get isInEditView() {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
     private dotElement = createRef<HTMLElement>();
 
+    /**
+     * The (start) date of the event.
+     * Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".
+     * Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.
+     */
     @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
     accessor date: TimelineDate | null = null;
 
+    /**
+     * The end date of the event, should be after the start date.
+     * Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".
+     * Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.
+     */
     @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
     accessor endDate: TimelineDate | null = null;
 
     @state()
-    accessor titleEmpty: boolean = true;
+    private accessor titleEmpty: boolean = true;
 
     private titleElement = null;
     private titleMutationObserver = new MutationObserver(() => this.checkIfTitleIsEmpty());
@@ -152,6 +168,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         }
     }
 
+    /** @internal */
     async showMovedAnimation() {
         const dot = this.dotElement.value;
         if (!dot) return;

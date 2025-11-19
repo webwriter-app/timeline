@@ -5,10 +5,14 @@ import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import LOCALIZE from "../../localization/generated";
 
+/**
+ * The title of a `webwriter-timeline-event` element. Should not be used independently.
+ * As children, it can contain any inline "text" content (e.g., text nodes, `<strong>`, `<em>`, etc.).
+ */
 @localized()
 @customElement("webwriter-timeline-event-title")
 export class WebWriterTimelineEventTitleWidget extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
     static styles = css`
         :host {

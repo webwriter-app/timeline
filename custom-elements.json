@@ -1,0 +1,460 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/webwriter-timeline.widget.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Displays a timeline with events and a quiz based on those events.\n\nAs children, it should only contain `<webwriter-timeline-event>` elements in order\nto function properly. Any other children may lead to unexpected behavior.",
+          "name": "WebWriterTimelineWidget",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "protected",
+              "default": "LOCALIZE"
+            },
+            {
+              "kind": "field",
+              "name": "isInEditView",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "tabGroupRef",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "enabledPanels",
+              "type": {
+                "text": "\"timeline\" | \"quiz\" | \"timeline+quiz\""
+              },
+              "default": "\"timeline+quiz\"",
+              "description": "Which panels are enabled for the reader:\n- \"timeline\": only the timeline panel\n- \"quiz\": only the quiz panel\n- \"timeline+quiz\": both panels with tabs",
+              "attribute": "panels",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "eventsForQuiz",
+              "type": {
+                "text": "QuizEvent[]"
+              },
+              "privacy": "private",
+              "default": "[]"
+            },
+            {
+              "kind": "method",
+              "name": "updateEventsForQuiz",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "addEvent",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "dateChanged",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "Options",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "Quiz",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "Timeline",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "PanelIcon",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "panelName",
+                  "type": {
+                    "text": "string"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "TabGroup",
+              "privacy": "private"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "panels",
+              "type": {
+                "text": "\"timeline\" | \"quiz\" | \"timeline+quiz\""
+              },
+              "default": "\"timeline+quiz\"",
+              "description": "Which panels are enabled for the reader:\n- \"timeline\": only the timeline panel\n- \"quiz\": only the quiz panel\n- \"timeline+quiz\": both panels with tabs",
+              "fieldName": "enabledPanels"
+            }
+          ],
+          "superclass": {
+            "name": "LitElementWw",
+            "package": "@webwriter/lit"
+          },
+          "tagName": "webwriter-timeline",
+          "customElement": true,
+          "modulePath": "src/webwriter-timeline.widget.ts",
+          "definitionPath": "src/webwriter-timeline.widget.ts"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WebWriterTimelineWidget",
+          "declaration": {
+            "name": "WebWriterTimelineWidget",
+            "module": "src/webwriter-timeline.widget.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "webwriter-timeline",
+          "declaration": {
+            "name": "WebWriterTimelineWidget",
+            "module": "src/webwriter-timeline.widget.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/timeline/webwriter-timeline-event-details.widget.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The details of a `webwriter-timeline-event` component. Should not be used independently.\nAs children, it can contain any HTML content representing the details of the event.",
+          "name": "WebWriterTimelineEventDetailsWidget",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "protected",
+              "default": "LOCALIZE"
+            },
+            {
+              "kind": "field",
+              "name": "isEmpty",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "observedElement",
+              "type": {
+                "text": "HTMLElement"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "mutationObserver",
+              "privacy": "private",
+              "default": "new MutationObserver(() => { let empty = this.observedElement.childNodes.length === 0; // If the only child is a trailing break, consider it empty if (this.observedElement.children.length === 1) { const child = this.observedElement.children[0]; empty = child.tagName === \"BR\" && child.classList.contains(\"ProseMirror-trailingBreak\"); } this.isEmpty = empty; })"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "isInEditView",
+              "privacy": "private",
+              "readonly": true
+            }
+          ],
+          "superclass": {
+            "name": "LitElementWw",
+            "package": "@webwriter/lit"
+          },
+          "tagName": "webwriter-timeline-event-details",
+          "customElement": true,
+          "modulePath": "src/timeline/webwriter-timeline-event-details.widget.ts",
+          "definitionPath": "src/timeline/webwriter-timeline-event-details.widget.ts"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WebWriterTimelineEventDetailsWidget",
+          "declaration": {
+            "name": "WebWriterTimelineEventDetailsWidget",
+            "module": "src/timeline/webwriter-timeline-event-details.widget.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "webwriter-timeline-event-details",
+          "declaration": {
+            "name": "WebWriterTimelineEventDetailsWidget",
+            "module": "src/timeline/webwriter-timeline-event-details.widget.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/timeline/webwriter-timeline-event-title.widget.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "The title of a `webwriter-timeline-event` element. Should not be used independently.\nAs children, it can contain any inline \"text\" content (e.g., text nodes, `<strong>`, `<em>`, etc.).",
+          "name": "WebWriterTimelineEventTitleWidget",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "protected",
+              "default": "LOCALIZE"
+            },
+            {
+              "kind": "field",
+              "name": "showPlaceholder",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "true"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "superclass": {
+            "name": "LitElementWw",
+            "package": "@webwriter/lit"
+          },
+          "tagName": "webwriter-timeline-event-title",
+          "customElement": true,
+          "modulePath": "src/timeline/webwriter-timeline-event-title.widget.ts",
+          "definitionPath": "src/timeline/webwriter-timeline-event-title.widget.ts"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WebWriterTimelineEventTitleWidget",
+          "declaration": {
+            "name": "WebWriterTimelineEventTitleWidget",
+            "module": "src/timeline/webwriter-timeline-event-title.widget.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "webwriter-timeline-event-title",
+          "declaration": {
+            "name": "WebWriterTimelineEventTitleWidget",
+            "module": "src/timeline/webwriter-timeline-event-title.widget.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/timeline/webwriter-timeline-event.widget.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "A single event in a `webwriter-timeline` component. Should not be used independently.\nAs children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,\nwhich contain the title and details of the event, respectively.",
+          "name": "WebWriterTimelineEventWidget",
+          "members": [
+            {
+              "kind": "field",
+              "name": "localize",
+              "privacy": "protected",
+              "default": "LOCALIZE"
+            },
+            {
+              "kind": "field",
+              "name": "isInEditView",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "dotElement",
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "date",
+              "type": {
+                "text": "TimelineDate | null"
+              },
+              "default": "null",
+              "description": "The (start) date of the event.\nMust be formatted as an ISO 8601 date as \"YYYY\", \"YYYY-MM\", or \"YYYY-MM-DD\".\nAny year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.",
+              "attribute": "date",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "endDate",
+              "type": {
+                "text": "TimelineDate | null"
+              },
+              "default": "null",
+              "description": "The end date of the event, should be after the start date.\nMust be formatted as an ISO 8601 date as \"YYYY\", \"YYYY-MM\", or \"YYYY-MM-DD\".\nAny year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.",
+              "attribute": "endDate",
+              "reflects": true
+            },
+            {
+              "kind": "field",
+              "name": "titleEmpty",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "titleElement",
+              "type": {
+                "text": "null"
+              },
+              "privacy": "private",
+              "default": "null"
+            },
+            {
+              "kind": "field",
+              "name": "titleMutationObserver",
+              "privacy": "private",
+              "default": "new MutationObserver(() => this.checkIfTitleIsEmpty())"
+            },
+            {
+              "kind": "method",
+              "name": "checkIfTitleIsEmpty",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "onSlotChange",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "Event"
+                  }
+                }
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "date-changed",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "date",
+              "type": {
+                "text": "TimelineDate | null"
+              },
+              "default": "null",
+              "description": "The (start) date of the event.\nMust be formatted as an ISO 8601 date as \"YYYY\", \"YYYY-MM\", or \"YYYY-MM-DD\".\nAny year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.",
+              "fieldName": "date"
+            },
+            {
+              "name": "endDate",
+              "type": {
+                "text": "TimelineDate | null"
+              },
+              "default": "null",
+              "description": "The end date of the event, should be after the start date.\nMust be formatted as an ISO 8601 date as \"YYYY\", \"YYYY-MM\", or \"YYYY-MM-DD\".\nAny year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on.",
+              "fieldName": "endDate"
+            }
+          ],
+          "superclass": {
+            "name": "LitElementWw",
+            "package": "@webwriter/lit"
+          },
+          "tagName": "webwriter-timeline-event",
+          "customElement": true,
+          "modulePath": "src/timeline/webwriter-timeline-event.widget.ts",
+          "definitionPath": "src/timeline/webwriter-timeline-event.widget.ts"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "WebWriterTimelineEventWidget",
+          "declaration": {
+            "name": "WebWriterTimelineEventWidget",
+            "module": "src/timeline/webwriter-timeline-event.widget.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "webwriter-timeline-event",
+          "declaration": {
+            "name": "WebWriterTimelineEventWidget",
+            "module": "src/timeline/webwriter-timeline-event.widget.ts"
+          }
+        }
+      ]
+    }
+  ]
+}

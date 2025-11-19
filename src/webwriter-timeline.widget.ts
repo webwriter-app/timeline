@@ -18,11 +18,18 @@ import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
 import { TimelineDate } from "./util/timeline-date";
 
+/**
+ * Displays a timeline with events and a quiz based on those events.
+ *
+ * As children, it should only contain `<webwriter-timeline-event>` elements in order
+ * to function properly. Any other children may lead to unexpected behavior.
+ */
 @localized()
 @customElement("webwriter-timeline")
 export class WebWriterTimelineWidget extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
+    /** @internal */
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,
@@ -58,12 +65,18 @@ export class WebWriterTimelineWidget extends LitElementWw {
         }
     `;
 
-    get isInEditView() {
+    private get isInEditView() {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
     private tabGroupRef = createRef<SlTabGroup>();
 
+    /**
+     * Which panels are enabled for the reader:
+     * - "timeline": only the timeline panel
+     * - "quiz": only the quiz panel
+     * - "timeline+quiz": both panels with tabs
+     */
     @property({ type: String, reflect: true, attribute: "panels" })
     accessor enabledPanels: "timeline" | "quiz" | "timeline+quiz" = "timeline+quiz";
 

@@ -5,10 +5,14 @@ import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import LOCALIZE from "../../localization/generated";
 
+/**
+ * The details of a `webwriter-timeline-event` component. Should not be used independently.
+ * As children, it can contain any HTML content representing the details of the event.
+ */
 @localized()
 @customElement("webwriter-timeline-event-details")
 export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
-    localize = LOCALIZE;
+    protected localize = LOCALIZE;
 
     static styles = css`
         :host {
@@ -67,7 +71,7 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
         }
     }
 
-    get isInEditView() {
+    private get isInEditView() {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
