@@ -8,6 +8,7 @@ import { createRef, ref } from "lit/directives/ref.js";
 import PlusCircleFillIcon from "../../assets/icons/plus-circle-fill.svg";
 import LOCALIZE from "../../localization/generated";
 import { TimelineTemplate } from "../util/timeline-template.component";
+import type { WebWriterTimelineEventWidget } from "./webwriter-timeline-event.widget";
 
 @localized()
 export class TimelineContainer extends LitElementWw {
@@ -54,10 +55,21 @@ export class TimelineContainer extends LitElementWw {
     @state()
     private accessor noEvents: boolean = false;
 
-    protected firstUpdated(_changedProperties: PropertyValues): void {
-        this.noEvents = this.slotRef.value?.assignedElements({ flatten: true }).length === 0;
+    private updateNoEvents() {
+        let currentEvents = this.slotRef.value?.assignedElements({ flatten: true });
+        // Since incomplete events are not rendered when not in edit view,
+        // we need to not consider them when checking if there are any events at all.
+        if (currentEvents && !this.isContentEditable) {
+            currentEvents = currentEvents
+                .filter((el) => el.tagName === "WEBWRITER-TIMELINE-EVENT")
+                .filter((event: WebWriterTimelineEventWidget) => !event.isIncomplete);
+        }
+        this.noEvents = (currentEvents?.length ?? 0) === 0;
     }
 
+    protected firstUpdated(_changedProperties: PropertyValues): void {
+        this.updateNoEvents();
+    }
     addEvent() {
         // Since the slot containing the timeline events is managed by the parent widget,
         // we need to dispatch an event to notify the parent to add a new event.
@@ -67,12 +79,7 @@ export class TimelineContainer extends LitElementWw {
     render() {
         return html`<timeline-template>
             ${this.noEvents ? html`<div class="no-events">${msg("No events")}</div>` : nothing}
-            <slot
-                ${ref(this.slotRef)}
-                @slotchange=${(e: Event) => {
-                    this.noEvents = (e.target as HTMLSlotElement).assignedElements({ flatten: true }).length === 0;
-                }}
-            ></slot>
+            <slot ${ref(this.slotRef)} @slotchange=${() => this.updateNoEvents()}></slot>
             ${this.isInEditView
                 ? html`<div class="add-event">
                       <sl-icon src=${PlusCircleFillIcon}></sl-icon>

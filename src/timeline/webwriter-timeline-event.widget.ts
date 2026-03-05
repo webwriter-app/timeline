@@ -196,12 +196,15 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
         }
     }
 
-    render() {
-        const isValid = this.date && !this.titleEmpty;
+    get isIncomplete() {
+        return this.titleEmpty || !this.date;
+    }
 
+    render() {
         // Do not render invalid events when not in edit view
         // However, we still need to mount the slot to be able to observe changes
-        if (!isValid && !this.isInEditView) return html`<slot @slotchange=${this.onSlotChange} class="hide"></slot>`;
+        if (!this.isInEditView && this.isIncomplete)
+            return html`<slot @slotchange=${this.onSlotChange} class="hide"></slot>`;
 
         return html`
             <div class="dot" ${ref(this.dotElement)}></div>
@@ -240,7 +243,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                               ></date-input>`
                         : nothing}
                     <span class="spacer"></span>
-                    ${!isValid
+                    ${this.isIncomplete
                         ? html`<sl-tooltip content=${msg("An event requires a date and a title")} placement="bottom">
                               <sl-icon src=${ExclamationCircleIcon}></sl-icon>
                           </sl-tooltip>`
