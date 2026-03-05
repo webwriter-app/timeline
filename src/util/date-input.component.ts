@@ -173,7 +173,7 @@ export class DateInput extends LitElementWw {
             }
         }
 
-        if (_changedProperties.has("internalValue")) {
+        if (_changedProperties.has("internalValue") || _changedProperties.has("placeholder")) {
             this.resizeInput();
         }
     }
