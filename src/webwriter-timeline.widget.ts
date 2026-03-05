@@ -85,14 +85,18 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private updateEventsForQuiz() {
         this.eventsForQuiz = Array.from(this.children)
-            .filter((c) => c instanceof HTMLElement && c.tagName === "WEBWRITER-TIMELINE-EVENT")
+            .filter((child) => {
+                if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") return false;
+                const event = child as WebWriterTimelineEventWidget;
+                const titleElement = event.querySelector("webwriter-timeline-event-title");
+                return event.date && titleElement && titleElement.textContent.trim() !== "";
+            })
             .map((event: WebWriterTimelineEventWidget) => ({
                 id: event.id,
                 titleHtml: event.querySelector("webwriter-timeline-event-title").innerHTML.trim(),
                 date: event.date,
                 endDate: event.endDate,
-            }))
-            .filter((event) => event.date && event.titleHtml);
+            }));
     }
 
     private addEvent(event: CustomEvent) {
