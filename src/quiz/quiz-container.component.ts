@@ -152,7 +152,6 @@ export class QuizContainer extends LitElementWw {
     accessor checkAnswers: boolean = false;
 
     protected update(changedProperties: PropertyValues): void {
-        super.update(changedProperties);
         if (changedProperties.has("events")) {
             // Remove assignments for events that no longer exist
             const eventIds = new Set(this.events.map((e) => e.id));
@@ -165,9 +164,8 @@ export class QuizContainer extends LitElementWw {
                     this.assignments.splice(randomIndex, 0, { id: event.id, assignedToId: null });
                 }
             }
-
-            this.requestUpdate();
         }
+        super.update(changedProperties);
     }
 
     private resetAssignments() {

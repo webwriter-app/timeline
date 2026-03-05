@@ -24,7 +24,7 @@ export class TimelineTemplate extends LitElementWw {
         .line {
             position: absolute;
             top: 0;
-            bottom: 0;
+            bottom: var(--line-width);
             left: calc((var(--line-container-width) - var(--line-width)) / 2);
             width: var(--line-width);
 
@@ -43,7 +43,7 @@ export class TimelineTemplate extends LitElementWw {
             height: var(--size);
 
             right: calc(var(--line-width) / 2);
-            bottom: 0;
+            bottom: calc(var(--line-width) * -1);
             transform-origin: bottom right;
             transform: rotate(45deg);
 

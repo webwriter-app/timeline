@@ -26,15 +26,15 @@
       </trans-unit>
       <trans-unit id="s9cb70d37f84f7c24">
         <source>No events available for this quiz.</source>
-        <target>Für dieses Quiz sind keine Veranstaltungen verfügbar.</target>
+        <target>Keine Ereignisse für dieses Quiz verfügbar.</target>
       </trans-unit>
       <trans-unit id="s1b14eab64a60306b">
         <source>No events</source>
-        <target>Keine Veranstaltungen</target>
+        <target>Keine Ereignisse</target>
       </trans-unit>
       <trans-unit id="s1a445bc371e19b14">
         <source>Add Event</source>
-        <target>Veranstaltung hinzufügen</target>
+        <target>Ereignis hinzufügen</target>
       </trans-unit>
       <trans-unit id="s39f5885d883e91d9">
         <source>Invalid year</source>
@@ -54,7 +54,7 @@
       </trans-unit>
       <trans-unit id="s1e1a1d080e3b4053">
         <source>Invalid format</source>
-        <target>Ungültiges Format</target>
+        <target>Ungültiges Datumsformat</target>
       </trans-unit>
       <trans-unit id="se0baa9b7fb0768e4">
         <source>Invalid date</source>
@@ -70,15 +70,15 @@
       </trans-unit>
       <trans-unit id="sb971373f2f92a03f">
         <source>An event requires a date and a title</source>
-        <target>Eine Veranstaltung erfordert ein Datum und einen Titel.</target>
+        <target>Ein Ereignis erfordert ein Datum und einen Titel.</target>
       </trans-unit>
       <trans-unit id="scc342eb1f2b3826a">
         <source>Delete event</source>
-        <target>Veranstaltung löschen</target>
+        <target>Ereignis löschen</target>
       </trans-unit>
       <trans-unit id="s1c417ec19e8605bf">
         <source>Which panels will be visible to readers</source>
-        <target>Welche Panels werden für die Leser sichtbar sein?</target>
+        <target>Welche Panels für die Leser sichtbar sein werden</target>
       </trans-unit>
       <trans-unit id="s782f69ab5dd839e0">
         <source>Timeline and Quiz</source>

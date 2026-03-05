@@ -85,14 +85,18 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private updateEventsForQuiz() {
         this.eventsForQuiz = Array.from(this.children)
-            .filter((c) => c instanceof HTMLElement && c.tagName === "WEBWRITER-TIMELINE-EVENT")
+            .filter((child) => {
+                if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") return false;
+                const event = child as WebWriterTimelineEventWidget;
+                const titleElement = event.querySelector("webwriter-timeline-event-title");
+                return event.date && titleElement && titleElement.textContent.trim() !== "";
+            })
             .map((event: WebWriterTimelineEventWidget) => ({
                 id: event.id,
                 titleHtml: event.querySelector("webwriter-timeline-event-title").innerHTML.trim(),
                 date: event.date,
                 endDate: event.endDate,
-            }))
-            .filter((event) => event.date && event.titleHtml);
+            }));
     }
 
     private addEvent(event: CustomEvent) {
@@ -149,16 +153,24 @@ export class WebWriterTimelineWidget extends LitElementWw {
     }
 
     private Options() {
+        // Shoelace's radio group only syncs the value to the checked state of the radio buttons if <sl-radio> is
+        // defined inside the global customElements registry, see
+        // https://github.com/shoelace-style/shoelace/blob/v2.20.1/src/components/radio-group/radio-group.component.ts#L238
+        // Since we are using scoped elements, we need to manually set the checked state of the radio buttons
+        const PanelRadioOption = (value: string, label: string) =>
+            html`<sl-radio value=${value} .checked=${this.enabledPanels === value}>${label}</sl-radio>`;
+
         return html`<aside part="options">
             <sl-radio-group
-                value=${this.enabledPanels}
+                .value=${this.enabledPanels}
                 @sl-change=${(e: CustomEvent) =>
                     (this.enabledPanels = (e.target as SlRadioGroup).value as "timeline" | "quiz" | "timeline+quiz")}
                 help-text=${msg("Which panels will be visible to readers")}
             >
-                <sl-radio value="timeline+quiz">${msg("Timeline and Quiz")}</sl-radio>
-                <sl-radio value="timeline">${msg("Timeline only")}</sl-radio>
-                <sl-radio value="quiz">${msg("Quiz only")}</sl-radio>
+                <!-- prettier-ignore -->
+                ${PanelRadioOption("timeline+quiz", msg("Timeline and Quiz"))}
+                ${PanelRadioOption("timeline", msg("Timeline only"))}
+				${PanelRadioOption("quiz", msg("Quiz only"))}
             </sl-radio-group>
         </aside>`;
     }
