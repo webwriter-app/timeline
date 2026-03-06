@@ -3,12 +3,12 @@ import SlIconButton from "@shoelace-style/shoelace/dist/components/icon-button/i
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.component.js";
 import { LitElementWw } from "@webwriter/lit";
+import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
+import TrashIcon from "bootstrap-icons/icons/trash.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import ExclamationCircleIcon from "../../assets/icons/exclamation-circle.svg";
-import TrashIcon from "../../assets/icons/trash.svg";
 import LOCALIZE from "../../localization/generated";
 import { DateInput } from "../util/date-input.component";
 import { TimelineDate, timelineDateConverter } from "../util/timeline-date";

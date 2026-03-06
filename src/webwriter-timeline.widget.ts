@@ -8,10 +8,10 @@ import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-p
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import { LitElementWw } from "@webwriter/lit";
+import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import EyeSlash from "../assets/icons/eye-slash.svg";
 import LOCALIZE from "../localization/generated";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
@@ -193,7 +193,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private PanelIcon(panelName: string) {
         if (!this.enabledPanels.includes(panelName)) {
-            return html`<sl-icon src=${EyeSlash} label=${msg("(disabled)")}></sl-icon>`;
+            return html`<sl-icon src=${EyeSlashIcon} label=${msg("(disabled)")}></sl-icon>`;
         } else {
             return nothing;
         }

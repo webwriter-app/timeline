@@ -41,6 +41,7 @@
         "@lit/localize": "^0.12.2",
         "@shoelace-style/shoelace": "^2.20.1",
         "@webwriter/lit": "^2",
+        "bootstrap-icons": "^1.13.1",
         "lit": "^3"
     },
     "devDependencies": {
