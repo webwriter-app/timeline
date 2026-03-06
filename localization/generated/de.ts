@@ -24,7 +24,7 @@
 's355b21b89ce5d9c5': `Details`,
 's39f5885d883e91d9': `Ungültiges Jahr`,
 's45156c13b0fb3494': `Quiz`,
-'s6431645dad89d68e': `Ordnen Sie die Ereignisse den richtigen Daten zu, indem Sie sie per Drag &amp; Drop auf die Zeitleiste ziehen.`,
+'s6431645dad89d68e': `Ordnen Sie die Ereignisse den richtigen Daten zu, indem Sie sie per Drag und Drop auf die Zeitleiste ziehen.`,
 's680fc90489553ed6': `Zeitleiste`,
 's782f69ab5dd839e0': `Zeitleiste und Quiz`,
 's7d775183a3896b44': `Nur Zeitleiste`,
