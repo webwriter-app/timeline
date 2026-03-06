@@ -52,8 +52,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             margin: 0 auto;
             margin-top: 9px;
 
-            height: 0.5em;
-            aspect-ratio: 1 / 1;
+            height: 10px;
+            width: 10px;
 
             border-radius: 50%;
             background-color: black;
@@ -96,6 +96,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
 
         sl-icon {
             margin: auto;
+            color: var(--sl-color-neutral-600);
         }
 
         sl-icon-button::part(base) {
