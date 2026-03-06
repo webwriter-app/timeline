@@ -59,7 +59,7 @@ export class TimelineContainer extends LitElementWw {
         let currentEvents = this.slotRef.value?.assignedElements({ flatten: true });
         // Since incomplete events are not rendered when not in edit view,
         // we need to not consider them when checking if there are any events at all.
-        if (currentEvents && !this.isContentEditable) {
+        if (currentEvents && !this.isInEditView) {
             currentEvents = currentEvents
                 .filter((el) => el.tagName === "WEBWRITER-TIMELINE-EVENT")
                 .filter((event: WebWriterTimelineEventWidget) => !event.isIncomplete);
