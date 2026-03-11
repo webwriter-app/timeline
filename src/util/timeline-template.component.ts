@@ -12,13 +12,13 @@ export class TimelineTemplate extends LitElementWw {
 
             display: grid;
             grid-template-columns: var(--line-container-width) 1fr;
-            gap: 10px var(--line-spacing);
+            gap: var(--sl-spacing-small) var(--line-spacing);
 
             position: relative; /* For positioning the line */
 
             box-sizing: border-box;
             padding-top: var(--sl-spacing-x-small);
-            padding-bottom: 15px;
+            padding-bottom: var(--sl-spacing-medium);
         }
 
         .line {

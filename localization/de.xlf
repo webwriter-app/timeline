@@ -2,7 +2,10 @@
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="de">
     <body>
       <trans-unit id="h84e1bc2032e6a3ca">
-        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+        <source>You got 
+          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of 
+          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.
+        </source>
         <target>Du hast 
           <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> aus 
           <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> Ereignisse richtig.
@@ -14,7 +17,7 @@
       </trans-unit>
       <trans-unit id="s6431645dad89d68e">
         <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
-        <target>Ordnen Sie die Ereignisse den richtigen Daten zu, indem Sie sie per Drag & Drop auf die Zeitleiste ziehen.</target>
+        <target>Ordnen Sie die Ereignisse den richtigen Daten zu, indem Sie per Drag-and-Drop auf die Zeitleiste ziehen.</target>
       </trans-unit>
       <trans-unit id="s8ae42ce9d674b6ce">
         <source>Submit answers</source>
@@ -23,14 +26,6 @@
       <trans-unit id="s255857544a9d5ec0">
         <source>Reset</source>
         <target>Zurücksetzen</target>
-      </trans-unit>
-      <trans-unit id="s9cb70d37f84f7c24">
-        <source>No events available for this quiz.</source>
-        <target>Keine Ereignisse für dieses Quiz verfügbar.</target>
-      </trans-unit>
-      <trans-unit id="s1b14eab64a60306b">
-        <source>No events</source>
-        <target>Keine Ereignisse</target>
       </trans-unit>
       <trans-unit id="s1a445bc371e19b14">
         <source>Add Event</source>
@@ -111,6 +106,14 @@
       <trans-unit id="s99f110d27e30b289">
         <source>Title</source>
         <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="sfab2185e1bcd629a">
+        <source>Add an event in the timeline to try the quiz.</source>
+        <target>Fügen Sie ein Ereignis in der Zeitleiste hinzu, um das Quiz auszuprobieren.</target>
+      </trans-unit>
+      <trans-unit id="s7a4a4ef6339fe2bb">
+        <source>Timeline is empty.</source>
+        <target>Die Zeitleiste ist leer.</target>
       </trans-unit>
     </body>
   </file>

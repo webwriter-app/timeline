@@ -8,16 +8,16 @@ import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-p
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import { LitElementWw } from "@webwriter/lit";
+import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
+import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import EyeSlash from "../assets/icons/eye-slash.svg";
 import LOCALIZE from "../localization/generated";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
 import { TimelineDate } from "./util/timeline-date";
-
 /**
  * Displays a timeline with events and a quiz based on those events.
  *
@@ -63,6 +63,12 @@ export class WebWriterTimelineWidget extends LitElementWw {
         .hide {
             display: none;
         }
+
+        .timeline-empty {
+            display: flex;
+            gap: var(--sl-spacing-small);
+            align-items: center;
+        }
     `;
 
     private get isInEditView() {
@@ -81,7 +87,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
     accessor enabledPanels: "timeline" | "quiz" | "timeline+quiz" = "timeline+quiz";
 
     @state()
-    private accessor eventsForQuiz: QuizEvent[] = [];
+    private accessor eventsForQuiz: QuizEvent[] | null = null;
 
     private updateEventsForQuiz() {
         this.eventsForQuiz = Array.from(this.children)
@@ -176,7 +182,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
     }
 
     private Quiz() {
-        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz}></quiz-container>`;
+        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz || []}></quiz-container>`;
     }
 
     private Timeline() {
@@ -193,18 +199,26 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private PanelIcon(panelName: string) {
         if (!this.enabledPanels.includes(panelName)) {
-            return html`<sl-icon src=${EyeSlash} label=${msg("(disabled)")}></sl-icon>`;
+            return html`<sl-icon src=${EyeSlashIcon} label=${msg("(disabled)")}></sl-icon>`;
         } else {
             return nothing;
         }
     }
 
     private TabGroup() {
-        if (!this.isInEditView && this.enabledPanels !== "timeline+quiz") {
+        if (!this.isInEditView) {
+            // During reader view, display a warning if there are no events instead of showing a empty timeline or quiz,
+            // as this is likely a mistake by the author.
+            if (this.eventsForQuiz?.length === 0) {
+                return html`<div class="timeline-empty">
+                    <sl-icon src=${ExclamationCircleIcon}></sl-icon>
+                    ${msg("Timeline is empty.")}
+                </div>`;
+            }
+
             if (this.enabledPanels === "timeline") {
                 return this.Timeline();
-            }
-            if (this.enabledPanels === "quiz") {
+            } else if (this.enabledPanels === "quiz") {
                 // We still need to mount the slot to get a list of events for the quiz
                 return html`<slot class="hide" @slotchange=${() => this.updateEventsForQuiz()}></slot>${this.Quiz()}`;
             }
