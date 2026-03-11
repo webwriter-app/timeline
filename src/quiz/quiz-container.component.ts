@@ -43,10 +43,8 @@ export class QuizContainer extends LitElementWw {
 
         .empty-quiz {
             grid-column: 1 / -1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 5em;
+            padding: var(--sl-spacing-x-small);
+            padding-left: 1.5rem;
             color: var(--sl-color-neutral-500);
         }
 
@@ -308,7 +306,7 @@ export class QuizContainer extends LitElementWw {
 
     render() {
         if (this.events.length === 0) {
-            return html`<div class="empty-quiz">${msg("No events available for this quiz.")}</div>`;
+            return html`<div class="empty-quiz">${msg("Add an event in the timeline to try the quiz.")}</div>`;
         }
 
         return html`${this.UnassignedEventsContainer()}${this.AssignedEventsTimeline()}`;

@@ -2,7 +2,10 @@
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="zh-Hant">
     <body>
       <trans-unit id="h84e1bc2032e6a3ca">
-        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+        <source>You got 
+          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of 
+          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.
+        </source>
         <target>你獲得了 
           <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> 脫離 
           <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> 事件正確。
@@ -23,14 +26,6 @@
       <trans-unit id="s255857544a9d5ec0">
         <source>Reset</source>
         <target>重置</target>
-      </trans-unit>
-      <trans-unit id="s9cb70d37f84f7c24">
-        <source>No events available for this quiz.</source>
-        <target>此測驗暫無可用活動。</target>
-      </trans-unit>
-      <trans-unit id="s1b14eab64a60306b">
-        <source>No events</source>
-        <target>無活動</target>
       </trans-unit>
       <trans-unit id="s1a445bc371e19b14">
         <source>Add Event</source>
@@ -111,6 +106,14 @@
       <trans-unit id="s99f110d27e30b289">
         <source>Title</source>
         <target>標題</target>
+      </trans-unit>
+      <trans-unit id="sfab2185e1bcd629a">
+        <source>Add an event in the timeline to try the quiz.</source>
+        <target>在時間軸中新增一個事件來嘗試測驗。</target>
+      </trans-unit>
+      <trans-unit id="s7a4a4ef6339fe2bb">
+        <source>Timeline is empty.</source>
+        <target>時間軸為空。</target>
       </trans-unit>
     </body>
   </file>

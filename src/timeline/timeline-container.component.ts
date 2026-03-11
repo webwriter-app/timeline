@@ -4,11 +4,10 @@ import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component
 import { LitElementWw } from "@webwriter/lit";
 import PlusCircleFillIcon from "bootstrap-icons/icons/plus-circle-fill.svg";
 import { css, html, nothing, PropertyValues } from "lit";
-import { property, state } from "lit/decorators.js";
+import { property } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
 import LOCALIZE from "../../localization/generated";
 import { TimelineTemplate } from "../util/timeline-template.component";
-import type { WebWriterTimelineEventWidget } from "./webwriter-timeline-event.widget";
 
 @localized()
 export class TimelineContainer extends LitElementWw {
@@ -52,24 +51,20 @@ export class TimelineContainer extends LitElementWw {
     accessor isInEditView: boolean = true;
 
     private slotRef = createRef<HTMLSlotElement>();
-    @state()
-    private accessor noEvents: boolean = false;
 
-    private updateNoEvents() {
-        let currentEvents = this.slotRef.value?.assignedElements({ flatten: true });
-        // Since incomplete events are not rendered when not in edit view,
-        // we need to not consider them when checking if there are any events at all.
-        if (currentEvents && !this.isInEditView) {
-            currentEvents = currentEvents
-                .filter((el) => el.tagName === "WEBWRITER-TIMELINE-EVENT")
-                .filter((event: WebWriterTimelineEventWidget) => !event.isIncomplete);
+    private ensurePlaceholderEvent() {
+        if (!this.isInEditView) return;
+
+        // During editing, ensure that is always a placeholder event that the user can edit
+        if (this.slotRef.value?.assignedElements({ flatten: true }).length == 0) {
+            this.addEvent();
         }
-        this.noEvents = (currentEvents?.length ?? 0) === 0;
     }
 
     protected firstUpdated(_changedProperties: PropertyValues): void {
-        this.updateNoEvents();
+        this.ensurePlaceholderEvent();
     }
+
     addEvent() {
         // Since the slot containing the timeline events is managed by the parent widget,
         // we need to dispatch an event to notify the parent to add a new event.
@@ -78,8 +73,7 @@ export class TimelineContainer extends LitElementWw {
 
     render() {
         return html`<timeline-template>
-            ${this.noEvents ? html`<div class="no-events">${msg("No events")}</div>` : nothing}
-            <slot ${ref(this.slotRef)} @slotchange=${() => this.updateNoEvents()}></slot>
+            <slot ${ref(this.slotRef)} @slotchange=${() => this.ensurePlaceholderEvent()}></slot>
             ${this.isInEditView
                 ? html`<div class="add-event">
                       <sl-icon src=${PlusCircleFillIcon}></sl-icon>
