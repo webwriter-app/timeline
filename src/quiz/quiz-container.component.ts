@@ -100,6 +100,9 @@ export class QuizContainer extends LitElementWw {
 
         .buttons {
             margin-top: var(--sl-spacing-small);
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--sl-spacing-x-small);
         }
 
         .results-container {
