@@ -43,12 +43,15 @@ export class WebWriterTimelineEventDetailsWidget extends LitElementWw {
     @state()
     private accessor isEmpty = false;
 
-    private observedElement: HTMLElement = null;
+    private observedElement: HTMLElement | null = null;
     private mutationObserver = new MutationObserver(() => {
-        let empty = this.observedElement.childNodes.length === 0;
+        const observedElement = this.observedElement;
+        if (!observedElement) return;
+
+        let empty = observedElement.childNodes.length === 0;
         // If the only child is a trailing break, consider it empty
-        if (this.observedElement.children.length === 1) {
-            const child = this.observedElement.children[0];
+        if (observedElement.children.length === 1) {
+            const child = observedElement.children[0];
             empty = child.tagName === "BR" && child.classList.contains("ProseMirror-trailingBreak");
         }
         this.isEmpty = empty;
