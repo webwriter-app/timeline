@@ -23,6 +23,9 @@ type QuizDragState = {
     pointerId: number;
     startPageX: number;
     startPageY: number;
+    clientX: number;
+    clientY: number;
+    maxPageScrollY: number;
     dropTarget: HTMLElement | null;
 };
 
@@ -37,6 +40,8 @@ export class QuizContainer extends LitElementWw {
 
     private static readonly DROP_TRANSITION_DURATION = 200; //ms
     private static readonly DROP_TRANSITION_EASING = "cubic-bezier(0.2, 0, 0, 1)";
+    private static readonly AUTO_SCROLL_EDGE_SIZE = 80; //px
+    private static readonly AUTO_SCROLL_STEP = 12; //px/frame
 
     /** @internal */
     static scopedElements = {
@@ -312,9 +317,54 @@ export class QuizContainer extends LitElementWw {
 
     private dragState: QuizDragState | null = null;
     private isTransitioning = false;
+    private dragFrame: number | null = null;
 
-    private getDropTargetFromEvent(event: PointerEvent): HTMLElement | null {
-        return this.shadowRoot!.elementFromPoint(event.clientX, event.clientY)?.closest("[data-drop-target]") ?? null;
+    private getDropTargetAt(clientX: number, clientY: number): HTMLElement | null {
+        return this.shadowRoot!.elementFromPoint(clientX, clientY)?.closest("[data-drop-target]") ?? null;
+    }
+
+    private requestDragFrame() {
+        if (this.dragFrame === null) this.dragFrame = requestAnimationFrame(() => this.runDragFrame());
+    }
+
+    private runDragFrame() {
+        this.dragFrame = null;
+        const dragState = this.dragState;
+        if (!dragState) return;
+
+        const edgeSize = Math.min(QuizContainer.AUTO_SCROLL_EDGE_SIZE, window.innerHeight / 2);
+        const scrollDirection =
+            dragState.clientY < edgeSize ? -1 : dragState.clientY > window.innerHeight - edgeSize ? 1 : 0;
+        const scrollingElement = document.scrollingElement ?? document.documentElement;
+        const currentScrollY = scrollingElement.scrollTop;
+        const nextScrollY = Math.min(
+            dragState.maxPageScrollY,
+            Math.max(0, currentScrollY + scrollDirection * QuizContainer.AUTO_SCROLL_STEP),
+        );
+        scrollingElement.scrollTop = nextScrollY;
+
+        const deltaX = dragState.clientX + window.scrollX - dragState.startPageX;
+        const deltaY = dragState.clientY + window.scrollY - dragState.startPageY;
+        dragState.element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+        const dropTarget = this.getDropTargetAt(dragState.clientX, dragState.clientY);
+        if (dropTarget !== dragState.dropTarget) {
+            dragState.dropTarget?.classList.remove("drag-over");
+            dropTarget?.classList.add("drag-over");
+            dragState.dropTarget = dropTarget;
+        }
+
+        if (scrollDirection !== 0 && nextScrollY !== currentScrollY) this.requestDragFrame();
+    }
+
+    private stopDragFrame() {
+        if (this.dragFrame !== null) cancelAnimationFrame(this.dragFrame);
+        this.dragFrame = null;
+    }
+
+    disconnectedCallback(): void {
+        this.stopDragFrame();
+        super.disconnectedCallback();
     }
 
     private onPointerDown(event: PointerEvent) {
@@ -327,11 +377,16 @@ export class QuizContainer extends LitElementWw {
         eventCard.setPointerCapture(event.pointerId);
 
         eventCard.classList.add("dragging");
+        const scrollingElement = document.scrollingElement ?? document.documentElement;
         this.dragState = {
             pointerId: event.pointerId,
             element: eventCard as HTMLElement,
-            startPageX: event.clientX + document.documentElement.scrollLeft,
-            startPageY: event.clientY + document.documentElement.scrollTop,
+            startPageX: event.clientX + window.scrollX,
+            startPageY: event.clientY + window.scrollY,
+            clientX: event.clientX,
+            clientY: event.clientY,
+            // Capture this before the transform can add overflow to the document.
+            maxPageScrollY: Math.max(0, scrollingElement.scrollHeight - scrollingElement.clientHeight),
             dropTarget: null,
         };
     }
@@ -340,17 +395,9 @@ export class QuizContainer extends LitElementWw {
         if (event.pointerId !== this.dragState?.pointerId) return;
         event.preventDefault();
 
-        const { element, startPageX, startPageY } = this.dragState;
-        const deltaX = event.clientX + document.documentElement.scrollLeft - startPageX;
-        const deltaY = event.clientY + document.documentElement.scrollTop - startPageY;
-        element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-
-        const dropTarget = this.getDropTargetFromEvent(event);
-        if (dropTarget !== this.dragState.dropTarget) {
-            if (this.dragState.dropTarget) this.dragState.dropTarget.classList.remove("drag-over");
-            if (dropTarget) dropTarget.classList.add("drag-over");
-        }
-        this.dragState.dropTarget = dropTarget;
+        this.dragState.clientX = event.clientX;
+        this.dragState.clientY = event.clientY;
+        this.requestDragFrame();
     }
 
     private prefersReducedMotion() {
@@ -436,7 +483,8 @@ export class QuizContainer extends LitElementWw {
 
         const dragState = this.dragState;
         this.dragState = null;
-        const dropTarget = event.type === "pointerup" ? this.getDropTargetFromEvent(event) : null;
+        this.stopDragFrame();
+        const dropTarget = event.type === "pointerup" ? this.getDropTargetAt(event.clientX, event.clientY) : null;
         if (dragState.dropTarget) dragState.dropTarget.classList.remove("drag-over");
         if (dragState.element.hasPointerCapture(event.pointerId))
             dragState.element.releasePointerCapture(event.pointerId);
