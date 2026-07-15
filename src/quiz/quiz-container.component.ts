@@ -21,14 +21,22 @@ export type QuizEvent = {
 type QuizDragState = {
     element: HTMLElement;
     pointerId: number;
-    startX: number;
-    startY: number;
+    startPageX: number;
+    startPageY: number;
     dropTarget: HTMLElement | null;
+};
+
+type QuizTransitionSnapshot = {
+    cardRects: Map<string, DOMRect>;
+    containerHeights: Map<string, number>;
 };
 
 @localized()
 export class QuizContainer extends LitElementWw {
     protected localize = LOCALIZE;
+
+    private static readonly DROP_TRANSITION_DURATION = 200; //ms
+    private static readonly DROP_TRANSITION_EASING = "cubic-bezier(0.2, 0, 0, 1)";
 
     /** @internal */
     static scopedElements = {
@@ -56,9 +64,37 @@ export class QuizContainer extends LitElementWw {
             display: flex;
             flex-direction: column;
             padding: var(--sl-spacing-small) 0;
-            gap: var(--sl-spacing-small);
             height: 100%;
             box-sizing: border-box;
+        }
+
+        .event-cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--sl-spacing-small);
+            width: 100%;
+            min-height: 0;
+            box-sizing: border-box;
+        }
+
+        .event-slot > .event-cards-container {
+            display: grid;
+
+            > .card-base {
+                grid-area: 1 / 1;
+            }
+
+            > .card-event {
+                position: relative;
+            }
+        }
+
+        .unassigned-events-container > .event-cards-container:not(:empty) {
+            padding-bottom: var(--sl-spacing-small);
+        }
+
+        .buttons {
+            margin-top: var(--sl-spacing-small);
         }
 
         .results-container {
@@ -84,6 +120,11 @@ export class QuizContainer extends LitElementWw {
             transition:
                 var(--sl-transition-fast) border-color,
                 var(--sl-transition-fast) background-color;
+
+            .event-slot.drag-over & {
+                background-color: var(--sl-color-neutral-100);
+                border-color: var(--sl-color-neutral-300);
+            }
 
             &.card-correct {
                 border-color: var(--sl-color-success-500);
@@ -137,6 +178,10 @@ export class QuizContainer extends LitElementWw {
             /* Ensures that the dot is above the timeline line */
             position: relative;
             z-index: 1;
+        }
+
+        .event-slot:not(:last-child) {
+            padding-bottom: var(--sl-spacing-small);
         }
 
         .help-text {
@@ -195,6 +240,10 @@ export class QuizContainer extends LitElementWw {
         return html`<div class="${cardClasses}" data-event-id="${event.id}">${unsafeHTML(event.titleHtml)}</div>`;
     }
 
+    private EventCardsContainer(containerId: string, cards: unknown) {
+        return html`<div class="event-cards-container" data-event-container-id=${containerId}>${cards}</div>`;
+    }
+
     private ResultsContainer() {
         const total = this.assignments.length;
         const correct = this.assignments.filter((a) => a.assignedToId === a.id).length;
@@ -221,7 +270,7 @@ export class QuizContainer extends LitElementWw {
             });
 
         return html`<div class="unassigned-events-container" data-drop-target>
-            ${cards}
+            ${this.EventCardsContainer("unassigned", cards)}
 
             <div class="help-text">
                 ${msg("Match the events to their correct dates by dragging and dropping them onto the timeline.")}
@@ -247,9 +296,13 @@ export class QuizContainer extends LitElementWw {
                         ${event.date.toLocalizedString(this.lang || "en-US")}
                         ${event.endDate ? `- ${event.endDate.toLocalizedString(this.lang || "en-US")}` : nothing}
                     </div>
-                    ${assignedEvent
-                        ? this.EventCard(assignedEvent, assignedToThis?.id === assignedToThis?.assignedToId)
-                        : html`<div class="card-base card-placeholder"></div>`}
+                    ${this.EventCardsContainer(
+                        `slot:${event.id}`,
+                        html`<div class="card-base card-placeholder"></div>
+                            ${assignedEvent
+                                ? this.EventCard(assignedEvent, assignedToThis?.id === assignedToThis?.assignedToId)
+                                : nothing}`,
+                    )}
                 </div>
             `;
         });
@@ -258,12 +311,15 @@ export class QuizContainer extends LitElementWw {
     }
 
     private dragState: QuizDragState | null = null;
+    private isTransitioning = false;
 
     private getDropTargetFromEvent(event: PointerEvent): HTMLElement | null {
         return this.shadowRoot!.elementFromPoint(event.clientX, event.clientY)?.closest("[data-drop-target]") ?? null;
     }
 
     private onPointerDown(event: PointerEvent) {
+        if (this.isTransitioning || this.checkAnswers || this.dragState) return;
+
         const eventCard = (event.target as HTMLElement).closest?.(".card-event");
         if (!eventCard) return;
 
@@ -274,8 +330,8 @@ export class QuizContainer extends LitElementWw {
         this.dragState = {
             pointerId: event.pointerId,
             element: eventCard as HTMLElement,
-            startX: event.clientX + document.documentElement.scrollLeft,
-            startY: event.clientY + document.documentElement.scrollTop,
+            startPageX: event.clientX + document.documentElement.scrollLeft,
+            startPageY: event.clientY + document.documentElement.scrollTop,
             dropTarget: null,
         };
     }
@@ -284,9 +340,9 @@ export class QuizContainer extends LitElementWw {
         if (event.pointerId !== this.dragState?.pointerId) return;
         event.preventDefault();
 
-        const { element, startX, startY } = this.dragState;
-        const deltaX = event.clientX + document.documentElement.scrollLeft - startX;
-        const deltaY = event.clientY + document.documentElement.scrollTop - startY;
+        const { element, startPageX, startPageY } = this.dragState;
+        const deltaX = event.clientX + document.documentElement.scrollLeft - startPageX;
+        const deltaY = event.clientY + document.documentElement.scrollTop - startPageY;
         element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
 
         const dropTarget = this.getDropTargetFromEvent(event);
@@ -297,31 +353,130 @@ export class QuizContainer extends LitElementWw {
         this.dragState.dropTarget = dropTarget;
     }
 
-    private onPointerEnd(event: PointerEvent) {
-        if (event.pointerId !== this.dragState?.pointerId) return;
+    private prefersReducedMotion() {
+        return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
 
-        const dropTarget = this.getDropTargetFromEvent(event);
-        if (dropTarget) {
-            const dragEventId = this.dragState.element.dataset.eventId;
-            const dragAssignment = this.assignments.find((a) => a.id === dragEventId);
-            if (dropTarget.classList.contains("unassigned-events-container") && dragAssignment) {
-                dragAssignment.assignedToId = null;
-                this.requestUpdate();
+    private resetCardTransition(card: HTMLElement) {
+        card.style.transform = "";
+        card.classList.remove("dragging");
+    }
+
+    private captureTransitionSnapshot(): QuizTransitionSnapshot {
+        const cardRects = new Map<string, DOMRect>();
+        const containerHeights = new Map<string, number>();
+
+        for (const card of this.shadowRoot!.querySelectorAll<HTMLElement>(".card-event")) {
+            const eventId = card.dataset.eventId;
+            if (eventId) cardRects.set(eventId, card.getBoundingClientRect());
+        }
+        for (const container of this.shadowRoot!.querySelectorAll<HTMLElement>(".event-cards-container")) {
+            const containerId = container.dataset.eventContainerId;
+            if (containerId) containerHeights.set(containerId, container.getBoundingClientRect().height);
+        }
+
+        return { cardRects, containerHeights };
+    }
+
+    private async playReleaseTransition(snapshot: QuizTransitionSnapshot, releasedEventId: string | undefined) {
+        await this.updateComplete;
+        if (!this.isConnected) return;
+
+        const cards = Array.from(this.shadowRoot!.querySelectorAll<HTMLElement>(".card-event"));
+        const containers = Array.from(this.shadowRoot!.querySelectorAll<HTMLElement>(".event-cards-container"));
+        for (const card of cards) card.classList.toggle("dragging", card.dataset.eventId === releasedEventId);
+
+        const animationOptions: KeyframeAnimationOptions = {
+            duration: QuizContainer.DROP_TRANSITION_DURATION,
+            easing: QuizContainer.DROP_TRANSITION_EASING,
+        };
+        const animations: Animation[] = [];
+
+        if (!this.prefersReducedMotion()) {
+            for (const container of containers) {
+                const containerId = container.dataset.eventContainerId;
+                const firstHeight = containerId ? snapshot.containerHeights.get(containerId) : undefined;
+                const finalHeight = container.getBoundingClientRect().height;
+                if (firstHeight === undefined || Math.abs(firstHeight - finalHeight) < 0.5) continue;
+
+                animations.push(
+                    container.animate(
+                        [{ height: `${firstHeight}px` }, { height: `${finalHeight}px` }],
+                        animationOptions,
+                    ),
+                );
             }
-            if (dropTarget.classList.contains("event-slot") && dragAssignment) {
-                const slotEventId = this.events[Number(dropTarget.dataset.eventIndex)].id;
-                const slotCurrentAssignment = this.assignments.find((a) => a.assignedToId === slotEventId);
-                if (slotCurrentAssignment) slotCurrentAssignment.assignedToId = dragAssignment.assignedToId;
 
-                dragAssignment.assignedToId = slotEventId;
-                this.requestUpdate();
+            for (const card of cards) {
+                const eventId = card.dataset.eventId;
+                const firstRect = eventId ? snapshot.cardRects.get(eventId) : undefined;
+                if (!firstRect) continue;
+
+                const currentRect = card.getBoundingClientRect();
+                const deltaX = firstRect.left - currentRect.left;
+                const deltaY = firstRect.top - currentRect.top;
+                if (Math.abs(deltaX) < 0.5 && Math.abs(deltaY) < 0.5) continue;
+
+                animations.push(
+                    card.animate(
+                        [{ transform: `translate(${deltaX}px, ${deltaY}px)` }, { transform: "none" }],
+                        animationOptions,
+                    ),
+                );
             }
         }
 
-        this.dragState.element.classList.remove("dragging");
-        this.dragState.element.style.transform = "";
-        if (this.dragState.dropTarget) this.dragState.dropTarget.classList.remove("drag-over");
+        await Promise.all(animations.map((animation) => animation.finished.catch(() => {})));
+
+        for (const card of cards) this.resetCardTransition(card);
+    }
+
+    private async onPointerEnd(event: PointerEvent) {
+        if (event.pointerId !== this.dragState?.pointerId) return;
+
+        const dragState = this.dragState;
         this.dragState = null;
+        const dropTarget = event.type === "pointerup" ? this.getDropTargetFromEvent(event) : null;
+        if (dragState.dropTarget) dragState.dropTarget.classList.remove("drag-over");
+        if (dragState.element.hasPointerCapture(event.pointerId))
+            dragState.element.releasePointerCapture(event.pointerId);
+
+        const dragEventId = dragState.element.dataset.eventId;
+        const dragAssignment = this.assignments.find((assignment) => assignment.id === dragEventId);
+        let assignmentChanged = false;
+        let applyAssignment = () => {};
+
+        if (dropTarget?.classList.contains("unassigned-events-container") && dragAssignment) {
+            assignmentChanged = dragAssignment.assignedToId !== null;
+            applyAssignment = () => (dragAssignment.assignedToId = null);
+        } else if (dropTarget?.classList.contains("event-slot") && dragAssignment) {
+            const slotEventId = this.events[Number(dropTarget.dataset.eventIndex)]?.id;
+            if (slotEventId && dragAssignment.assignedToId !== slotEventId) {
+                const previousSlotEventId = dragAssignment.assignedToId;
+                const slotCurrentAssignment = this.assignments.find(
+                    (assignment) => assignment.assignedToId === slotEventId,
+                );
+                assignmentChanged = true;
+                applyAssignment = () => {
+                    if (slotCurrentAssignment) slotCurrentAssignment.assignedToId = previousSlotEventId;
+                    dragAssignment.assignedToId = slotEventId;
+                };
+            }
+        }
+
+        const snapshot = this.captureTransitionSnapshot();
+        dragState.element.style.transform = "";
+        this.isTransitioning = true;
+        try {
+            if (assignmentChanged) {
+                applyAssignment();
+                this.requestUpdate();
+            }
+            await this.playReleaseTransition(snapshot, dragEventId);
+        } finally {
+            this.resetCardTransition(dragState.element);
+            this.isTransitioning = false;
+        }
     }
 
     render() {
