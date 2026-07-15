@@ -60,6 +60,11 @@ export class WebWriterTimelineWidget extends LitElementWw {
             padding: 0;
         }
 
+        sl-tab-group::part(body) {
+            /* Required for the drag-and-drop interaction in the quiz panel */
+            overflow: visible;
+        }
+
         .hide {
             display: none;
         }

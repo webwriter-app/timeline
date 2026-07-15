@@ -5,6 +5,7 @@ import { LitElementWw } from "@webwriter/lit";
 import { css, PropertyValues } from "lit";
 import { html, nothing } from "lit-html";
 import { property, state } from "lit/decorators.js";
+import { classMap } from "lit/directives/class-map.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
 import LOCALIZE from "../../localization/generated";
 import { TimelineDate } from "../util/timeline-date";
@@ -17,13 +18,17 @@ export type QuizEvent = {
     endDate: TimelineDate | null;
 };
 
+type QuizDragState = {
+    element: HTMLElement;
+    pointerId: number;
+    startX: number;
+    startY: number;
+    dropTarget: HTMLElement | null;
+};
+
 @localized()
 export class QuizContainer extends LitElementWw {
     protected localize = LOCALIZE;
-
-    // We cannot use a custom application/x- MIME type here because
-    // mobile browsers do not support them in drag-and-drop operations.
-    private static DRAG_DATA_TYPE = "text/plain";
 
     /** @internal */
     static scopedElements = {
@@ -33,7 +38,7 @@ export class QuizContainer extends LitElementWw {
     };
 
     static styles = css`
-        :host {
+        .quiz-container {
             width: 100%;
             display: grid;
             grid-template-columns: calc(50% - 1em) auto;
@@ -42,7 +47,6 @@ export class QuizContainer extends LitElementWw {
         }
 
         .empty-quiz {
-            grid-column: 1 / -1;
             padding: var(--sl-spacing-x-small);
             padding-left: 1.5rem;
             color: var(--sl-color-neutral-500);
@@ -91,13 +95,14 @@ export class QuizContainer extends LitElementWw {
                 background-color: var(--sl-color-danger-50);
             }
 
-            &[draggable="true"] {
+            .quiz-active & {
                 cursor: grab;
-            }
+                touch-action: none;
 
-            &[draggable="true"]:hover {
-                border-color: var(--sl-color-primary-300);
-                background-color: var(--sl-color-primary-50);
+                &:hover {
+                    border-color: var(--sl-color-primary-300);
+                    background-color: var(--sl-color-primary-50);
+                }
             }
         }
 
@@ -138,6 +143,12 @@ export class QuizContainer extends LitElementWw {
             font-size: var(--sl-font-size-small);
             color: var(--sl-color-neutral-500);
         }
+
+        .dragging {
+            z-index: 1000;
+            pointer-events: none;
+            cursor: grabbing !important;
+        }
     `;
 
     @property({ type: Array, attribute: true })
@@ -174,10 +185,6 @@ export class QuizContainer extends LitElementWw {
         this.requestUpdate();
     }
 
-    private extractEventIdFromDragEvent(e: DragEvent): string | null {
-        return e.dataTransfer?.getData(QuizContainer.DRAG_DATA_TYPE) ?? null;
-    }
-
     private EventCard(event: QuizEvent, correct?: boolean) {
         let cardClasses = "card-base card-event";
         if (this.checkAnswers && correct !== undefined) {
@@ -185,16 +192,7 @@ export class QuizContainer extends LitElementWw {
             else cardClasses += " card-incorrect";
         }
 
-        return html`<div
-            class="${cardClasses}"
-            draggable=${this.checkAnswers === false}
-            @dragstart=${(e: DragEvent) => {
-                e.dataTransfer?.setData(QuizContainer.DRAG_DATA_TYPE, event.id);
-                e.dataTransfer!.effectAllowed = "move";
-            }}
-        >
-            ${unsafeHTML(event.titleHtml)}
-        </div>`;
+        return html`<div class="${cardClasses}" data-event-id="${event.id}">${unsafeHTML(event.titleHtml)}</div>`;
     }
 
     private ResultsContainer() {
@@ -222,19 +220,7 @@ export class QuizContainer extends LitElementWw {
                 return this.EventCard(event);
             });
 
-        return html`<div
-            class="unassigned-events-container"
-            @dragover=${(e: DragEvent) => e.preventDefault()}
-            @drop=${(e: DragEvent) => {
-                e.preventDefault();
-                const eventId = this.extractEventIdFromDragEvent(e);
-                if (eventId) {
-                    const assignment = this.assignments.find((a) => a.id === eventId);
-                    assignment!.assignedToId = null;
-                    this.requestUpdate();
-                }
-            }}
-        >
+        return html`<div class="unassigned-events-container" data-drop-target>
             ${cards}
 
             <div class="help-text">
@@ -250,52 +236,19 @@ export class QuizContainer extends LitElementWw {
     }
 
     private AssignedEventsTimeline() {
-        const eventSlots = this.events.map((event) => {
+        const eventSlots = this.events.map((event, index) => {
             const assignedToThis = this.assignments.find((a) => a.assignedToId === event.id);
             const assignedEvent = this.events.find((e) => e.id === assignedToThis?.id) ?? null;
 
-            // Track how many "nested" dragenter events are active to avoid removing
-            // the drag-over class too early
-            let dragCounter = 0;
-
             return html`
                 <div class="dot"></div>
-                <div
-                    @dragenter=${(e: DragEvent) => {
-                        (e.currentTarget as HTMLElement).classList.add("drag-over");
-                        dragCounter++;
-                    }}
-                    @dragover=${(e: DragEvent) => {
-                        e.preventDefault();
-                        e.dataTransfer!.dropEffect = "move";
-                    }}
-                    @dragleave=${(e: DragEvent) => {
-                        dragCounter--;
-                        if (dragCounter === 0) (e.currentTarget as HTMLElement).classList.remove("drag-over");
-                    }}
-                    @drop=${(e: DragEvent) => {
-                        e.preventDefault();
-                        (e.currentTarget as HTMLElement).classList.remove("drag-over");
-                        dragCounter = 0;
-
-                        const eventId = this.extractEventIdFromDragEvent(e);
-                        if (eventId) {
-                            // If a different event was assigned here, unassign it
-                            if (assignedToThis) assignedToThis.assignedToId = null;
-
-                            // Assign the dropped event to this slot
-                            const assignment = this.assignments.find((a) => a.id === eventId);
-                            assignment!.assignedToId = event.id;
-                            this.requestUpdate();
-                        }
-                    }}
-                >
+                <div class="event-slot" data-drop-target data-event-index="${index}">
                     <div>
                         ${event.date.toLocalizedString(this.lang || "en-US")}
                         ${event.endDate ? `- ${event.endDate.toLocalizedString(this.lang || "en-US")}` : nothing}
                     </div>
                     ${assignedEvent
-                        ? this.EventCard(assignedEvent, assignedToThis.id === assignedToThis.assignedToId)
+                        ? this.EventCard(assignedEvent, assignedToThis?.id === assignedToThis?.assignedToId)
                         : html`<div class="card-base card-placeholder"></div>`}
                 </div>
             `;
@@ -304,11 +257,89 @@ export class QuizContainer extends LitElementWw {
         return html`<timeline-template>${eventSlots}</timeline-template>`;
     }
 
+    private dragState: QuizDragState | null = null;
+
+    private getDropTargetFromEvent(event: PointerEvent): HTMLElement | null {
+        return this.shadowRoot!.elementFromPoint(event.clientX, event.clientY)?.closest("[data-drop-target]") ?? null;
+    }
+
+    private onPointerDown(event: PointerEvent) {
+        const eventCard = (event.target as HTMLElement).closest?.(".card-event");
+        if (!eventCard) return;
+
+        event.preventDefault();
+        eventCard.setPointerCapture(event.pointerId);
+
+        eventCard.classList.add("dragging");
+        this.dragState = {
+            pointerId: event.pointerId,
+            element: eventCard as HTMLElement,
+            startX: event.clientX + document.documentElement.scrollLeft,
+            startY: event.clientY + document.documentElement.scrollTop,
+            dropTarget: null,
+        };
+    }
+
+    private onPointerMove(event: PointerEvent) {
+        if (event.pointerId !== this.dragState?.pointerId) return;
+        event.preventDefault();
+
+        const { element, startX, startY } = this.dragState;
+        const deltaX = event.clientX + document.documentElement.scrollLeft - startX;
+        const deltaY = event.clientY + document.documentElement.scrollTop - startY;
+        element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+
+        const dropTarget = this.getDropTargetFromEvent(event);
+        if (dropTarget !== this.dragState.dropTarget) {
+            if (this.dragState.dropTarget) this.dragState.dropTarget.classList.remove("drag-over");
+            if (dropTarget) dropTarget.classList.add("drag-over");
+        }
+        this.dragState.dropTarget = dropTarget;
+    }
+
+    private onPointerEnd(event: PointerEvent) {
+        if (event.pointerId !== this.dragState?.pointerId) return;
+
+        const dropTarget = this.getDropTargetFromEvent(event);
+        if (dropTarget) {
+            const dragEventId = this.dragState.element.dataset.eventId;
+            const dragAssignment = this.assignments.find((a) => a.id === dragEventId);
+            if (dropTarget.classList.contains("unassigned-events-container") && dragAssignment) {
+                dragAssignment.assignedToId = null;
+                this.requestUpdate();
+            }
+            if (dropTarget.classList.contains("event-slot") && dragAssignment) {
+                const slotEventId = this.events[Number(dropTarget.dataset.eventIndex)].id;
+                const slotCurrentAssignment = this.assignments.find((a) => a.assignedToId === slotEventId);
+                if (slotCurrentAssignment) slotCurrentAssignment.assignedToId = dragAssignment.assignedToId;
+
+                dragAssignment.assignedToId = slotEventId;
+                this.requestUpdate();
+            }
+        }
+
+        this.dragState.element.classList.remove("dragging");
+        this.dragState.element.style.transform = "";
+        if (this.dragState.dropTarget) this.dragState.dropTarget.classList.remove("drag-over");
+        this.dragState = null;
+    }
+
     render() {
         if (this.events.length === 0) {
             return html`<div class="empty-quiz">${msg("Add an event in the timeline to try the quiz.")}</div>`;
         }
 
-        return html`${this.UnassignedEventsContainer()}${this.AssignedEventsTimeline()}`;
+        return html`<div
+            class=${classMap({
+                "quiz-container": true,
+                "quiz-active": !this.checkAnswers,
+            })}
+            @pointerdown=${this.onPointerDown}
+            @pointermove=${this.onPointerMove}
+            @pointerup=${this.onPointerEnd}
+            @pointercancel=${this.onPointerEnd}
+        >
+            ${this.UnassignedEventsContainer()} ${this.AssignedEventsTimeline()}
+        </div>`;
     }
 }
