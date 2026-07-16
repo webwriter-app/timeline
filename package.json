@@ -1,6 +1,6 @@
 {
     "name": "@webwriter/timeline",
-    "version": "2.0.4",
+    "version": "2.1.0",
     "description": "Create/learn with a digital timeline and test your knowledge.",
     "repository": "github:@webwriter-app/timeline",
     "keywords": [
@@ -47,7 +47,8 @@
     },
     "devDependencies": {
         "@lit/localize-tools": "^0.8",
-        "prettier": "^3.6.2"
+        "prettier": "^3.6.2",
+        "typescript": "^6.0.3"
     },
     "exports": {
         "./widgets/webwriter-timeline.*": {

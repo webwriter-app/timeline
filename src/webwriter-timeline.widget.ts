@@ -60,6 +60,11 @@ export class WebWriterTimelineWidget extends LitElementWw {
             padding: 0;
         }
 
+        sl-tab-group::part(body) {
+            /* Required for the drag-and-drop interaction in the quiz panel */
+            overflow: visible;
+        }
+
         .hide {
             display: none;
         }
@@ -90,19 +95,22 @@ export class WebWriterTimelineWidget extends LitElementWw {
     private accessor eventsForQuiz: QuizEvent[] | null = null;
 
     private updateEventsForQuiz() {
-        this.eventsForQuiz = Array.from(this.children)
-            .filter((child) => {
-                if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") return false;
-                const event = child as WebWriterTimelineEventWidget;
-                const titleElement = event.querySelector("webwriter-timeline-event-title");
-                return event.date && titleElement && titleElement.textContent.trim() !== "";
-            })
-            .map((event: WebWriterTimelineEventWidget) => ({
+        const eventsForQuiz: QuizEvent[] = [];
+        for (const child of this.children) {
+            if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") continue;
+
+            const event = child as WebWriterTimelineEventWidget;
+            const titleElement = event.querySelector<HTMLElement>("webwriter-timeline-event-title");
+            if (!event.date || !titleElement || titleElement.textContent.trim() === "") continue;
+
+            eventsForQuiz.push({
                 id: event.id,
-                titleHtml: event.querySelector("webwriter-timeline-event-title").innerHTML.trim(),
+                titleHtml: titleElement.innerHTML.trim(),
                 date: event.date,
                 endDate: event.endDate,
-            }));
+            });
+        }
+        this.eventsForQuiz = eventsForQuiz;
     }
 
     private addEvent(event: CustomEvent) {
@@ -116,25 +124,28 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
         // When the date of an event changes, we need to reorder the events.
         const target = event.target as WebWriterTimelineEventWidget;
+        const targetDate = target.date;
 
         let oldPos = Array.from(this.children).indexOf(target);
         let inserted = false;
 
-        for (const child of this.children) {
-            if ("date" in child && child.date) {
-                // Move the target before the first event with a date greater than the target's date
-                // (i.e. at the end of all events with a date less than or equal to the target's date)
-                if (target.date.compare(child.date as TimelineDate) < 0) {
+        if (targetDate) {
+            for (const child of this.children) {
+                if ("date" in child && child.date) {
+                    // Move the target before the first event with a date greater than the target's date
+                    // (i.e. at the end of all events with a date less than or equal to the target's date)
+                    if (targetDate.compare(child.date as TimelineDate) < 0) {
+                        this.insertBefore(target, child);
+                        inserted = true;
+                        break;
+                    }
+                } else {
+                    // Once we reach an event without a date, we can insert the target before it
+                    // as all previous events have a date less than or equal to the target's date
                     this.insertBefore(target, child);
                     inserted = true;
                     break;
                 }
-            } else {
-                // Once we reach an event without a date, we can insert the target before it
-                // as all previous events have a date less than or equal to the target's date
-                this.insertBefore(target, child);
-                inserted = true;
-                break;
             }
         }
         // If no event was found with a date greater than the target's date, append it to the end

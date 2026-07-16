@@ -23,6 +23,7 @@ export class DateInput extends LitElementWw {
             padding: 0;
             font: inherit;
             outline: none;
+            field-sizing: content;
         }
 
         input:disabled {
@@ -35,22 +36,9 @@ export class DateInput extends LitElementWw {
         input::placeholder {
             color: var(--sl-color-gray-500);
         }
-
-        /* Use an invisible span to measure the length of the text */
-        span {
-            position: absolute;
-            left: 0;
-            opacity: 0;
-            z-index: -1;
-
-            /* Prevent wrapping and ensure spaces are counted */
-            white-space: pre;
-        }
     `;
 
-    private measureElement = createRef<HTMLSpanElement>();
     private inputElement = createRef<HTMLInputElement>();
-    private resizeObserver?: ResizeObserver;
 
     @property({
         type: TimelineDate,
@@ -143,22 +131,6 @@ export class DateInput extends LitElementWw {
         }
     }
 
-    private resizeInput() {
-        if (!this.inputElement.value || !this.measureElement.value) return;
-        this.inputElement.value.style.width = `${this.measureElement.value.offsetWidth + 1}px`;
-    }
-
-    connectedCallback(): void {
-        super.connectedCallback();
-        this.resizeObserver = new ResizeObserver(() => this.resizeInput());
-        this.resizeObserver.observe(this);
-    }
-
-    disconnectedCallback(): void {
-        this.resizeObserver?.disconnect();
-        super.disconnectedCallback();
-    }
-
     protected updated(_changedProperties: PropertyValues): void {
         if (_changedProperties.has("value") || _changedProperties.has("lang")) {
             this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
@@ -172,28 +144,23 @@ export class DateInput extends LitElementWw {
                 this.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
             }
         }
-
-        if (_changedProperties.has("internalValue") || _changedProperties.has("placeholder")) {
-            this.resizeInput();
-        }
     }
 
     render() {
-        return html`<span ${ref(this.measureElement)}>${this.internalValue || this.placeholder}</span
-            ><input
-                ${ref(this.inputElement)}
-                type="text"
-                placeholder=${this.placeholder}
-                .value=${this.internalValue}
-                ?disabled=${this.disabled}
-                @focus=${this.onInputFocus}
-                @input=${(e: Event) => {
-                    this.internalValue = (e.target as HTMLInputElement).value;
-                    // Required, otherwise the validation popup would re-appear on every keystroke
-                    this.inputElement.value?.setCustomValidity("");
-                }}
-                @keydown=${this.onInputKeydown}
-                @blur=${this.onInputBlur}
-            />`;
+        return html`<input
+            ${ref(this.inputElement)}
+            type="text"
+            placeholder=${this.placeholder}
+            .value=${this.internalValue}
+            ?disabled=${this.disabled}
+            @focus=${this.onInputFocus}
+            @input=${(e: Event) => {
+                this.internalValue = (e.target as HTMLInputElement).value;
+                // Required, otherwise the validation popup would re-appear on every keystroke
+                this.inputElement.value?.setCustomValidity("");
+            }}
+            @keydown=${this.onInputKeydown}
+            @blur=${this.onInputBlur}
+        />`;
     }
 }

@@ -150,7 +150,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
     @state()
     private accessor titleEmpty: boolean = true;
 
-    private titleElement = null;
+    private titleElement: Element | null = null;
     private titleMutationObserver = new MutationObserver(() => this.checkIfTitleIsEmpty());
 
     private checkIfTitleIsEmpty() {
@@ -159,9 +159,10 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
 
     private onSlotChange(event: Event) {
         this.titleMutationObserver.disconnect();
-        this.titleElement = (event.target as HTMLSlotElement)
-            .assignedElements()
-            .find((e) => e.tagName === "WEBWRITER-TIMELINE-EVENT-TITLE");
+        this.titleElement =
+            (event.target as HTMLSlotElement)
+                .assignedElements()
+                .find((e) => e.tagName === "WEBWRITER-TIMELINE-EVENT-TITLE") ?? null;
 
         if (this.titleElement) {
             this.checkIfTitleIsEmpty();
@@ -189,7 +190,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
     protected firstUpdated(_changedProperties: PropertyValues): void {
         // Check if either date attribute is not yet obfuscated
         // If so, set it to a clone to force an update which will obfuscate the attribute value
-        if (this.date && !this.getAttribute("date").startsWith("$")) {
+        if (this.date && !this.getAttribute("date")?.startsWith("$")) {
             this.date = this.date.clone();
         }
         if (this.endDate && !this.getAttribute("enddate")?.startsWith("$")) {

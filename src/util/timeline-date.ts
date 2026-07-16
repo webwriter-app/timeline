@@ -191,10 +191,7 @@ export class TimelineDate {
     }
 }
 
-/**
- *
- */
-export const timelineDateConverter: ComplexAttributeConverter<TimelineDate> = {
+export const timelineDateConverter: ComplexAttributeConverter<TimelineDate | null> = {
     fromAttribute(value: string | null): TimelineDate | null {
         try {
             if (!value) return null;
