@@ -157,7 +157,8 @@ export class QuizContainer extends LitElementWw {
 
         .card-placeholder {
             background-color: var(--sl-color-neutral-100);
-            height: calc(1.5em + (var(--sl-spacing-x-small) + 1px) * 2);
+            min-height: calc(1.5em + (var(--sl-spacing-x-small) + 1px) * 2);
+            height: 100%;
             transition: var(--sl-transition-fast) background-color;
 
             .drag-over & {
@@ -307,9 +308,11 @@ export class QuizContainer extends LitElementWw {
                     ${this.EventCardsContainer(
                         `slot:${event.id}`,
                         html`<div class="card-base card-placeholder"></div>
-                            ${assignedEvent
-                                ? this.EventCard(assignedEvent, assignedToThis?.id === assignedToThis?.assignedToId)
-                                : nothing}`,
+                            ${
+                                assignedEvent
+                                    ? this.EventCard(assignedEvent, assignedToThis?.id === assignedToThis?.assignedToId)
+                                    : nothing
+                            }`,
                     )}
                 </div>
             `;
