@@ -148,7 +148,14 @@ export class QuizContainer extends LitElementWw {
                 cursor: grab;
                 touch-action: none;
 
-                &:hover {
+                @media (hover: hover) {
+                    &:hover {
+                        border-color: var(--sl-color-primary-300);
+                        background-color: var(--sl-color-primary-50);
+                    }
+                }
+
+                &.dragging {
                     border-color: var(--sl-color-primary-300);
                     background-color: var(--sl-color-primary-50);
                 }
