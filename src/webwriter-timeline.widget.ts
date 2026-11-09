@@ -10,9 +10,9 @@ import "@shoelace-style/shoelace/dist/themes/light.css";
 import { LitElementWw } from "@webwriter/lit";
 import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
 import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
-import { css, html, nothing, PropertyValues } from "lit";
+import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-import { createRef, ref } from "lit/directives/ref.js";
+import { ref } from "lit/directives/ref.js";
 import LOCALIZE from "../localization/generated";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
@@ -80,8 +80,6 @@ export class WebWriterTimelineWidget extends LitElementWw {
         return this.contentEditable === "true" || this.contentEditable === "";
     }
 
-    private tabGroupRef = createRef<SlTabGroup>();
-
     /**
      * Which panels are enabled for the reader:
      * - "timeline": only the timeline panel
@@ -92,15 +90,50 @@ export class WebWriterTimelineWidget extends LitElementWw {
     accessor enabledPanels: "timeline" | "quiz" | "timeline+quiz" = "timeline+quiz";
 
     @state()
-    private accessor eventsForQuiz: QuizEvent[] | null = null;
+    private accessor eventsForQuiz: QuizEvent[] = [];
+
+    private eventsObserver = new MutationObserver((records) => {
+        if (
+            records.some(
+                ({ target }) =>
+                    target === this ||
+                    target.parentElement === this ||
+                    (target instanceof Element ? target : target.parentElement)?.closest(
+                        "webwriter-timeline-event-title",
+                    ),
+            )
+        ) {
+            this.updateEventsForQuiz();
+        }
+    });
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.eventsObserver.observe(this, { childList: true, subtree: true, characterData: true, attributes: true });
+        this.updateEventsForQuiz();
+    }
+
+    disconnectedCallback() {
+        this.eventsObserver.disconnect();
+        super.disconnectedCallback();
+    }
+
+    protected firstUpdated() {
+        // WebWriter loads the event widget separately from the timeline.
+        customElements.whenDefined("webwriter-timeline-event").then(() => {
+            if (this.isConnected) this.updateEventsForQuiz();
+        });
+    }
 
     private updateEventsForQuiz() {
+        if (!customElements.get("webwriter-timeline-event")) return;
+
         const eventsForQuiz: QuizEvent[] = [];
         for (const child of this.children) {
             if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") continue;
 
             const event = child as WebWriterTimelineEventWidget;
-            const titleElement = event.querySelector<HTMLElement>("webwriter-timeline-event-title");
+            const titleElement = event.querySelector(":scope > webwriter-timeline-event-title");
             if (!event.date || !titleElement || titleElement.textContent.trim() === "") continue;
 
             eventsForQuiz.push({
@@ -163,10 +196,12 @@ export class WebWriterTimelineWidget extends LitElementWw {
         }
     }
 
-    protected firstUpdated(_changedProperties: PropertyValues): void {
-        // It is not entirely clear why this is necessary, but without this,
-        // no tab is selected when the widget is first rendered in export mode.
-        this.tabGroupRef.value?.updateComplete.then(() => this.tabGroupRef.value?.show("timeline"));
+    private initTabGroup(element?: Element) {
+        const tabs = element as SlTabGroup | undefined;
+        // Select the first tab whenever the tab group is mounted, including after an empty state.
+        tabs?.updateComplete.then(() => {
+            if (tabs.isConnected) tabs.show("timeline");
+        });
     }
 
     private Options() {
@@ -193,7 +228,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
     }
 
     private Quiz() {
-        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz || []}></quiz-container>`;
+        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz}></quiz-container>`;
     }
 
     private Timeline() {
@@ -202,7 +237,6 @@ export class WebWriterTimelineWidget extends LitElementWw {
             ?edit-view=${this.isInEditView}
             @add-event=${this.addEvent}
             @date-changed=${this.dateChanged}
-            @slotchange=${() => this.updateEventsForQuiz()}
         >
             <slot></slot>
         </timeline-container>`;
@@ -218,31 +252,24 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private TabGroup() {
         if (!this.isInEditView) {
-            // During reader view, display a warning if there are no events instead of showing a empty timeline or quiz,
-            // as this is likely a mistake by the author.
-            if (this.eventsForQuiz?.length === 0) {
-                return html`<div class="timeline-empty">
-                    <sl-icon src=${ExclamationCircleIcon}></sl-icon>
-                    ${msg("Timeline is empty.")}
-                </div>`;
+            const isEmpty = this.eventsForQuiz.length === 0;
+            if (isEmpty || this.enabledPanels === "quiz") {
+                // Keep authored events slotted when the timeline itself is hidden.
+                const content = isEmpty
+                    ? html`<div class="timeline-empty">
+                          <sl-icon src=${ExclamationCircleIcon}></sl-icon>
+                          ${msg("Timeline is empty.")}
+                      </div>`
+                    : this.Quiz();
+                return html`<slot class="hide"></slot>${content}`;
             }
 
             if (this.enabledPanels === "timeline") {
                 return this.Timeline();
-            } else if (this.enabledPanels === "quiz") {
-                // We still need to mount the slot to get a list of events for the quiz
-                return html`<slot class="hide" @slotchange=${() => this.updateEventsForQuiz()}></slot>${this.Quiz()}`;
             }
         }
 
-        return html`<sl-tab-group
-            ${ref(this.tabGroupRef)}
-            tabindex="0"
-            activation="manual"
-            @sl-tab-show=${(event: CustomEvent) => {
-                if (event.detail.name === "quiz") this.updateEventsForQuiz();
-            }}
-        >
+        return html`<sl-tab-group ${ref(this.initTabGroup)} tabindex="0" activation="manual">
             <sl-tab slot="nav" panel="timeline">${msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
             <sl-tab slot="nav" panel="quiz">${msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
             <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>

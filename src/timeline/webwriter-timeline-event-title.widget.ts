@@ -16,7 +16,9 @@ export class WebWriterTimelineEventTitleWidget extends LitElementWw {
 
     static styles = css`
         :host {
+            display: block;
             font-weight: bold;
+            min-block-size: 1lh;
             position: relative;
             word-break: break-word;
             overflow-wrap: break-word;

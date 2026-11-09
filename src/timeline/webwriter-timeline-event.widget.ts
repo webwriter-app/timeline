@@ -150,24 +150,22 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
     @state()
     private accessor titleEmpty: boolean = true;
 
-    private titleElement: Element | null = null;
     private titleMutationObserver = new MutationObserver(() => this.checkIfTitleIsEmpty());
 
     private checkIfTitleIsEmpty() {
-        this.titleEmpty = this.titleElement?.textContent === "";
+        const title = this.querySelector(":scope > webwriter-timeline-event-title");
+        this.titleEmpty = !title?.textContent.trim();
     }
 
-    private onSlotChange(event: Event) {
-        this.titleMutationObserver.disconnect();
-        this.titleElement =
-            (event.target as HTMLSlotElement)
-                .assignedElements()
-                .find((e) => e.tagName === "WEBWRITER-TIMELINE-EVENT-TITLE") ?? null;
+    connectedCallback() {
+        super.connectedCallback();
+        this.titleMutationObserver.observe(this, { childList: true, subtree: true, characterData: true });
+        this.checkIfTitleIsEmpty();
+    }
 
-        if (this.titleElement) {
-            this.checkIfTitleIsEmpty();
-            this.titleMutationObserver.observe(this.titleElement, { childList: true });
-        }
+    disconnectedCallback() {
+        this.titleMutationObserver.disconnect();
+        super.disconnectedCallback();
     }
 
     /** @internal */
@@ -203,10 +201,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
     }
 
     render() {
-        // Do not render invalid events when not in edit view
-        // However, we still need to mount the slot to be able to observe changes
-        if (!this.isInEditView && this.isIncomplete)
-            return html`<slot @slotchange=${this.onSlotChange} class="hide"></slot>`;
+        // Do not display incomplete events outside edit view.
+        if (!this.isInEditView && this.isIncomplete) return html`<slot class="hide"></slot>`;
 
         return html`
             <div class="dot" ${ref(this.dotElement)}></div>
@@ -258,7 +254,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                           ></sl-icon-button>`
                         : nothing}
                 </div>
-                <slot @slotchange=${this.onSlotChange}></slot>
+                <slot></slot>
             </div>
         `;
     }
