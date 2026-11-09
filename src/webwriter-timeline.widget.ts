@@ -13,7 +13,7 @@ import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
 import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { ref } from "lit/directives/ref.js";
-import LOCALIZE from "../localization/generated";
+import LOCALIZE from "../localization/localizer";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";

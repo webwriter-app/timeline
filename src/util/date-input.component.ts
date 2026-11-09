@@ -3,7 +3,7 @@ import { LitElementWw } from "@webwriter/lit";
 import { css, html, PropertyValues } from "lit";
 import { property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/generated";
+import LOCALIZE from "../../localization/localizer";
 import { TimelineDate, timelineDateConverter } from "./timeline-date";
 
 @localized()

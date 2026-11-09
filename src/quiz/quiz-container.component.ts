@@ -7,7 +7,7 @@ import { html, nothing } from "lit-html";
 import { property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import LOCALIZE from "../../localization/generated";
+import LOCALIZE from "../../localization/localizer";
 import { TimelineDate } from "../util/timeline-date";
 import { TimelineTemplate } from "../util/timeline-template.component";
 

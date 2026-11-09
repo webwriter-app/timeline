@@ -3,7 +3,7 @@ import { LitElementWw } from "@webwriter/lit";
 import { css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
-import LOCALIZE from "../../localization/generated";
+import LOCALIZE from "../../localization/localizer";
 
 /**
  * The title of a `webwriter-timeline-event` element. Should not be used independently.

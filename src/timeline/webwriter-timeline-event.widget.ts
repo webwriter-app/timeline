@@ -9,7 +9,7 @@ import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/generated";
+import LOCALIZE from "../../localization/localizer";
 import { DateInput } from "../util/date-input.component";
 import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
 
