@@ -1,4 +1,5 @@
 import { ComplexAttributeConverter } from "lit";
+import { parseLocale } from "../../localization/localizer";
 
 /**
  * A custom data class to represent a date inside this widget. It supports
@@ -72,7 +73,7 @@ export class TimelineDate {
         options: Pick<Intl.DateTimeFormatOptions, "year" | "month" | "day" | "era"> = {},
     ): string {
         const date = this.toDate();
-        return Intl.DateTimeFormat(locale, {
+        return Intl.DateTimeFormat(parseLocale(locale).toString(), {
             year: options.year ?? "numeric",
             month: this.month !== null ? (options.month ?? "long") : undefined,
             day: this.day !== null ? (options.day ?? "numeric") : undefined,

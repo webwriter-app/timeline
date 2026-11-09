@@ -6,7 +6,7 @@ import PlusCircleFillIcon from "bootstrap-icons/icons/plus-circle-fill.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { property } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/generated";
+import LOCALIZE from "../../localization/localizer";
 import { TimelineTemplate } from "../util/timeline-template.component";
 
 @localized()
