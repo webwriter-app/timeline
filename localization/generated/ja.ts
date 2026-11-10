@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`あなたは 
-          <strong>${0}</strong> イベントを 
-          <strong>${1}</strong> イベントを正しく
-        `,
+      'h84e1bc2032e6a3ca': html`<strong>${1}</strong>件中<strong>${0}</strong>件の出来事を正しく対応させました。`,
 's07c0dacf93b42c9a': `無効な日`,
 's1a445bc371e19b14': `イベントを追加`,
 's1d449f9f444e532a': `終了日`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `詳細`,
 's39f5885d883e91d9': `無効な年`,
 's45156c13b0fb3494': `クイズ`,
+'s611e0cdb06b46c98': `表示するパネル`,
 's6431645dad89d68e': `イベントを正しい日付に一致させるには、タイムライン上にドラッグ＆ドロップしてください。`,
 's680fc90489553ed6': `タイムライン`,
 's782f69ab5dd839e0': `タイムラインとクイズ`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `無効な日付`,
 'sfab2185e1bcd629a': `タイムラインにイベントを追加してクイズを試してみてください。`,
 'sfe03165961812f36': `クイズのみ`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

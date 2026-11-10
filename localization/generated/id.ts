@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Anda mendapatkan 
-          <strong>${0}</strong> dari 
-          <strong>${1}</strong> acara dengan benar.
-        `,
+      'h84e1bc2032e6a3ca': html`Anda menjawab benar untuk <strong>${0}</strong> dari <strong>${1}</strong> peristiwa.`,
 's07c0dacf93b42c9a': `Hari tidak valid`,
 's1a445bc371e19b14': `Tambahkan Acara`,
 's1d449f9f444e532a': `Tanggal akhir`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Rincian`,
 's39f5885d883e91d9': `Tahun tidak valid`,
 's45156c13b0fb3494': `Kuis`,
+'s611e0cdb06b46c98': `Panel yang ditampilkan`,
 's6431645dad89d68e': `Sesuaikan peristiwa dengan tanggal yang benar dengan menyeret dan melepaskannya ke garis waktu.`,
 's680fc90489553ed6': `Jadwal Waktu`,
 's782f69ab5dd839e0': `Jadwal dan Kuis`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Tanggal tidak valid`,
 'sfab2185e1bcd629a': `Tambahkan acara di garis waktu untuk mencoba kuis.`,
 'sfe03165961812f36': `Kuis saja`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

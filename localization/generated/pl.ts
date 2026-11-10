@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Otrzymałeś 
-          <strong>${0}</strong> z 
-          <strong>${1}</strong> wydarzenia prawidłowo.
-        `,
+      'h84e1bc2032e6a3ca': html`Poprawnie wskazano <strong>${0}</strong> z <strong>${1}</strong> wydarzeń.`,
 's07c0dacf93b42c9a': `Nieprawidłowy dzień`,
 's1a445bc371e19b14': `Dodaj wydarzenie`,
 's1d449f9f444e532a': `Data zakończenia`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Szczegóły`,
 's39f5885d883e91d9': `Nieprawidłowy rok`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Widoczne panele`,
 's6431645dad89d68e': `Dopasuj wydarzenia do odpowiednich dat, przeciągając je i upuszczając na osi czasu.`,
 's680fc90489553ed6': `Oś czasu`,
 's782f69ab5dd839e0': `Oś czasu i quiz`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Nieprawidłowa data`,
 'sfab2185e1bcd629a': `Dodaj wydarzenie na osi czasu, aby wypróbować quiz.`,
 'sfe03165961812f36': `Tylko quiz`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

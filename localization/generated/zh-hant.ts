@@ -9,10 +9,7 @@
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`你獲得了\x20
-          <strong>${0}</strong> 脫離\x20
-          <strong>${1}</strong> 事件正確。
-        `,
+      'h84e1bc2032e6a3ca': html`你答對了 <strong>${0}</strong> 個，共 <strong>${1}</strong> 個事件。`,
 's07c0dacf93b42c9a': `無效日期`,
 's1a445bc371e19b14': `新增活動`,
 's1d449f9f444e532a': `結束日期`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `詳情`,
 's39f5885d883e91d9': `無效年份`,
 's45156c13b0fb3494': `測驗`,
+'s611e0cdb06b46c98': `可見面板`,
 's6431645dad89d68e': `將事件拖放至時間軸上，使其與正確日期對應。`,
 's680fc90489553ed6': `時間軸`,
 's782f69ab5dd839e0': `時間軸與測驗`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `無效日期`,
 'sfab2185e1bcd629a': `在時間軸中新增一個事件來嘗試測驗。`,
 'sfe03165961812f36': `測驗`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

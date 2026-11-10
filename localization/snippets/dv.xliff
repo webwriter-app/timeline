@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="dv">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>އޭޑާ ލަވްލޭސް</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>ޕްރޮގްރާމް ލިޔުން އާންމުވުމުގެ ކުރިންވެސް އަންހެނުން ޕްރޮގްރާމް ލިޔަމުންދިޔައެވެ. މިސާލަކީ</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>އޭޑާ ލަވްލޭސް</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: ލޯޑް ބައިރަންގެ ދަރިފުޅެވެ. އޭނާއަކީ ފުރަތަމަ ކޮމްޕިއުޓަރ ޕްރޮގްރާމަރ ކަމަށް ގިނައިން ބެލެވެއެވެ. އޭނާގެ މަސައްކަތަކީ</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>ޗާލްސް ބެބެޖްގެ އެނަލިޓިކަލް އިންޖިން</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>ގެ މައްޗަށް ލިޔުނެކެވެ. އެއިން މެޝިނަކުން ހިންގޭ ފުރަތަމަ އެލްގޮރިދަމްގެ ނޯޓުތައް ފެނެއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>ފުރަތަމަ ކޮމްޕިއުޓަރ</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>«Project PX» ގެ ސިއްރު ނަމުގައި، އެމެރިކާގެ އާމީގެ ފައިސާއިން، ތަފާތު ކަންތައްތަކަށް ބޭނުންކުރެވޭ ފުރަތަމަ ކޮމްޕިއުޓަރ ENIAC ހެދިއެވެ. އެއީ Electronic Numerical Integrator And Computer އެވެ. އެއާދިއްޔަ ހެދީ ޕެންސިލްވޭނިއާ ޔުނިވަރސިޓީގެ Moore School of Electrical Engineering ގައެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… އަދި އެއާދިއްޔަ ހިންގުވި އަންހެނުން</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>ENIAC ގެ ޕްރޮގްރާމަރުންގެ ތެރޭ Jean Bartik، Marlyn Wescoff Meltzer، Ruth Lichterman Teitelbaum، Kay McNulty Mauchly Antonelli، Frances Spence އަދި Frances Elizabeth «Betty» Holberton ހިމެނެއެވެ. މިއީ އާ މަގެއް ހުޅުވި މަސައްކަތެއް ކަމަށް ވިއަސް، އާމީއިން ENIAC ގައި މަސައްކަތްކުރި އަންހެނުންގެ ނަންތައް އާންމުނުކުރިއެވެ. 1985 ގައި Kathy Kleiman އިން އެމީހުންގެ ވާހަކަ ހޯދުމުގެ ކުރިން ގިނަމީހުންނަށް އެމީހުން ހަނދާންނެތުނެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>އީޑިތް ކްލާކް އާދައާ ދެކޮޅުވި</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>އަންހެން ޑޮކްޓަރުން ބޭނުންވާ ފަދައިން، އިންޖިނިއަރުން އަންހެނުން ކަމުގައިވާތީ އެމީހުން ޚާއްސަކޮށް ބޭނުންނުވެއެވެ. އެކަމަކު ރަނގަޅު މަސައްކަތެއް ކުރެވޭ މީހުން އަބަދުވެސް ބޭނުންވެއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>އީޑިތް ކްލާކް، އެމެރިކާގެ ކަރަންޓު އިންޖިނިއަރިންގެ ފުރަތަމަ އަންހެން ޕްރޮފެސަރ</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>ރޯޒާ ޕޭޓަރ، ރިކަރޝަންގެ ޝާއިރާ</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>ހަންގޭރީގައި އުފަން ރޯޒާ ޕޭޓަރ ނަންބަރު ނަޒަރިއްޔާއާއި ޅެން ދަސްކުރިއެވެ. ފަހުން ރިކަރޝަން ނަޒަރިއްޔާއަށް ވެގެންދިޔަ ޚިޔާލަށް އޭނާ ޝައުޤުވެރިވިއެވެ. 1951 ގައި «Recursive Functions» ޝާއިޢުކުރިއަސް، ކޮމްޕިއުޓަރުތަކުގައި މި އިލްމު ބޭނުންކުރަން ފެށީ 1950 ތަކުގެ މެދުގައެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>ގްރޭސް ހޮޕަރ ކޮމްޕައިލަރ ހެދި</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>ނޭވީގައި ރިއަރ އެޑްމިރަލް ގްރޭސް ހޮޕަރ ފުރަތަމަ ވިޔަފާރިގެ ކޮމްޕިއުޓަރ UNIVAC ގައި މަސައްކަތްކުރިއެވެ. COBOL ޕްރޮގްރާމިންގެ ބަހުގެ އަސާސް އެޅުއްވިއެވެ. އޭނާ ހެދި އެންމެ މުހިންމު ތަކެތިއަކީ ކޮމްޕައިލަރ އެވެ. އެއިން އަސްލު ބަސް ބައިނަރީ ކޯޑަށް، އެބަހީ އަހަރެމެން ލިޔާ ކޯޑު 0 އާއި 1 އަށް، ބަދަލުކުރެވެއެވެ. 1952 ގައި އޭނާ އެއާދިއްޔަ ހެދިއެވެ. އޭނާ ބުންޏެވެ: «އެއްވެސް މީހަކު އެއާދިއްޔަ ބޭނުންކުރަން ނުރުހިއެވެ. ކޮމްޕިއުޓަރުން ހިސާބު ހެދުން އެކަނި ކުރެވޭނެކަމަށް ބުނިއެވެ.»</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>ފަޒާ ދިރާސާއަށް ކުރި އެހީ</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>ހިސާބުގައި ޑޮކްޓަރޭޓް ހޯދި ފުރަތަމަ އެފްރިކާ-އެމެރިކާ އަންހެނުންގެ ތެރޭގެ އެވްލިން ބޯއިޑް ގްރެންވިލް ވައި ދަތުރާއި ފަޒާގައި މަސައްކަތްކުރިއެވެ. 1956 ގައި NASA އާއި IBM އާއެކު މީހުން ގެންދާ ފުރަތަމަ ފަޒާ ދަތުރުގެ Project Mercury ގައި މަސައްކަތްކުރިއެވެ. ކުޑަ އަހަރުތަކެއް ފަހުން Project Apollo ގައި NASA އާއެކު އަލުން މަސައްކަތްކުރިއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>ކޮމްޕިއުޓަރ ސައިންސްގެ ފުރަތަމަ ޑޮކްޓަރޭޓް</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>ސިސްޓަރ Mary Kenneth Keller އަކީ ކޮމްޕިއުޓަރ ސައިންސްގައި ޑޮކްޓަރޭޓް ހޯދި ފުރަތަމަ އަންހެނުންގެ ތެރޭގެ މީހެކެވެ. ފުރަތަމަ މީހާއަކީ އޭނާކަމަށްވެސް ވެދާނެއެވެ. Dartmouth College ގައި ހުރި ވަގުތު BASIC ބަސް ހެދުމަށް އެހީވިއެވެ. ފަހުން Clarke College ގައި ކޮމްޕިއުޓަރ ސައިންސް ޑިޕާޓްމެންޓް އުފައްދައި 20 އަހަރު އިސްވެ ހިންގިއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>ކެރެން ސްޕާކް ޖޯންސް ހޯދުން ފަސޭހަކުރި</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>Cambridge Computer Laboratory ގެ ޕްރޮފެސަރ Spärck Jones އާދައިގެ ބަސް ޕްރޮސެސްކުރުމަށާއި މައުލޫމާތު ހޯދުމަށް ޝައުޤުވެރިވިއެވެ. 1972 ގައި ޑޮކިއުމެންޓުތަކުގައި ބަހެއް ފެންނަ ފަހަރުގެ އެނބުރި މިންވަރު ތަޢާރަފުކުރިއެވެ. އަދިވެސް ގިނަ ހޯދާ އިންޖިނުތަކުގައި އެއާދިއްޔަ ބޭނުންކުރެއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>«އިންޓަނެޓުގެ މަންމަ»</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>ރޭޑިއާ ޕަލްމަނަށް «އިންޓަނެޓުގެ މަންމަ» އޭ ގިނައިން ކިޔެއެވެ. އޭނާގެ spanning tree protocol އާއި ގުޅޭ މަސައްކަތުން މިޒަމާނުގެ ނެޓްވޯކުތައް ތަރައްޤީކުރުން ފަސޭހަވިއެވެ. އޭނާގެ ނަމުގައި 100 އަށްވުރެ ގިނަ ޕޭޓެންޓު ހުރިއެވެ. މަންމައިން އެންމެ ރަނގަޅަށް ކުރާ ކަމަކީ މިއެވެ.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>ކުރީގެ އޮލިމްޕިކް ކުޅިވަރު</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>ރަސްމީ ކުޅިވަރުގެ ފުރަތަމަ ލިޔެވުނު ހެކި ލިބެނީ މީލާދުން ކުރިން 776 އަހަރުންނެވެ. އެވަގުތު ގްރީކު މީހުން އޮލިމްޕިކްތަކުގެ ދެމެދުގެ މުއްދަތުން ވަގުތު މިނަން ފެށިއެވެ. ޒޫސް އިލާހަށް ޝަރަފްކުރުމަށް ފުރަތަމަ އޮލިމްޕިކް ކުޅިވަރު ކޮންމެ ހަތަރު އަހަރަކު ބޭއްވިއެވެ. ފަހުން އޮލިމްޕިއާގެ ކުޅިވަރުން ވަކި ޕިތިއަން ނުވަތަ ޑެލްފިކް ކުޅިވަރުގައި މިއުޒިކާއި، ލަވައާއި، ޅެމާއި، ޑްރާމާ ފަދަ ފަންނީ ހަރަކާތްތައް ބޭއްވިއެވެ. ފެށުމުން ފެށިގެން ސަގާފަތާއި ކުޅިވަރު ގުޅިފައިވިއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>އޮލިމްޕިކް ކުޅިވަރު މަނާކުރި</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>393 ގައި ރޫމީ ބަދިޝާ ތިއޮޑޯސިއަސް ފުރަތަމަ ދީނީ ސަބަބަކުން އޮލިމްޕިކް މަނާކުރިއެވެ. އެއިން ބުދުތަކަށް އަޅުކަންކުރުން ބާރުއަޅާކަމަށް ބުނިއެވެ. މިޒަމާނު އައުމުގެ ކުރިން ކުޅިވަރު އަލުން ނުފެށުނެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>ޕެރިސްގައި އޮލިމްޕިކް އަލުން ފެށުނު</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>19 ވަނަ ގަރުނުގެ ފަހުގައި ބައިނަލްއަޤުވާމީ ކުޅިވަރެއް އަލުން ފަށަން ގިނަ މަސައްކަތް ކުރިއެވެ. ދުނިޔޭގެ ކުޅިވަރު ޖަމާއަތްތައް ގުޅިގެން މަސައްކަތްނުކުރާތީ އެއާދިއްޔަ ކާމިޔާބުނުވިއެވެ. ފަހުން މީހަކު މައިގަނޑު ފަރާތްތައް ޕެރިސްގައި ޖަމާކުރަން ނިންމިއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>އެހެންވެ އޮލިމްޕިކް އަލުން ފެށީ Baron Pierre de Coubertin އިން 1894 ޖޫން 16 އިން 23 އަށް ސޯބޯން ޔުނިވަރސިޓީގެ ބޮޑު ހޯލުގައި ބޭއްވި ފުރަތަމަ އޮލިމްޕިކް ކޮންގްރެސްގައެވެ. ދެހާސް މީހުން ބައިވެރިވިއެވެ. ފްރާންސްގެ 24 ކުޅިވަރު ޖަމާއަތާއި ކްލަބުން 58 މަންދޫބުންނާއި، ބެލްޖިއަމް، ބްރިޓަން، ގްރީސް، އަޔަލެންޑް، އިޓަލީ، ރަޝިޔާ، ސްޕެއިން، ސްވީޑަން އަދި އެމެރިކާގެ 13 ކުޅިވަރު ފެޑަރޭޝަނުން 20 މަންދޫބުން އެ ތެރޭގައި ހިމެނުނެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>ޒަމާނީ ފުރަތަމަ އޮލިމްޕިކް</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>ޒަމާނީ ފުރަތަމަ އޮލިމްޕިކް 1896 އޭޕްރީލްގައި އެތެންސްގައި ބޭއްވިއެވެ. އެއީ ކުރީގެ އޮލިމްޕިކް ބޭއްވި ގްރީސްގައެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>އަންހެނުން އޮލިމްޕިކްގައި ފުރަތަމަ ބައިވެރިވި</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>1900 ގައި ދެވަނަ ކުޅިވަރު ޕެރިސްގައި ބޭއްވިއެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>1900 ގައި ޕެރިސް އޮލިމްޕިކްގައި އަންހެނުން ފުރަތަމަ ބައިވެރިވިއެވެ. ފުރަތަމަ އަންހެން ޗެމްޕިއަނަކީ ވިމްބަލްޑަން ފަސްފަހަރު ހޯދި ބްރިޓަންގެ ޓެނިސް ކުޅޭ ޝާލަޓް ކޫޕަރ އެވެ. 997 ކުޅިވަރުތެރިންގެ ތެރޭ 22 މީހުން އަންހެނުންނެވެ. އެމީހުން ބައިވެރިވީ މި ފަސް ކުޅިވަރުގައި އެކަންޏެވެ:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>ޓެނިސް</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>ފަތް އުފުލާ ބޯޓު ދުއްވުން</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>، ކްރޯކޭ،</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>އަސް އެރުމުގެ ކުޅިވަރު</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>އަދި</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>ގޮލްފް</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>ޚާއްސަ އެހީ ބޭނުންވާ ކުޅިވަރުތެރިން ބައިވެރިވި ފުރަތަމަ އޮލިމްޕިކް</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>1904 ގައި މިޒޫރީގެ ސެންޓް ލޫއިސްގައި ބޭއްވި އޮލިމްޕިކަކީ ރަނާއި، ރިހިއާއި، ލޯ މެޑަލް ބެހި ފުރަތަމަ ކުޅިވަރެވެ. އޮލިމްޕިކްގައި ބައިވެރިވި ޚާއްސަ އެހީ ބޭނުންވާ ފުރަތަމަ މީހާކަމަށް އެނގޭ ޖޯޖް އައިސަރުވެސް ބައިވެރިވިއެވެ. ޖިމްނާސްޓިކްސްގައި އޭނާ ހަމެޑަލް ހޯދިއިރު، ތިން މެޑަލަކީ ރަން މެޑަލެވެ.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>ފަސް ބަރުބިމުން ކުޅިވަރުތެރިން ބައިވެރިވި ފުރަތަމަ އޮލިމްޕިކް</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>1912 ސްޓޮކްހޯމް އޮލިމްޕިކަކީ އޮލިމްޕިކް ރިންގުތަކުން ނިޝާންކުރާ ފަސް ބަރުބިމުން ކުޅިވަރުތެރިން ބައިވެރިވި ފުރަތަމަ ކުޅިވަރެވެ. އެ އަހަރު އަންހެނުން ފުރަތަމަ ފެތުމުގެ މުބާރާތްތަކުގައި ބައިވެރިވިއެވެ.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

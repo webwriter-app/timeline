@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Máte 
-          <strong>${0}</strong> z 
-          <strong>${1}</strong> správne.
-        `,
+      'h84e1bc2032e6a3ca': html`Správne ste určili <strong>${0}</strong> z <strong>${1}</strong> udalostí.`,
 's07c0dacf93b42c9a': `Neplatný deň`,
 's1a445bc371e19b14': `Pridať udalosť`,
 's1d449f9f444e532a': `Dátum ukončenia`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Podrobnosti`,
 's39f5885d883e91d9': `Neplatný rok`,
 's45156c13b0fb3494': `Kvíz`,
+'s611e0cdb06b46c98': `Viditeľné panely`,
 's6431645dad89d68e': `Priraďte udalosti k správnym dátumom tak, že ich pretiahnete a umiestnite na časovú os.`,
 's680fc90489553ed6': `Časová os`,
 's782f69ab5dd839e0': `Časová os a kvíz`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Neplatný dátum`,
 'sfab2185e1bcd629a': `Pridajte udalosť do časovej osi a vyskúšajte kvíz.`,
 'sfe03165961812f36': `Len kvíz`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Hai ottenuto 
-          <strong>${0}</strong> esatto 
-          <strong>${1}</strong> gli eventi correttamente.
-        `,
+      'h84e1bc2032e6a3ca': html`Hai risposto correttamente a <strong>${0}</strong> eventi su <strong>${1}</strong>.`,
 's07c0dacf93b42c9a': `Giorno non valido`,
 's1a445bc371e19b14': `Aggiungi evento`,
 's1d449f9f444e532a': `Data di fine`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Dettagli`,
 's39f5885d883e91d9': `Anno non valido`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Pannelli visibili`,
 's6431645dad89d68e': `Abbina gli eventi alle date corrette trascinandoli sulla linea temporale.`,
 's680fc90489553ed6': `Cronologia`,
 's782f69ab5dd839e0': `Cronologia e quiz`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Data non valida`,
 'sfab2185e1bcd629a': `Aggiungi un evento nella timeline per provare il quiz.`,
 'sfe03165961812f36': `Solo quiz`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

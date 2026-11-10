@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="be">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ада Лаўлейс</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>Жанчыны праграмавалі яшчэ да таго, як гэта стала звычайнай справай. Пазнаёмцеся з</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ада Лаўлейс</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: дачкой лорда Байрана, якую часта лічаць першай праграмісткай. Яе праца над</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>Аналітычнай машынай Чарлза Бэбіджа</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>змяшчае нататкі пра першы алгарытм, выкананы машынай.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>Першы камп’ютар</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>Першы камп’ютар агульнага прызначэння з кодавай назвай «Project PX» фінансавала армія ЗША. Электронны лічбавы інтэгратар і камп’ютар (ENIAC) распрацавалі ў школе электратэхнікі Мура пры Пенсільванскім універсітэце.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… І жанчыны, якія прымусілі яго працаваць</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>Сярод праграмістак ENIAC былі Джын Барцік, Марлін Вескаф Мелтцэр, Рут Ліхтэрман Тэйтэлбаўм, Кей Макналці Моклі Антанэлі, Фрэнсіс Спенс і Фрэнсіс Элізабэт «Бэці» Холбертон. Нягледзячы на іх наватарскую працу, армія так і не апублікавала імёны жанчын, і пра іх амаль забыліся, пакуль Кэці Клейман не адкрыла іх гісторыю ў 1985 годзе.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>Эдыт Кларк: насуперак плыні</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>Попыт на жанчын-інжынераў не такі вялікі, як на жанчын-урачоў, але заўсёды ёсць попыт на кожнага, хто добра выконвае сваю працу.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>Эдыт Кларк, першая жанчына-прафесар электратэхнікі ў ЗША</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>Рожа Петэр: паэтэса рэкурсіі</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>Рожа Петэр, якая нарадзілася ў Венгрыі, вывучала тэорыю лікаў і паэзію, перш чым зацікавілася ідэяй, што стала тэорыяй рэкурсіі. У 1951 годзе яна апублікавала працу «Recursive Functions», але пачала прымяняць яе да камп’ютараў толькі ў сярэдзіне 1950-х.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>Грэйс Хопер вынаходзіць кампілятар</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>Контр-адмірал Грэйс Хопер працавала ў флоце над першым камерцыйным камп’ютарам (UNIVAC) і заклала асновы мовы COBOL. Найважнейшым яе вынаходствам стаў кампілятар, які пераўтварае зыходную мову ў двайковы код — нулі і адзінкі. Яна распрацавала яго ў 1952 годзе і казала: «Ніхто не хацеў яго чапаць. Мне казалі, што камп’ютары ўмеюць толькі лічыць».</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>Уклад у даследаванне космасу</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>Эвелін Бойд Гранвіл была адной з першых афраамерыканак з доктарскай ступенню па матэматыцы. Яна займалася авіяцыяй і космасам, а ў 1956 годзе працавала з NASA і IBM над праектам Mercury — першым пілатаваным касмічным палётам. Праз некалькі гадоў яна зноў працавала з NASA над праектам Apollo.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>Першая доктарская ступень па інфарматыцы</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>Сястра Мэры Кенэт Келер была адной з першых жанчын, а магчыма і першай, якая атрымала доктарскую ступень па інфарматыцы. У каледжы Дартмута яна таксама ўдзельнічала ў распрацоўцы мовы BASIC. Пасля яна заснавала кафедру інфарматыкі ў каледжы Кларка і кіравала ёю 20 гадоў.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>Карэн Спарк Джонс робіць пошук магчымым</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>Спарк Джонс, прафесарка камп’ютарнай лабараторыі Кембрыджа, цікавілася апрацоўкай натуральнай мовы і пошукам інфармацыі. У 1972 годзе яна ўвяла паняцце адваротнай частаты дакумента, на якім дагэтуль грунтуецца большасць пошукавых сістэм.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>«Маці інтэрнэту»</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>Радыю Перлман часта называюць «маці інтэрнэту». Яе праца над пратаколам spanning tree дапамагла развіццю сучасных сетак. У яе больш за 100 патэнтаў — у гэтым маці найлепшыя.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>Старажытныя Алімпійскія гульні</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>Першыя пісьмовыя звесткі пра афіцыйныя гульні датуюцца 776 годам да н. э., калі грэкі пачалі вымяраць час алімпіядамі — перыядамі паміж правядзеннем Алімпійскіх гульняў. Гульні праводзілі кожныя чатыры гады ў гонар Зеўса. Пазней на Піфійскіх або Дэльфійскіх гульнях, асобным мерапрыемстве ад гульняў у Алімпіі, ладзілі музычныя, песенныя, паэтычныя і тэатральныя выступленні, спалучаючы культуру і спорт з самага пачатку.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>Забарона Алімпійскіх гульняў</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>У 393 годзе рымскі імператар Феадосій I забараніў Алімпійскія гульні з рэлігійных прычын, сцвярджаючы, што яны спрыяюць паганству. Гульні аднавіліся толькі ў сучасную эпоху.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>Алімпійскія гульні адраджаюцца ў Парыжы</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>У канцы XIX стагоддзя было некалькі спроб аднавіць міжнародную спартыўную падзею, але яны не ўдаліся праз адсутнасць каардынацыі сусветнага спартыўнага руху — пакуль адзін чалавек не вырашыў сабраць асноўных зацікаўленых асоб у Парыжы.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>Алімпійскія гульні аднавілі на першым Алімпійскім кангрэсе, які барон П’ер дэ Кубертэн арганізаваў у Вялікім амфітэатры Сарбоны з 16 па 23 чэрвеня 1894 года. Удзельнічалі 2 000 чалавек: 58 французскіх дэлегатаў ад 24 спартыўных арганізацый і клубаў, а таксама 20 дэлегатаў з Бельгіі, Вялікабрытаніі, Грэцыі, Ірландыі, Італіі, Расіі, Іспаніі, Швецыі і ЗША, якія прадстаўлялі 13 замежных спартыўных федэрацый.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>Першыя сучасныя Алімпійскія гульні</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>Першыя Алімпійскія гульні сучаснай эпохі прайшлі ў Афінах у красавіку 1896 года — у краіне, дзе праводзіліся старажытныя гульні.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>Жанчыны ўпершыню ўдзельнічаюць у Алімпійскіх гульнях</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>У 1900 годзе другія гульні прымалі ў Парыжы.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>На Алімпійскіх гульнях у Парыжы ў 1900 годзе жанчыны ўпершыню ўдзельнічалі ў спаборніцтвах. Першай чэмпіёнкай стала брытанская тэнісістка Шарлота Купер, якая пяць разоў выйгравала Уімблдон. З 997 спартсменаў 22 былі жанчынамі, і яны спаборнічалі толькі ў пяці відах спорту:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>тэніс</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>парусны спорт</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, кракет,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>конныя спаборніцтвы</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>і</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>гольф</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>Першыя Алімпійскія гульні, адкрытыя для спартсменаў з інваліднасцю</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>Гульні 1904 года ў Сент-Луісе (Місуры) першымі ўручалі залатыя, сярэбраныя і бронзавыя медалі. У іх удзельнічаў і першы вядомы спартсмен з інваліднасцю Джордж Эйсер. Ён выйграў шэсць медалёў у гімнастыцы, тры з іх — залатыя.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>Першыя гульні са спартсменамі з пяці кантынентаў</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>Алімпійскія гульні ў Стакгольме ў 1912 годзе першымі сабралі спартсменаў з усіх пяці кантынентаў, прадстаўленых алімпійскімі кольцамі. У тым жа годзе жанчыны ўпершыню ўдзельнічалі ў спаборніцтвах па плаванні.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

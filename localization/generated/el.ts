@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Έχεις 
-          <strong>${0}</strong> από 
-          <strong>${1}</strong> τα γεγονότα σωστά.
-        `,
+      'h84e1bc2032e6a3ca': html`Απαντήσατε σωστά σε <strong>${0}</strong> από τα <strong>${1}</strong> συμβάντα.`,
 's07c0dacf93b42c9a': `Μη έγκυρη ημέρα`,
 's1a445bc371e19b14': `Προσθήκη εκδήλωσης`,
 's1d449f9f444e532a': `Ημερομηνία λήξης`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Λεπτομέρειες`,
 's39f5885d883e91d9': `Μη έγκυρο έτος`,
 's45156c13b0fb3494': `Κουίζ`,
+'s611e0cdb06b46c98': `Ορατά πλαίσια`,
 's6431645dad89d68e': `Ταιριάξτε τα γεγονότα με τις σωστές ημερομηνίες τους, σύροντάς τα και αποθέτοντάς τα στο χρονοδιάγραμμα.`,
 's680fc90489553ed6': `Χρονοδιάγραμμα`,
 's782f69ab5dd839e0': `Χρονοδιάγραμμα και κουίζ`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Μη έγκυρη ημερομηνία`,
 'sfab2185e1bcd629a': `Προσθέστε ένα συμβάν στο χρονοδιάγραμμα για να δοκιμάσετε το κουίζ.`,
 'sfe03165961812f36': `Μόνο κουίζ`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

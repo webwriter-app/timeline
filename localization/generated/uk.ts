@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Ви отримали 
-          <strong>${0}</strong> правильно 
-          <strong>${1}</strong> правильно.
-        `,
+      'h84e1bc2032e6a3ca': html`Правильно визначено <strong>${0}</strong> із <strong>${1}</strong> подій.`,
 's07c0dacf93b42c9a': `Недійсний день`,
 's1a445bc371e19b14': `Додати подію`,
 's1d449f9f444e532a': `Дата закінчення`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Деталі`,
 's39f5885d883e91d9': `Недійсний рік`,
 's45156c13b0fb3494': `Вікторина`,
+'s611e0cdb06b46c98': `Видимі панелі`,
 's6431645dad89d68e': `Зіставте події з відповідними датами, перетягнувши їх на часову шкалу.`,
 's680fc90489553ed6': `Хронологія`,
 's782f69ab5dd839e0': `Хронологія та вікторина`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Недійсна дата`,
 'sfab2185e1bcd629a': `Додайте подію в часовій шкалі, щоб спробувати пройти тест.`,
 'sfe03165961812f36': `Тільки вікторина`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

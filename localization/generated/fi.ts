@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Sait 
-          <strong>${0}</strong> tapahtumat oikein. 
-          <strong>${1}</strong> tapahtumat oikein.
-        `,
+      'h84e1bc2032e6a3ca': html`Sait <strong>${0}</strong> tapahtumasta <strong>${1}</strong> oikein.`,
 's07c0dacf93b42c9a': `Päivämäärä ei kelpaa`,
 's1a445bc371e19b14': `Lisää tapahtuma`,
 's1d449f9f444e532a': `Päättymispäivä`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Yksityiskohdat`,
 's39f5885d883e91d9': `Virheellinen vuosi`,
 's45156c13b0fb3494': `Tietokilpailu`,
+'s611e0cdb06b46c98': `Näkyvät paneelit`,
 's6431645dad89d68e': `Yhdistä tapahtumat oikeisiin päivämääriin vetämällä ja pudottamalla ne aikajanalle.`,
 's680fc90489553ed6': `Aikajana`,
 's782f69ab5dd839e0': `Aikajana ja tietokilpailu`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Virheellinen päivämäärä`,
 'sfab2185e1bcd629a': `Lisää tapahtuma aikajanalle kokeillaksesi tietokilpailua.`,
 'sfe03165961812f36': `Vain tietokilpailu`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

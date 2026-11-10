@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Получихте 
-          <strong>${0}</strong> излязохте 
-          <strong>${1}</strong> събитията правилно.
-        `,
+      'h84e1bc2032e6a3ca': html`Познахте <strong>${0}</strong> от <strong>${1}</strong> събития.`,
 's07c0dacf93b42c9a': `Невалиден ден`,
 's1a445bc371e19b14': `Добави събитие`,
 's1d449f9f444e532a': `Крайна дата`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Подробности`,
 's39f5885d883e91d9': `Невалидна година`,
 's45156c13b0fb3494': `Викторина`,
+'s611e0cdb06b46c98': `Видими панели`,
 's6431645dad89d68e': `Съпоставяйте събитията с правилните им дати, като ги плъзгате и пускате върху времевата линия.`,
 's680fc90489553ed6': `Времева линия`,
 's782f69ab5dd839e0': `Времева линия и тест`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Невалидна дата`,
 'sfab2185e1bcd629a': `Добавете събитие в хронологията, за да опитате теста.`,
 'sfe03165961812f36': `Само тест`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

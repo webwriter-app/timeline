@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`당신은 
-          <strong>${0}</strong> 정확히 
-          <strong>${1}</strong> 사건을 정확히 파악하셨군요.
-        `,
+      'h84e1bc2032e6a3ca': html`사건 <strong>${1}</strong>개 중 <strong>${0}</strong>개를 맞혔습니다.`,
 's07c0dacf93b42c9a': `잘못된 날짜`,
 's1a445bc371e19b14': `이벤트 추가`,
 's1d449f9f444e532a': `종료일`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `상세 정보`,
 's39f5885d883e91d9': `잘못된 연도`,
 's45156c13b0fb3494': `퀴즈`,
+'s611e0cdb06b46c98': `표시할 패널`,
 's6431645dad89d68e': `이벤트를 타임라인에 드래그 앤 드롭하여 올바른 날짜에 맞추세요.`,
 's680fc90489553ed6': `타임라인`,
 's782f69ab5dd839e0': `타임라인과 퀴즈`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `잘못된 날짜`,
 'sfab2185e1bcd629a': `타임라인에 이벤트를 추가하여 퀴즈를 풀어보세요.`,
 'sfe03165961812f36': `퀴즈만`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

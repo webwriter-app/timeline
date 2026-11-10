@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file target-language="bn" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="h84e1bc2032e6a3ca">
+  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
+<target>আপনি <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" />টি ইভেন্টের মধ্যে <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" />টি সঠিক করেছেন।</target></trans-unit>
+<trans-unit id="s8cdcbe65c5e46f7a">
+  <source>Try Again</source>
+<target>আবার চেষ্টা করুন</target></trans-unit>
+<trans-unit id="s6431645dad89d68e">
+  <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
+<target>ইভেন্টগুলোকে সঠিক তারিখের সঙ্গে মেলাতে টেনে সময়রেখায় ছেড়ে দিন।</target></trans-unit>
+<trans-unit id="s8ae42ce9d674b6ce">
+  <source>Submit answers</source>
+<target>উত্তর জমা দিন</target></trans-unit>
+<trans-unit id="s255857544a9d5ec0">
+  <source>Reset</source>
+<target>রিসেট</target></trans-unit>
+<trans-unit id="sfab2185e1bcd629a">
+  <source>Add an event in the timeline to try the quiz.</source>
+<target>কুইজ দিতে সময়রেখায় একটি ইভেন্ট যোগ করুন।</target></trans-unit>
+<trans-unit id="s1a445bc371e19b14">
+  <source>Add Event</source>
+<target>ইভেন্ট যোগ করুন</target></trans-unit>
+<trans-unit id="s355b21b89ce5d9c5">
+  <source>Details</source>
+<target>বিবরণ</target></trans-unit>
+<trans-unit id="s99f110d27e30b289">
+  <source>Title</source>
+<target>শিরোনাম</target></trans-unit>
+<trans-unit id="sac8252732f2edb19">
+  <source>Date</source>
+<target>তারিখ</target></trans-unit>
+<trans-unit id="s1d449f9f444e532a">
+  <source>End date</source>
+<target>শেষ তারিখ</target></trans-unit>
+<trans-unit id="sb971373f2f92a03f">
+  <source>An event requires a date and a title</source>
+<target>একটি ইভেন্টের তারিখ ও শিরোনাম আবশ্যক</target></trans-unit>
+<trans-unit id="scc342eb1f2b3826a">
+  <source>Delete event</source>
+<target>ইভেন্ট মুছুন</target></trans-unit>
+<trans-unit id="s39f5885d883e91d9">
+  <source>Invalid year</source>
+<target>অবৈধ বছর</target></trans-unit>
+<trans-unit id="sb3b1ba3205c4733e">
+  <source>Invalid month</source>
+<target>অবৈধ মাস</target></trans-unit>
+<trans-unit id="s07c0dacf93b42c9a">
+  <source>Invalid day</source>
+<target>অবৈধ দিন</target></trans-unit>
+<trans-unit id="s1fa60442ead25459">
+  <source>Year zero does not exist</source>
+<target>শূন্য বছর নেই</target></trans-unit>
+<trans-unit id="s1e1a1d080e3b4053">
+  <source>Invalid format</source>
+<target>অবৈধ বিন্যাস</target></trans-unit>
+<trans-unit id="se0baa9b7fb0768e4">
+  <source>Invalid date</source>
+<target>অবৈধ তারিখ</target></trans-unit>
+<trans-unit id="s9a3d950ed0f37bea">
+  <source>(disabled)</source>
+<target>(নিষ্ক্রিয়)</target></trans-unit>
+<trans-unit id="s7a4a4ef6339fe2bb">
+  <source>Timeline is empty.</source>
+<target>সময়রেখা খালি।</target></trans-unit>
+<trans-unit id="s680fc90489553ed6">
+  <source>Timeline</source>
+<target>সময়রেখা</target></trans-unit>
+<trans-unit id="s45156c13b0fb3494">
+  <source>Quiz</source>
+<target>কুইজ</target></trans-unit>
+<trans-unit id="s611e0cdb06b46c98">
+  <source>Visible panels</source>
+<target>দৃশ্যমান প্যানেল</target></trans-unit>
+<trans-unit id="s782f69ab5dd839e0">
+  <source>Timeline and Quiz</source>
+<target>সময়রেখা ও কুইজ</target></trans-unit>
+<trans-unit id="s7d775183a3896b44">
+  <source>Timeline only</source>
+<target>শুধু সময়রেখা</target></trans-unit>
+<trans-unit id="sfe03165961812f36">
+  <source>Quiz only</source>
+<target>শুধু কুইজ</target></trans-unit>
+</body>
+</file>
+</xliff>

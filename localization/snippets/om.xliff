@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="om">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>Sagantaa barreessuun bal’inaan beekamuu isaa dura dubartoonni sagantaalee barreessaa turan. Fakkeenya tokko</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: intala Lord Byron turte. Yeroo baay’ee nama jalqabaa sagantaa kompiitaraa barreessite jedhamti. Hojiin ishee waa’ee</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>Maashinii Xiinxalaa Charles Babbage</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>yaadannoo algoriizimii jalqabaa maashiniin raawwatamu of keessaa qaba.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>Kompiitara Jalqabaa</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>Kompiitarri kaayyoo hedduuf hojjetu kan jalqabaa, maqaa iccitii «Project PX» jedhuun, maallaqa Raayyaa Lafaa Ameerikaatiin hojjetame. Maqaan isaa Electronic Numerical Integrator And Computer (ENIAC) ture. Yuunivarsiitii Pennsylvania keessatti Mana Barumsaa Injinariingii Elektirikii Moore keessatti qophaa’e.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… fi Dubartoota Isa Hojjechiisan</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>Sagantaa ENIAC kan barreessan keessaa dubartoonni hedduun turan: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence fi Frances Elizabeth «Betty» Holberton. Hojii haaraa kan daandii bane hojjetan iyyuu, raayyaan sun maqaa dubartoota ENIAC irratti hojjetanii hin ifoomsine. Hanga Kathy Kleiman bara 1985 seenaa isaanii argattetti irra caalaa dagatamanii turan.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>Edith Clarke Karaa Barame Irraa Gore</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>Ogeeyyii injinariingii dubartoota ta’uu isaaniitiin qofa akkuma hakiimota dubartootaa hin barbaadan. Garuu nama hojii gaarii hojjechuu danda’u yeroo hunda barbaadu.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>Edith Clarke, dubartii Ameerikaa keessatti piroofeesara injinariingii elektirikii taate jalqabaa</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>Rózsa Péter, Walaleessituu Irra Deebi’ee Of Waamuu</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>Rózsa Péter Haangaarii keessatti dhalatte. Yaada booda tiyoorii irra deebi’ee of waamuu ta’etti fedhii qabaachuu ishee dura tiyoorii lakkoofsaa fi walaloo baratte. Bara 1951 barruu «Recursive Functions» jedhu maxxansite. Garuu qorannoo ishee kompiitaroota irratti hojiirra oolchuu kan jalqabde walakkeessa bara 1950mootaa keessa ture.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>Grace Hopper Walitti Qindeessaa Koodii Uumte</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>Grace Hopper, hoggantuun raayyaa galaanaa sadarkaa Rear Admiral qabdu, hojii raayyaa galaanaa keessatti kompiitara daldalaa jalqabaa UNIVAC irratti hojjette. Afaan sagantaa COBOL’f bu’uura kaa’atte. Kalaqni ishee inni guddaan walitti qindeessaa koodii, jechuunis kompaayilara, ture. Innis afaan madda gara koodii baayinarii jijjiira. Kana jechuun koodii nuti barreessinu gara 0 fi 1tti hiika. Bara 1952 qopheessite, garuu «Namni isa fayyadamuu barbaadu hin turre. Kompiitaroonni herrega qofa hojjechuu danda’u naan jedhan» jette.</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>Gumaacha Qorannoo Hawaa</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>Evelyn Boyd Granville, dubartoota Ameerikaa dhalootaan Afrikaa ta’an kan herregaan digrii doktoraa argatan keessaa tokko, hojii ishee balalii fi hawaa irratti xiyyeeffatte. Bara 1956 NASA fi IBM waliin Pirojektii Mercury, balalii hawaa nama fe’e jalqabaa, irratti hojjette. Waggaa muraasa booda Pirojektii Apollo irratti NASA waliin deebitee hojjette.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>Digrii Doktoraa Saayinsii Kompiitaraa Jalqabaa</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>Obboleettiin amantii Mary Kenneth Keller dubartoota saayinsii kompiitaraatiin digrii doktoraa argatan keessaa warra jalqabaa keessaa tokko turte, tarii isheenuma jalqabaa ti. Dartmouth College keessa yeroo turtetti afaan BASIC qopheessuu irratti gumaachite. Boodas Clarke College keessatti kutaa saayinsii kompiitaraa hundeessitee waggaa 20f hooggante.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>Karen Spärck Jones Barbaacha Dandeessiste</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>Spärck Jones Laaboraatoorii Kompiitaraa Cambridge keessatti piroofeesara turte. Afaan uumamaa adeemsisuu fi odeeffannoo barbaaduu irratti fedhii qabdi turte. Bara 1972 yaada yeroo jechi galmeewwan keessatti mul’atu faallaan madaalu dhiheessite. Motora barbaacha hedduun ammas itti fayyadamu.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>«Haadha Intarneetii»</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>Radia Perlman yeroo baay’ee «Haadha Intarneetii» jedhamti. Hojiin ishee seera muka quunnamtii diriirsuu irratti hojjette guddina neetwoorkota ammayyaa dandeessise. Mirgoota kalaqaa 100 ol qabdi. Kun hojii haadholiin akka gaariitti hojjetan keessaa isa tokko dha.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>Taphoota Olompikii Durii</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>Ragaan barreeffamaa jalqabaa taphoota seera qabeessaa bara 776 dhaloota Kiristoos dura irraa argama. Yeroo sana Giriikonni yeroo isaanii turtii taphoota Olompikii lama gidduutti argamuun safaruu jalqaban. Taphoonni jalqabaa waaqa Zeus kabajuuf waggaa afur afuriin geggeeffamu turan. Sana booda muuziqaa, sirba, walaloo fi tiyaatira dabalatee aartiin taphoota Pythia yookaan Delphi keessatti qophaa’aa ture. Taphoonni sun taphoota Olympia keessatti geggeeffaman irraa adda turan. Aadaa fi ispoortiin jalqabuma irraa walitti hidhatan.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>Taphoonni Olompikii Dhorkaman</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>Bara 393 dhaloota Kiristoos booda bulchaan Roomaa Theodosius I sababii amantiitiin taphoota Olompikii dhorke. Taphoonni amantii waaqolii durii jajjabeessu jedhe. Hanga bara ammayyaatti taphoonni sun deebisanii hin jalqabamne.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>Taphoonni Olompikii Paaris Keessatti Deebi’anii Jalqabaman</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>Dhuma jaarraa 19ffaa keessa dorgommii ispoortii addunyaa deebisanii jalqabuuf yaaliin hedduun godhame. Dhaabbileen ispoortii addunyaa wal qindeessuu waan hin dandeenyeef yaaliin sun hin milkoofne. Dhuma irratti namni tokko qaamota ijoo Paaris keessatti walitti qabuuf murteesse.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>Taphoonni Olompikii Yaa’ii Olompikii jalqabaa irratti deebi’anii jalqabaman. Baron Pierre de Coubertin yaa’ii sana galma guddaa Yuunivarsiitii Sorbonne keessatti Waxabajjii 16 hanga 23 bara 1894 qopheesse. Namoonni kuma lama irratti argaman. Isaan keessaa bakka bu’oonni Faransaay 58 dhaabbilee fi kilaboota ispoortii 24 bakka bu’an. Bakka bu’oonni 20 Beeljiyeem, Biriitaaniyaa Guddoo, Giriik, Ayerlaand, Xaaliyaanii, Raashiyaa, Ispeen, Siwiidin fi Ameerikaa irraa dhufan federeeshinoota ispoortii biyyoota alaa 13 bakka bu’an.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>Taphoota Olompikii Ammayyaa Jalqabaa</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>Taphoonni Olompikii bara ammayyaa jalqabaa Ebla 1896 magaalaa Ateens keessatti geggeeffaman. Biyyi sun Giriik, biyya taphoonni durii keessatti geggeeffaman turte.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>Dubartoonni Olompikii Irratti Yeroo Jalqabaaf Dorgoman</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>Paaris bara 1900 taphoota lammaffaa keessummeessite.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>Taphoota Olompikii Paaris bara 1900 irratti dubartoonni yeroo jalqabaaf dorgoman. Shaampiyooniin Olompikii dubartii jalqabaa Charlotte Cooper, taphattuu teenisii Biriitaaniyaa kan Wimbledon yeroo shan injifatte, turte. Atileetota 997 keessaa 22 dubartoota turan. Isaanis ispoortii shan qofa irratti dorgoman:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>teenisii</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>dorgommii dooniin qilleensaan deemuu</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, kirooketii,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>dorgommii fardaan yaabbachuu</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>fi</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>goolfii</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>Olompikii Jalqabaa Atileetota Qaama Miidhamtootaaf Baname</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>Taphoonni Olompikii bara 1904 St. Louis, Missouri keessatti geggeeffaman meedaaliyaa warqee, meetii fi naasaa kennuun jalqabaa turan. George Eyser, atileetii qaama miidhamaa Olompikii irratti dorgome jechuun jalqabaaf beekamu, irrattis hirmaate. Jimnaastikii keessatti meedaaliyaa ja’a argate. Isaan keessaa sadii kan warqee turan.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>Olompikii Jalqabaa Atileetota Ardii Shanan Irraa</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>Olompikiin Istookhoolm bara 1912 atileetota ardii shanan qubeelaa Olompikiitiin bakka buufaman hunda irraa hirmaachisuun jalqabaa ture. Bara sanatti dubartoonnis dorgommii daakaa irratti yeroo jalqabaaf hirmaatan.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

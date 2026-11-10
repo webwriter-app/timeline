@@ -9,10 +9,7 @@
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`你得了\x20
-          <strong>${0}</strong>
-          <strong>${1}</strong> 事件的正确性。
-        `,
+      'h84e1bc2032e6a3ca': html`你答对了 <strong>${0}</strong> 个，共 <strong>${1}</strong> 个事件。`,
 's07c0dacf93b42c9a': `无效日期`,
 's1a445bc371e19b14': `添加活动`,
 's1d449f9f444e532a': `截止日期`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `详情`,
 's39f5885d883e91d9': `无效年份`,
 's45156c13b0fb3494': `测验`,
+'s611e0cdb06b46c98': `可见面板`,
 's6431645dad89d68e': `将事件拖拽至时间轴上对应的日期位置。`,
 's680fc90489553ed6': `时间轴`,
 's782f69ab5dd839e0': `时间轴与测验`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `无效日期`,
 'sfab2185e1bcd629a': `在时间轴中添加一个事件来尝试测验。`,
 'sfe03165961812f36': `仅限测验`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

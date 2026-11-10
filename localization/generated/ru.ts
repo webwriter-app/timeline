@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Вы получили 
-          <strong>${0}</strong> правильно ответили на 
-          <strong>${1}</strong> правильно поняли события.
-        `,
+      'h84e1bc2032e6a3ca': html`Правильно отвечено на <strong>${0}</strong> из <strong>${1}</strong> событий.`,
 's07c0dacf93b42c9a': `Недействительный день`,
 's1a445bc371e19b14': `Добавить событие`,
 's1d449f9f444e532a': `Дата окончания`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Подробности`,
 's39f5885d883e91d9': `Недопустимый год`,
 's45156c13b0fb3494': `Викторина`,
+'s611e0cdb06b46c98': `Видимые панели`,
 's6431645dad89d68e': `Сопоставьте события с правильными датами, перетаскивая их на временную шкалу.`,
 's680fc90489553ed6': `Хронология`,
 's782f69ab5dd839e0': `Хронология и викторина`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Недопустимая дата`,
 'sfab2185e1bcd629a': `Добавьте событие в календарь, чтобы попробовать пройти тест.`,
 'sfe03165961812f36': `Только тест`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

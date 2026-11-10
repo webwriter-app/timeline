@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Du fikk 
-          <strong>${0}</strong> ut av 
-          <strong>${1}</strong> begivenhetene riktig.
-        `,
+      'h84e1bc2032e6a3ca': html`Du fikk <strong>${0}</strong> av <strong>${1}</strong> hendelser riktig.`,
 's07c0dacf93b42c9a': `Ugyldig dag`,
 's1a445bc371e19b14': `Legg til begivenhet`,
 's1d449f9f444e532a': `Sluttdato`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Detaljer`,
 's39f5885d883e91d9': `Ugyldig år`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Synlige paneler`,
 's6431645dad89d68e': `Plasser hendelsene på riktig dato ved å dra og slippe dem på tidslinjen.`,
 's680fc90489553ed6': `Tidslinje`,
 's782f69ab5dd839e0': `Tidslinje og quiz`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Ugyldig dato`,
 'sfab2185e1bcd629a': `Legg til en hendelse i tidslinjen for å prøve quizen.`,
 'sfe03165961812f36': `Kun quiz`,
-'s611e0cdb06b46c98': `Visible panels`,
     };

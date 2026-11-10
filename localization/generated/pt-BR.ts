@@ -3,16 +3,13 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Você obteve 
-          <strong>${0}</strong> acertado 
-          <strong>${1}</strong> os eventos corretamente.
-        `,
+      'h84e1bc2032e6a3ca': html`Você acertou <strong>${0}</strong> de <strong>${1}</strong> eventos.`,
 's07c0dacf93b42c9a': `Dia inválido`,
 's1a445bc371e19b14': `Adicionar evento`,
 's1d449f9f444e532a': `Data de término`,
@@ -22,6 +19,7 @@
 's355b21b89ce5d9c5': `Detalhes`,
 's39f5885d883e91d9': `Ano inválido`,
 's45156c13b0fb3494': `Questionário`,
+'s611e0cdb06b46c98': `Painéis visíveis`,
 's6431645dad89d68e': `Combine os eventos com as datas corretas, arrastando-os e soltando-os na linha do tempo.`,
 's680fc90489553ed6': `Cronograma`,
 's782f69ab5dd839e0': `Cronograma e questionário`,
@@ -38,5 +36,4 @@
 'se0baa9b7fb0768e4': `Data inválida`,
 'sfab2185e1bcd629a': `Adicione um evento na linha do tempo para experimentar o questionário.`,
 'sfe03165961812f36': `Apenas questionário`,
-'s611e0cdb06b46c98': `Visible panels`,
     };
