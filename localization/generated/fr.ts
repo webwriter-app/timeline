@@ -37,4 +37,3 @@
 'sfab2185e1bcd629a': `Ajoutez un événement dans la chronologie pour essayer le quiz.`,
 'sfe03165961812f36': `Quiz uniquement`,
     };
-  

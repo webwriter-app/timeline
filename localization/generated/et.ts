@@ -40,4 +40,3 @@
 'sfe03165961812f36': `Ainult viktoriin`,
 's611e0cdb06b46c98': `Visible panels`,
     };
-  

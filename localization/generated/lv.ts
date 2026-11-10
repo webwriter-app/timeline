@@ -40,4 +40,3 @@
 'sfe03165961812f36': `Tikai tests`,
 's611e0cdb06b46c98': `Visible panels`,
     };
-  

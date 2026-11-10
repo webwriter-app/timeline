@@ -37,4 +37,3 @@
 'sfab2185e1bcd629a': `Fügen Sie ein Ereignis in der Zeitleiste hinzu, um das Quiz auszuprobieren.`,
 'sfe03165961812f36': `Nur Quiz`,
     };
-  

@@ -37,4 +37,3 @@
 's355b21b89ce5d9c5': `Details`,
 's99f110d27e30b289': `Title`,
     };
-  

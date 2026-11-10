@@ -40,4 +40,3 @@
 'sfe03165961812f36': `Samo kviz`,
 's611e0cdb06b46c98': `Visible panels`,
     };
-  

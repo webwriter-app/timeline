@@ -37,4 +37,3 @@
 'sfab2185e1bcd629a': `Añade un evento en la línea de tiempo para probar el cuestionario.`,
 'sfe03165961812f36': `Solo cuestionario`,
     };
-  

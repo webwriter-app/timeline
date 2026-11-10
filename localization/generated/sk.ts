@@ -40,4 +40,3 @@
 'sfe03165961812f36': `Len kvíz`,
 's611e0cdb06b46c98': `Visible panels`,
     };
-  
