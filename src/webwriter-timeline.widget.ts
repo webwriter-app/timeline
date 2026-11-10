@@ -1,8 +1,6 @@
 import { localized, msg } from "@lit/localize";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
-import SlRadioGroup from "@shoelace-style/shoelace/dist/components/radio-group/radio-group.component.js";
-import SlRadio from "@shoelace-style/shoelace/dist/components/radio/radio.component.js";
 import SlTabGroup from "@shoelace-style/shoelace/dist/components/tab-group/tab-group.component.js";
 import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-panel.component.js";
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
@@ -29,12 +27,23 @@ import { TimelineDate } from "./util/timeline-date";
 export class WebWriterTimelineWidget extends LitElementWw {
     protected localize = LOCALIZE;
 
+    static options = {
+        panels: {
+            type: "select" as const,
+            label: { _: "Visible panels" },
+            options: [
+                { value: "timeline+quiz", label: { _: "Timeline and Quiz" } },
+                { value: "timeline", label: { _: "Timeline only" } },
+                { value: "quiz", label: { _: "Quiz only" } },
+            ],
+        },
+    };
+    readonly options = WebWriterTimelineWidget.options;
+
     /** @internal */
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,
-        "sl-radio-group": SlRadioGroup,
-        "sl-radio": SlRadio,
         "sl-tab-group": SlTabGroup,
         "sl-tab-panel": SlTabPanel,
         "sl-tab": SlTab,
@@ -204,29 +213,6 @@ export class WebWriterTimelineWidget extends LitElementWw {
         });
     }
 
-    private Options() {
-        // Shoelace's radio group only syncs the value to the checked state of the radio buttons if <sl-radio> is
-        // defined inside the global customElements registry, see
-        // https://github.com/shoelace-style/shoelace/blob/v2.20.1/src/components/radio-group/radio-group.component.ts#L238
-        // Since we are using scoped elements, we need to manually set the checked state of the radio buttons
-        const PanelRadioOption = (value: string, label: string) =>
-            html`<sl-radio value=${value} .checked=${this.enabledPanels === value}>${label}</sl-radio>`;
-
-        return html`<aside part="options">
-            <sl-radio-group
-                .value=${this.enabledPanels}
-                @sl-change=${(e: CustomEvent) =>
-                    (this.enabledPanels = (e.target as SlRadioGroup).value as "timeline" | "quiz" | "timeline+quiz")}
-                help-text=${msg("Which panels will be visible to readers")}
-            >
-                <!-- prettier-ignore -->
-                ${PanelRadioOption("timeline+quiz", msg("Timeline and Quiz"))}
-                ${PanelRadioOption("timeline", msg("Timeline only"))}
-				${PanelRadioOption("quiz", msg("Quiz only"))}
-            </sl-radio-group>
-        </aside>`;
-    }
-
     private Quiz() {
         return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz}></quiz-container>`;
     }
@@ -278,6 +264,6 @@ export class WebWriterTimelineWidget extends LitElementWw {
     }
 
     render() {
-        return html`${this.Options()}${this.TabGroup()}`;
+        return html`${this.TabGroup()}`;
     }
 }
