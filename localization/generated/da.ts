@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Ugyldig dag`,
 's1a445bc371e19b14': `Tilføj begivenhed`,
-'s1c417ec19e8605bf': `Hvilke paneler vil være synlige for læserne?`,
 's1d449f9f444e532a': `Slutdato`,
 's1e1a1d080e3b4053': `Ugyldigt format`,
 's1fa60442ead25459': `År nul eksisterer ikke`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Ugyldig dato`,
 'sfab2185e1bcd629a': `Tilføj en begivenhed i tidslinjen for at prøve quizzen.`,
 'sfe03165961812f36': `Kun quiz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

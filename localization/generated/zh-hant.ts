@@ -26,7 +26,7 @@
 's1d449f9f444e532a': `End date`,
 'sb971373f2f92a03f': `An event requires a date and a title`,
 'scc342eb1f2b3826a': `Delete event`,
-'s1c417ec19e8605bf': `Which panels will be visible to readers`,
+'s611e0cdb06b46c98': `Visible panels`,
 's782f69ab5dd839e0': `Timeline and Quiz`,
 's7d775183a3896b44': `Timeline only`,
 'sfe03165961812f36': `Quiz only`,

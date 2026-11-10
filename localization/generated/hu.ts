@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Érvénytelen nap`,
 's1a445bc371e19b14': `Esemény hozzáadása`,
-'s1c417ec19e8605bf': `Mely panelek lesznek láthatóak az olvasók számára?`,
 's1d449f9f444e532a': `Befejezés dátuma`,
 's1e1a1d080e3b4053': `Érvénytelen formátum`,
 's1fa60442ead25459': `A nulla év nem létezik`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Érvénytelen dátum`,
 'sfab2185e1bcd629a': `Adjon hozzá egy eseményt az idővonalhoz, hogy kipróbálhassa a kvízt.`,
 'sfe03165961812f36': `Csak kvíz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

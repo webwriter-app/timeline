@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Nieprawidłowy dzień`,
 's1a445bc371e19b14': `Dodaj wydarzenie`,
-'s1c417ec19e8605bf': `Które panele będą widoczne dla czytelników`,
 's1d449f9f444e532a': `Data zakończenia`,
 's1e1a1d080e3b4053': `Nieprawidłowy format`,
 's1fa60442ead25459': `Rok zero nie istnieje.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Nieprawidłowa data`,
 'sfab2185e1bcd629a': `Dodaj wydarzenie na osi czasu, aby wypróbować quiz.`,
 'sfe03165961812f36': `Tylko quiz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

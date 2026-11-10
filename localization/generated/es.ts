@@ -9,13 +9,9 @@
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Tienes 
-          <strong>${0}</strong> de 
-          <strong>${1}</strong> los acontecimientos correctamente.
-        `,
+      'h84e1bc2032e6a3ca': html`Has colocado correctamente <strong>${0}</strong> de <strong>${1}</strong> eventos.`,
 's07c0dacf93b42c9a': `Día no válido`,
 's1a445bc371e19b14': `Añadir evento`,
-'s1c417ec19e8605bf': `¿Qué paneles serán visibles para los lectores?`,
 's1d449f9f444e532a': `Fecha de finalización`,
 's1e1a1d080e3b4053': `Formato no válido`,
 's1fa60442ead25459': `El año cero no existe.`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Detalles`,
 's39f5885d883e91d9': `Año no válido`,
 's45156c13b0fb3494': `Cuestionario`,
+'s611e0cdb06b46c98': `Paneles visibles`,
 's6431645dad89d68e': `Empareja los eventos con sus fechas correctas arrastrándolos y soltándolos en la línea de tiempo.`,
 's680fc90489553ed6': `Cronología`,
 's782f69ab5dd839e0': `Cronología y cuestionario`,

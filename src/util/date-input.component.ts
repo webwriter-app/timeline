@@ -1,14 +1,11 @@
-import { localized, msg } from "@lit/localize";
-import { LitElementWw } from "@webwriter/lit";
+import { localizeElement, LocalizedElement } from "../../localization/localizer";
 import { css, html, PropertyValues } from "lit";
 import { property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/localizer";
 import { TimelineDate, timelineDateConverter } from "./timeline-date";
 
-@localized()
-export class DateInput extends LitElementWw {
-    protected localize = LOCALIZE;
+export class DateInput extends LocalizedElement {
+    protected readonly messages = localizeElement(this);
 
     static styles = css`
         :host {
@@ -60,23 +57,20 @@ export class DateInput extends LitElementWw {
     @property({ type: String, attribute: true })
     accessor placeholder: string = "";
 
-    @property({ type: String, attribute: true })
-    accessor lang: string = "en-US";
-
     private localizeErrorMessage(key: string): string {
         switch (key) {
             case "INVALID_YEAR":
-                return msg("Invalid year");
+                return this.messages.msg("Invalid year");
             case "INVALID_MONTH":
-                return msg("Invalid month");
+                return this.messages.msg("Invalid month");
             case "INVALID_DAY":
-                return msg("Invalid day");
+                return this.messages.msg("Invalid day");
             case "YEAR_ZERO_INVALID":
-                return msg("Year zero does not exist");
+                return this.messages.msg("Year zero does not exist");
             case "INVALID_FORMAT":
-                return msg("Invalid format");
+                return this.messages.msg("Invalid format");
             default:
-                return msg("Invalid date");
+                return this.messages.msg("Invalid date");
         }
     }
 
@@ -127,14 +121,16 @@ export class DateInput extends LitElementWw {
             this.value = TimelineDate.fromEuropeanString(this.internalValue);
         } catch (e) {
             // Even if the date is invalid, revert to the last valid date on blur
-            this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+            this.internalValue = this.value?.toLocalizedString(this.messages.getLanguage()) ?? "";
         }
     }
 
     protected updated(_changedProperties: PropertyValues): void {
         if (_changedProperties.has("value") || _changedProperties.has("lang")) {
-            this.internalValue = this.value?.toLocalizedString(this.lang) ?? "";
+            this.internalValue = this.value?.toLocalizedString(this.messages.getLanguage()) ?? "";
+        }
 
+        if (_changedProperties.has("value")) {
             // Send update event if the value actually changed
             const oldValue = _changedProperties.get("value") as TimelineDate | null;
             const valueNotChanged =

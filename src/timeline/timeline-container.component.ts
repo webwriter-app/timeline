@@ -1,17 +1,14 @@
-import { localized, msg } from "@lit/localize";
+import { localizeElement, LocalizedElement } from "../../localization/localizer";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
-import { LitElementWw } from "@webwriter/lit";
 import PlusCircleFillIcon from "bootstrap-icons/icons/plus-circle-fill.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { property } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/localizer";
 import { TimelineTemplate } from "../util/timeline-template.component";
 
-@localized()
-export class TimelineContainer extends LitElementWw {
-    protected localize = LOCALIZE;
+export class TimelineContainer extends LocalizedElement {
+    protected readonly messages = localizeElement(this);
 
     /** @internal */
     static scopedElements = {
@@ -81,7 +78,7 @@ export class TimelineContainer extends LitElementWw {
             ${this.isInEditView
                 ? html`<div class="add-event">
                       <sl-icon src=${PlusCircleFillIcon}></sl-icon>
-                      <sl-button variant="default" size="medium" @click=${this.addEvent}>${msg("Add Event")}</sl-button>
+                      <sl-button variant="default" size="medium" @click=${this.addEvent}>${this.messages.msg("Add Event")}</sl-button>
                   </div>`
                 : nothing}</timeline-template
         >`;

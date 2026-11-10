@@ -1,13 +1,11 @@
-import { localized, msg } from "@lit/localize";
+import { localizeElement, LocalizedElement } from "../../localization/localizer";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlProgressRing from "@shoelace-style/shoelace/dist/components/progress-ring/progress-ring.component.js";
-import { LitElementWw } from "@webwriter/lit";
 import { css, PropertyValues } from "lit";
 import { html, nothing } from "lit-html";
 import { property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { unsafeHTML } from "lit/directives/unsafe-html.js";
-import LOCALIZE from "../../localization/localizer";
 import { TimelineDate } from "../util/timeline-date";
 import { TimelineTemplate } from "../util/timeline-template.component";
 
@@ -34,9 +32,8 @@ type QuizTransitionSnapshot = {
     containerHeights: Map<string, number>;
 };
 
-@localized()
-export class QuizContainer extends LitElementWw {
-    protected localize = LOCALIZE;
+export class QuizContainer extends LocalizedElement {
+    protected readonly messages = localizeElement(this);
 
     private static readonly DROP_TRANSITION_DURATION = 200; //ms
     private static readonly DROP_TRANSITION_EASING = "cubic-bezier(0.2, 0, 0, 1)";
@@ -268,10 +265,10 @@ export class QuizContainer extends LitElementWw {
         return html`<div class="results-container">
             <sl-progress-ring value=${percentage}>${Math.round(percentage)}%</sl-progress-ring>
             <div>
-                ${msg(html`You got <strong>${correct}</strong> out of <strong>${total}</strong> events correct.`)}
+                ${this.messages.msg(html`You got <strong>${correct}</strong> out of <strong>${total}</strong> events correct.`)}
             </div>
 
-            <sl-button @click=${() => this.resetAssignments()}>${msg("Try Again")}</sl-button>
+            <sl-button @click=${() => this.resetAssignments()}>${this.messages.msg("Try Again")}</sl-button>
         </div>`;
     }
 
@@ -289,13 +286,13 @@ export class QuizContainer extends LitElementWw {
             ${this.EventCardsContainer("unassigned", cards)}
 
             <div class="help-text">
-                ${msg("Match the events to their correct dates by dragging and dropping them onto the timeline.")}
+                ${this.messages.msg("Match the events to their correct dates by dragging and dropping them onto the timeline.")}
             </div>
             <div class="buttons">
                 <sl-button variant="primary" @click=${() => (this.checkAnswers = true)} ?disabled=${this.checkAnswers}>
-                    ${msg("Submit answers")}
+                    ${this.messages.msg("Submit answers")}
                 </sl-button>
-                <sl-button variant="danger" outline @click=${() => this.resetAssignments()}>${msg("Reset")}</sl-button>
+                <sl-button variant="danger" outline @click=${() => this.resetAssignments()}>${this.messages.msg("Reset")}</sl-button>
             </div>
         </div>`;
     }
@@ -309,8 +306,8 @@ export class QuizContainer extends LitElementWw {
                 <div class="dot"></div>
                 <div class="event-slot" data-drop-target data-event-index="${index}">
                     <div>
-                        ${event.date.toLocalizedString(this.lang || "en-US")}
-                        ${event.endDate ? `- ${event.endDate.toLocalizedString(this.lang || "en-US")}` : nothing}
+                        ${event.date.toLocalizedString(this.messages.getLanguage() || "en-US")}
+                        ${event.endDate ? `- ${event.endDate.toLocalizedString(this.messages.getLanguage() || "en-US")}` : nothing}
                     </div>
                     ${this.EventCardsContainer(
                         `slot:${event.id}`,
@@ -542,7 +539,7 @@ export class QuizContainer extends LitElementWw {
 
     render() {
         if (this.events.length === 0) {
-            return html`<div class="empty-quiz">${msg("Add an event in the timeline to try the quiz.")}</div>`;
+            return html`<div class="empty-quiz">${this.messages.msg("Add an event in the timeline to try the quiz.")}</div>`;
         }
 
         return html`<div

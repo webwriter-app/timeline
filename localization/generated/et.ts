@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Kehtetu päev`,
 's1a445bc371e19b14': `Lisa sündmus`,
-'s1c417ec19e8605bf': `Millised paneelid on lugejatele nähtavad?`,
 's1d449f9f444e532a': `Lõppkuupäev`,
 's1e1a1d080e3b4053': `Kehtetu formaat`,
 's1fa60442ead25459': `Null aastat ei ole olemas`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Kehtetu kuupäev`,
 'sfab2185e1bcd629a': `Lisa sündmus ajakavasse, et proovida viktoriini.`,
 'sfe03165961812f36': `Ainult viktoriin`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

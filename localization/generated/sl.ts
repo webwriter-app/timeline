@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Neveljaven dan`,
 's1a445bc371e19b14': `Dodaj dogodek`,
-'s1c417ec19e8605bf': `Kateri paneli bodo vidni bralcem`,
 's1d449f9f444e532a': `Končni datum`,
 's1e1a1d080e3b4053': `Neveljaven format`,
 's1fa60442ead25459': `Leto nič ne obstaja.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Neveljaven datum`,
 'sfab2185e1bcd629a': `Dodajte dogodek v časovnico, da preizkusite kviz.`,
 'sfe03165961812f36': `Samo kviz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

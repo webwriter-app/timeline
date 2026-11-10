@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Geçersiz gün`,
 's1a445bc371e19b14': `Etkinlik Ekle`,
-'s1c417ec19e8605bf': `Okuyucular hangi panelleri görebilecek?`,
 's1d449f9f444e532a': `Bitiş tarihi`,
 's1e1a1d080e3b4053': `Geçersiz biçim`,
 's1fa60442ead25459': `Sıfır yılı yoktur.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Geçersiz tarih`,
 'sfab2185e1bcd629a': `Zaman çizelgesine bir etkinlik ekleyerek testi deneyin.`,
 'sfe03165961812f36': `Sadece test`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

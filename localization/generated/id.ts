@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Hari tidak valid`,
 's1a445bc371e19b14': `Tambahkan Acara`,
-'s1c417ec19e8605bf': `Panel mana yang akan terlihat oleh pembaca?`,
 's1d449f9f444e532a': `Tanggal akhir`,
 's1e1a1d080e3b4053': `Format tidak valid`,
 's1fa60442ead25459': `Tahun nol tidak ada.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Tanggal tidak valid`,
 'sfab2185e1bcd629a': `Tambahkan acara di garis waktu untuk mencoba kuis.`,
 'sfe03165961812f36': `Kuis saja`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

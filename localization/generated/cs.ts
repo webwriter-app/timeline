@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Neplatný den`,
 's1a445bc371e19b14': `Přidat událost`,
-'s1c417ec19e8605bf': `Které panely budou pro čtenáře viditelné`,
 's1d449f9f444e532a': `Datum ukončení`,
 's1e1a1d080e3b4053': `Neplatný formát`,
 's1fa60442ead25459': `Rok nula neexistuje`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Neplatné datum`,
 'sfab2185e1bcd629a': `Přidejte událost do časové osy a vyzkoušejte kvíz.`,
 'sfe03165961812f36': `Pouze kvíz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

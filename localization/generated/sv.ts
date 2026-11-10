@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Ogiltig dag`,
 's1a445bc371e19b14': `Lägg till evenemang`,
-'s1c417ec19e8605bf': `Vilka paneler kommer att vara synliga för läsarna?`,
 's1d449f9f444e532a': `Slutdatum`,
 's1e1a1d080e3b4053': `Ogiltigt format`,
 's1fa60442ead25459': `År noll existerar inte`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Ogiltigt datum`,
 'sfab2185e1bcd629a': `Lägg till ett evenemang i tidslinjen för att prova frågesporten.`,
 'sfe03165961812f36': `Endast quiz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

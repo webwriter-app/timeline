@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Giorno non valido`,
 's1a445bc371e19b14': `Aggiungi evento`,
-'s1c417ec19e8605bf': `Quali pannelli saranno visibili ai lettori`,
 's1d449f9f444e532a': `Data di fine`,
 's1e1a1d080e3b4053': `Formato non valido`,
 's1fa60442ead25459': `L'anno zero non esiste`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Data non valida`,
 'sfab2185e1bcd629a': `Aggiungi un evento nella timeline per provare il quiz.`,
 'sfe03165961812f36': `Solo quiz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

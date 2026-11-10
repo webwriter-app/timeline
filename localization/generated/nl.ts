@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Ongeldige dag`,
 's1a445bc371e19b14': `Evenement toevoegen`,
-'s1c417ec19e8605bf': `Welke panelen zullen zichtbaar zijn voor lezers?`,
 's1d449f9f444e532a': `Einddatum`,
 's1e1a1d080e3b4053': `Ongeldig formaat`,
 's1fa60442ead25459': `Het jaar nul bestaat niet.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Ongeldige datum`,
 'sfab2185e1bcd629a': `Voeg een evenement toe aan de tijdlijn om de quiz te proberen.`,
 'sfe03165961812f36': `Alleen quiz`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

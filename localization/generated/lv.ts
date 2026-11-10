@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Neatbilstoša diena`,
 's1a445bc371e19b14': `Pievienot notikumu`,
-'s1c417ec19e8605bf': `Kādi paneļi būs redzami lasītājiem`,
 's1d449f9f444e532a': `Beigu datums`,
 's1e1a1d080e3b4053': `Nepareizs formāts`,
 's1fa60442ead25459': `Nulle gads nepastāv`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Neatbilstošs datums`,
 'sfab2185e1bcd629a': `Pievienojiet notikumu laika joslā, lai izmēģinātu viktorīnu.`,
 'sfe03165961812f36': `Tikai tests`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Päivämäärä ei kelpaa`,
 's1a445bc371e19b14': `Lisää tapahtuma`,
-'s1c417ec19e8605bf': `Mitkä paneelit ovat näkyvissä lukijoille?`,
 's1d449f9f444e532a': `Päättymispäivä`,
 's1e1a1d080e3b4053': `Virheellinen muoto`,
 's1fa60442ead25459': `Vuosi nolla ei ole olemassa.`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Virheellinen päivämäärä`,
 'sfab2185e1bcd629a': `Lisää tapahtuma aikajanalle kokeillaksesi tietokilpailua.`,
 'sfe03165961812f36': `Vain tietokilpailu`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   

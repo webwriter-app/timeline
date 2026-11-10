@@ -15,7 +15,6 @@
         `,
 's07c0dacf93b42c9a': `Dia inválido`,
 's1a445bc371e19b14': `Adicionar evento`,
-'s1c417ec19e8605bf': `Quais painéis serão visíveis para os leitores`,
 's1d449f9f444e532a': `Data de término`,
 's1e1a1d080e3b4053': `Formato inválido`,
 's1fa60442ead25459': `O ano zero não existe`,
@@ -39,5 +38,6 @@
 'se0baa9b7fb0768e4': `Data inválida`,
 'sfab2185e1bcd629a': `Adicione um evento na linha do tempo para experimentar o questionário.`,
 'sfe03165961812f36': `Apenas questionário`,
+'s611e0cdb06b46c98': `Visible panels`,
     };
   
