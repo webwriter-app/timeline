@@ -103,7 +103,16 @@
             "so": "Jadwal waqtiyeed",
             "ti": "ናይ ግዜ መስመር",
             "sw": "Mfuatano wa matukio",
-            "ha": "Jadawalin lokaci"
+            "ha": "Jadawalin lokaci",
+            "yue-Hans": "时间轴",
+            "yue-Hant": "時間軸",
+            "kmr": "Dîroka demê",
+            "kmr-Latn": "Dîroka demê",
+            "kmr-Arab": "دیرۆکا دەمێ",
+            "ckb": "تایم‌لاین",
+            "ckb-Arab": "تایم‌لاین",
+            "af-ZA": "Tydlyn",
+            "af-NA": "Tydlyn"
         }
     },
     "./widgets/webwriter-timeline": {
@@ -212,7 +221,16 @@
             "so": "Jadwal waqtiyeed",
             "ti": "ናይ ግዜ መስመር",
             "sw": "Mfuatano wa matukio",
-            "ha": "Jadawalin lokaci"
+            "ha": "Jadawalin lokaci",
+            "yue-Hans": "时间轴",
+            "yue-Hant": "時間軸",
+            "kmr": "Dîroka demê",
+            "kmr-Latn": "Dîroka demê",
+            "kmr-Arab": "دیرۆکا دەمێ",
+            "ckb": "تایم‌لاین",
+            "ckb-Arab": "تایم‌لاین",
+            "af-ZA": "Tydlyn",
+            "af-NA": "Tydlyn"
         }
     },
     "./widgets/webwriter-timeline-event": {
@@ -321,7 +339,16 @@
             "so": "Dhacdo jadwalka waqtiyeedka",
             "ti": "ፍጻሜ ናይ ግዜ መስመር",
             "sw": "Tukio katika mfuatano",
-            "ha": "Abin da ya faru a jadawalin lokaci"
+            "ha": "Abin da ya faru a jadawalin lokaci",
+            "yue-Hans": "时间轴事件",
+            "yue-Hant": "時間軸事件",
+            "kmr": "Bûyera dîroka demê",
+            "kmr-Latn": "Bûyera dîroka demê",
+            "kmr-Arab": "بوویەرا دیرۆکا دەمێ",
+            "ckb": "ڕووداوی تایم‌لاین",
+            "ckb-Arab": "ڕووداوی تایم‌لاین",
+            "af-ZA": "Tydlyngebeurtenis",
+            "af-NA": "Tydlyngebeurtenis"
         }
     },
     "./widgets/webwriter-timeline-event-title": {
@@ -430,7 +457,16 @@
             "so": "Cinwaanka dhacdada",
             "ti": "ኣርእስቲ ፍጻሜ",
             "sw": "Kichwa cha tukio",
-            "ha": "Taken abin da ya faru"
+            "ha": "Taken abin da ya faru",
+            "yue-Hans": "时间轴事件标题",
+            "yue-Hant": "時間軸事件標題",
+            "kmr": "Sernavê bûyera dîroka demê",
+            "kmr-Latn": "Sernavê bûyera dîroka demê",
+            "kmr-Arab": "سەرناڤێ بوویەرا دیرۆکا دەمێ",
+            "ckb": "ناونیشانی ڕووداوی تایم‌لاین",
+            "ckb-Arab": "ناونیشانی ڕووداوی تایم‌لاین",
+            "af-ZA": "Titel van tydlyngebeurtenis",
+            "af-NA": "Titel van tydlyngebeurtenis"
         }
     },
     "./widgets/webwriter-timeline-event-details": {
@@ -539,7 +575,16 @@
             "so": "Faahfaahinta dhacdada",
             "ti": "ዝርዝር ፍጻሜ",
             "sw": "Maelezo ya tukio",
-            "ha": "Bayanan abin da ya faru"
+            "ha": "Bayanan abin da ya faru",
+            "yue-Hans": "时间轴事件详情",
+            "yue-Hant": "時間軸事件詳情",
+            "kmr": "Hûrgiliyên bûyera dîroka demê",
+            "kmr-Latn": "Hûrgiliyên bûyera dîroka demê",
+            "kmr-Arab": "هوورگلیێن بوویەرا دیرۆکا دەمێ",
+            "ckb": "وردەکاریی ڕووداوی تایم‌لاین",
+            "ckb-Arab": "وردەکاریی ڕووداوی تایم‌لاین",
+            "af-ZA": "Besonderhede van tydlyngebeurtenis",
+            "af-NA": "Besonderhede van tydlyngebeurtenis"
         }
     },
     ".": {
@@ -646,7 +691,16 @@
             "so": "Jadwal waqtiyeed",
             "ti": "ናይ ግዜ መስመር",
             "sw": "Mfuatano wa matukio",
-            "ha": "Jadawalin lokaci"
+            "ha": "Jadawalin lokaci",
+            "yue-Hans": "时间轴",
+            "yue-Hant": "時間軸",
+            "kmr": "Dîroka demê",
+            "kmr-Latn": "Dîroka demê",
+            "kmr-Arab": "دیرۆکا دەمێ",
+            "ckb": "تایم‌لاین",
+            "ckb-Arab": "تایم‌لاین",
+            "af-ZA": "Tydlyn",
+            "af-NA": "Tydlyn"
         },
         "description": {
             "_": "Create/learn with a digital timeline and test your knowledge.",
@@ -751,7 +805,16 @@
             "so": "Samee jadwal waqtiyeed dijitaal ah, wax ku baro, dabadeedna tijaabi aqoontaada.",
             "ti": "ዲጂታል ናይ ግዜ መስመር ፍጠሩ፡ ተማሃሩ፡ ከምኡውን ፍልጠትኩም ፈትኑ።",
             "sw": "Unda mfuatano wa kidijitali, jifunze kupitia mfuatano huo na jaribu maarifa yako.",
-            "ha": "Ƙirƙiri jadawalin lokaci na dijital, koyi darasi da shi, sannan gwada iliminka."
+            "ha": "Ƙirƙiri jadawalin lokaci na dijital, koyi darasi da shi, sannan gwada iliminka.",
+            "yue-Hans": "建立数码时间轴／透过时间轴学习，并测试你嘅知识。",
+            "yue-Hant": "建立數碼時間軸／透過時間軸學習，並測試你嘅知識。",
+            "kmr": "Bi rêznameyeke dîjîtal çêbike/an fêr bibe û zanîna xwe test bike.",
+            "kmr-Latn": "Bi rêznameyeke dîjîtal çêbike/an fêr bibe û zanîna xwe test bike.",
+            "kmr-Arab": "ب رێزنامەیەکە دیژیتال چێبکە/ئان فێر ببە ئوو زانینا خوە تەست بکە.",
+            "ckb": "بە تایم‌لاینێکی دیجیتاڵ دروست بکە یان فێری ببە و زانیارییەکانت تاقی بکەرەوە.",
+            "ckb-Arab": "بە تایم‌لاینێکی دیجیتاڵ دروست بکە یان فێری ببە و زانیارییەکانت تاقی بکەرەوە.",
+            "af-ZA": "Skep ’n digitale tydlyn om mee te leer en toets jou kennis.",
+            "af-NA": "Skep ’n digitale tydlyn om mee te leer en toets jou kennis."
         }
     },
     "./snippets/women-in-tech": {
@@ -858,7 +921,16 @@
             "so": "Haweenka ku jira farsamada",
             "ti": "ደቂ ኣንስትዮ ኣብ ቴክኖሎጂ",
             "sw": "Wanawake Katika Teknolojia",
-            "ha": "Mata a Fannin Fasaha"
+            "ha": "Mata a Fannin Fasaha",
+            "yue-Hans": "科技界女性",
+            "yue-Hant": "科技界女性",
+            "kmr": "Jin di Teknolojiyê de",
+            "kmr-Latn": "Jin di Teknolojiyê de",
+            "kmr-Arab": "ژن د تەکنۆلۆژیێ دە",
+            "ckb": "ژنانی بوارەکانی تەکنەلۆژیا",
+            "ckb-Arab": "ژنانی بوارەکانی تەکنەلۆژیا",
+            "af-ZA": "Vroue in tegnologie",
+            "af-NA": "Vroue in tegnologie"
         }
     },
     "./snippets/history-of-olympic-games": {
@@ -965,7 +1037,16 @@
             "so": "Taariikhda Ciyaaraha Olombikada",
             "ti": "ታሪኽ ኦሎምፒክ ጸወታታት",
             "sw": "Historia ya Michezo ya Olimpiki",
-            "ha": "Tarihin Wasannin Olympics"
+            "ha": "Tarihin Wasannin Olympics",
+            "yue-Hans": "奥运会历史",
+            "yue-Hant": "奧運會歷史",
+            "kmr": "Dîroka Lîstikên Olîmpîk",
+            "kmr-Latn": "Dîroka Lîstikên Olîmpîk",
+            "kmr-Arab": "دیرۆکا لیستکێن ئۆلیمپیک",
+            "ckb": "مێژووی یارییە ئۆڵۆمپییەکان",
+            "ckb-Arab": "مێژووی یارییە ئۆڵۆمپییەکان",
+            "af-ZA": "Geskiedenis van die Olimpiese Spele",
+            "af-NA": "Geskiedenis van die Olimpiese Spele"
         }
     }
 }
