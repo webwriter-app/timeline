@@ -1,19 +1,15 @@
-import { localized, msg } from "@lit/localize";
+import { localizeElement, LocalizedElement } from "../localization/localizer";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
-import SlRadioGroup from "@shoelace-style/shoelace/dist/components/radio-group/radio-group.component.js";
-import SlRadio from "@shoelace-style/shoelace/dist/components/radio/radio.component.js";
 import SlTabGroup from "@shoelace-style/shoelace/dist/components/tab-group/tab-group.component.js";
 import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-panel.component.js";
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
-import { LitElementWw } from "@webwriter/lit";
 import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
 import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
 import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { ref } from "lit/directives/ref.js";
-import LOCALIZE from "../localization/localizer";
 import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
 import { TimelineContainer } from "./timeline/timeline-container.component";
 import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
@@ -24,17 +20,28 @@ import { TimelineDate } from "./util/timeline-date";
  * As children, it should only contain `<webwriter-timeline-event>` elements in order
  * to function properly. Any other children may lead to unexpected behavior.
  */
-@localized()
 @customElement("webwriter-timeline")
-export class WebWriterTimelineWidget extends LitElementWw {
-    protected localize = LOCALIZE;
+export class WebWriterTimelineWidget extends LocalizedElement {
+    protected readonly messages = localizeElement(this);
+
+    get options() {
+        return {
+            panels: {
+                type: "select" as const,
+                label: { _: this.messages.msg("Visible panels") },
+                options: [
+                    { value: "timeline+quiz", label: { _: this.messages.msg("Timeline and Quiz") } },
+                    { value: "timeline", label: { _: this.messages.msg("Timeline only") } },
+                    { value: "quiz", label: { _: this.messages.msg("Quiz only") } },
+                ],
+            },
+        };
+    }
 
     /** @internal */
     static scopedElements = {
         "sl-button": SlButton,
         "sl-icon": SlIcon,
-        "sl-radio-group": SlRadioGroup,
-        "sl-radio": SlRadio,
         "sl-tab-group": SlTabGroup,
         "sl-tab-panel": SlTabPanel,
         "sl-tab": SlTab,
@@ -204,36 +211,13 @@ export class WebWriterTimelineWidget extends LitElementWw {
         });
     }
 
-    private Options() {
-        // Shoelace's radio group only syncs the value to the checked state of the radio buttons if <sl-radio> is
-        // defined inside the global customElements registry, see
-        // https://github.com/shoelace-style/shoelace/blob/v2.20.1/src/components/radio-group/radio-group.component.ts#L238
-        // Since we are using scoped elements, we need to manually set the checked state of the radio buttons
-        const PanelRadioOption = (value: string, label: string) =>
-            html`<sl-radio value=${value} .checked=${this.enabledPanels === value}>${label}</sl-radio>`;
-
-        return html`<aside part="options">
-            <sl-radio-group
-                .value=${this.enabledPanels}
-                @sl-change=${(e: CustomEvent) =>
-                    (this.enabledPanels = (e.target as SlRadioGroup).value as "timeline" | "quiz" | "timeline+quiz")}
-                help-text=${msg("Which panels will be visible to readers")}
-            >
-                <!-- prettier-ignore -->
-                ${PanelRadioOption("timeline+quiz", msg("Timeline and Quiz"))}
-                ${PanelRadioOption("timeline", msg("Timeline only"))}
-				${PanelRadioOption("quiz", msg("Quiz only"))}
-            </sl-radio-group>
-        </aside>`;
-    }
-
     private Quiz() {
-        return html`<quiz-container lang=${this.lang} .events=${this.eventsForQuiz}></quiz-container>`;
+        return html`<quiz-container .events=${this.eventsForQuiz}></quiz-container>`;
     }
 
     private Timeline() {
         return html`<timeline-container
-            lang=${this.lang}
+
             ?edit-view=${this.isInEditView}
             @add-event=${this.addEvent}
             @date-changed=${this.dateChanged}
@@ -244,7 +228,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
 
     private PanelIcon(panelName: string) {
         if (!this.enabledPanels.includes(panelName)) {
-            return html`<sl-icon src=${EyeSlashIcon} label=${msg("(disabled)")}></sl-icon>`;
+            return html`<sl-icon src=${EyeSlashIcon} label=${this.messages.msg("(disabled)")}></sl-icon>`;
         } else {
             return nothing;
         }
@@ -258,7 +242,7 @@ export class WebWriterTimelineWidget extends LitElementWw {
                 const content = isEmpty
                     ? html`<div class="timeline-empty">
                           <sl-icon src=${ExclamationCircleIcon}></sl-icon>
-                          ${msg("Timeline is empty.")}
+                          ${this.messages.msg("Timeline is empty.")}
                       </div>`
                     : this.Quiz();
                 return html`<slot class="hide"></slot>${content}`;
@@ -270,14 +254,14 @@ export class WebWriterTimelineWidget extends LitElementWw {
         }
 
         return html`<sl-tab-group ${ref(this.initTabGroup)} tabindex="0" activation="manual">
-            <sl-tab slot="nav" panel="timeline">${msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
-            <sl-tab slot="nav" panel="quiz">${msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
+            <sl-tab slot="nav" panel="timeline">${this.messages.msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
+            <sl-tab slot="nav" panel="quiz">${this.messages.msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
             <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>
             <sl-tab-panel name="quiz">${this.Quiz()}</sl-tab-panel>
         </sl-tab-group>`;
     }
 
     render() {
-        return html`${this.Options()}${this.TabGroup()}`;
+        return html`${this.TabGroup()}`;
     }
 }

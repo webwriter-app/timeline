@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Je hebt 
-          <strong>${0}</strong> uit 
-          <strong>${1}</strong> gebeurtenissen goed.
-        `,
+      'h84e1bc2032e6a3ca': html`Je had <strong>${0}</strong> van de <strong>${1}</strong> gebeurtenissen goed.`,
 's07c0dacf93b42c9a': `Ongeldige dag`,
 's1a445bc371e19b14': `Evenement toevoegen`,
-'s1c417ec19e8605bf': `Welke panelen zullen zichtbaar zijn voor lezers?`,
 's1d449f9f444e532a': `Einddatum`,
 's1e1a1d080e3b4053': `Ongeldig formaat`,
 's1fa60442ead25459': `Het jaar nul bestaat niet.`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Details`,
 's39f5885d883e91d9': `Ongeldig jaar`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Zichtbare panelen`,
 's6431645dad89d68e': `Koppel de gebeurtenissen aan de juiste data door ze naar de tijdlijn te slepen en neer te zetten.`,
 's680fc90489553ed6': `Tijdlijn`,
 's782f69ab5dd839e0': `Tijdlijn en quiz`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Voeg een evenement toe aan de tijdlijn om de quiz te proberen.`,
 'sfe03165961812f36': `Alleen quiz`,
     };
-  

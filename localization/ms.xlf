@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<file target-language="ms" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="h84e1bc2032e6a3ca">
+  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
+<target>Anda menjawab <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> daripada <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> peristiwa dengan betul.</target></trans-unit>
+<trans-unit id="s8cdcbe65c5e46f7a">
+  <source>Try Again</source>
+<target>Cuba lagi</target></trans-unit>
+<trans-unit id="s6431645dad89d68e">
+  <source>Match the events to their correct dates by dragging and dropping them onto the timeline.</source>
+<target>Padankan peristiwa dengan tarikh yang betul dengan menyeret dan meletakkannya pada garis masa.</target></trans-unit>
+<trans-unit id="s8ae42ce9d674b6ce">
+  <source>Submit answers</source>
+<target>Hantar jawapan</target></trans-unit>
+<trans-unit id="s255857544a9d5ec0">
+  <source>Reset</source>
+<target>Tetapkan semula</target></trans-unit>
+<trans-unit id="sfab2185e1bcd629a">
+  <source>Add an event in the timeline to try the quiz.</source>
+<target>Tambah peristiwa pada garis masa untuk mencuba kuiz.</target></trans-unit>
+<trans-unit id="s1a445bc371e19b14">
+  <source>Add Event</source>
+<target>Tambah peristiwa</target></trans-unit>
+<trans-unit id="s355b21b89ce5d9c5">
+  <source>Details</source>
+<target>Butiran</target></trans-unit>
+<trans-unit id="s99f110d27e30b289">
+  <source>Title</source>
+<target>Tajuk</target></trans-unit>
+<trans-unit id="sac8252732f2edb19">
+  <source>Date</source>
+<target>Tarikh</target></trans-unit>
+<trans-unit id="s1d449f9f444e532a">
+  <source>End date</source>
+<target>Tarikh tamat</target></trans-unit>
+<trans-unit id="sb971373f2f92a03f">
+  <source>An event requires a date and a title</source>
+<target>Peristiwa memerlukan tarikh dan tajuk</target></trans-unit>
+<trans-unit id="scc342eb1f2b3826a">
+  <source>Delete event</source>
+<target>Padam peristiwa</target></trans-unit>
+<trans-unit id="s39f5885d883e91d9">
+  <source>Invalid year</source>
+<target>Tahun tidak sah</target></trans-unit>
+<trans-unit id="sb3b1ba3205c4733e">
+  <source>Invalid month</source>
+<target>Bulan tidak sah</target></trans-unit>
+<trans-unit id="s07c0dacf93b42c9a">
+  <source>Invalid day</source>
+<target>Hari tidak sah</target></trans-unit>
+<trans-unit id="s1fa60442ead25459">
+  <source>Year zero does not exist</source>
+<target>Tahun sifar tidak wujud</target></trans-unit>
+<trans-unit id="s1e1a1d080e3b4053">
+  <source>Invalid format</source>
+<target>Format tidak sah</target></trans-unit>
+<trans-unit id="se0baa9b7fb0768e4">
+  <source>Invalid date</source>
+<target>Tarikh tidak sah</target></trans-unit>
+<trans-unit id="s9a3d950ed0f37bea">
+  <source>(disabled)</source>
+<target>(dinyahdayakan)</target></trans-unit>
+<trans-unit id="s7a4a4ef6339fe2bb">
+  <source>Timeline is empty.</source>
+<target>Garis masa kosong.</target></trans-unit>
+<trans-unit id="s680fc90489553ed6">
+  <source>Timeline</source>
+<target>Garis masa</target></trans-unit>
+<trans-unit id="s45156c13b0fb3494">
+  <source>Quiz</source>
+<target>Kuiz</target></trans-unit>
+<trans-unit id="s611e0cdb06b46c98">
+  <source>Visible panels</source>
+<target>Panel yang dipaparkan</target></trans-unit>
+<trans-unit id="s782f69ab5dd839e0">
+  <source>Timeline and Quiz</source>
+<target>Garis masa dan kuiz</target></trans-unit>
+<trans-unit id="s7d775183a3896b44">
+  <source>Timeline only</source>
+<target>Garis masa sahaja</target></trans-unit>
+<trans-unit id="sfe03165961812f36">
+  <source>Quiz only</source>
+<target>Kuiz sahaja</target></trans-unit>
+</body>
+</file>
+</xliff>

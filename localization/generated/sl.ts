@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Dobil si 
-          <strong>${0}</strong> iz 
-          <strong>${1}</strong> dogodkov.
-        `,
+      'h84e1bc2032e6a3ca': html`Pravilno ste odgovorili na <strong>${0}</strong> od <strong>${1}</strong> dogodkov.`,
 's07c0dacf93b42c9a': `Neveljaven dan`,
 's1a445bc371e19b14': `Dodaj dogodek`,
-'s1c417ec19e8605bf': `Kateri paneli bodo vidni bralcem`,
 's1d449f9f444e532a': `Končni datum`,
 's1e1a1d080e3b4053': `Neveljaven format`,
 's1fa60442ead25459': `Leto nič ne obstaja.`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Podrobnosti`,
 's39f5885d883e91d9': `Neveljavno leto`,
 's45156c13b0fb3494': `Kviz`,
+'s611e0cdb06b46c98': `Vidne plošče`,
 's6431645dad89d68e': `Ujemite dogodke z njihovimi pravimi datumi tako, da jih povlečete in spustite na časovnico.`,
 's680fc90489553ed6': `Časovnica`,
 's782f69ab5dd839e0': `Časovnica in kviz`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Dodajte dogodek v časovnico, da preizkusite kviz.`,
 'sfe03165961812f36': `Samo kviz`,
     };
-  

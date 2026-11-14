@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Jūs gavote 
-          <strong>${0}</strong> iš 
-          <strong>${1}</strong> įvykius teisingai.
-        `,
+      'h84e1bc2032e6a3ca': html`Teisingai atsakėte į <strong>${0}</strong> iš <strong>${1}</strong> įvykių.`,
 's07c0dacf93b42c9a': `Neteisinga diena`,
 's1a445bc371e19b14': `Pridėti renginį`,
-'s1c417ec19e8605bf': `Kokios skiltys bus matomos skaitytojams`,
 's1d449f9f444e532a': `Pabaigos data`,
 's1e1a1d080e3b4053': `Neteisingas formatas`,
 's1fa60442ead25459': `Nuliniai metai neegzistuoja`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Išsami informacija`,
 's39f5885d883e91d9': `Neteisingi metai`,
 's45156c13b0fb3494': `Viktorina`,
+'s611e0cdb06b46c98': `Matomos sritys`,
 's6431645dad89d68e': `Suderinkite įvykius su teisingomis datomis, juos vilkdami ir numeskite ant laiko juostos.`,
 's680fc90489553ed6': `Laiko juosta`,
 's782f69ab5dd839e0': `Laiko juosta ir viktorina`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Pridėkite įvykį į laiko juostą, kad išbandytumėte viktoriną.`,
 'sfe03165961812f36': `Tik viktorina`,
     };
-  

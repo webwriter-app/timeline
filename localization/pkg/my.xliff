@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="my">
+  <file id="./snippets/webwriter-timeline" original="./snippets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>အချိန်မျဉ်း</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline" original="./widgets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>အချိန်မျဉ်း</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event" original="./widgets/webwriter-timeline-event">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event</source>
+        <target>အချိန်မျဉ်းဖြစ်ရပ်</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-title" original="./widgets/webwriter-timeline-event-title">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Title</source>
+        <target>ဖြစ်ရပ်ခေါင်းစဉ်</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-details" original="./widgets/webwriter-timeline-event-details">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Details</source>
+        <target>ဖြစ်ရပ်အသေးစိတ်</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="." original=".">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>အချိန်မျဉ်း</target>
+      </segment>
+    </unit>
+    <unit id="description">
+      <segment>
+        <source>Create/learn with a digital timeline and test your knowledge.</source>
+        <target>ဒစ်ဂျစ်တယ်အချိန်မျဉ်းတစ်ခု ဖန်တီး၊ လေ့လာပြီး သင့်အသိပညာကို စမ်းသပ်ပါ။</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/women-in-tech" original="./snippets/women-in-tech">
+    <unit id="label">
+      <segment>
+        <source>Women In Tech</source>
+        <target>နည်းပညာနယ်ပယ်ရှိ အမျိုးသမီးများ</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games" original="./snippets/history-of-olympic-games">
+    <unit id="label">
+      <segment>
+        <source>History Of Olympic Games</source>
+        <target>အိုလံပစ်အားကစားပြိုင်ပွဲသမိုင်း</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

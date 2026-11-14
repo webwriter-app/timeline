@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Sa said 
-          <strong>${0}</strong> õigesti 
-          <strong>${1}</strong> sündmused õigesti.
-        `,
+      'h84e1bc2032e6a3ca': html`Vastuseid õigesti: <strong>${0}</strong> sündmust <strong>${1}</strong>-st.`,
 's07c0dacf93b42c9a': `Kehtetu päev`,
 's1a445bc371e19b14': `Lisa sündmus`,
-'s1c417ec19e8605bf': `Millised paneelid on lugejatele nähtavad?`,
 's1d449f9f444e532a': `Lõppkuupäev`,
 's1e1a1d080e3b4053': `Kehtetu formaat`,
 's1fa60442ead25459': `Null aastat ei ole olemas`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Detailid`,
 's39f5885d883e91d9': `Kehtetu aasta`,
 's45156c13b0fb3494': `Viktoriin`,
+'s611e0cdb06b46c98': `Nähtavad paneelid`,
 's6431645dad89d68e': `Paiguta sündmused õigete kuupäevade juurde, lohistades need ajajoonele.`,
 's680fc90489553ed6': `Ajakava`,
 's782f69ab5dd839e0': `Ajakava ja viktoriin`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Lisa sündmus ajakavasse, et proovida viktoriini.`,
 'sfe03165961812f36': `Ainult viktoriin`,
     };
-  

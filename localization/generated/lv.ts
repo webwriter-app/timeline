@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Jums ir 
-          <strong>${0}</strong> no 
-          <strong>${1}</strong> notikumus pareizi.
-        `,
+      'h84e1bc2032e6a3ca': html`Pareizi atbildējāt uz <strong>${0}</strong> no <strong>${1}</strong> notikumiem.`,
 's07c0dacf93b42c9a': `Neatbilstoša diena`,
 's1a445bc371e19b14': `Pievienot notikumu`,
-'s1c417ec19e8605bf': `Kādi paneļi būs redzami lasītājiem`,
 's1d449f9f444e532a': `Beigu datums`,
 's1e1a1d080e3b4053': `Nepareizs formāts`,
 's1fa60442ead25459': `Nulle gads nepastāv`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Sīkāka informācija`,
 's39f5885d883e91d9': `Neatbilstošs gads`,
 's45156c13b0fb3494': `Viktorīna`,
+'s611e0cdb06b46c98': `Redzamie paneļi`,
 's6431645dad89d68e': `Saskaņojiet notikumus ar pareizajiem datumiem, velkot un nometot tos uz laika skalu.`,
 's680fc90489553ed6': `Laika skala`,
 's782f69ab5dd839e0': `Laika skala un tests`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Pievienojiet notikumu laika joslā, lai izmēģinātu viktorīnu.`,
 'sfe03165961812f36': `Tikai tests`,
     };
-  

@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`40 
-          <strong>${0}</strong> eseményeket 
-          <strong>${1}</strong> eseményeket helyesen.
-        `,
+      'h84e1bc2032e6a3ca': html`<strong>${0}</strong> eseményből <strong>${1}</strong>-et talált el.`,
 's07c0dacf93b42c9a': `Érvénytelen nap`,
 's1a445bc371e19b14': `Esemény hozzáadása`,
-'s1c417ec19e8605bf': `Mely panelek lesznek láthatóak az olvasók számára?`,
 's1d449f9f444e532a': `Befejezés dátuma`,
 's1e1a1d080e3b4053': `Érvénytelen formátum`,
 's1fa60442ead25459': `A nulla év nem létezik`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Részletek`,
 's39f5885d883e91d9': `Érvénytelen év`,
 's45156c13b0fb3494': `Kvíz`,
+'s611e0cdb06b46c98': `Látható panelek`,
 's6431645dad89d68e': `Helyezze az eseményeket a megfelelő dátumokhoz az idővonalra húzva és ott elengedve őket.`,
 's680fc90489553ed6': `Idővonal`,
 's782f69ab5dd839e0': `Idővonal és kvíz`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Adjon hozzá egy eseményt az idővonalhoz, hogy kipróbálhassa a kvízt.`,
 'sfe03165961812f36': `Csak kvíz`,
     };
-  

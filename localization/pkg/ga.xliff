@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="ga">
+  <file id="./snippets/webwriter-timeline" original="./snippets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Amlíne</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline" original="./widgets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Amlíne</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event" original="./widgets/webwriter-timeline-event">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event</source>
+        <target>Imeacht ar an amlíne</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-title" original="./widgets/webwriter-timeline-event-title">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Title</source>
+        <target>Teideal an imeachta</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-details" original="./widgets/webwriter-timeline-event-details">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Details</source>
+        <target>Sonraí an imeachta</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="." original=".">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Amlíne</target>
+      </segment>
+    </unit>
+    <unit id="description">
+      <segment>
+        <source>Create/learn with a digital timeline and test your knowledge.</source>
+        <target>Cruthaigh amlíne dhigiteach, foghlaim uaithi agus déan do chuid eolais a thástáil.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/women-in-tech" original="./snippets/women-in-tech">
+    <unit id="label">
+      <segment>
+        <source>Women In Tech</source>
+        <target>Mná sa teicneolaíocht</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games" original="./snippets/history-of-olympic-games">
+    <unit id="label">
+      <segment>
+        <source>History Of Olympic Games</source>
+        <target>Stair na gCluichí Oilimpeacha</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

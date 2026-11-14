@@ -3,19 +3,15 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`
-          <strong>${0}</strong>
-          <strong>${1}</strong> olayları doğru anladınız.
-        `,
+      'h84e1bc2032e6a3ca': html`<strong>${0}</strong>/<strong>${1}</strong> olayı doğru yanıtladınız.`,
 's07c0dacf93b42c9a': `Geçersiz gün`,
 's1a445bc371e19b14': `Etkinlik Ekle`,
-'s1c417ec19e8605bf': `Okuyucular hangi panelleri görebilecek?`,
 's1d449f9f444e532a': `Bitiş tarihi`,
 's1e1a1d080e3b4053': `Geçersiz biçim`,
 's1fa60442ead25459': `Sıfır yılı yoktur.`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Ayrıntılar`,
 's39f5885d883e91d9': `Geçersiz yıl`,
 's45156c13b0fb3494': `Sınav`,
+'s611e0cdb06b46c98': `Görünür paneller`,
 's6431645dad89d68e': `Olayları zaman çizelgesine sürükleyip bırakarak doğru tarihleriyle eşleştirin.`,
 's680fc90489553ed6': `Zaman çizelgesi`,
 's782f69ab5dd839e0': `Zaman Çizelgesi ve Test`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Zaman çizelgesine bir etkinlik ekleyerek testi deneyin.`,
 'sfe03165961812f36': `Sadece test`,
     };
-  

@@ -1,15 +1,13 @@
-import { localized, msg } from "@lit/localize";
+import { localizeElement, LocalizedElement } from "../../localization/localizer";
 import SlIconButton from "@shoelace-style/shoelace/dist/components/icon-button/icon-button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.component.js";
-import { LitElementWw } from "@webwriter/lit";
 import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
 import TrashIcon from "bootstrap-icons/icons/trash.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import LOCALIZE from "../../localization/localizer";
 import { DateInput } from "../util/date-input.component";
 import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
 
@@ -18,10 +16,9 @@ import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
  * As children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,
  * which contain the title and details of the event, respectively.
  */
-@localized()
 @customElement("webwriter-timeline-event")
-export class WebWriterTimelineEventWidget extends LitElementWw {
-    protected localize = LOCALIZE;
+export class WebWriterTimelineEventWidget extends LocalizedElement {
+    protected readonly messages = localizeElement(this);
 
     /** @internal */
     static scopedElements = {
@@ -209,8 +206,7 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
             <div>
                 <div class="controls">
                     <date-input
-                        lang=${this.lang || "en-US"}
-                        placeholder=${msg("Date")}
+                        placeholder=${this.messages.msg("Date")}
                         .value=${this.date}
                         ?disabled=${!this.isInEditView}
                         @change=${(e: Event) => {
@@ -229,9 +225,8 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                                   —
                               </span>
                               <date-input
-                                  lang=${this.lang || "en-US"}
                                   class=${classMap({ "show-on-focus": !this.endDate })}
-                                  placeholder=${msg("End date")}
+                                  placeholder=${this.messages.msg("End date")}
                                   .value=${this.endDate}
                                   ?disabled=${!this.isInEditView}
                                   optional
@@ -242,14 +237,14 @@ export class WebWriterTimelineEventWidget extends LitElementWw {
                         : nothing}
                     <span class="spacer"></span>
                     ${this.isIncomplete
-                        ? html`<sl-tooltip content=${msg("An event requires a date and a title")} placement="bottom">
+                        ? html`<sl-tooltip content=${this.messages.msg("An event requires a date and a title")} placement="bottom">
                               <sl-icon src=${ExclamationCircleIcon}></sl-icon>
                           </sl-tooltip>`
                         : nothing}
                     ${this.isInEditView
                         ? html`<sl-icon-button
                               src=${TrashIcon}
-                              label=${msg("Delete event")}
+                              label=${this.messages.msg("Delete event")}
                               @click=${() => this.remove()}
                           ></sl-icon-button>`
                         : nothing}

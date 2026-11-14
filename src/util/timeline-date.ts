@@ -1,6 +1,21 @@
 import { ComplexAttributeConverter } from "lit";
 import { parseLocale } from "../../localization/localizer";
 
+const gregorianDateLabels: Record<string, { months: string[]; beforeCommonEra: string }> = {
+    dv: {
+        months: ["ޖަނަވަރީ", "ފެބްރުވަރީ", "މާރޗް", "އޭޕްރީލް", "މޭ", "ޖޫން", "ޖުލައި", "އޯގަސްޓް", "ސެޕްޓެމްބަރު", "އޮކްޓޯބަރު", "ނޮވެމްބަރު", "ޑިސެމްބަރު"],
+        beforeCommonEra: "މީލާދުން ކުރިން",
+    },
+    la: {
+        months: ["Ianuarii", "Februarii", "Martii", "Aprilis", "Maii", "Iunii", "Iulii", "Augusti", "Septembris", "Octobris", "Novembris", "Decembris"],
+        beforeCommonEra: "a. Chr. n.",
+    },
+    tpi: {
+        months: ["Janueri", "Februeri", "Mas", "Epril", "Me", "Jun", "Julai", "Ogas", "Septemba", "Oktoba", "Novemba", "Disemba"],
+        beforeCommonEra: "bipo long Krais",
+    },
+};
+
 /**
  * A custom data class to represent a date inside this widget. It supports
  * year-only, year-month, and year-month-day precision, with validation based
@@ -73,12 +88,28 @@ export class TimelineDate {
         options: Pick<Intl.DateTimeFormatOptions, "year" | "month" | "day" | "era"> = {},
     ): string {
         const date = this.toDate();
-        return Intl.DateTimeFormat(parseLocale(locale).toString(), {
+        const parsed = parseLocale(locale);
+        const localeName = parsed.toString();
+        const labels = gregorianDateLabels[parsed.language];
+        const fallback = labels && !Intl.DateTimeFormat.supportedLocalesOf(localeName).length;
+        const month = options.month ?? "long";
+        const formatter = Intl.DateTimeFormat(fallback ? "en-GB" : localeName, {
+            calendar: "gregory",
+            timeZone: "UTC",
             year: options.year ?? "numeric",
-            month: this.month !== null ? (options.month ?? "long") : undefined,
+            month: this.month !== null ? month : undefined,
             day: this.day !== null ? (options.day ?? "numeric") : undefined,
             era: this.year <= 0 ? (options.era ?? "short") : undefined,
-        }).format(date);
+        });
+        if (!fallback) return formatter.format(date);
+        return formatter.formatToParts(date).map(part => {
+            if (part.type === "era") return labels.beforeCommonEra;
+            if (part.type !== "month" || this.month === null || month === "numeric" || month === "2-digit") return part.value;
+            const name = labels.months[this.month - 1];
+            if (month === "long") return name;
+            // Keep combining marks attached when abbreviating the month.
+            return name.match(/\P{M}\p{M}*/gu)?.slice(0, month === "short" ? 3 : 1).join("") ?? name;
+        }).join("");
     }
 
     /**

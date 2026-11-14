@@ -9,13 +9,9 @@
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Du hast 
-          <strong>${0}</strong> aus 
-          <strong>${1}</strong> Ereignisse richtig.
-        `,
+      'h84e1bc2032e6a3ca': html`Sie haben <strong>${0}</strong> von <strong>${1}</strong> Ereignissen richtig eingeordnet.`,
 's07c0dacf93b42c9a': `Ungültiger Tag`,
 's1a445bc371e19b14': `Ereignis hinzufügen`,
-'s1c417ec19e8605bf': `Welche Panels für die Leser sichtbar sein werden`,
 's1d449f9f444e532a': `Enddatum`,
 's1e1a1d080e3b4053': `Ungültiges Datumsformat`,
 's1fa60442ead25459': `Das Jahr Null existiert nicht.`,
@@ -23,6 +19,7 @@
 's355b21b89ce5d9c5': `Details`,
 's39f5885d883e91d9': `Ungültiges Jahr`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Sichtbare Bereiche`,
 's6431645dad89d68e': `Ordnen Sie die Ereignisse den richtigen Daten zu, indem Sie per Drag-and-Drop auf die Zeitleiste ziehen.`,
 's680fc90489553ed6': `Zeitleiste`,
 's782f69ab5dd839e0': `Zeitleiste und Quiz`,
@@ -40,4 +37,3 @@
 'sfab2185e1bcd629a': `Fügen Sie ein Ereignis in der Zeitleiste hinzu, um das Quiz auszuprobieren.`,
 'sfe03165961812f36': `Nur Quiz`,
     };
-  
