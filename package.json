@@ -151,14 +151,15 @@
     "dependencies": {
         "@lit/localize": "^0.12.2",
         "@shoelace-style/shoelace": "^2.20.1",
-        "@webwriter/lit": "^2",
-        "bootstrap-icons": "^1.13.1",
+        "@webwriter/lit": "^3.0.0",
+        "bootstrap-icons": "^1.13.2",
         "lit": "^3"
     },
     "devDependencies": {
+        "@webwriter/build": "^1.13.1",
         "@lit/localize-tools": "^0.8",
-        "prettier": "^3.6.2",
-        "typescript": "^6.0.3"
+        "prettier": "^3.10.1",
+        "typescript": "^7.0.2"
     },
     "exports": {
         "./widgets/webwriter-timeline.*": {
