@@ -1,14 +1,15 @@
-import { localizeElement, LocalizedElement } from "../../localization/localizer";
+import { LitElementWw } from "@webwriter/lit";
+import { widgetMsg } from "@webwriter/lit/localize";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
-import PlusCircleFillIcon from "bootstrap-icons/icons/plus-circle-fill.svg";
-import { css, html, nothing, PropertyValues } from "lit";
-import { property } from "lit/decorators.js";
+import PlusCircleFillIcon from "@tabler/icons/filled/circle-plus.svg";
+import { css, html, PropertyValues } from "lit";
 import { createRef, ref } from "lit/directives/ref.js";
-import { TimelineTemplate } from "../util/timeline-template.component";
+import { TimelineTemplate } from "./timeline-template";
+import { Permissions } from "@webwriter/lit/permissions";
 
-export class TimelineContainer extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
+export class TimelineContainer extends LitElementWw {
+    protected readonly msg = widgetMsg(this);
 
     /** @internal */
     static scopedElements = {
@@ -48,13 +49,13 @@ export class TimelineContainer extends LocalizedElement {
         }
     `;
 
-    @property({ type: Boolean, attribute: "edit-view" })
-    accessor isInEditView: boolean = true;
+    /** Inside the widget's shadow tree the mode is the widget's; `data-ww-can="edit"` shows the authoring controls. */
+    readonly #permissions = new Permissions(this);
 
     private slotRef = createRef<HTMLSlotElement>();
 
     private ensurePlaceholderEvent() {
-        if (!this.isInEditView) return;
+        if (!this.#permissions.editing) return;
 
         // During editing, ensure that is always a placeholder event that the user can edit
         if (this.slotRef.value?.assignedElements({ flatten: true }).length == 0) {
@@ -75,12 +76,10 @@ export class TimelineContainer extends LocalizedElement {
     render() {
         return html`<timeline-template>
             <slot ${ref(this.slotRef)} @slotchange=${() => this.ensurePlaceholderEvent()}></slot>
-            ${this.isInEditView
-                ? html`<div class="add-event">
-                      <sl-icon src=${PlusCircleFillIcon}></sl-icon>
-                      <sl-button variant="default" size="medium" @click=${this.addEvent}>${this.messages.msg("Add Event")}</sl-button>
-                  </div>`
-                : nothing}</timeline-template
+            <div class="add-event" data-ww-can="edit">
+                <sl-icon src=${PlusCircleFillIcon}></sl-icon>
+                <sl-button variant="default" size="medium" @click=${this.addEvent}>${this.msg("Add Event")}</sl-button>
+            </div></timeline-template
         >`;
     }
 }

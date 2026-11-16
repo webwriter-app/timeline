@@ -1,5 +1,5 @@
-import { ComplexAttributeConverter } from "lit";
-import { parseLocale } from "../../localization/localizer";
+import type { ComplexAttributeConverter } from "lit";
+import { parseLocale } from "./localize-options";
 
 const gregorianDateLabels: Record<string, { months: string[]; beforeCommonEra: string }> = {
     dv: {

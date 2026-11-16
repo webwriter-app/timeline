@@ -1,5 +1,5 @@
-# Timeline (`@webwriter/timeline@2.1.3`)
-[License: MIT](LICENSE) | Version: 2.1.3
+# Timeline (`@webwriter/timeline@3.0.0`)
+[License: MIT](LICENSE) | Version: 3.0.0
 
 Create/learn with a digital timeline and test your knowledge.
 
@@ -14,7 +14,7 @@ Create/learn with a digital timeline and test your knowledge.
 
 
 
-## `WebWriterTimelineWidget` (`<webwriter-timeline>`)
+## `WebwriterTimeline` (`<webwriter-timeline>`)
 Displays a timeline with events and a quiz based on those events.
 
 As children, it should only contain `<webwriter-timeline-event>` elements in order
@@ -44,6 +44,8 @@ npm install @webwriter/timeline
 ## Fields
 | Name (Attribute Name) | Type | Description | Default | Reflects |
 | :-------------------: | :--: | :---------: | :-----: | :------: |
+| `WebwriterTimeline.options` | `object` | - | `{ panels: { type: "select" as const, label: (widget: { msg: MsgFn }) => widget.msg("Visible panels"), options: [ { value: "timeline+quiz", label: (widget: { msg: MsgFn }) => widget.msg("Timeline and Quiz") }, { value: "timeline", label: (widget: { msg: MsgFn }) => widget.msg("Timeline only") }, { value: "quiz", label: (widget: { msg: MsgFn }) => widget.msg("Quiz only") }, ], }, }` | ✗ |
+| `localize` | - | - | - | ✗ |
 | `enabledPanels` (`panels`) | `"timeline" \| "quiz" \| "timeline+quiz"` | Which panels are enabled for the reader:<br>- "timeline": only the timeline panel<br>- "quiz": only the quiz panel<br>- "timeline+quiz": both panels with tabs | `"timeline+quiz"` | ✓ |
 
 *Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
@@ -58,7 +60,7 @@ npm install @webwriter/timeline
 *No public methods, slots, events, custom CSS properties, or CSS parts.*
 
 
-## `WebWriterTimelineEventWidget` (`<webwriter-timeline-event>`)
+## `WebwriterTimelineEvent` (`<webwriter-timeline-event>`)
 A single event in a `webwriter-timeline` component. Should not be used independently.
 As children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,
 which contain the title and details of the event, respectively.
@@ -87,8 +89,10 @@ npm install @webwriter/timeline
 ## Fields
 | Name (Attribute Name) | Type | Description | Default | Reflects |
 | :-------------------: | :--: | :---------: | :-----: | :------: |
+| `localize` | - | - | - | ✗ |
 | `date` (`date`) | `TimelineDate \| null` | The (start) date of the event.<br>Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".<br>Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on. | `null` | ✓ |
 | `endDate` (`endDate`) | `TimelineDate \| null` | The end date of the event, should be after the start date.<br>Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".<br>Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on. | `null` | ✓ |
+| `isIncomplete` | - | - | - | ✗ |
 
 *Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
 
@@ -109,7 +113,7 @@ npm install @webwriter/timeline
 *No public methods, slots, custom CSS properties, or CSS parts.*
 
 
-## `WebWriterTimelineEventTitleWidget` (`<webwriter-timeline-event-title>`)
+## `WebwriterTimelineEventTitle` (`<webwriter-timeline-event-title>`)
 The title of a `webwriter-timeline-event` element. Should not be used independently.
 As children, it can contain any inline "text" content (e.g., text nodes, `<strong>`, `<em>`, etc.).
 
@@ -134,6 +138,13 @@ npm install @webwriter/timeline
 <webwriter-timeline-event-title></webwriter-timeline-event-title>
 ```
 
+## Fields
+| Name (Attribute Name) | Type | Description | Default | Reflects |
+| :-------------------: | :--: | :---------: | :-----: | :------: |
+| `localize` | - | - | - | ✗ |
+
+*Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
+
 ## Editing config
 | Name | Value |
 | :--: | :---------: |
@@ -141,10 +152,10 @@ npm install @webwriter/timeline
 
 *The [editing config](https://webwriter.app/docs/packages/configuring/#editingconfig) defines how explorable authoring tools such as [WebWriter](https://webwriter.app) treat the widget.*
 
-*No public fields, methods, slots, events, custom CSS properties, or CSS parts.*
+*No public methods, slots, events, custom CSS properties, or CSS parts.*
 
 
-## `WebWriterTimelineEventDetailsWidget` (`<webwriter-timeline-event-details>`)
+## `WebwriterTimelineEventDetails` (`<webwriter-timeline-event-details>`)
 The details of a `webwriter-timeline-event` component. Should not be used independently.
 As children, it can contain any HTML content representing the details of the event.
 
@@ -169,6 +180,13 @@ npm install @webwriter/timeline
 <webwriter-timeline-event-details></webwriter-timeline-event-details>
 ```
 
+## Fields
+| Name (Attribute Name) | Type | Description | Default | Reflects |
+| :-------------------: | :--: | :---------: | :-----: | :------: |
+| `localize` | - | - | - | ✗ |
+
+*Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
+
 ## Editing config
 | Name | Value |
 | :--: | :---------: |
@@ -176,8 +194,8 @@ npm install @webwriter/timeline
 
 *The [editing config](https://webwriter.app/docs/packages/configuring/#editingconfig) defines how explorable authoring tools such as [WebWriter](https://webwriter.app) treat the widget.*
 
-*No public fields, methods, slots, events, custom CSS properties, or CSS parts.*
+*No public methods, slots, events, custom CSS properties, or CSS parts.*
 
 
 ---
-*Generated with @webwriter/build@1.9.0*
+*Generated with @webwriter/build@1.9.1*

@@ -1,4 +1,7 @@
-import { localizeElement, LocalizedElement } from "../../localization/localizer";
+import { Permissions } from "@webwriter/lit/permissions";
+import { LitElementWw } from "@webwriter/lit";
+import { localizer } from "@webwriter/lit/localize";
+import { localizeOptions } from "../model/localize-options";
 import { css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
@@ -8,9 +11,7 @@ import { classMap } from "lit/directives/class-map.js";
  * As children, it can contain any HTML content representing the details of the event.
  */
 @customElement("webwriter-timeline-event-details")
-export class WebWriterTimelineEventDetailsWidget extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
-
+export class WebwriterTimelineEventDetails extends LitElementWw {
     static styles = css`
         :host {
             position: relative;
@@ -36,6 +37,11 @@ export class WebWriterTimelineEventDetailsWidget extends LocalizedElement {
             box-sizing: border-box;
         }
     `;
+
+    localize = localizer(this, localizeOptions);
+    protected readonly msg = this.localize.msg;
+
+    readonly #permissions = new Permissions(this);
 
     @state()
     private accessor isEmpty = false;
@@ -71,16 +77,12 @@ export class WebWriterTimelineEventDetailsWidget extends LocalizedElement {
         }
     }
 
-    private get isInEditView() {
-        return this.contentEditable === "true" || this.contentEditable === "";
-    }
-
     render() {
         return html`<slot
-            style="--placeholder-text: '${this.messages.msg("Details")}'"
+            style="--placeholder-text: '${this.msg("Details")}'"
             class=${classMap({
-                "show-placeholder": this.isInEditView && this.isEmpty,
-                hide: !this.isInEditView && this.isEmpty,
+                "show-placeholder": this.#permissions.editing && this.isEmpty,
+                hide: !this.#permissions.editing && this.isEmpty,
             })}
             @slotchange=${this.handleSlotChange}
         ></slot>`;

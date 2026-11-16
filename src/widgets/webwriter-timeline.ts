@@ -1,19 +1,24 @@
-import { localizeElement, LocalizedElement } from "../localization/localizer";
+import { LitElementWw } from "@webwriter/lit";
+import type { MsgFn } from "@lit/localize";
+import { localizer } from "@webwriter/lit/localize";
+import { localizeOptions } from "../model/localize-options";
 import SlButton from "@shoelace-style/shoelace/dist/components/button/button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
+import { ref } from "lit/directives/ref.js";
 import SlTabGroup from "@shoelace-style/shoelace/dist/components/tab-group/tab-group.component.js";
 import SlTabPanel from "@shoelace-style/shoelace/dist/components/tab-panel/tab-panel.component.js";
 import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js";
 import "@shoelace-style/shoelace/dist/themes/light.css";
-import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
-import EyeSlashIcon from "bootstrap-icons/icons/eye-slash.svg";
+import ExclamationCircleIcon from "@tabler/icons/outline/exclamation-circle.svg";
+import EyeSlashIcon from "@tabler/icons/outline/eye-off.svg";
 import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
-import { ref } from "lit/directives/ref.js";
-import { QuizContainer, QuizEvent } from "./quiz/quiz-container.component";
-import { TimelineContainer } from "./timeline/timeline-container.component";
-import type { WebWriterTimelineEventWidget } from "./timeline/webwriter-timeline-event.widget";
-import { TimelineDate } from "./util/timeline-date";
+import { QuizContainer, QuizEvent } from "../components/quiz-container";
+import { TimelineContainer } from "../components/timeline-container";
+import type { WebwriterTimelineEvent } from "./webwriter-timeline-event";
+import { TimelineDate } from "../model/timeline-date";
+import { Permissions } from "@webwriter/lit/permissions";
+
 /**
  * Displays a timeline with events and a quiz based on those events.
  *
@@ -21,23 +26,7 @@ import { TimelineDate } from "./util/timeline-date";
  * to function properly. Any other children may lead to unexpected behavior.
  */
 @customElement("webwriter-timeline")
-export class WebWriterTimelineWidget extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
-
-    get options() {
-        return {
-            panels: {
-                type: "select" as const,
-                label: { _: this.messages.msg("Visible panels") },
-                options: [
-                    { value: "timeline+quiz", label: { _: this.messages.msg("Timeline and Quiz") } },
-                    { value: "timeline", label: { _: this.messages.msg("Timeline only") } },
-                    { value: "quiz", label: { _: this.messages.msg("Quiz only") } },
-                ],
-            },
-        };
-    }
-
+export class WebwriterTimeline extends LitElementWw {
     /** @internal */
     static scopedElements = {
         "sl-button": SlButton,
@@ -83,9 +72,23 @@ export class WebWriterTimelineWidget extends LocalizedElement {
         }
     `;
 
-    private get isInEditView() {
-        return this.contentEditable === "true" || this.contentEditable === "";
-    }
+    static options = {
+        panels: {
+            type: "select" as const,
+            label: (widget: { msg: MsgFn }) => widget.msg("Visible panels"),
+            options: [
+                { value: "timeline+quiz", label: (widget: { msg: MsgFn }) => widget.msg("Timeline and Quiz") },
+                { value: "timeline", label: (widget: { msg: MsgFn }) => widget.msg("Timeline only") },
+                { value: "quiz", label: (widget: { msg: MsgFn }) => widget.msg("Quiz only") },
+            ],
+        },
+    };
+
+    localize = localizer(this, { ...localizeOptions, drawer: true });
+    protected readonly msg = this.localize.msg;
+
+    /** Timeline has no author-granted permissions. The module supplies the edit mode and `data-ww-can="edit"`. */
+    readonly #permissions = new Permissions(this);
 
     /**
      * Which panels are enabled for the reader:
@@ -114,6 +117,12 @@ export class WebWriterTimelineWidget extends LocalizedElement {
         }
     });
 
+    /** The panels the author enabled in the `panels` attribute, e.g. "timeline+quiz". All of them if it is absent. */
+    private get panelsForReaders() {
+        const chosen = this.getAttribute("panels")?.split("+");
+        return ["timeline", "quiz"].filter((panel) => !chosen || chosen.includes(panel));
+    }
+
     connectedCallback() {
         super.connectedCallback();
         this.eventsObserver.observe(this, { childList: true, subtree: true, characterData: true, attributes: true });
@@ -139,7 +148,7 @@ export class WebWriterTimelineWidget extends LocalizedElement {
         for (const child of this.children) {
             if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") continue;
 
-            const event = child as WebWriterTimelineEventWidget;
+            const event = child as WebwriterTimelineEvent;
             const titleElement = event.querySelector(":scope > webwriter-timeline-event-title");
             if (!event.date || !titleElement || titleElement.textContent.trim() === "") continue;
 
@@ -163,7 +172,7 @@ export class WebWriterTimelineWidget extends LocalizedElement {
         event.stopPropagation();
 
         // When the date of an event changes, we need to reorder the events.
-        const target = event.target as WebWriterTimelineEventWidget;
+        const target = event.target as WebwriterTimelineEvent;
         const targetDate = target.date;
 
         let oldPos = Array.from(this.children).indexOf(target);
@@ -197,7 +206,7 @@ export class WebWriterTimelineWidget extends LocalizedElement {
             setTimeout(() => {
                 const updatedTarget = Array.from(this.children).find(
                     (child) => child.id === target.id,
-                ) as WebWriterTimelineEventWidget;
+                ) as WebwriterTimelineEvent;
                 updatedTarget?.showMovedAnimation();
             }, 0);
         }
@@ -212,13 +221,11 @@ export class WebWriterTimelineWidget extends LocalizedElement {
     }
 
     private Quiz() {
-        return html`<quiz-container .events=${this.eventsForQuiz}></quiz-container>`;
+        return html`<quiz-container .events=${this.eventsForQuiz} .language=${this.lang}></quiz-container>`;
     }
 
     private Timeline() {
         return html`<timeline-container
-
-            ?edit-view=${this.isInEditView}
             @add-event=${this.addEvent}
             @date-changed=${this.dateChanged}
         >
@@ -227,35 +234,32 @@ export class WebWriterTimelineWidget extends LocalizedElement {
     }
 
     private PanelIcon(panelName: string) {
-        if (!this.enabledPanels.includes(panelName)) {
-            return html`<sl-icon src=${EyeSlashIcon} label=${this.messages.msg("(disabled)")}></sl-icon>`;
+        if (!this.panelsForReaders.includes(panelName)) {
+            return html`<sl-icon data-ww-can="edit" src=${EyeSlashIcon} label=${this.msg("(disabled)")}></sl-icon>`;
         } else {
             return nothing;
         }
     }
 
     private TabGroup() {
-        if (!this.isInEditView) {
-            const isEmpty = this.eventsForQuiz.length === 0;
-            if (isEmpty || this.enabledPanels === "quiz") {
-                // Keep authored events slotted when the timeline itself is hidden.
-                const content = isEmpty
-                    ? html`<div class="timeline-empty">
-                          <sl-icon src=${ExclamationCircleIcon}></sl-icon>
-                          ${this.messages.msg("Timeline is empty.")}
-                      </div>`
-                    : this.Quiz();
-                return html`<slot class="hide"></slot>${content}`;
-            }
+        if (!this.#permissions.editing && this.eventsForQuiz.length === 0) {
+            // Keep authored events slotted while the timeline itself is hidden.
+            return html`<slot class="hide"></slot>
+                <div class="timeline-empty">
+                    <sl-icon src=${ExclamationCircleIcon}></sl-icon>
+                    ${this.msg("Timeline is empty.")}
+                </div>`;
+        }
 
-            if (this.enabledPanels === "timeline") {
-                return this.Timeline();
-            }
+        // Authors see every panel, readers the enabled ones.
+        const visible = this.#permissions.editing ? ["timeline", "quiz"] : this.panelsForReaders;
+        if (visible.length < 2) {
+            return visible[0] === "quiz" ? html`<slot class="hide"></slot>${this.Quiz()}` : this.Timeline();
         }
 
         return html`<sl-tab-group ${ref(this.initTabGroup)} tabindex="0" activation="manual">
-            <sl-tab slot="nav" panel="timeline">${this.messages.msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
-            <sl-tab slot="nav" panel="quiz">${this.messages.msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
+            <sl-tab slot="nav" panel="timeline">${this.msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
+            <sl-tab slot="nav" panel="quiz">${this.msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
             <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>
             <sl-tab-panel name="quiz">${this.Quiz()}</sl-tab-panel>
         </sl-tab-group>`;

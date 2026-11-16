@@ -1,15 +1,18 @@
-import { localizeElement, LocalizedElement } from "../../localization/localizer";
+import { Permissions } from "@webwriter/lit/permissions";
+import { LitElementWw } from "@webwriter/lit";
+import { localizer } from "@webwriter/lit/localize";
+import { localizeOptions } from "../model/localize-options";
 import SlIconButton from "@shoelace-style/shoelace/dist/components/icon-button/icon-button.component.js";
 import SlIcon from "@shoelace-style/shoelace/dist/components/icon/icon.component.js";
 import SlTooltip from "@shoelace-style/shoelace/dist/components/tooltip/tooltip.component.js";
-import ExclamationCircleIcon from "bootstrap-icons/icons/exclamation-circle.svg";
-import TrashIcon from "bootstrap-icons/icons/trash.svg";
+import ExclamationCircleIcon from "@tabler/icons/outline/exclamation-circle.svg";
+import TrashIcon from "@tabler/icons/outline/trash.svg";
 import { css, html, nothing, PropertyValues } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import { DateInput } from "../util/date-input.component";
-import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
+import { DateInput } from "../components/date-input";
+import { TimelineDate, timelineDateConverter } from "../model/timeline-date";
 
 /**
  * A single event in a `webwriter-timeline` component. Should not be used independently.
@@ -17,9 +20,7 @@ import { TimelineDate, timelineDateConverter } from "../util/timeline-date";
  * which contain the title and details of the event, respectively.
  */
 @customElement("webwriter-timeline-event")
-export class WebWriterTimelineEventWidget extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
-
+export class WebwriterTimelineEvent extends LitElementWw {
     /** @internal */
     static scopedElements = {
         "sl-icon-button": SlIconButton,
@@ -122,11 +123,10 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
         }
     `;
 
-    private get isInEditView() {
-        return this.contentEditable === "true" || this.contentEditable === "";
-    }
+    localize = localizer(this, localizeOptions);
+    protected readonly msg = this.localize.msg;
 
-    private dotElement = createRef<HTMLElement>();
+    readonly #permissions = new Permissions(this);
 
     /**
      * The (start) date of the event.
@@ -143,6 +143,8 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
      */
     @property({ type: TimelineDate, attribute: true, reflect: true, converter: timelineDateConverter })
     accessor endDate: TimelineDate | null = null;
+
+    private dotElement = createRef<HTMLElement>();
 
     @state()
     private accessor titleEmpty: boolean = true;
@@ -165,6 +167,17 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
         super.disconnectedCallback();
     }
 
+    protected firstUpdated(_changedProperties: PropertyValues): void {
+        // Check if either date attribute is not yet obfuscated
+        // If so, set it to a clone to force an update which will obfuscate the attribute value
+        if (this.date && !this.getAttribute("date")?.startsWith("$")) {
+            this.date = this.date.clone();
+        }
+        if (this.endDate && !this.getAttribute("enddate")?.startsWith("$")) {
+            this.endDate = this.endDate.clone();
+        }
+    }
+
     /** @internal */
     async showMovedAnimation() {
         const dot = this.dotElement.value;
@@ -182,33 +195,23 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
         dot.addEventListener("animationend", removePulse);
     }
 
-    protected firstUpdated(_changedProperties: PropertyValues): void {
-        // Check if either date attribute is not yet obfuscated
-        // If so, set it to a clone to force an update which will obfuscate the attribute value
-        if (this.date && !this.getAttribute("date")?.startsWith("$")) {
-            this.date = this.date.clone();
-        }
-        if (this.endDate && !this.getAttribute("enddate")?.startsWith("$")) {
-            this.endDate = this.endDate.clone();
-        }
-    }
-
     get isIncomplete() {
         return this.titleEmpty || !this.date;
     }
 
     render() {
         // Do not display incomplete events outside edit view.
-        if (!this.isInEditView && this.isIncomplete) return html`<slot class="hide"></slot>`;
+        if (!this.#permissions.editing && this.isIncomplete) return html`<slot class="hide"></slot>`;
 
         return html`
             <div class="dot" ${ref(this.dotElement)}></div>
             <div>
                 <div class="controls">
                     <date-input
-                        placeholder=${this.messages.msg("Date")}
+                        .language=${this.lang}
+                        placeholder=${this.msg("Date")}
                         .value=${this.date}
-                        ?disabled=${!this.isInEditView}
+                        ?disabled=${!this.#permissions.editing}
                         @change=${(e: Event) => {
                             if (this.date === (e.target as DateInput).value) return;
 
@@ -220,15 +223,16 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
                             );
                         }}
                     ></date-input>
-                    ${this.isInEditView || !!this.endDate
+                    ${this.#permissions.editing || !!this.endDate
                         ? html`<span class=${classMap({ "gray-out": !this.endDate, "show-on-focus": !this.endDate })}>
                                   —
                               </span>
                               <date-input
+                                  .language=${this.lang}
                                   class=${classMap({ "show-on-focus": !this.endDate })}
-                                  placeholder=${this.messages.msg("End date")}
+                                  placeholder=${this.msg("End date")}
                                   .value=${this.endDate}
-                                  ?disabled=${!this.isInEditView}
+                                  ?disabled=${!this.#permissions.editing}
                                   optional
                                   @change=${(event: Event) => {
                                       this.endDate = (event.target as DateInput).value;
@@ -237,14 +241,14 @@ export class WebWriterTimelineEventWidget extends LocalizedElement {
                         : nothing}
                     <span class="spacer"></span>
                     ${this.isIncomplete
-                        ? html`<sl-tooltip content=${this.messages.msg("An event requires a date and a title")} placement="bottom">
+                        ? html`<sl-tooltip content=${this.msg("An event requires a date and a title")} placement="bottom">
                               <sl-icon src=${ExclamationCircleIcon}></sl-icon>
                           </sl-tooltip>`
                         : nothing}
-                    ${this.isInEditView
+                    ${this.#permissions.editing
                         ? html`<sl-icon-button
                               src=${TrashIcon}
-                              label=${this.messages.msg("Delete event")}
+                              label=${this.msg("Delete event")}
                               @click=${() => this.remove()}
                           ></sl-icon-button>`
                         : nothing}

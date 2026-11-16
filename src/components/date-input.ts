@@ -1,11 +1,16 @@
-import { localizeElement, LocalizedElement } from "../../localization/localizer";
+import { LitElementWw } from "@webwriter/lit";
+import { widgetMsg } from "@webwriter/lit/localize";
 import { css, html, PropertyValues } from "lit";
 import { property, state } from "lit/decorators.js";
 import { createRef, ref } from "lit/directives/ref.js";
-import { TimelineDate, timelineDateConverter } from "./timeline-date";
+import { TimelineDate, timelineDateConverter } from "../model/timeline-date";
 
-export class DateInput extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
+export class DateInput extends LitElementWw {
+    protected readonly msg = widgetMsg(this);
+
+    /** The language dates are written in. The widget passes its own, since `lang` does not reach into its shadow tree. */
+    @property({ type: String })
+    accessor language: string = "";
 
     static styles = css`
         :host {
@@ -60,17 +65,17 @@ export class DateInput extends LocalizedElement {
     private localizeErrorMessage(key: string): string {
         switch (key) {
             case "INVALID_YEAR":
-                return this.messages.msg("Invalid year");
+                return this.msg("Invalid year");
             case "INVALID_MONTH":
-                return this.messages.msg("Invalid month");
+                return this.msg("Invalid month");
             case "INVALID_DAY":
-                return this.messages.msg("Invalid day");
+                return this.msg("Invalid day");
             case "YEAR_ZERO_INVALID":
-                return this.messages.msg("Year zero does not exist");
+                return this.msg("Year zero does not exist");
             case "INVALID_FORMAT":
-                return this.messages.msg("Invalid format");
+                return this.msg("Invalid format");
             default:
-                return this.messages.msg("Invalid date");
+                return this.msg("Invalid date");
         }
     }
 
@@ -121,13 +126,13 @@ export class DateInput extends LocalizedElement {
             this.value = TimelineDate.fromEuropeanString(this.internalValue);
         } catch (e) {
             // Even if the date is invalid, revert to the last valid date on blur
-            this.internalValue = this.value?.toLocalizedString(this.messages.getLanguage()) ?? "";
+            this.internalValue = this.value?.toLocalizedString(this.language) ?? "";
         }
     }
 
     protected updated(_changedProperties: PropertyValues): void {
-        if (_changedProperties.has("value") || _changedProperties.has("lang")) {
-            this.internalValue = this.value?.toLocalizedString(this.messages.getLanguage()) ?? "";
+        if (_changedProperties.has("value") || _changedProperties.has("language")) {
+            this.internalValue = this.value?.toLocalizedString(this.language) ?? "";
         }
 
         if (_changedProperties.has("value")) {

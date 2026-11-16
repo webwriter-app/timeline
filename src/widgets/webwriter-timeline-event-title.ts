@@ -1,4 +1,6 @@
-import { localizeElement, LocalizedElement } from "../../localization/localizer";
+import { LitElementWw } from "@webwriter/lit";
+import { localizer } from "@webwriter/lit/localize";
+import { localizeOptions } from "../model/localize-options";
 import { css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
@@ -8,9 +10,7 @@ import { classMap } from "lit/directives/class-map.js";
  * As children, it can contain any inline "text" content (e.g., text nodes, `<strong>`, `<em>`, etc.).
  */
 @customElement("webwriter-timeline-event-title")
-export class WebWriterTimelineEventTitleWidget extends LocalizedElement {
-    protected readonly messages = localizeElement(this);
-
+export class WebwriterTimelineEventTitle extends LitElementWw {
     static styles = css`
         :host {
             display: block;
@@ -32,6 +32,9 @@ export class WebWriterTimelineEventTitleWidget extends LocalizedElement {
         }
     `;
 
+    localize = localizer(this, localizeOptions);
+    protected readonly msg = this.localize.msg;
+
     @state()
     private accessor showPlaceholder = true;
 
@@ -48,7 +51,7 @@ export class WebWriterTimelineEventTitleWidget extends LocalizedElement {
 
     render() {
         return html`<slot
-            style="--placeholder-text: '${this.messages.msg("Title")}'"
+            style="--placeholder-text: '${this.msg("Title")}'"
             class=${classMap({ "show-placeholder": this.showPlaceholder })}
             @slotchange=${this.handleSlotChange}
         ></slot>`;
