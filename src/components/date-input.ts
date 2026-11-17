@@ -79,7 +79,7 @@ export class DateInput extends LitElementWw {
         }
     }
 
-    private onInputFocus(event: InputEvent) {
+    private onInputFocus() {
         this.internalValue = this.value?.toEuropeanString() ?? "";
         this.updateComplete.then(() => this.inputElement.value?.select());
     }

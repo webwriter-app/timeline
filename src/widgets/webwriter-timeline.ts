@@ -48,10 +48,6 @@ export class WebwriterTimeline extends LitElementWw {
             margin-left: var(--sl-spacing-x-small);
         }
 
-        :host(:not([contenteditable="true"]):not([contenteditable=""])) aside {
-            display: none;
-        }
-
         sl-tab-panel::part(base) {
             padding: 0;
         }

@@ -77,15 +77,6 @@ export class WebwriterTimelineEvent extends LitElementWw {
             }
         }
 
-        input {
-            background: unset;
-            padding: 0;
-            border: none;
-            font: inherit;
-            display: block;
-            outline: none !important;
-        }
-
         .controls {
             display: flex;
             gap: var(--sl-spacing-x-small);

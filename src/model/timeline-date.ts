@@ -16,6 +16,16 @@ const gregorianDateLabels: Record<string, { months: string[]; beforeCommonEra: s
     },
 };
 
+const formatters = new Map<string, Intl.DateTimeFormat>();
+
+/** Building an Intl.DateTimeFormat is costly and the quiz formats every event on each render. */
+function formatterFor(locale: string, options: Intl.DateTimeFormatOptions): Intl.DateTimeFormat {
+    const key = `${locale}|${options.year}|${options.month}|${options.day}|${options.era}`;
+    let formatter = formatters.get(key);
+    if (!formatter) formatters.set(key, (formatter = new Intl.DateTimeFormat(locale, options)));
+    return formatter;
+}
+
 /**
  * A custom data class to represent a date inside this widget. It supports
  * year-only, year-month, and year-month-day precision, with validation based
@@ -28,7 +38,7 @@ export class TimelineDate {
     /**
      * Check if a given year is a leap year.
      */
-    static isLeapYear(year: number): boolean {
+    private static isLeapYear(year: number): boolean {
         const mod = (a: number, n: number) => ((a % n) + n) % n;
         return mod(year, 400) === 0 || (mod(year, 4) === 0 && mod(year, 100) !== 0);
     }
@@ -93,7 +103,7 @@ export class TimelineDate {
         const labels = gregorianDateLabels[parsed.language];
         const fallback = labels && !Intl.DateTimeFormat.supportedLocalesOf(localeName).length;
         const month = options.month ?? "long";
-        const formatter = Intl.DateTimeFormat(fallback ? "en-GB" : localeName, {
+        const formatter = formatterFor(fallback ? "en-GB" : localeName, {
             calendar: "gregory",
             timeZone: "UTC",
             year: options.year ?? "numeric",
@@ -110,22 +120,6 @@ export class TimelineDate {
             // Keep combining marks attached when abbreviating the month.
             return name.match(/\P{M}\p{M}*/gu)?.slice(0, month === "short" ? 3 : 1).join("") ?? name;
         }).join("");
-    }
-
-    /**
-     * Converts the date to an ISO 8601 formatted string.
-     */
-    toISOString(): string {
-        let result = "";
-
-        if (this.year < 0) result += "-";
-        result += Math.abs(this.year).toString().padStart(4, "0");
-
-        if (this.month !== null) result += "-" + this.month.toString().padStart(2, "0");
-
-        if (this.day !== null) result += "-" + this.day.toString().padStart(2, "0");
-
-        return result;
     }
 
     /**

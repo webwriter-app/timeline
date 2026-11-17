@@ -19,11 +19,6 @@ export class TimelineContainer extends LitElementWw {
     };
 
     static styles = css`
-        .no-events {
-            grid-column: 2;
-            color: var(--sl-color-neutral-500);
-        }
-
         timeline-template {
             row-gap: var(--sl-spacing-small);
         }
