@@ -124,6 +124,13 @@ export class WebwriterTimelineEvent extends LitElementWw {
         }
 
         .controls {
+            display: grid;
+            grid-template-columns: minmax(0, max-content) minmax(0, 1fr);
+            gap: var(--sl-spacing-x-small);
+        }
+
+        .date-fields {
+            min-inline-size: 0;
             display: flex;
             flex-wrap: wrap;
             gap: var(--sl-spacing-x-small);
@@ -131,12 +138,34 @@ export class WebwriterTimelineEvent extends LitElementWw {
         }
 
         .reorder-hint {
-            margin-inline-start: auto;
+            /* Only the date fields determine the row height, even when the hint wraps. */
+            contain: size;
+            container: timeline-reorder-hint / inline-size;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            min-inline-size: 0;
             color: var(--sl-color-gray-500);
-            font-size: 0.875em;
-            white-space: nowrap;
+            font-size: 0.6875em;
+            line-height: 1;
+            text-align: end;
             pointer-events: none;
             user-select: none;
+        }
+
+        .reorder-hint > span {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: clip;
+            overflow-wrap: anywhere;
+        }
+
+        @container timeline-reorder-hint (inline-size < 6em) {
+            .reorder-hint > span {
+                display: none;
+            }
         }
 
         .gray-out {
@@ -307,40 +336,42 @@ export class WebwriterTimelineEvent extends LitElementWw {
             </div>
             <div class="content" ?data-selected=${this.selectionWithin}>
                 <div class="controls">
-                    <date-input
-                        .language=${this.lang}
-                        placeholder=${this.msg("Date")}
-                        .value=${this.date}
-                        ?disabled=${!this.#permissions.editing}
-                        @change=${(e: Event) => {
-                            if (this.date === (e.target as DateInput).value) return;
+                    <div class="date-fields">
+                        <date-input
+                            .language=${this.lang}
+                            placeholder=${this.msg("Date")}
+                            .value=${this.date}
+                            ?disabled=${!this.#permissions.editing}
+                            @change=${(e: Event) => {
+                                if (this.date === (e.target as DateInput).value) return;
 
-                            this.date = (e.target as DateInput).value;
-                            // Notify the webwriter-timeline widget that the date has changed
-                            // so it can reorder the events.
-                            this.updateComplete.then(() =>
-                                this.dispatchEvent(new CustomEvent("date-changed", { bubbles: true, composed: true })),
-                            );
-                        }}
-                    ></date-input>
-                    ${this.#permissions.editing || !!this.endDate
-                        ? html`<span class=${classMap({ "gray-out": !this.endDate, "show-on-focus": !this.endDate })}>
-                                  —
-                              </span>
-                              <date-input
-                                  .language=${this.lang}
-                                  class=${classMap({ "show-on-focus": !this.endDate })}
-                                  placeholder=${this.msg("End date")}
-                                  .value=${this.endDate}
-                                  ?disabled=${!this.#permissions.editing}
-                                  optional
-                                  @change=${(event: Event) => {
-                                      this.endDate = (event.target as DateInput).value;
-                                  }}
-                              ></date-input>`
-                        : nothing}
+                                this.date = (e.target as DateInput).value;
+                                // Notify the webwriter-timeline widget that the date has changed
+                                // so it can reorder the events.
+                                this.updateComplete.then(() =>
+                                    this.dispatchEvent(new CustomEvent("date-changed", { bubbles: true, composed: true })),
+                                );
+                            }}
+                        ></date-input>
+                        ${this.#permissions.editing || !!this.endDate
+                            ? html`<span class=${classMap({ "gray-out": !this.endDate, "show-on-focus": !this.endDate })}>
+                                      —
+                                  </span>
+                                  <date-input
+                                      .language=${this.lang}
+                                      class=${classMap({ "show-on-focus": !this.endDate })}
+                                      placeholder=${this.msg("End date")}
+                                      .value=${this.endDate}
+                                      ?disabled=${!this.#permissions.editing}
+                                      optional
+                                      @change=${(event: Event) => {
+                                          this.endDate = (event.target as DateInput).value;
+                                      }}
+                                  ></date-input>`
+                            : nothing}
+                    </div>
                     ${this.#permissions.editing
-                        ? html`<span class="reorder-hint show-on-focus" part="reorder-hint">${this.msg("Change date to reorder")}</span>`
+                        ? html`<span class="reorder-hint show-on-focus" part="reorder-hint"><span>${this.msg("Change date to reorder")}</span></span>`
                         : nothing}
                 </div>
                 <slot

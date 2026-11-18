@@ -227,6 +227,66 @@ describe("<webwriter-timeline> modes and languages", function () {
       assert.isAtLeast(edge.getBoundingClientRect().height, content.getBoundingClientRect().height)
     })
 
+    it("wraps the reorder hint to two lines without increasing the date row height", function () {
+      const event = eventEl()
+      const controls = event.shadowRoot.querySelector(".controls") as HTMLElement
+      const fields = controls.querySelector(".date-fields") as HTMLElement
+      const hint = controls.querySelector(".reorder-hint") as HTMLElement
+      const text = hint.firstElementChild as HTMLElement
+      const originalStyle = controls.getAttribute("style")
+      const originalText = text.textContent
+      try {
+        controls.style.cssText = "inline-size: 800px; font-size: 20px; line-height: 1.5"
+        const gap = parseFloat(getComputedStyle(controls).columnGap)
+        const textWidth = text.getBoundingClientRect().width
+        controls.style.inlineSize = `${fields.getBoundingClientRect().width + gap + textWidth * 0.6}px`
+        const height = controls.getBoundingClientRect().height
+        const lineHeight = parseFloat(getComputedStyle(text).lineHeight)
+        assert.closeTo(text.getBoundingClientRect().height, lineHeight * 2, 1)
+        assert.isBelow(parseFloat(getComputedStyle(hint).fontSize), 15)
+        text.textContent = originalText.repeat(10)
+        assert.equal(controls.getBoundingClientRect().height, height)
+        assert.isAtMost(text.getBoundingClientRect().height, lineHeight * 2 + 1)
+        controls.style.lineHeight = "1"
+        const compactHeight = controls.getBoundingClientRect().height
+        assert.closeTo(text.getBoundingClientRect().height, lineHeight * 2, 1)
+        hint.style.display = "none"
+        assert.equal(controls.getBoundingClientRect().height, compactHeight)
+      }
+      finally {
+        text.textContent = originalText
+        hint.style.removeProperty("display")
+        if (originalStyle === null) controls.removeAttribute("style")
+        else controls.setAttribute("style", originalStyle)
+      }
+    })
+
+    it("hides the reorder hint when the space beside the dates is too narrow", function () {
+      const controls = eventEl().shadowRoot.querySelector(".controls") as HTMLElement
+      const fields = controls.querySelector(".date-fields") as HTMLElement
+      const hint = controls.querySelector(".reorder-hint") as HTMLElement
+      const text = hint.firstElementChild as HTMLElement
+      const originalStyle = controls.getAttribute("style")
+      try {
+        controls.style.inlineSize = "800px"
+        const fieldsWidth = fields.getBoundingClientRect().width
+        const gap = parseFloat(getComputedStyle(controls).columnGap)
+        const fontSize = parseFloat(getComputedStyle(hint).fontSize)
+        const height = controls.getBoundingClientRect().height
+        controls.style.inlineSize = `${fieldsWidth + gap + fontSize * 5}px`
+        assert.equal(getComputedStyle(text).display, "none")
+        assert.equal(controls.getBoundingClientRect().height, height)
+        controls.style.inlineSize = `${fieldsWidth - 20}px`
+        assert.equal(getComputedStyle(text).display, "none")
+        controls.style.inlineSize = "800px"
+        assert.notEqual(getComputedStyle(text).display, "none")
+      }
+      finally {
+        if (originalStyle === null) controls.removeAttribute("style")
+        else controls.setAttribute("style", originalStyle)
+      }
+    })
+
     it("keeps the edge indicator and end-date placeholder while selection is inside the event", async function () {
       const event = eventEl()
       const paragraph = event.querySelector("p")
@@ -235,7 +295,7 @@ describe("<webwriter-timeline> modes and languages", function () {
       await event.updateComplete
       assert.isTrue(event.shadowRoot.querySelector(".dot").hasAttribute("data-selected"))
       assert.equal(getComputedStyle(dateInputs()[1]).opacity, "1")
-      assert.equal(getComputedStyle(event.shadowRoot.querySelector(".controls > .show-on-focus")).opacity, "1")
+      assert.equal(getComputedStyle(event.shadowRoot.querySelector(".date-fields > .show-on-focus")).opacity, "1")
       const hint = event.shadowRoot.querySelector(".reorder-hint")
       assert.equal(hint.textContent, "Change date to reorder")
       assert.equal(getComputedStyle(hint).opacity, "1")
@@ -251,7 +311,7 @@ describe("<webwriter-timeline> modes and languages", function () {
         const html = event.outerHTML
         const edge = event.shadowRoot.querySelector(".event-selector")
         const dot = event.shadowRoot.querySelector(".dot")
-        const dash = event.shadowRoot.querySelector(".controls > .show-on-focus")
+        const dash = event.shadowRoot.querySelector(".date-fields > .show-on-focus")
         assert.isFalse(dot.hasAttribute("data-selected"))
         assert.equal(getComputedStyle(dateInputs()[1]).opacity, "0")
         event.selectionStates.add(state)
