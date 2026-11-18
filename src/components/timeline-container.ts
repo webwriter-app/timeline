@@ -42,6 +42,12 @@ export class TimelineContainer extends LitElementWw {
                 width: fit-content;
             }
         }
+
+        @media print {
+            .add-event {
+                display: none;
+            }
+        }
     `;
 
     /** Inside the widget's shadow tree the mode is the widget's; `data-ww-can="edit"` shows the authoring controls. */
@@ -69,7 +75,7 @@ export class TimelineContainer extends LitElementWw {
     }
 
     render() {
-        return html`<timeline-template>
+        return html`<timeline-template exportparts="line">
             <slot ${ref(this.slotRef)} @slotchange=${() => this.ensurePlaceholderEvent()}></slot>
             <div class="add-event" data-ww-can="edit">
                 <sl-icon src=${PlusCircleFillIcon}></sl-icon>

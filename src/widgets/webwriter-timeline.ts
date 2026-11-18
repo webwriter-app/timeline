@@ -11,12 +11,21 @@ import SlTab from "@shoelace-style/shoelace/dist/components/tab/tab.component.js
 import "@shoelace-style/shoelace/dist/themes/light.css";
 import ExclamationCircleIcon from "@tabler/icons/outline/exclamation-circle.svg";
 import EyeSlashIcon from "@tabler/icons/outline/eye-off.svg";
+import { computed, signal } from "@webwriter/lit";
 import { css, html, nothing } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import { QuizContainer, QuizEvent } from "../components/quiz-container";
 import { TimelineContainer } from "../components/timeline-container";
 import type { WebwriterTimelineEvent } from "./webwriter-timeline-event";
 import { TimelineDate } from "../model/timeline-date";
+import { eventsFromCsv, eventsToCsv, ExchangeError } from "../model/timeline-exchange";
+import {
+    buildEvents,
+    eventRecords,
+    eventsFromFragment,
+    eventsToDetails,
+    recordsToParsed,
+} from "../components/timeline-exchange";
 import { Permissions } from "@webwriter/lit/permissions";
 
 /**
@@ -24,6 +33,29 @@ import { Permissions } from "@webwriter/lit/permissions";
  *
  * As children, it should only contain `<webwriter-timeline-event>` elements in order
  * to function properly. Any other children may lead to unexpected behavior.
+ *
+ * @part line - The vertical line of the timeline (also in the quiz panel).
+ * @part marker - The dot of an event in the quiz panel. The dots in the timeline panel belong to `webwriter-timeline-event`.
+ * @part card - A draggable event card in the quiz panel.
+ *
+ * Media rules for authored images and videos in the details are adopted as one page-level stylesheet into the root
+ * that holds the element (counted per root, removed on disconnect); roots without `adoptedStyleSheets` skip it.
+ *
+ * Conversions: an `ol`, `ul`, `dl` or a series of `details` elements becomes a timeline, and the timeline can become
+ * `details` elements. A list item, a `dt` or a `summary` starts with the date or date range (ISO 8601 such as
+ * `1815-12-10`, or `10.12.1815`; a `time` element with `datetime` also works), then the title; what follows the title
+ * is the detail text. Dates with a year below 1000 need the ISO form with four digits, such as `0476`.
+ * The timeline reads and writes CSV (`.csv`, `text/csv`) with the columns `date`, `end_date`, `title` and `details`
+ * (UTF-8, comma or semicolon separated on import). A file import replaces all events. CSV keeps plain text only:
+ * the formatting, links and images in the details are dropped, and each paragraph of the details becomes one line.
+ *
+ * Signals: `score` is the share of events the reader placed correctly in the quiz after submitting (a number from 0 to 1,
+ * 0 until then), and `complete` is `true` once the answers are submitted. A receiving widget connects with an
+ * effect attribute such as `value-from="#timeline-id[score]"`. The timeline has no effects of its own.
+ *
+ * Theme: text uses `--ww-text-color` and `--ww-font-family`; the line, dots and highlights use `--ww-theme-accent-1` and `--ww-theme-accent-2`.
+ *
+ * Print: shows the active panel without tabs and controls. The quiz prints as a worksheet (event cards and empty date boxes).
  */
 @customElement("webwriter-timeline")
 export class WebwriterTimeline extends LitElementWw {
@@ -41,8 +73,14 @@ export class WebwriterTimeline extends LitElementWw {
     static styles = css`
         :host {
             display: block;
+            box-sizing: border-box;
             width: 100%;
+            min-width: min(300px, 100%);
+            max-width: 2100px;
+            min-height: 6rem;
             block-size: auto;
+            color: var(--ww-text-color, inherit);
+            font-family: var(--ww-font-family, inherit);
         }
 
         sl-icon {
@@ -72,6 +110,18 @@ export class WebwriterTimeline extends LitElementWw {
             gap: var(--sl-spacing-small);
             align-items: center;
         }
+
+        @media print {
+            :host {
+                min-width: 0;
+                max-width: none;
+            }
+
+            /* The paper shows the active panel only: no tabs. */
+            sl-tab-group::part(nav) {
+                display: none;
+            }
+        }
     `;
 
     static options = {
@@ -84,6 +134,21 @@ export class WebwriterTimeline extends LitElementWw {
                 { value: "quiz", label: (widget: { msg: MsgFn }) => widget.msg("Quiz only") },
             ],
         },
+    };
+
+    /** DOM and file conversions. See the class description for the formats. */
+    static convertFrom = {
+        ol: "fromElement",
+        ul: "fromElement",
+        dl: "fromElement",
+        details: "fromElement",
+        ".csv": "importCsv",
+        "text/csv": "importCsv",
+    };
+
+    static convertTo = {
+        details: "toDetails",
+        "text/csv": "exportCsv",
     };
 
     localize = localizer(this, { ...localizeOptions, drawer: true });
@@ -100,6 +165,15 @@ export class WebwriterTimeline extends LitElementWw {
      */
     @property({ type: String, reflect: true, attribute: "panels" })
     accessor enabledPanels: "timeline" | "quiz" | "timeline+quiz" = "timeline+quiz";
+
+    readonly #score = signal(0);
+    readonly #complete = signal(false);
+
+    /** The quiz result for other widgets: `score` from 0 to 1 and `complete` once the answers are submitted. */
+    readonly signals = {
+        score: computed(() => this.#score.get()),
+        complete: computed(() => this.#complete.get()),
+    };
 
     @state()
     private accessor eventsForQuiz: QuizEvent[] = [];
@@ -176,6 +250,46 @@ export class WebwriterTimeline extends LitElementWw {
         this.eventsForQuiz = eventsForQuiz;
     }
 
+    /** Takes over the events of a copied list, description list or `details` elements. */
+    fromElement(fragment: DocumentFragment) {
+        const parsed = eventsFromFragment(fragment);
+        if (parsed.length === 0) return false;
+        this.replaceChildren("\n", ...buildEvents(this.ownerDocument, parsed).flatMap((event) => [event, "\n"]));
+    }
+
+    /** The events as `details` elements, or `null` when there are none. */
+    toDetails() {
+        const fragment = eventsToDetails(this, this.lang);
+        return fragment.childElementCount ? fragment : null;
+    }
+
+    /** Reads the whole file first. The returned function replaces all events. */
+    async importCsv(file: File) {
+        let parsed;
+        try {
+            parsed = recordsToParsed(this.ownerDocument, eventsFromCsv(await file.text()));
+        } catch (error) {
+            if (!(error instanceof ExchangeError)) throw error;
+            if (error.code === "columns") throw new Error(this.msg("The file needs a date column and a title column."));
+            if (error.code === "date") throw new Error(`${this.msg("The date is not valid in row")} ${error.row}.`);
+            throw new Error(this.msg("The file contains no events."));
+        }
+        return () => {
+            this.replaceChildren("\n", ...buildEvents(this.ownerDocument, parsed).flatMap((event) => [event, "\n"]));
+        };
+    }
+
+    exportCsv() {
+        const records = eventRecords(this);
+        if (records.length === 0) return null;
+        return new File([eventsToCsv(records)], "timeline.csv", { type: "text/csv" });
+    }
+
+    private quizStateChanged(event: CustomEvent<{ score: number; complete: boolean }>) {
+        this.#score.set(event.detail.score);
+        this.#complete.set(event.detail.complete);
+    }
+
     private addEvent(event: CustomEvent) {
         event.stopPropagation();
         const newEvent = document.createElement("webwriter-timeline-event");
@@ -239,11 +353,12 @@ export class WebwriterTimeline extends LitElementWw {
     }
 
     private Quiz() {
-        return html`<quiz-container .events=${this.eventsForQuiz} .language=${this.lang}></quiz-container>`;
+        return html`<quiz-container exportparts="line, marker, card" @quiz-state=${this.quizStateChanged} .events=${this.eventsForQuiz} .language=${this.lang}></quiz-container>`;
     }
 
     private Timeline() {
         return html`<timeline-container
+            exportparts="line"
             @add-event=${this.addEvent}
             @date-changed=${this.dateChanged}
         >

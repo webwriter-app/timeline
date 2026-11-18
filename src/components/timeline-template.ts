@@ -5,13 +5,16 @@ export class TimelineTemplate extends LitElementWw {
     static styles = css`
         :host {
             width: 100%;
+            min-width: 0;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
 
             --line-container-width: 1em; /* Width of the container centering the line */
             --line-width: 0.125rem; /* Width of the vertical line */
             --line-spacing: var(--sl-spacing-x-small); /* Space between the line container and the content */
 
             display: grid;
-            grid-template-columns: var(--line-container-width) 1fr;
+            grid-template-columns: var(--line-container-width) minmax(0, 1fr);
             column-gap: var(--line-spacing);
 
             position: relative; /* For positioning the line */
@@ -28,7 +31,7 @@ export class TimelineTemplate extends LitElementWw {
             left: calc((var(--line-container-width) - var(--line-width)) / 2);
             width: var(--line-width);
 
-            background-color: black;
+            background-color: var(--ww-theme-accent-1, black);
         }
 
         /* Arrow tip at the end (bottom) of the line */
@@ -47,14 +50,14 @@ export class TimelineTemplate extends LitElementWw {
             transform-origin: bottom right;
             transform: rotate(45deg);
 
-            border-color: black;
+            border-color: var(--ww-theme-accent-1, black);
             border-style: solid;
             border-width: 0 var(--line-width) var(--line-width) 0;
         }
     `;
 
     render() {
-        return html`<div class="line"></div>
+        return html`<div class="line" part="line"></div>
             <slot></slot>`;
     }
 }

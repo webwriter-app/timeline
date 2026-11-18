@@ -53,6 +53,14 @@
               "default": "new MutationObserver(() => { const observedElement = this.observedElement; if (!observedElement) return; let empty = observedElement.childNodes.length === 0; // If the only child is a trailing break, consider it empty if (observedElement.children.length === 1) { const child = observedElement.children[0]; empty = child.tagName === \"BR\" && child.classList.contains(\"ProseMirror-trailingBreak\"); } this.isEmpty = empty; })"
             },
             {
+              "kind": "field",
+              "name": "releaseMediaStyles",
+              "type": {
+                "text": "() => void | undefined"
+              },
+              "privacy": "private"
+            },
+            {
               "kind": "method",
               "name": "handleSlotChange",
               "privacy": "private",
@@ -330,6 +338,20 @@
           "kind": "class",
           "description": "Displays a timeline with events and a quiz based on those events.\n\nAs children, it should only contain `<webwriter-timeline-event>` elements in order\nto function properly. Any other children may lead to unexpected behavior.",
           "name": "WebwriterTimeline",
+          "cssParts": [
+            {
+              "description": "The vertical line of the timeline (also in the quiz panel).",
+              "name": "line"
+            },
+            {
+              "description": "The dot of an event in the quiz panel. The dots in the timeline panel belong to `webwriter-timeline-event`.",
+              "name": "marker"
+            },
+            {
+              "description": "A draggable event card in the quiz panel. Media rules for authored images and videos in the details are adopted as one page-level stylesheet into the root that holds the element (counted per root, removed on disconnect); roots without `adoptedStyleSheets` skip it. Conversions: an `ol`, `ul`, `dl` or a series of `details` elements becomes a timeline, and the timeline can become `details` elements. A list item, a `dt` or a `summary` starts with the date or date range (ISO 8601 such as `1815-12-10`, or `10.12.1815`; a `time` element with `datetime` also works), then the title; what follows the title is the detail text. Dates with a year below 1000 need the ISO form with four digits, such as `0476`. The timeline reads and writes CSV (`.csv`, `text/csv`) with the columns `date`, `end_date`, `title` and `details` (UTF-8, comma or semicolon separated on import). A file import replaces all events. CSV keeps plain text only: the formatting, links and images in the details are dropped, and each paragraph of the details becomes one line. Signals: `score` is the share of events the reader placed correctly in the quiz after submitting (a number from 0 to 1, 0 until then), and `complete` is `true` once the answers are submitted. A receiving widget connects with an effect attribute such as `value-from=\"#timeline-id[score]\"`. The timeline has no effects of its own. Theme: text uses `--ww-text-color` and `--ww-font-family`; the line, dots and highlights use `--ww-theme-accent-1` and `--ww-theme-accent-2`. Print: shows the active panel without tabs and controls. The quiz prints as a worksheet (event cards and empty date boxes).",
+              "name": "card"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -339,6 +361,25 @@
               },
               "static": true,
               "default": "{ panels: { type: \"select\" as const, label: (widget: { msg: MsgFn }) => widget.msg(\"Visible panels\"), options: [ { value: \"timeline+quiz\", label: (widget: { msg: MsgFn }) => widget.msg(\"Timeline and Quiz\") }, { value: \"timeline\", label: (widget: { msg: MsgFn }) => widget.msg(\"Timeline only\") }, { value: \"quiz\", label: (widget: { msg: MsgFn }) => widget.msg(\"Quiz only\") }, ], }, }"
+            },
+            {
+              "kind": "field",
+              "name": "convertFrom",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ ol: \"fromElement\", ul: \"fromElement\", dl: \"fromElement\", details: \"fromElement\", \".csv\": \"importCsv\", \"text/csv\": \"importCsv\", }",
+              "description": "DOM and file conversions. See the class description for the formats."
+            },
+            {
+              "kind": "field",
+              "name": "convertTo",
+              "type": {
+                "text": "object"
+              },
+              "static": true,
+              "default": "{ details: \"toDetails\", \"text/csv\": \"exportCsv\", }"
             },
             {
               "kind": "field",
@@ -371,6 +412,28 @@
             },
             {
               "kind": "field",
+              "name": "#score",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "#complete",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
+              "kind": "field",
+              "name": "signals",
+              "type": {
+                "text": "object"
+              },
+              "readonly": true,
+              "default": "{ score: computed(() => this.#score.get()), complete: computed(() => this.#complete.get()), }",
+              "description": "The quiz result for other widgets: `score` from 0 to 1 and `complete` once the answers are submitted."
+            },
+            {
+              "kind": "field",
               "name": "eventsForQuiz",
               "type": {
                 "text": "QuizEvent[]"
@@ -395,6 +458,54 @@
               "kind": "method",
               "name": "updateEventsForQuiz",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "fromElement",
+              "parameters": [
+                {
+                  "name": "fragment",
+                  "type": {
+                    "text": "DocumentFragment"
+                  }
+                }
+              ],
+              "description": "Takes over the events of a copied list, description list or `details` elements."
+            },
+            {
+              "kind": "method",
+              "name": "toDetails",
+              "description": "The events as `details` elements, or `null` when there are none."
+            },
+            {
+              "kind": "method",
+              "name": "importCsv",
+              "parameters": [
+                {
+                  "name": "file",
+                  "type": {
+                    "text": "File"
+                  }
+                }
+              ],
+              "description": "Reads the whole file first. The returned function replaces all events."
+            },
+            {
+              "kind": "method",
+              "name": "exportCsv"
+            },
+            {
+              "kind": "method",
+              "name": "quizStateChanged",
+              "privacy": "private",
+              "parameters": [
+                {
+                  "name": "event",
+                  "type": {
+                    "text": "CustomEvent<{ score: number; complete: boolean }>"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",

@@ -9,15 +9,6 @@ export class DateInput extends LitElementWw {
     protected readonly msg = widgetMsg(this);
 
     /** The language dates are written in. The widget passes its own, since `lang` does not reach into its shadow tree. */
-    focus(options?: FocusOptions) {
-        const active = this.ownerDocument.activeElement;
-        void this.updateComplete.then(() => {
-            if (this.isConnected && this.ownerDocument.activeElement === active && !this.disabled) {
-                this.inputElement.value?.focus(options);
-            }
-        });
-    }
-
     @property({ type: String })
     accessor language: string = "";
 
@@ -26,15 +17,31 @@ export class DateInput extends LitElementWw {
             display: inline-block;
             position: relative;
             overflow: hidden;
+            max-inline-size: 100%;
+            /* The input is taller than its text line (a 24 px target); the margin keeps the row as high as before. */
+            margin-block: -3px;
         }
 
         input {
+            max-inline-size: 100%;
+            box-sizing: border-box;
+            min-block-size: 24px;
             border: none;
             background: none;
             padding: 0;
             font: inherit;
             outline: none;
             field-sizing: content;
+        }
+
+        @media (pointer: coarse) {
+            :host {
+                margin-block: -13px;
+            }
+
+            input {
+                min-block-size: 2.75rem;
+            }
         }
 
         input:disabled {
@@ -50,6 +57,15 @@ export class DateInput extends LitElementWw {
     `;
 
     private inputElement = createRef<HTMLInputElement>();
+
+    focus(options?: FocusOptions) {
+        const active = this.ownerDocument.activeElement;
+        void this.updateComplete.then(() => {
+            if (this.isConnected && this.ownerDocument.activeElement === active && !this.disabled) {
+                this.inputElement.value?.focus(options);
+            }
+        });
+    }
 
     @property({
         type: TimelineDate,

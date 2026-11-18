@@ -232,7 +232,14 @@
             "ckb-Arab": "تایم‌لاین",
             "af-ZA": "Tydlyn",
             "af-NA": "Tydlyn"
-        }
+        },
+        "importFormats": [
+            ".csv",
+            "text/csv"
+        ],
+        "exportFormats": [
+            "text/csv"
+        ]
     },
     "./widgets/webwriter-timeline-event": {
         "group": "",

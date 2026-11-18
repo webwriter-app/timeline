@@ -5,6 +5,7 @@ import { localizeOptions } from "../model/localize-options";
 import { css, html } from "lit";
 import { customElement, state } from "lit/decorators.js";
 import { classMap } from "lit/directives/class-map.js";
+import { adoptDetailsMediaStyles } from "../components/details-media-styles";
 
 /**
  * The details of a `webwriter-timeline-event` component. Should not be used independently.
@@ -14,6 +15,8 @@ import { classMap } from "lit/directives/class-map.js";
 export class WebwriterTimelineEventDetails extends LitElementWw {
     static styles = css`
         :host {
+            display: block;
+            min-width: 0;
             position: relative;
             word-break: break-word;
             overflow-wrap: break-word;
@@ -35,6 +38,20 @@ export class WebwriterTimelineEventDetails extends LitElementWw {
 
         ::slotted(iframe) {
             box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        ::slotted(img),
+        ::slotted(video),
+        ::slotted(canvas),
+        ::slotted(svg) {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ::slotted(pre) {
+            max-width: 100%;
+            overflow: auto;
         }
     `;
 
@@ -59,6 +76,19 @@ export class WebwriterTimelineEventDetails extends LitElementWw {
         }
         this.isEmpty = empty;
     });
+
+    private releaseMediaStyles?: () => void;
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.releaseMediaStyles = adoptDetailsMediaStyles(this);
+    }
+
+    disconnectedCallback() {
+        this.releaseMediaStyles?.();
+        this.mutationObserver.disconnect();
+        super.disconnectedCallback();
+    }
 
     private handleSlotChange(event: Event) {
         const assignedNodes = (event.target as HTMLSlotElement).assignedElements();

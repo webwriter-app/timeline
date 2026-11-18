@@ -137,6 +137,18 @@ export class TimelineDate {
     }
 
     /**
+     * Converts the date to an ISO 8601 string ("YYYY", "YYYY-MM" or "YYYY-MM-DD") with the
+     * astronomical year, so that year 0 is 1 BCE and a negative year gets a minus sign.
+     */
+    toISOString(): string {
+        const year = Math.abs(this.year).toString().padStart(4, "0");
+        let result = (this.year < 0 ? "-" : "") + year;
+        if (this.month !== null) result += "-" + this.month.toString().padStart(2, "0");
+        if (this.day !== null) result += "-" + this.day.toString().padStart(2, "0");
+        return result;
+    }
+
+    /**
      * Converts the date to a European formatted string (DD.MM.YYYY).
      */
     toEuropeanString(): string {

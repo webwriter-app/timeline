@@ -9,6 +9,7 @@ import { createRef, ref } from "lit/directives/ref.js";
 import { styleMap } from "lit/directives/style-map.js";
 import { DateInput } from "../components/date-input";
 import { TimelineDate, timelineDateConverter } from "../model/timeline-date";
+import { adoptDetailsMediaStyles } from "../components/details-media-styles";
 
 /**
  * A single event in a `webwriter-timeline` component. Should not be used independently.
@@ -33,8 +34,13 @@ export class WebwriterTimelineEvent extends LitElementWw {
             display: contents !important;
         }
 
+        :host {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
         .dot {
-            --event-edge-color: black;
+            --event-edge-color: var(--ww-theme-accent-1, black);
             --event-edge-background: transparent;
             position: relative;
             width: 100%;
@@ -114,7 +120,7 @@ export class WebwriterTimelineEvent extends LitElementWw {
                 opacity: 1;
             }
             50% {
-                background-color: var(--sl-color-primary-600);
+                background-color: var(--ww-theme-accent-2, var(--sl-color-primary-600));
                 transform: scale(1.4);
             }
             100% {
@@ -210,6 +216,34 @@ export class WebwriterTimelineEvent extends LitElementWw {
             font-weight: bold;
         }
 
+        ::slotted(iframe) {
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        ::slotted(pre) {
+            max-width: 100%;
+            overflow: auto;
+        }
+
+        /* Touch has no hover: show the optional end date, dimmed. */
+        @media (hover: none) {
+            .show-on-focus:not(.reorder-hint) {
+                opacity: 0.6;
+            }
+        }
+
+        @media print {
+            .dot {
+                break-inside: avoid;
+                --event-edge-color: var(--ww-theme-accent-1, black) !important;
+            }
+
+            .event-selector,
+            .show-on-focus {
+                display: none;
+            }
+        }
     `;
 
     localize = localizer(this, localizeOptions);
@@ -245,6 +279,7 @@ export class WebwriterTimelineEvent extends LitElementWw {
     private accessor selectionWithin: boolean = false;
 
     private titleMutationObserver = new MutationObserver(() => this.checkIfTitleIsEmpty());
+    private releaseMediaStyles?: () => void;
     private selectionDocument?: Document;
 
     private readonly updateSelectionWithin = () => {
@@ -264,6 +299,7 @@ export class WebwriterTimelineEvent extends LitElementWw {
 
     connectedCallback() {
         super.connectedCallback();
+        this.releaseMediaStyles = adoptDetailsMediaStyles(this);
         this.titleMutationObserver.observe(this, {
             childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["slot"],
         });
@@ -277,6 +313,7 @@ export class WebwriterTimelineEvent extends LitElementWw {
         this.titleMutationObserver.disconnect();
         this.selectionDocument?.removeEventListener("selectionchange", this.updateSelectionWithin);
         this.selectionDocument = undefined;
+        this.releaseMediaStyles?.();
         super.disconnectedCallback();
     }
 

@@ -33,12 +33,30 @@ export class QuizContainer extends LitElementWw {
     };
 
     static styles = css`
+        :host {
+            display: block;
+            min-width: 0;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .quiz-frame {
+            container-type: inline-size;
+        }
+
         .quiz-container {
             width: 100%;
             display: grid;
-            grid-template-columns: calc(50% - 1em) auto;
+            grid-template-columns: calc(50% - 1em) minmax(0, 1fr);
             gap: 0 0.5em;
             align-items: start;
+        }
+
+        /* Narrow: the tray of cards above the timeline. */
+        @container (max-width: 31rem) {
+            .quiz-container {
+                grid-template-columns: minmax(0, 1fr);
+            }
         }
 
         .empty-quiz {
@@ -102,6 +120,7 @@ export class QuizContainer extends LitElementWw {
             border-radius: var(--sl-border-radius-medium);
             padding: var(--sl-spacing-x-small) var(--sl-spacing-small);
             box-sizing: border-box;
+            overflow-wrap: anywhere;
         }
 
         .card-event {
@@ -131,13 +150,13 @@ export class QuizContainer extends LitElementWw {
 
                 @media (hover: hover) {
                     &:hover {
-                        border-color: var(--sl-color-primary-300);
+                        border-color: var(--ww-theme-accent-1, var(--sl-color-primary-300));
                         background-color: var(--sl-color-primary-50);
                     }
                 }
 
                 &[data-ww-dragging] {
-                    border-color: var(--sl-color-primary-300);
+                    border-color: var(--ww-theme-accent-1, var(--sl-color-primary-300));
                     background-color: var(--sl-color-primary-50);
                 }
             }
@@ -159,8 +178,7 @@ export class QuizContainer extends LitElementWw {
             aspect-ratio: 1 / 1;
         }
 
-        .dot::before {
-            content: "";
+        .marker {
             display: block;
             margin: 0 auto;
             margin-top: 9px;
@@ -169,7 +187,7 @@ export class QuizContainer extends LitElementWw {
             aspect-ratio: 1 / 1;
 
             border-radius: 50%;
-            background-color: black;
+            background-color: var(--ww-theme-accent-1, black);
             outline: 4px solid white;
 
             /* Ensures that the dot is above the timeline line */
@@ -193,6 +211,39 @@ export class QuizContainer extends LitElementWw {
 
         [data-ww-dragging] {
             cursor: grabbing !important;
+        }
+
+        sl-progress-ring {
+            --indicator-color: var(--ww-theme-accent-1, var(--sl-color-primary-600));
+        }
+
+        /* On paper the quiz is a worksheet: cards to cut out or copy, empty boxes to write the dates into. */
+        @media print {
+            .help-text,
+            .buttons,
+            .results-container sl-button {
+                display: none;
+            }
+
+            .card-base,
+            .event-slot,
+            .results-container {
+                break-inside: avoid;
+            }
+
+            .card-event {
+                border-color: currentColor;
+            }
+
+            .card-placeholder {
+                border: 1px solid currentColor;
+                min-height: 2.5rem;
+                box-sizing: border-box;
+            }
+
+            .quiz-container {
+                grid-template-columns: calc(50% - 1em) minmax(0, 1fr);
+            }
         }
     `;
 
@@ -233,6 +284,14 @@ export class QuizContainer extends LitElementWw {
         }
     }
 
+    protected updated(changedProperties: PropertyValues): void {
+        if (!["events", "placements", "checked", "order"].some((name) => changedProperties.has(name))) return;
+        const total = this.order.length;
+        const correct = this.order.filter((id) => this.placements[id] === id).length;
+        const detail = { score: this.checked && total ? correct / total : 0, complete: this.checked };
+        this.dispatchEvent(new CustomEvent("quiz-state", { detail }));
+    }
+
     check() {
         this.checked = true;
     }
@@ -267,6 +326,7 @@ export class QuizContainer extends LitElementWw {
         };
         return html`<div
             class=${classMap(classes)}
+            part="card"
             data-ww-drag=${this.checked ? nothing : "card"}
             data-ww-key=${event.id}
         >
@@ -323,7 +383,7 @@ export class QuizContainer extends LitElementWw {
                 : event.date.toLocalizedString(language);
 
             return html`
-                <div class="dot"></div>
+                <div class="dot"><span class="marker" part="marker"></span></div>
                 <div
                     class="event-slot"
                     data-ww-drop="card"
@@ -341,7 +401,7 @@ export class QuizContainer extends LitElementWw {
             `;
         });
 
-        return html`<timeline-template>${eventSlots}</timeline-template>`;
+        return html`<timeline-template exportparts="line">${eventSlots}</timeline-template>`;
     }
 
     render() {
@@ -349,11 +409,13 @@ export class QuizContainer extends LitElementWw {
             return html`<div class="empty-quiz">${this.msg("Add an event in the timeline to try the quiz.")}</div>`;
         }
 
-        return html`<div
-            class=${classMap({ "quiz-container": true, "quiz-active": !this.checked })}
-            @ww-dragcommit=${this.place}
-        >
-            ${this.UnassignedEventsContainer()} ${this.AssignedEventsTimeline()}
+        return html`<div class="quiz-frame">
+            <div
+                class=${classMap({ "quiz-container": true, "quiz-active": !this.checked })}
+                @ww-dragcommit=${this.place}
+            >
+                ${this.UnassignedEventsContainer()} ${this.AssignedEventsTimeline()}
+            </div>
         </div>`;
     }
 }
