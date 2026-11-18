@@ -116,6 +116,7 @@
         }
     },
     "./widgets/webwriter-timeline": {
+        "resize": "inline",
         "content": "webwriter-timeline-event*",
         "uninsertable": true,
         "label": {
@@ -234,7 +235,10 @@
         }
     },
     "./widgets/webwriter-timeline-event": {
-        "content": "webwriter-timeline-event-title webwriter-timeline-event-details",
+        "group": "",
+        "movable": false,
+        "resize": "none",
+        "content": "h2 flow+",
         "uninsertable": true,
         "label": {
             "_": "Timeline Event",

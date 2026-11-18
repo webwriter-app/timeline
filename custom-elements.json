@@ -172,8 +172,18 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "A single event in a `webwriter-timeline` component. Should not be used independently.\nAs children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,\nwhich contain the title and details of the event, respectively.",
+          "description": "A single event in a webwriter-timeline component. Contains exactly one h2[slot=\"title\"] and flow content in the default slot.",
           "name": "WebwriterTimelineEvent",
+          "cssParts": [
+            {
+              "description": "The dot on the timeline line.",
+              "name": "marker"
+            },
+            {
+              "description": "The selectable left edge in edit mode.",
+              "name": "edge"
+            }
+          ],
           "members": [
             {
               "kind": "field",
@@ -280,7 +290,17 @@
           "tagName": "webwriter-timeline-event",
           "customElement": true,
           "modulePath": "src/widgets/webwriter-timeline-event.ts",
-          "definitionPath": "src/widgets/webwriter-timeline-event.ts"
+          "definitionPath": "src/widgets/webwriter-timeline-event.ts",
+          "slots": [
+            {
+              "name": "title",
+              "description": "Exactly one h2 containing the event title."
+            },
+            {
+              "name": "",
+              "description": "Authored flow content describing the event."
+            }
+          ]
         }
       ],
       "exports": [

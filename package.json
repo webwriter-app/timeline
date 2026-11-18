@@ -195,7 +195,8 @@
     "./package.json": "./package.json",
     "./icon": "./icon.svg",
     "./editing-config.json": "./editing-config.json",
-    "./custom-elements.json": "./custom-elements.json"
+    "./custom-elements.json": "./custom-elements.json",
+    "./migrate.js": "./migrate.js"
   },
   "customElements": "custom-elements.json"
 }

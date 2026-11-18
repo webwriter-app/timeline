@@ -42,6 +42,7 @@ export class WebwriterTimeline extends LitElementWw {
         :host {
             display: block;
             width: 100%;
+            block-size: auto;
         }
 
         sl-icon {
@@ -50,6 +51,11 @@ export class WebwriterTimeline extends LitElementWw {
 
         sl-tab-panel::part(base) {
             padding: 0;
+        }
+
+        sl-tab-group {
+            --track-color: var(--ww-theme-accent-1, black);
+            --indicator-color: transparent;
         }
 
         sl-tab-group::part(body) {
@@ -105,7 +111,7 @@ export class WebwriterTimeline extends LitElementWw {
                     target === this ||
                     target.parentElement === this ||
                     (target instanceof Element ? target : target.parentElement)?.closest(
-                        "webwriter-timeline-event-title",
+                        'h2[slot="title"], webwriter-timeline-event-title',
                     ),
             )
         ) {
@@ -130,6 +136,17 @@ export class WebwriterTimeline extends LitElementWw {
         super.disconnectedCallback();
     }
 
+    focus(options?: FocusOptions) {
+        const events = this.querySelectorAll<WebwriterTimelineEvent>(":scope > webwriter-timeline-event");
+        const event = events.length === 1 ? events[0] : null;
+        if (event && !event.date && !event.textContent.trim() && event.children.length === 2 &&
+            event.children[0].matches('h2[slot="title"]') && event.children[1].matches("p:empty")) {
+            event.focus(options);
+        } else {
+            super.focus(options);
+        }
+    }
+
     protected firstUpdated() {
         // WebWriter loads the event widget separately from the timeline.
         customElements.whenDefined("webwriter-timeline-event").then(() => {
@@ -145,7 +162,8 @@ export class WebwriterTimeline extends LitElementWw {
             if (!(child instanceof HTMLElement) || child.tagName !== "WEBWRITER-TIMELINE-EVENT") continue;
 
             const event = child as WebwriterTimelineEvent;
-            const titleElement = event.querySelector(":scope > webwriter-timeline-event-title");
+            const titles = event.querySelectorAll(':scope > h2[slot="title"], :scope > webwriter-timeline-event-title');
+            const titleElement = titles.length === 1 ? titles[0] : null;
             if (!event.date || !titleElement || titleElement.textContent.trim() === "") continue;
 
             eventsForQuiz.push({
@@ -161,7 +179,11 @@ export class WebwriterTimeline extends LitElementWw {
     private addEvent(event: CustomEvent) {
         event.stopPropagation();
         const newEvent = document.createElement("webwriter-timeline-event");
+        const title = document.createElement("h2");
+        title.slot = "title";
+        newEvent.append(title, document.createElement("p"));
         this.appendChild(newEvent);
+        newEvent.focus();
     }
 
     private dateChanged(event: Event) {
@@ -253,7 +275,7 @@ export class WebwriterTimeline extends LitElementWw {
             return visible[0] === "quiz" ? html`<slot class="hide"></slot>${this.Quiz()}` : this.Timeline();
         }
 
-        return html`<sl-tab-group ${ref(this.initTabGroup)} tabindex="0" activation="manual">
+        return html`<sl-tab-group ${ref(this.initTabGroup)} activation="manual">
             <sl-tab slot="nav" panel="timeline">${this.msg("Timeline")}${this.PanelIcon("timeline")}</sl-tab>
             <sl-tab slot="nav" panel="quiz">${this.msg("Quiz")}${this.PanelIcon("quiz")}</sl-tab>
             <sl-tab-panel name="timeline">${this.Timeline()}</sl-tab-panel>

@@ -9,6 +9,15 @@ export class DateInput extends LitElementWw {
     protected readonly msg = widgetMsg(this);
 
     /** The language dates are written in. The widget passes its own, since `lang` does not reach into its shadow tree. */
+    focus(options?: FocusOptions) {
+        const active = this.ownerDocument.activeElement;
+        void this.updateComplete.then(() => {
+            if (this.isConnected && this.ownerDocument.activeElement === active && !this.disabled) {
+                this.inputElement.value?.focus(options);
+            }
+        });
+    }
+
     @property({ type: String })
     accessor language: string = "";
 

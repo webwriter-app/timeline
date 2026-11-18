@@ -62,8 +62,22 @@ npm install @webwriter/timeline
 
 ## `WebwriterTimelineEvent` (`<webwriter-timeline-event>`)
 A single event in a `webwriter-timeline` component. Should not be used independently.
-As children, it must contain both a `webwriter-timeline-event-title` and a `webwriter-timeline-event-details` element,
-which contain the title and details of the event, respectively.
+Each event contains exactly one `<h2 slot="title">`, followed by one or more flow content elements shown in the default slot.
+The timeline's content expression accepts events directly by type. An event's `group: ""` excludes it from general flow content, preventing insertion or dropping into the document body, event contents, or other flow containers.
+Resize the timeline horizontally; individual events size themselves to their content and cannot be resized.
+In edit mode, click the left edge to select the event. Events cannot be moved or dragged: change their dates to reorder them chronologically. A grey “Change date to reorder” hint appears on the right of the date row while the event is hovered, focused or selected. A subtle background marks the edge while hovering anywhere in the event or while its content is selected. Hovering the edge itself emphasizes the line and dot. The edge is also a keyboard-accessible button.
+The end-date placeholder stays visible while the event has focus or contains the document selection.
+WebWriter's native `ww-element-selected` and `ww-element-capture-selected` states also keep the edge indicator and end-date placeholder visible when the event itself is selected. The event exposes its `ElementInternals.states` through `selectionStates` for the editor; these states are never saved in authored HTML.
+Inserting the empty snippet or adding an event puts the input caret in the new event's Date field. The horizontal tab divider follows the timeline's line color, without a separate active-tab underline.
+
+```html
+<webwriter-timeline-event date="1815-12-10">
+  <h2 slot="title">Ada Lovelace</h2>
+  <p>First program.</p>
+</webwriter-timeline-event>
+```
+
+The `./migrate.js` export converts the earlier title and details wrappers while preserving their content and authored attributes. Legacy widget exports remain available for previously saved documents.
 
 ### Usage
 
