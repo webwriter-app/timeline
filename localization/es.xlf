@@ -1,16 +1,10 @@
-<xliff xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd" version="1.2">
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="es">
     <body>
       <trans-unit id="h84e1bc2032e6a3ca">
-        <source>You got 
-          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of 
-          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.
-        </source>
-        <target>Tienes 
-          <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> de 
-          <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> los acontecimientos correctamente.
-        </target>
-      </trans-unit>
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+<target>Has colocado correctamente <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> de <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> eventos.</target></trans-unit>
       <trans-unit id="s8cdcbe65c5e46f7a">
         <source>Try Again</source>
         <target>Inténtalo de nuevo</target>
@@ -63,18 +57,6 @@
         <source>End date</source>
         <target>Fecha de finalización</target>
       </trans-unit>
-      <trans-unit id="sb971373f2f92a03f">
-        <source>An event requires a date and a title</source>
-        <target>Un evento requiere una fecha y un título.</target>
-      </trans-unit>
-      <trans-unit id="scc342eb1f2b3826a">
-        <source>Delete event</source>
-        <target>Eliminar evento</target>
-      </trans-unit>
-      <trans-unit id="s1c417ec19e8605bf">
-        <source>Which panels will be visible to readers</source>
-        <target>¿Qué paneles serán visibles para los lectores?</target>
-      </trans-unit>
       <trans-unit id="s782f69ab5dd839e0">
         <source>Timeline and Quiz</source>
         <target>Cronología y cuestionario</target>
@@ -115,6 +97,33 @@
         <source>Timeline is empty.</source>
         <target>La línea de tiempo está vacía.</target>
       </trans-unit>
-    </body>
+    <trans-unit id="s611e0cdb06b46c98">
+  <source>Visible panels</source>
+<target>Paneles visibles</target></trans-unit>
+<trans-unit id="se1a7152d9dcd4433">
+  <source>Unassigned events</source>
+<target>Eventos sin asignar</target>
+</trans-unit>
+<trans-unit id="s978b4f72cc299835">
+  <source>Select event</source>
+<target>Seleccionar evento</target>
+</trans-unit>
+<trans-unit id="s047e5cae353e8713">
+  <source>Change date to reorder</source>
+<target>Cambia la fecha para reordenar</target>
+</trans-unit>
+<trans-unit id="s8b7a3775e05375ae">
+  <source>The file needs a date column and a title column.</source>
+<target>El archivo necesita una columna de fecha y otra de título.</target>
+</trans-unit>
+<trans-unit id="s96d72b3e893d2136">
+  <source>The date is not valid in row</source>
+<target>La fecha no es válida en la fila</target>
+</trans-unit>
+<trans-unit id="sda041725dacb5da3">
+  <source>The file contains no events.</source>
+<target>El archivo no contiene eventos.</target>
+</trans-unit>
+</body>
   </file>
 </xliff>

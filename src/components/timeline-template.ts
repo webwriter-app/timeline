@@ -1,0 +1,63 @@
+import { LitElementWw } from "@webwriter/lit";
+import { css, html } from "lit";
+
+export class TimelineTemplate extends LitElementWw {
+    static styles = css`
+        :host {
+            width: 100%;
+            min-width: 0;
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+
+            --line-container-width: 1em; /* Width of the container centering the line */
+            --line-width: 0.125rem; /* Width of the vertical line */
+            --line-spacing: var(--sl-spacing-x-small); /* Space between the line container and the content */
+
+            display: grid;
+            grid-template-columns: var(--line-container-width) minmax(0, 1fr);
+            column-gap: var(--line-spacing);
+
+            position: relative; /* For positioning the line */
+
+            box-sizing: border-box;
+            padding-top: var(--sl-spacing-x-small);
+            padding-bottom: var(--sl-spacing-medium);
+        }
+
+        .line {
+            position: absolute;
+            top: 0;
+            bottom: var(--line-width);
+            left: calc((var(--line-container-width) - var(--line-width)) / 2);
+            width: var(--line-width);
+
+            background-color: var(--ww-theme-accent-1, black);
+        }
+
+        /* Arrow tip at the end (bottom) of the line */
+        .line::after {
+            --size: 8px;
+
+            content: "";
+            display: block;
+            position: absolute;
+
+            width: var(--size);
+            height: var(--size);
+
+            right: calc(var(--line-width) / 2);
+            bottom: calc(var(--line-width) * -1);
+            transform-origin: bottom right;
+            transform: rotate(45deg);
+
+            border-color: var(--ww-theme-accent-1, black);
+            border-style: solid;
+            border-width: 0 var(--line-width) var(--line-width) 0;
+        }
+    `;
+
+    render() {
+        return html`<div class="line" part="line"></div>
+            <slot></slot>`;
+    }
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="mk">
+  <file id="./snippets/webwriter-timeline" original="./snippets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Временска линија</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline" original="./widgets/webwriter-timeline">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Временска линија</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event" original="./widgets/webwriter-timeline-event">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event</source>
+        <target>Настан на временската линија</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-title" original="./widgets/webwriter-timeline-event-title">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Title</source>
+        <target>Наслов на настанот</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./widgets/webwriter-timeline-event-details" original="./widgets/webwriter-timeline-event-details">
+    <unit id="label">
+      <segment>
+        <source>Timeline Event Details</source>
+        <target>Детали за настанот</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="." original=".">
+    <unit id="label">
+      <segment>
+        <source>Timeline</source>
+        <target>Временска линија</target>
+      </segment>
+    </unit>
+    <unit id="description">
+      <segment>
+        <source>Create/learn with a digital timeline and test your knowledge.</source>
+        <target>Создајте дигитална временска линија, учете и проверете го своето знаење.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/women-in-tech" original="./snippets/women-in-tech">
+    <unit id="label">
+      <segment>
+        <source>Women In Tech</source>
+        <target>Жени во технологијата</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games" original="./snippets/history-of-olympic-games">
+    <unit id="label">
+      <segment>
+        <source>History Of Olympic Games</source>
+        <target>Историја на Олимписките игри</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

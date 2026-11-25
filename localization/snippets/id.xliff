@@ -1,134 +1,328 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="id">
-<file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
-<unit id="Ada Lovelace#1"><segment><source>Ada Lovelace</source><target></target></segment></unit>
-<unit id="Women have been programming since before it was a thing. Take#1"><segment><source>Women have been programming since before it was a thing. Take</source><target></target></segment></unit>
-<unit id="Ada#1"><segment><source>Ada</source><target></target></segment></unit>
-<unit id="Lovelace#1"><segment><source>Lovelace</source><target></target></segment></unit>
-<unit id=":
-                Daughter of Lord Byron, she's often credited as the first computer programmer. Her work on#1"><segment><source>:
-                Daughter of Lord Byron, she's often credited as the first computer programmer. Her work on</source><target></target></segment></unit>
-<unit id="Charles Babbage's Analytical Engine#1"><segment><source>Charles Babbage's Analytical Engine</source><target></target></segment></unit>
-<unit id="contains notes of the first machine-implemented algorithm.#1"><segment><source>contains notes of the first machine-implemented algorithm.</source><target></target></segment></unit>
-<unit id="The First Computer#1"><segment><source>The First Computer</source><target></target></segment></unit>
-<unit id="Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>Perempuan sudah menulis program sejak sebelum pemrograman dikenal luas. Contohnya</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: Putri Lord Byron ini sering dianggap sebagai pemrogram komputer pertama. Karyanya tentang</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>Mesin Analitik Charles Babbage</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>memuat catatan mengenai algoritma pertama yang dijalankan oleh mesin.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>Komputer Pertama</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
                 Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
-                Pennsylvania's Moore School of Electrical Engineering.#1"><segment><source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
-                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
-                Pennsylvania's Moore School of Electrical Engineering.</source><target></target></segment></unit>
-<unit id="... And The Women Who Made It Work#1"><segment><source>... And The Women Who Made It Work</source><target></target></segment></unit>
-<unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>Dengan nama sandi “Project PX” dan pendanaan dari Angkatan Darat Amerika Serikat, komputer serbaguna pertama itu bernama Electronic Numerical Integrator And Computer (ENIAC). Komputer ini dikembangkan di Sekolah Teknik Elektro Moore, Universitas Pennsylvania.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… dan Para Perempuan yang Membuatnya Berfungsi</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
                 Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
                 Despite their groundbreaking work, the Army never released the names of the women who worked on the
-                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1"><segment><source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
-                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
-                Despite their groundbreaking work, the Army never released the names of the women who worked on the
-                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source><target></target></segment></unit>
-<unit id="Edith Clarke: Bucking The Trend#1"><segment><source>Edith Clarke: Bucking The Trend</source><target></target></segment></unit>
-<unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always
-                    a demand for anyone who can do a good piece of work.#1"><segment><source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
-                    a demand for anyone who can do a good piece of work.</source><target></target></segment></unit>
-<unit id="Rózsa Péter: The Poet of Recursion#1"><segment><source>Rózsa Péter: The Poet of Recursion</source><target></target></segment></unit>
-<unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>Sejumlah pemrogram ENIAC adalah perempuan: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, dan Frances Elizabeth “Betty” Holberton. Terlepas dari karya rintisan mereka, Angkatan Darat tidak pernah mengungkap nama para perempuan yang mengerjakan ENIAC. Mereka pun hampir terlupakan hingga Kathy Kleiman menemukan kisah mereka pada 1985.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>Edith Clarke Melawan Arus</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>Tidak ada permintaan khusus untuk insinyur perempuan seperti halnya untuk dokter perempuan; tetapi selalu ada permintaan untuk siapa pun yang mampu bekerja dengan baik.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>Edith Clarke, profesor teknik elektro perempuan pertama di Amerika Serikat</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>Rózsa Péter, Penyair Rekursi</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
                 would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
-                until the mid-50's that she began to apply her work to the realm of computers.#1"><segment><source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
-                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
-                until the mid-50's that she began to apply her work to the realm of computers.</source><target></target></segment></unit>
-<unit id="Grace Hopper Invents The Compiler#1"><segment><source>Grace Hopper Invents The Compiler</source><target></target></segment></unit>
-<unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>Rózsa Péter, yang lahir di Hungaria, mempelajari teori bilangan dan puisi sebelum tertarik pada gagasan yang kemudian menjadi teori rekursi. Ia menerbitkan makalah “Recursive Functions” pada 1951, tetapi baru mulai menerapkan karyanya pada komputer pada pertengahan 1950-an.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>Grace Hopper Menciptakan Kompilator</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
                 and laid the groundwork for the programming language COBOL. But her most notable invention was the
                 compiler, which can transform a source language into binary code. (In other words, it can translate the
                 code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
-                They told me computers could only do arithmetic."#1"><segment><source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
-                and laid the groundwork for the programming language COBOL. But her most notable invention was the
-                compiler, which can transform a source language into binary code. (In other words, it can translate the
-                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
-                They told me computers could only do arithmetic."</source><target></target></segment></unit>
-<unit id="Contributions To Space Exploration#1"><segment><source>Contributions To Space Exploration</source><target></target></segment></unit>
-<unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                They told me computers could only do arithmetic."</source>
+        <target>Semasa bertugas di Angkatan Laut, Laksamana Muda Grace Hopper mengerjakan komputer komersial pertama, UNIVAC, dan meletakkan dasar bahasa pemrograman COBOL. Namun, penemuannya yang paling penting ialah kompilator yang mengubah bahasa sumber menjadi kode biner. Dengan kata lain, kompilator menerjemahkan kode yang kita tulis menjadi angka 0 dan 1. Ia mengembangkannya pada 1952, tetapi berkata, “Tidak ada yang mau menggunakannya. Mereka bilang komputer hanya bisa berhitung.”</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>Kontribusi bagi Penjelajahan Antariksa</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
                 aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
-                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1"><segment><source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
-                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
-                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source><target></target></segment></unit>
-<unit id="The First PHD in Computer Science#1"><segment><source>The First PHD in Computer Science</source><target></target></segment></unit>
-<unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>Evelyn Boyd Granville, salah satu perempuan Afrika-Amerika pertama yang meraih gelar doktor matematika, menekuni aeronautika dan antariksa dalam kariernya. Pada 1956, ia bekerja sama dengan NASA dan IBM dalam Proyek Mercury, penerbangan antariksa berawak pertama. Beberapa tahun kemudian ia kembali bekerja dengan NASA dalam Proyek Apollo.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>Gelar Doktor Ilmu Komputer Pertama</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
                 Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
                 She then founded the computer science department at Clarke College and directed it for the next 20
-                years.#1"><segment><source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
-                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
-                She then founded the computer science department at Clarke College and directed it for the next 20
-                years.</source><target></target></segment></unit>
-<unit id="Karen Spärck Jones Makes Search Possible#1"><segment><source>Karen Spärck Jones Makes Search Possible</source><target></target></segment></unit>
-<unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                years.</source>
+        <target>Suster Mary Kenneth Keller adalah salah satu perempuan pertama yang meraih gelar doktor ilmu komputer, dan mungkin yang pertama. Saat di Dartmouth College, ia juga ikut mengembangkan bahasa BASIC. Ia kemudian mendirikan departemen ilmu komputer di Clarke College dan memimpinnya selama 20 tahun.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>Karen Spärck Jones Memungkinkan Pencarian</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
                 and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
-                search engines still rely on.#1"><segment><source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
-                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
-                search engines still rely on.</source><target></target></segment></unit>
-<unit id=""The Mother of the Internet"#1"><segment><source>"The Mother of the Internet"</source><target></target></segment></unit>
-<unit id="Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
-                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1"><segment><source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
-                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source><target></target></segment></unit>
-</file>
-<file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
-<unit id="Ancient Olympic Games#1"><segment><source>Ancient Olympic Games</source><target></target></segment></unit>
-<unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                search engines still rely on.</source>
+        <target>Sebagai profesor di Laboratorium Komputer Cambridge, Spärck Jones menekuni pemrosesan bahasa alami dan temu kembali informasi. Pada 1972, ia memperkenalkan konsep frekuensi dokumen terbalik yang masih digunakan oleh sebagian besar mesin pencari.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>“Ibu Internet”</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>Karya Radia Perlman, yang sering disebut “Ibu Internet”, tentang protokol pohon rentang memungkinkan berkembangnya jaringan modern. Ia memegang lebih dari 100 paten. Itulah yang paling piawai dilakukan para ibu.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>Olimpiade Kuno</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
                 in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
                 held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
                 music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
-                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1"><segment><source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
-                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
-                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
-                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
-                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source><target></target></segment></unit>
-<unit id="Ban of Olympic Games#1"><segment><source>Ban of Olympic Games</source><target></target></segment></unit>
-<unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
-                they encouraged paganism. They were not revived until the modern era.#1"><segment><source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
-                they encouraged paganism. They were not revived until the modern era.</source><target></target></segment></unit>
-<unit id="Olympic Games Revived in Paris#1"><segment><source>Olympic Games Revived in Paris</source><target></target></segment></unit>
-<unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>Bukti tertulis pertama tentang penyelenggaraan resmi berasal dari 776 SM, ketika orang Yunani mulai mengukur waktu dengan olimpiade, yaitu selang antara dua penyelenggaraan. Olimpiade pertama diadakan setiap empat tahun untuk menghormati Dewa Zeus. Sejak itu, kegiatan seni seperti musik, nyanyian, puisi, dan teater digelar dalam Pesta Olahraga Pitia atau Delfi, yang terpisah dari pesta di Olimpia. Budaya dan olahraga sudah berkaitan sejak awal.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>Pelarangan Olimpiade</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>Pada 393 M, Kaisar Romawi Theodosius I melarang Olimpiade dengan alasan keagamaan. Ia menganggap pesta itu mendorong paganisme. Olimpiade baru dihidupkan kembali pada zaman modern.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>Olimpiade Dihidupkan Kembali di Paris</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
                 19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
-                one man decided to bring the main stakeholders together in Paris.#1"><segment><source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
-                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
-                one man decided to bring the main stakeholders together in Paris.</source><target></target></segment></unit>
-<unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>Beberapa upaya mengadakan kembali pesta olahraga internasional dilakukan pada akhir abad ke-19. Semuanya gagal karena gerakan olahraga dunia kurang terkoordinasi, hingga seseorang memutuskan mempertemukan pihak-pihak utama di Paris.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
                 Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
                 thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
                 and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
-                United States representing 13 foreign sports federations.#1"><segment><source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
-                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
-                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
-                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
-                United States representing 13 foreign sports federations.</source><target></target></segment></unit>
-<unit id="First Modern Olympic Games#1"><segment><source>First Modern Olympic Games</source><target></target></segment></unit>
-<unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games
-                took place in Antiquity, in April 1896.#1"><segment><source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
-                took place in Antiquity, in April 1896.</source><target></target></segment></unit>
-<unit id="Women Competed for the First Time in the Olympic Games#1"><segment><source>Women Competed for the First Time in the Olympic Games</source><target></target></segment></unit>
-<unit id="Paris hosted the second Games in 1900.#1"><segment><source>Paris hosted the second Games in 1900.</source><target></target></segment></unit>
-<unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                United States representing 13 foreign sports federations.</source>
+        <target>Olimpiade akhirnya dihidupkan kembali pada Kongres Olimpiade pertama yang diselenggarakan Baron Pierre de Coubertin di amfiteater agung Universitas Sorbonne pada 16–23 Juni 1894. Dua ribu orang hadir, termasuk 58 delegasi Prancis yang mewakili 24 organisasi dan klub olahraga serta 20 delegasi dari Belgia, Britania Raya, Yunani, Irlandia, Italia, Rusia, Spanyol, Swedia, dan Amerika Serikat yang mewakili 13 federasi olahraga luar negeri.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>Olimpiade Modern Pertama</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>Olimpiade modern pertama berlangsung pada April 1896 di Athena, di negara tempat Olimpiade mula-mula diadakan pada zaman kuno.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>Perempuan Pertama Kali Bertanding di Olimpiade</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>Paris menjadi tuan rumah Olimpiade kedua pada 1900.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
                 Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
-                22 were women, competing in just five sports:#1"><segment><source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
-                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
-                22 were women, competing in just five sports:</source><target></target></segment></unit>
-<unit id="tennis#1"><segment><source>tennis</source><target></target></segment></unit>
-<unit id=",#1"><segment><source>,</source><target></target></segment></unit>
-<unit id="sailing#1"><segment><source>sailing</source><target></target></segment></unit>
-<unit id=", croquet,#1"><segment><source>, croquet,</source><target></target></segment></unit>
-<unit id="equestrian events#1"><segment><source>equestrian events</source><target></target></segment></unit>
-<unit id="and#1"><segment><source>and</source><target></target></segment></unit>
-<unit id="golf#1"><segment><source>golf</source><target></target></segment></unit>
-<unit id=".#1"><segment><source>.</source><target></target></segment></unit>
-<unit id="First Olympic Games Open to Athletes with Disabilities#1"><segment><source>First Olympic Games Open to Athletes with Disabilities</source><target></target></segment></unit>
-<unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                22 were women, competing in just five sports:</source>
+        <target>Di Olimpiade Paris 1900, perempuan bertanding untuk pertama kalinya. Juara Olimpiade perempuan pertama adalah Charlotte Cooper, petenis Britania yang menjuarai Wimbledon lima kali. Dari total 997 atlet, 22 adalah perempuan. Mereka hanya bertanding dalam lima cabang olahraga:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>tenis</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>layar</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, kroket,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>berkuda</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>dan</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>golf</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>Olimpiade Pertama yang Terbuka bagi Atlet Penyandang Disabilitas</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
                 medals, and also included the first known disabled athlete to compete in the Olympic Games, George
-                Eyser. He won six medals in gymnastics, three of which were gold.#1"><segment><source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
-                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
-                Eyser. He won six medals in gymnastics, three of which were gold.</source><target></target></segment></unit>
-<unit id="First Olympic Games with Athletes from Five Continents#1"><segment><source>First Olympic Games with Athletes from Five Continents</source><target></target></segment></unit>
-<unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>Olimpiade 1904 di St. Louis, Missouri, untuk pertama kalinya membagikan medali emas, perak, dan perunggu. Olimpiade itu juga diikuti George Eyser, atlet penyandang disabilitas pertama yang diketahui bertanding di Olimpiade. Ia meraih enam medali senam, tiga di antaranya emas.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>Olimpiade Pertama dengan Atlet dari Lima Benua</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
                 represented by the Olympic rings. It was also the year that women made their debut in the swimming
-                events.#1"><segment><source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
-                represented by the Olympic rings. It was also the year that women made their debut in the swimming
-                events.</source><target></target></segment></unit>
-</file>
+                events.</source>
+        <target>Olimpiade Stockholm 1912 untuk pertama kalinya diikuti atlet dari kelima benua yang dilambangkan oleh cincin Olimpiade. Pada tahun itu pula perempuan untuk pertama kalinya bertanding dalam cabang renang.</target>
+      </segment>
+    </unit>
+  </file>
 </xliff>

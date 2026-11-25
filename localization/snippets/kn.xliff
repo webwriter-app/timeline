@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="kn">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>ಅಡಾ ಲವ್ಲೇಸ್</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಜನಪ್ರಿಯವಾಗುವ ಮೊದಲೇ ಮಹಿಳೆಯರು ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಮಾಡುತ್ತಿದ್ದರು. ಪರಿಚಯ</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>ಅಡಾ ಲವ್ಲೇಸ್</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>ಲಾರ್ಡ್ ಬೈರನ್ ಅವರ ಮಗಳು; ಅವರನ್ನು ಅನೇಕರು ಮೊದಲ ಪ್ರೋಗ್ರಾಮರ್ ಎಂದು ಗುರುತಿಸುತ್ತಾರೆ. ಅವರ</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>ಚಾರ್ಲ್ಸ್ ಬ್ಯಾಬೇಜ್ ಅವರ ವಿಶ್ಲೇಷಣಾತ್ಮಕ ಯಂತ್ರ</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>ಯಂತ್ರದಿಂದ ಕಾರ್ಯಗತಗೊಳಿಸಿದ ಮೊದಲ ಅಲ್ಗಾರಿದಮ್‌ನ ಟಿಪ್ಪಣಿಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>ಮೊದಲ ಕಂಪ್ಯೂಟರ್</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>ಅಮೆರಿಕದ ಸೇನೆ ಹಣಕಾಸು ಒದಗಿಸಿದ, «Project PX» ಎಂಬ ಸಂಕೇತನಾಮ ಹೊಂದಿದ್ದ ಮೊದಲ ಸಾಮಾನ್ಯ ಉದ್ದೇಶದ ಕಂಪ್ಯೂಟರ್ ಎಲೆಕ್ಟ್ರಾನಿಕ್ ನ್ಯೂಮೆರಿಕಲ್ ಇಂಟಿಗ್ರೇಟರ್ ಅಂಡ್ ಕಂಪ್ಯೂಟರ್ (ENIAC). ಇದನ್ನು ಪೆನ್ಸಿಲ್ವೇನಿಯಾ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಮೂರ್ ಸ್ಕೂಲ್ ಆಫ್ ಎಲೆಕ್ಟ್ರಿಕಲ್ ಇಂಜಿನಿಯರಿಂಗ್‌ನಲ್ಲಿ ಅಭಿವೃದ್ಧಿಪಡಿಸಲಾಯಿತು.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>... ಅದನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸಿದ ಮಹಿಳೆಯರು</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>ENIAC ಪ್ರೋಗ್ರಾಮರ್‌ಗಳಲ್ಲಿ ಜೀನ್ ಬಾರ್ಟಿಕ್, ಮಾರ್ಲಿನ್ ವೆಸ್ಕಾಫ್ ಮೆಲ್ಟ್ಜರ್, ರುತ್ ಲಿಚ್ಟರ್‌ಮನ್ ಟೈಟೆಲ್‌ಬಾಮ್, ಕೇ ಮ್ಯಾಕ್‌ನಲ್ಟಿ ಮೌಕ್ಲಿ ಆಂಟೊನೆಲ್ಲಿ, ಫ್ರಾನ್ಸಿಸ್ ಸ್ಪೆನ್ಸ್ ಮತ್ತು ಫ್ರಾನ್ಸಿಸ್ ಎಲಿಜಬೆತ್ «ಬೆಟ್ಟಿ» ಹೋಲ್ಬರ್ಟನ್ ಇದ್ದರು. ಅವರ ನವೀನ ಕೆಲಸದ ಹೊರತಾಗಿಯೂ, ಸೇನೆ ENIACನಲ್ಲಿ ಕೆಲಸ ಮಾಡಿದ ಮಹಿಳೆಯರ ಹೆಸರುಗಳನ್ನು ಪ್ರಕಟಿಸಲಿಲ್ಲ; 1985ರಲ್ಲಿ ಕ್ಯಾಥಿ ಕ್ಲೈಮನ್ ಅವರ ಕಥೆಯನ್ನು ಪತ್ತೆಹಚ್ಚುವವರೆಗೆ ಅವರನ್ನು ಬಹುಮಟ್ಟಿಗೆ ಮರೆತಿದ್ದರು.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>ಎಡಿತ್ ಕ್ಲಾರ್ಕ್: ರೂಢಿಗೆ ವಿರುದ್ಧ</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>ಮಹಿಳಾ ಎಂಜಿನಿಯರ್‌ಗಳಿಗೆ ಮಹಿಳಾ ವೈದ್ಯರಷ್ಟು ಬೇಡಿಕೆ ಇಲ್ಲ; ಆದರೆ ಉತ್ತಮ ಕೆಲಸ ಮಾಡಬಲ್ಲ ಯಾರಿಗಾದರೂ ಯಾವಾಗಲೂ ಬೇಡಿಕೆ ಇರುತ್ತದೆ.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>ಎಡಿತ್ ಕ್ಲಾರ್ಕ್, ಅಮೆರಿಕದ ವಿದ್ಯುತ್ ಎಂಜಿನಿಯರಿಂಗ್‌ನ ಮೊದಲ ಮಹಿಳಾ ಪ್ರಾಧ್ಯಾಪಕಿ</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>ರóಜಾ ಪೀಟರ್: ಪುನರಾವರ್ತನೆಯ ಕವಯತ್ರಿ</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>ಹಂಗೇರಿಯಲ್ಲಿ ಜನಿಸಿದ ರóಜಾ ಪೀಟರ್ ಪುನರಾವರ್ತನೆ ಸಿದ್ಧಾಂತವಾಗುವ ಕಲ್ಪನೆಯಲ್ಲಿ ಆಸಕ್ತಿ ತೋರುವ ಮೊದಲು ಸಂಖ್ಯಾ ಸಿದ್ಧಾಂತ ಮತ್ತು ಕಾವ್ಯವನ್ನು ಅಧ್ಯಯನ ಮಾಡಿದರು. «Recursive Functions» ಲೇಖನವನ್ನು 1951ರಲ್ಲಿ ಪ್ರಕಟಿಸಿದರೂ, 1950ರ ದಶಕದ ಮಧ್ಯದಲ್ಲಿ ಕಂಪ್ಯೂಟರ್‌ಗಳಿಗೆ ತಮ್ಮ ಕೆಲಸವನ್ನು ಅನ್ವಯಿಸಲು ಆರಂಭಿಸಿದರು.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>ಗ್ರೇಸ್ ಹಾಪರ್ ಕಂಪೈಲರ್ ಕಂಡುಹಿಡಿದರು</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>ನೌಕಾಪಡೆಯಲ್ಲಿ ರಿಯರ್ ಅಡ್ಮಿರಲ್ ಗ್ರೇಸ್ ಹಾಪರ್ ಮೊದಲ ವಾಣಿಜ್ಯ ಕಂಪ್ಯೂಟರ್ (UNIVAC) ಮೇಲೆ ಕೆಲಸ ಮಾಡಿ COBOL ಭಾಷೆಗೆ ಅಡಿಪಾಯ ಹಾಕಿದರು. ಅವರ ಪ್ರಮುಖ ಆವಿಷ್ಕಾರ ಮೂಲ ಭಾಷೆಯನ್ನು ಬೈನರಿ ಕೋಡ್‌ಗೆ ಪರಿವರ್ತಿಸುವ ಕಂಪೈಲರ್. (ಅಂದರೆ ನಾವು ಬರೆಯುವ ಕೋಡ್ ಅನ್ನು 0 ಮತ್ತು 1ಗಳಾಗಿ ಬದಲಿಸುತ್ತದೆ.) 1952ರಲ್ಲಿ ಅದನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿದರೂ, «ಯಾರೂ ಅದನ್ನು ಮುಟ್ಟುತ್ತಿರಲಿಲ್ಲ. ಕಂಪ್ಯೂಟರ್‌ಗಳು ಅಂಕಗಣಿತ ಮಾತ್ರ ಮಾಡುತ್ತವೆ ಎಂದರು» ಎಂದು ಅವರು ಹೇಳಿದರು.</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>ಬಾಹ್ಯಾಕಾಶ ಪರಿಶೋಧನೆಗೆ ಕೊಡುಗೆ</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>ಗಣಿತದಲ್ಲಿ PhD ಪಡೆದ ಮೊದಲ ಆಫ್ರಿಕನ್-ಅಮೆರಿಕನ್ ಮಹಿಳೆಯರಲ್ಲಿ ಒಬ್ಬರಾದ ಎವೆಲಿನ್ ಬಾಯ್ಡ್ ಗ್ರ್ಯಾನ್ವಿಲ್ ತಮ್ಮ ವೃತ್ತಿಜೀವನದಲ್ಲಿ ಏರೋನಾಟಿಕ್ಸ್ ಮತ್ತು ಬಾಹ್ಯಾಕಾಶದತ್ತ ಗಮನಹರಿಸಿದರು. 1956ರಲ್ಲಿ ಅವರು NASA ಮತ್ತು IBM ಜೊತೆ ಮೊದಲ ಮಾನವಸಹಿತ ಬಾಹ್ಯಾಕಾಶ ಯಾನವಾದ ಪ್ರಾಜೆಕ್ಟ್ ಮರ್ಕ್ಯುರಿಯಲ್ಲಿ ಕೆಲಸ ಮಾಡಿದರು. ಕೆಲವು ವರ್ಷಗಳ ನಂತರ NASAದ ಅಪೊಲೊ ಯೋಜನೆಯಲ್ಲೂ ಕೆಲಸ ಮಾಡಿದರು.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ ಮೊದಲ PhD</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ PhD ಪಡೆದ ಮೊದಲ ಮಹಿಳೆಯರಲ್ಲಿ ಒಬ್ಬರಾದ (ಬಹುಶಃ ಮೊದಲ) ಸಿಸ್ಟರ್ ಮೇರಿ ಕೆನ್ನೆತ್ ಕೆಲ್ಲರ್ ಡಾರ್ಟ್‌ಮೌತ್ ಕಾಲೇಜಿನಲ್ಲಿ BASIC ಭಾಷೆಯ ಅಭಿವೃದ್ಧಿಗೂ ಕೊಡುಗೆ ನೀಡಿದರು. ನಂತರ ಕ್ಲಾರ್ಕ್ ಕಾಲೇಜಿನಲ್ಲಿ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ವಿಭಾಗ ಸ್ಥಾಪಿಸಿ ಮುಂದಿನ 20 ವರ್ಷ ಅದನ್ನು ಮುನ್ನಡೆಸಿದರು.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>ಕರೆನ್ ಸ್ಪಾರ್ಕ್ ಜೋನ್ಸ್ ಹುಡುಕಾಟ ಸಾಧ್ಯವಾಗಿಸಿದರು</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>ಕೇಂಬ್ರಿಡ್ಜ್ ಕಂಪ್ಯೂಟರ್ ಪ್ರಯೋಗಾಲಯದ ಪ್ರಾಧ್ಯಾಪಕಿ ಸ್ಪಾರ್ಕ್ ಜೋನ್ಸ್‌ಗೆ ನೈಸರ್ಗಿಕ ಭಾಷಾ ಸಂಸ್ಕರಣೆ ಮತ್ತು ಮಾಹಿತಿ ಹುಡುಕಾಟದಲ್ಲಿ ಆಸಕ್ತಿ ಇತ್ತು. 1972ರಲ್ಲಿ ಅವರು inverse document frequency ಪರಿಕಲ್ಪನೆಯನ್ನು ಪರಿಚಯಿಸಿದರು; ಹೆಚ್ಚಿನ ಹುಡುಕಾಟ ಎಂಜಿನ್‌ಗಳು ಇಂದಿಗೂ ಅದನ್ನು ಅವಲಂಬಿಸಿವೆ.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>«ಇಂಟರ್ನೆಟ್‌ನ ತಾಯಿ»</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>«ಇಂಟರ್ನೆಟ್‌ನ ತಾಯಿ» ಎಂದು ಕರೆಯಲ್ಪಡುವ ರಾಡಿಯಾ ಪರ್ಲ್‌ಮನ್ ಅವರ spanning tree ಪ್ರೋಟೋಕಾಲ್ ಕೆಲಸವು ಆಧುನಿಕ ಜಾಲಗಳ ಬೆಳವಣಿಗೆಗೆ ನೆರವಾಯಿತು. ಅವರಿಗೆ 100ಕ್ಕೂ ಹೆಚ್ಚು ಪೇಟೆಂಟ್‌ಗಳಿವೆ — ತಾಯಂದಿರು ಚೆನ್ನಾಗಿ ಮಾಡುವ ಕೆಲಸ ಇದೇ.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>ಪ್ರಾಚೀನ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳು</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>ಅಧಿಕೃತ ಕ್ರೀಡಾಕೂಟಗಳ ಮೊದಲ ಲಿಖಿತ ಸಾಕ್ಷ್ಯ ಕ್ರಿ.ಪೂ. 776ರದ್ದು. ಆಗ ಗ್ರೀಕರು ಒಲಿಂಪಿಯಾಡ್‌ಗಳಿಂದ, ಅಂದರೆ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳ ನಡುವಿನ ನಾಲ್ಕು ವರ್ಷಗಳಿಂದ, ಸಮಯ ಅಳೆಯಲು ಆರಂಭಿಸಿದರು. ಜೀಯಸ್ ಗೌರವಾರ್ಥ ಮೊದಲ ಕ್ರೀಡಾಕೂಟಗಳು ಪ್ರತಿ ನಾಲ್ಕು ವರ್ಷಕ್ಕೊಮ್ಮೆ ನಡೆದವು. ನಂತರ ಒಲಿಂಪಿಯಾದ ಆಟಗಳಿಂದ ಪ್ರತ್ಯೇಕವಾದ ಪಿಥಿಯನ್ ಅಥವಾ ಡೆಲ್ಫಿಕ್ ಆಟಗಳಲ್ಲಿ ಸಂಗೀತ, ಹಾಡುಗಾರಿಕೆ, ಕಾವ್ಯ ಮತ್ತು ನಾಟಕದ ಕಾರ್ಯಕ್ರಮಗಳು ನಡೆದವು; ಸಂಸ್ಕೃತಿ ಮತ್ತು ಕ್ರೀಡೆ ಮೊದಲಿನಿಂದಲೂ ಜೊತೆಗೂಡಿದವು.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳ ನಿಷೇಧ</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>ಕ್ರಿ.ಶ. 393ರಲ್ಲಿ ರೋಮನ್ ಚಕ್ರವರ್ತಿ ಥಿಯೋಡೋಸಿಯಸ್ I ಧಾರ್ಮಿಕ ಕಾರಣಗಳಿಂದ ಕ್ರೀಡಾಕೂಟಗಳನ್ನು ನಿಷೇಧಿಸಿದರು; ಅವು ಪೇಗನ್ ಧರ್ಮವನ್ನು ಉತ್ತೇಜಿಸುತ್ತವೆ ಎಂದು ಹೇಳಿದರು. ಆಧುನಿಕ ಯುಗದವರೆಗೆ ಅವು ಮತ್ತೆ ಆರಂಭವಾಗಲಿಲ್ಲ.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>ಪ್ಯಾರಿಸ್‌ನಲ್ಲಿ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳ ಪುನರುಜ್ಜೀವನ</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>19ನೇ ಶತಮಾನದ ಕೊನೆಯಲ್ಲಿ ಅಂತರರಾಷ್ಟ್ರೀಯ ಕ್ರೀಡಾಕೂಟವನ್ನು ಮರುಸ್ಥಾಪಿಸಲು ಹಲವು ಪ್ರಯತ್ನಗಳು ನಡೆದವು; ಆದರೆ ಜಾಗತಿಕ ಕ್ರೀಡಾ ಚಳವಳಿಯ ಸಮನ್ವಯದ ಕೊರತೆಯಿಂದ ವಿಫಲವಾದವು — ಒಬ್ಬ ವ್ಯಕ್ತಿ ಪ್ಯಾರಿಸ್‌ನಲ್ಲಿ ಪ್ರಮುಖರನ್ನು ಒಟ್ಟುಗೂಡಿಸಲು ನಿರ್ಧರಿಸುವವರೆಗೆ.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>1894ರ ಮೊದಲ ಒಲಿಂಪಿಕ್ ಕಾಂಗ್ರೆಸ್‌ನಲ್ಲಿ ಕ್ರೀಡಾಕೂಟಗಳನ್ನು ಮರುಪ್ರಾರಂಭಿಸಲಾಯಿತು. ಬ್ಯಾರನ್ ಪಿಯರ್ ದೆ ಕುಬರ್ಟಿನ್ ಜೂನ್ 16ರಿಂದ 23ರವರೆಗೆ ಸೊರ್ಬೋನ್ ವಿಶ್ವವಿದ್ಯಾಲಯದ ಗ್ರ್ಯಾಂಡ್ ಆಂಫಿಥಿಯೇಟರ್‌ನಲ್ಲಿ ಅದನ್ನು ಆಯೋಜಿಸಿದರು. 2,000 ಜನರು ಭಾಗವಹಿಸಿದರು: ಫ್ರಾನ್ಸ್‌ನ 24 ಕ್ರೀಡಾ ಸಂಸ್ಥೆ ಮತ್ತು ಕ್ಲಬ್‌ಗಳ 58 ಪ್ರತಿನಿಧಿಗಳು ಹಾಗೂ ಬೆಲ್ಜಿಯಂ, ಬ್ರಿಟನ್, ಗ್ರೀಸ್, ಐರ್ಲೆಂಡ್, ಇಟಲಿ, ರಷ್ಯಾ, ಸ್ಪೇನ್, ಸ್ವೀಡನ್ ಮತ್ತು ಅಮೆರಿಕದ 13 ವಿದೇಶಿ ಒಕ್ಕೂಟಗಳ 20 ಪ್ರತಿನಿಧಿಗಳು.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>ಮೊದಲ ಆಧುನಿಕ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳು</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>ಆಧುನಿಕ ಯುಗದ ಮೊದಲ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟಗಳು 1896ರ ಏಪ್ರಿಲ್‌ನಲ್ಲಿ ಪ್ರಾಚೀನ ಕ್ರೀಡಾಕೂಟಗಳ ನೆಲವಾದ ಗ್ರೀಸ್‌ನ ಅಥೆನ್ಸ್‌ನಲ್ಲಿ ನಡೆದವು.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>ಮಹಿಳೆಯರು ಮೊದಲ ಬಾರಿಗೆ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟದಲ್ಲಿ ಸ್ಪರ್ಧಿಸಿದರು</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>ಎರಡನೇ ಕ್ರೀಡಾಕೂಟಗಳು 1900ರಲ್ಲಿ ಪ್ಯಾರಿಸ್‌ನಲ್ಲಿ ನಡೆದವು.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>1900ರ ಪ್ಯಾರಿಸ್ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟದಲ್ಲಿ ಮಹಿಳೆಯರು ಮೊದಲ ಬಾರಿಗೆ ಸ್ಪರ್ಧಿಸಿದರು. ವಿಂಬಲ್ಡನ್ ಅನ್ನು ಐದು ಬಾರಿ ಗೆದ್ದ ಬ್ರಿಟಿಷ್ ಟೆನಿಸ್ ಆಟಗಾರ್ತಿ ಷಾರ್ಲೆಟ್ ಕೂಪರ್ ಮೊದಲ ಮಹಿಳಾ ಒಲಿಂಪಿಕ್ ಚಾಂಪಿಯನ್. ಒಟ್ಟು 997 ಆಟಗಾರರಲ್ಲಿ 22 ಮಹಿಳೆಯರು ಐದು ಕ್ರೀಡೆಗಳಲ್ಲಿ ಸ್ಪರ್ಧಿಸಿದರು:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>ಟೆನಿಸ್</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>ಪಟನೌಕೆ</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, ಕ್ರೊಕೆಟ್,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>ಕುದುರೆ ಸವಾರಿ</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>ಮತ್ತು</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>ಗಾಲ್ಫ್</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>ವಿಕಲಚೇತನ ಕ್ರೀಡಾಪಟುಗಳು ಭಾಗವಹಿಸಿದ ಮೊದಲ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟ</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>1904ರ ಸೇಂಟ್ ಲೂಯಿಸ್ (ಮಿಸ್ಸೌರಿ) ಕ್ರೀಡಾಕೂಟದಲ್ಲಿ ಚಿನ್ನ, ಬೆಳ್ಳಿ ಮತ್ತು ಕಂಚಿನ ಪದಕಗಳನ್ನು ಮೊದಲ ಬಾರಿಗೆ ನೀಡಲಾಯಿತು. ಒಲಿಂಪಿಕ್ಸ್‌ನಲ್ಲಿ ಭಾಗವಹಿಸಿದ ಮೊದಲ ತಿಳಿದಿರುವ ವಿಕಲಚೇತನ ಕ್ರೀಡಾಪಟುವಾದ ಜಿಮ್ನಾಸ್ಟ್ ಜಾರ್ಜ್ ಐಸರ್ ಕೂಡ ಸ್ಪರ್ಧಿಸಿದರು. ಅವರು ಆರು ಪದಕ, ಅವುಗಳಲ್ಲಿ ಮೂರು ಚಿನ್ನದ ಪದಕ ಗೆದ್ದರು.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>ಐದು ಖಂಡಗಳ ಕ್ರೀಡಾಪಟುಗಳು ಭಾಗವಹಿಸಿದ ಮೊದಲ ಒಲಿಂಪಿಕ್ ಕ್ರೀಡಾಕೂಟ</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>1912ರ ಸ್ಟಾಕ್‌ಹೋಮ್ ಕ್ರೀಡಾಕೂಟಗಳು ಒಲಿಂಪಿಕ್ ಉಂಗುರಗಳು ಸೂಚಿಸುವ ಎಲ್ಲಾ ಐದು ಖಂಡಗಳಿಂದ ಸ್ಪರ್ಧಿಗಳನ್ನು ಒಳಗೊಂಡ ಮೊದಲ ಕ್ರೀಡಾಕೂಟ. ಅದೇ ವರ್ಷ ಮಹಿಳೆಯರು ಈಜು ಸ್ಪರ್ಧೆಗಳಲ್ಲಿ ಮೊದಲ ಬಾರಿಗೆ ಭಾಗವಹಿಸಿದರು.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

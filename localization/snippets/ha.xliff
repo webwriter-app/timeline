@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="ha">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>Mata sun daɗe suna rubuta shirye-shiryen kwamfuta tun kafin aikin ya shahara. Ga misalin</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: ’yar Lord Byron, wadda ake yawan ɗauka a matsayin mutum na farko da ya rubuta shirin kwamfuta. Aikinta a kan</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>Injin Nazari na Charles Babbage</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>ya ƙunshi bayanin matakan lissafi na farko da na’ura za ta iya aiwatarwa.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>Kwamfuta ta Farko</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>An ba kwamfuta ta farko mai amfani iri-iri sunan ɓoye “Project PX”, kuma sojojin Amurka suka ba da kuɗin ƙera ta. Sunanta Electronic Numerical Integrator And Computer (ENIAC). An ƙera ta a Makarantar Injiniyan Lantarki ta Moore a Jami’ar Pennsylvania.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… da Matan da Suka Sa Ta Yi Aiki</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>Daga cikin masu rubuta shirye-shiryen ENIAC akwai mata da dama: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence da Frances Elizabeth “Betty” Holberton. Duk da wannan aikin majagaba, sojojin ba su bayyana sunayen matan da suka yi aikin ENIAC ba. An kusan manta da su har sai Kathy Kleiman ta gano labarinsu a 1985.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>Edith Clarke Ta Saɓa wa Al’ada</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>Ba a neman mata injiniyoyi saboda kawai su mata ne, kamar yadda ake neman likitoci mata. Amma ana neman duk wanda zai iya yin aiki mai kyau a kowane lokaci.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>Edith Clarke, mace ta farko da ta zama farfesa a fannin injiniyan lantarki a Amurka</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>Rózsa Péter, Mawaƙiyar Ka’idar Komawa ga Kai</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>An haifi Rózsa Péter a Hungary. Ta karanci ka’idar lambobi da waƙoƙi kafin ta fara sha’awar ra’ayin da daga baya ya zama ka’idar komawa ga kai. Ta wallafa takardar “Recursive Functions” a 1951, amma ta fara amfani da bincikenta a fannin kwamfuta a tsakiyar shekarun 1950.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>Grace Hopper Ta Ƙirƙiri Mai Fassara Lambar Shiri</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>A lokacin aikinta a rundunar sojin ruwa, Rear Admiral Grace Hopper ta yi aiki a kan kwamfutar kasuwanci ta farko, UNIVAC, kuma ta shimfiɗa tubalin harshen shirye-shirye na COBOL. Babban abin da ta ƙirƙira shi ne mai tattara lambar shiri, wanda ke sauya harshen asali zuwa lambar sifili da ɗaya. Wato yana fassara lambar da muke rubutawa zuwa 0 da 1. Ta ƙera shi a 1952, amma ta ce, “Ba wanda ya so ya taɓa shi. An gaya mini cewa kwamfutoci lissafi kawai suke iya yi.”</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>Gudummawa ga Binciken Sararin Samaniya</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>Evelyn Boyd Granville na daga cikin matan Amurka ’yan asalin Afirka na farko da suka sami digirin digirgir a lissafi. Ta mayar da hankali kan aikin jiragen sama da sararin samaniya. A 1956 ta yi aiki da NASA da IBM a Aikin Mercury, tafiyar farko zuwa sararin samaniya da ta ɗauki mutum. Bayan wasu shekaru ta sake aiki da NASA a Aikin Apollo.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>Digirin Digirgir na Farko a Kimiyyar Kwamfuta</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>’Yar’uwa Mary Kenneth Keller tana daga cikin matan farko, kuma wataƙila ita ce ta farko, da suka sami digirin digirgir a kimiyyar kwamfuta. Ta taimaka wajen haɓaka harshen BASIC lokacin da take Dartmouth College. Daga baya ta kafa sashen kimiyyar kwamfuta a Clarke College kuma ta jagorance shi na shekaru 20.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>Karen Spärck Jones Ta Sauƙaƙa Bincike</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>Spärck Jones farfesa ce a Dakin Gwajin Kwamfuta na Cambridge. Ta yi sha’awar sarrafa harshen ɗan adam da nemo bayanai. A 1972 ta gabatar da ra’ayin ba kalmar da ba ta yawaita a takardu muhimmanci wajen bincike, wanda yawancin injinan bincike har yanzu ke amfani da shi.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>“Uwar Intanet”</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>Ana yawan kiran Radia Perlman “Uwar Intanet”. Aikinta kan ƙa’idar itacen da ke haɗa dukkan sassa ya taimaka wajen bunƙasa hanyoyin sadarwa na zamani. Tana da takardun haƙƙin ƙirƙira fiye da 100, abin da iyaye mata suka fi iya yi.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>Wasannin Olympics na Dā</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>Rubutacciyar shaidar farko ta wasannin hukuma ta fito ne daga 776 kafin haihuwar Kristi. A lokacin ne Girkawa suka fara auna lokaci da tazarar da ke tsakanin kowane Wasannin Olympics. An shirya wasannin farko duk bayan shekara huɗu domin girmama allahn Zeus. Daga baya an shirya kiɗa, waƙa, waƙoƙin baka da wasan kwaikwayo a Wasannin Pythia ko Delphi, waɗanda suka bambanta da wasannin Olympia. Hakan ya haɗa al’adu da wasanni tun daga farko.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>Haramta Wasannin Olympics</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>A 393 bayan haihuwar Kristi, Sarkin Rum Theodosius na Ɗaya ya haramta Wasannin Olympics bisa dalilan addini. Ya ce wasannin suna ƙarfafa bautar gumaka. Ba a dawo da su ba sai a zamanin yau.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>An Dawo da Wasannin Olympics a Paris</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>A ƙarshen ƙarni na 19, an yi ƙoƙari da dama na dawo da gasar wasanni ta ƙasa da ƙasa. Ƙoƙarin bai yi nasara ba saboda rashin daidaito tsakanin masu shirya wasanni a duniya, har sai da wani mutum ya yanke shawarar haɗa manyan masu ruwa da tsaki a Paris.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>An dawo da Wasannin Olympics a taron Olympics na farko, wanda Baron Pierre de Coubertin ya shirya a babban dakin taro na Jami’ar Sorbonne daga 16 zuwa 23 ga Yuni 1894. Mutane dubu biyu suka halarta, ciki har da wakilai 58 na Faransa masu wakiltar ƙungiyoyi da kulake 24, da wakilai 20 daga Belgium, Birtaniya, Girka, Ireland, Italiya, Rasha, Sifaniya, Sweden da Amurka masu wakiltar ƙungiyoyin wasanni 13 na ƙasashen waje.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>Wasannin Olympics na Farko na Zamani</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>An gudanar da Wasannin Olympics na farko na zamani a Athens a watan Afrilu 1896, a ƙasar da aka gudanar da wasannin farko a zamanin dā.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>Mata Sun Yi Gasa a Olympics a Karon Farko</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>Paris ta karɓi bakuncin wasanni na biyu a 1900.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>A Wasannin Olympics na Paris na 1900 mata sun shiga gasa a karon farko. Mace ta farko da ta zama zakarar Olympics ita ce Charlotte Cooper, ’yar wasan tenis ta Birtaniya da ta lashe Wimbledon sau biyar. Daga cikin ’yan wasa 997, mata 22 ne. Sun yi gasa a wasanni biyar kawai:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>tenis</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>tseren jirgin ruwa mai zege</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, kroket,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>wasannin hawa doki</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>da</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>golf</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>Olympics na Farko da Aka Buɗe wa ’Yan Wasa Masu Nakasa</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>A gasar Olympics ta 1904 a St. Louis, Missouri, aka fara ba da lambobin zinariya, azurfa da tagulla. George Eyser, ɗan wasa mai nakasa na farko da aka sani ya yi gasa a Olympics, shi ma ya shiga. Ya lashe lambobi shida a wasan motsa jiki, uku daga ciki na zinariya ne.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>Olympics na Farko da ’Yan Wasa Daga Nahiyoyi Biyar</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>Wasannin Olympics na Stockholm a 1912 su ne na farko da suka haɗa ’yan wasa daga dukkan nahiyoyi biyar da zobban Olympics ke wakilta. A shekarar ne kuma mata suka fara shiga gasar iyo.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

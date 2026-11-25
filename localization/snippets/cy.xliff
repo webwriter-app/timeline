@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.1" srcLang="en" trgLang="cy">
+  <file id="./snippets/women-in-tech.html" original="./snippets/women-in-tech.html">
+    <unit id="Ada Lovelace#1">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id="Women have been programming since before it was a thing. Take#1">
+      <segment>
+        <source>Women have been programming since before it was a thing. Take</source>
+        <target>Roedd menywod yn rhaglennu cyn i hynny ddod yn beth cyffredin. Dewch i gwrdd ag</target>
+      </segment>
+    </unit>
+    <unit id="Ada Lovelace#2">
+      <segment>
+        <source>Ada Lovelace</source>
+        <target>Ada Lovelace</target>
+      </segment>
+    </unit>
+    <unit id=": Daughter of Lord Byron, she's&#10;                often credited as the first computer programmer. Her work on#1">
+      <segment>
+        <source>: Daughter of Lord Byron, she's
+                often credited as the first computer programmer. Her work on</source>
+        <target>: merch yr Arglwydd Byron, a ystyrir yn aml fel y rhaglennydd cyfrifiadurol cyntaf. Mae ei gwaith ar</target>
+      </segment>
+    </unit>
+    <unit id="Charles Babbage's Analytical Engine#1">
+      <segment>
+        <source>Charles Babbage's Analytical Engine</source>
+        <target>Beiriant Dadansoddol Charles Babbage</target>
+      </segment>
+    </unit>
+    <unit id="contains notes of the first machine-implemented algorithm.#1">
+      <segment>
+        <source>contains notes of the first machine-implemented algorithm.</source>
+        <target>yn cynnwys nodiadau am yr algorithm cyntaf a weithredwyd gan beiriant.</target>
+      </segment>
+    </unit>
+    <unit id="The First Computer#1">
+      <segment>
+        <source>The First Computer</source>
+        <target>Y cyfrifiadur cyntaf</target>
+      </segment>
+    </unit>
+    <unit id="Code named &quot;Project PX&quot; and funded by the United States Army, the first general-purpose computer was the&#10;                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of&#10;                Pennsylvania's Moore School of Electrical Engineering.#1">
+      <segment>
+        <source>Code named "Project PX" and funded by the United States Army, the first general-purpose computer was the
+                Electronic Numerical Integrator And Computer (ENIAC). It was developed at the University of
+                Pennsylvania's Moore School of Electrical Engineering.</source>
+        <target>Ariannwyd y cyfrifiadur amlbwrpas cyntaf, â’r enw cod “Project PX”, gan Fyddin yr Unol Daleithiau. Datblygwyd y Cyfrifiadur ac Integreiddiwr Rhifiadol Electronig (ENIAC) yn Ysgol Peirianneg Drydanol Moore ym Mhrifysgol Pennsylvania.</target>
+      </segment>
+    </unit>
+    <unit id="... And The Women Who Made It Work#1">
+      <segment>
+        <source>... And The Women Who Made It Work</source>
+        <target>… A’r menywod a’i rhoddodd ar waith</target>
+      </segment>
+    </unit>
+    <unit id="The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman&#10;                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth &quot;Betty&quot; Holberton.&#10;                Despite their groundbreaking work, the Army never released the names of the women who worked on the&#10;                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.#1">
+      <segment>
+        <source>The ENIAC programmers included a number of women: Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman
+                Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence, and Frances Elizabeth "Betty" Holberton.
+                Despite their groundbreaking work, the Army never released the names of the women who worked on the
+                ENIAC, and they were largely forgotten until Kathy Kleiman discovered their story in 1985.</source>
+        <target>Ymhlith rhaglenwyr ENIAC roedd Jean Bartik, Marlyn Wescoff Meltzer, Ruth Lichterman Teitelbaum, Kay McNulty Mauchly Antonelli, Frances Spence a Frances Elizabeth “Betty” Holberton. Er gwaethaf eu gwaith arloesol, ni chyhoeddodd y fyddin enwau’r menywod erioed; bu bron iddynt gael eu hanghofio nes i Kathy Kleiman ddarganfod eu hanes yn 1985.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke: Bucking The Trend#1">
+      <segment>
+        <source>Edith Clarke: Bucking The Trend</source>
+        <target>Edith Clarke: yn mynd yn groes i’r graen</target>
+      </segment>
+    </unit>
+    <unit id="There is no demand for women engineers, as such, as there are for women doctors; but there's always&#10;                    a demand for anyone who can do a good piece of work.#1">
+      <segment>
+        <source>There is no demand for women engineers, as such, as there are for women doctors; but there's always
+                    a demand for anyone who can do a good piece of work.</source>
+        <target>Nid oes cymaint o alw am beirianwyr benywaidd ag sydd am feddygon benywaidd; ond mae galw bob amser am unrhyw un sy’n gallu gwneud gwaith da.</target>
+      </segment>
+    </unit>
+    <unit id="Edith Clarke, first female professor of electrical engineering in the United States#1">
+      <segment>
+        <source>Edith Clarke, first female professor of electrical engineering in the United States</source>
+        <target>Edith Clarke, yr athro benywaidd cyntaf mewn peirianneg drydanol yn yr Unol Daleithiau</target>
+      </segment>
+    </unit>
+    <unit id="Rózsa Péter: The Poet of Recursion#1">
+      <segment>
+        <source>Rózsa Péter: The Poet of Recursion</source>
+        <target>Rózsa Péter: bardd y dychweliad</target>
+      </segment>
+    </unit>
+    <unit id="Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that&#10;                would become recursion theory. She published her paper &quot;Recursive Functions&quot; in 1951, but it wasn't&#10;                until the mid-50's that she began to apply her work to the realm of computers.#1">
+      <segment>
+        <source>Hungarian-born Rózsa Péter studied number theory and poetry before becoming interested in the idea that
+                would become recursion theory. She published her paper "Recursive Functions" in 1951, but it wasn't
+                until the mid-50's that she began to apply her work to the realm of computers.</source>
+        <target>Astudiodd Rózsa Péter, a anwyd yn Hwngari, ddamcaniaeth rhifau a barddoniaeth cyn ymddiddori yn y syniad a ddaeth yn ddamcaniaeth dychweliad. Cyhoeddodd ei phapur “Recursive Functions” yn 1951, ond ni ddechreuodd gymhwyso ei gwaith i gyfrifiaduron tan ganol y 1950au.</target>
+      </segment>
+    </unit>
+    <unit id="Grace Hopper Invents The Compiler#1">
+      <segment>
+        <source>Grace Hopper Invents The Compiler</source>
+        <target>Grace Hopper yn dyfeisio’r crynhoydd</target>
+      </segment>
+    </unit>
+    <unit id="In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)&#10;                and laid the groundwork for the programming language COBOL. But her most notable invention was the&#10;                compiler, which can transform a source language into binary code. (In other words, it can translate the&#10;                code you and I write into 0s and 1s.) She developed it in 1952, but she said &quot;Nobody would touch it.&#10;                They told me computers could only do arithmetic.&quot;#1">
+      <segment>
+        <source>In her career with the Navy, Rear Admiral Grace Hopper worked on the first commercial computer (UNIVAC)
+                and laid the groundwork for the programming language COBOL. But her most notable invention was the
+                compiler, which can transform a source language into binary code. (In other words, it can translate the
+                code you and I write into 0s and 1s.) She developed it in 1952, but she said "Nobody would touch it.
+                They told me computers could only do arithmetic."</source>
+        <target>Gweithiodd y Llyngesydd Cefn Grace Hopper yn y Llynges ar y cyfrifiadur masnachol cyntaf (UNIVAC) a gosododd seiliau’r iaith raglennu COBOL. Ei dyfais fwyaf nodedig oedd y crynhoydd, sy’n trosi iaith ffynhonnell yn god deuaidd, sef seroau ac unau. Datblygodd hi ef yn 1952 a dywedodd: “Doedd neb am ei gyffwrdd. Dweud wrthyf mai rhifyddeg yn unig y gallai cyfrifiaduron ei gwneud.”</target>
+      </segment>
+    </unit>
+    <unit id="Contributions To Space Exploration#1">
+      <segment>
+        <source>Contributions To Space Exploration</source>
+        <target>Cyfraniadau at archwilio’r gofod</target>
+      </segment>
+    </unit>
+    <unit id="One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on&#10;                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the&#10;                first manned space flight. She worked with NASA again a few years later on the Apollo Project.#1">
+      <segment>
+        <source>One of the first African-American women to earn a Ph.D in mathematics, Evelyn Boyd Granville focused on
+                aeronautics and space during her career. In 1956, she worked with NASA and IBM on Project Mercury, the
+                first manned space flight. She worked with NASA again a few years later on the Apollo Project.</source>
+        <target>Evelyn Boyd Granville oedd un o’r menywod Affricanaidd-Americanaidd cyntaf i ennill PhD mewn mathemateg. Canolbwyntiodd ar awyrenneg a’r gofod, a gweithiodd gyda NASA ac IBM yn 1956 ar Project Mercury, yr hediad gofod cyntaf â chriw. Rai blynyddoedd wedyn, gweithiodd eto gyda NASA ar Project Apollo.</target>
+      </segment>
+    </unit>
+    <unit id="The First PHD in Computer Science#1">
+      <segment>
+        <source>The First PHD in Computer Science</source>
+        <target>Y PhD cyntaf mewn cyfrifiadureg</target>
+      </segment>
+    </unit>
+    <unit id="One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth&#10;                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.&#10;                She then founded the computer science department at Clarke College and directed it for the next 20&#10;                years.#1">
+      <segment>
+        <source>One of the first women (if not the first woman) to earn a Ph.D in computer science, Sister Mary Kenneth
+                Keller also contributed to the development of the BASIC language during her time at Dartmouth College.
+                She then founded the computer science department at Clarke College and directed it for the next 20
+                years.</source>
+        <target>Roedd y Chwaer Mary Kenneth Keller yn un o’r menywod cyntaf, os nad y fenyw gyntaf, i ennill PhD mewn cyfrifiadureg. Cyfrannodd hefyd at ddatblygu BASIC yng Ngholeg Dartmouth. Yna sefydlodd adran cyfrifiadureg yng Ngholeg Clarke a’i harwain am 20 mlynedd.</target>
+      </segment>
+    </unit>
+    <unit id="Karen Spärck Jones Makes Search Possible#1">
+      <segment>
+        <source>Karen Spärck Jones Makes Search Possible</source>
+        <target>Karen Spärck Jones yn gwneud chwilio’n bosibl</target>
+      </segment>
+    </unit>
+    <unit id="A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing&#10;                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most&#10;                search engines still rely on.#1">
+      <segment>
+        <source>A professor at Cambridge Computer Laboratory, Spärck Jones was interested in natural language processing
+                and information retrieval. In 1972, she introduced the concept of inverse document frequency, which most
+                search engines still rely on.</source>
+        <target>Roedd Spärck Jones, athro yng Nghaergrawnt Computer Laboratory, yn ymddiddori mewn prosesu iaith naturiol ac adalw gwybodaeth. Yn 1972 cyflwynodd y cysyniad o amlder dogfen gwrthdro, y mae’r rhan fwyaf o beiriannau chwilio’n dal i’w ddefnyddio.</target>
+      </segment>
+    </unit>
+    <unit id="&quot;The Mother of the Internet&quot;#1">
+      <segment>
+        <source>"The Mother of the Internet"</source>
+        <target>“Mam y rhyngrwyd”</target>
+      </segment>
+    </unit>
+    <unit id="Often called &quot;the Mother of the Internet,&quot; Radia Perlman's work on spanning tree protocol enabled the&#10;                development of modern networking. She holds more than 100 patents, which is what mothers do best.#1">
+      <segment>
+        <source>Often called "the Mother of the Internet," Radia Perlman's work on spanning tree protocol enabled the
+                development of modern networking. She holds more than 100 patents, which is what mothers do best.</source>
+        <target>Gelwir Radia Perlman yn aml yn “fam y rhyngrwyd”. Galluogodd ei gwaith ar y protocol spanning tree ddatblygiad rhwydweithiau modern. Mae ganddi dros 100 o batentau — mae mamau’n dda am bethau felly.</target>
+      </segment>
+    </unit>
+  </file>
+  <file id="./snippets/history-of-olympic-games.html" original="./snippets/history-of-olympic-games.html">
+    <unit id="Ancient Olympic Games#1">
+      <segment>
+        <source>Ancient Olympic Games</source>
+        <target>Y Gemau Olympaidd hynafol</target>
+      </segment>
+    </unit>
+    <unit id="The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time&#10;                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were&#10;                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as&#10;                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to&#10;                the Games held in Olympia), linking culture and sport right from the beginning of the Games.#1">
+      <segment>
+        <source>The first written evidence of the official Games dates from 776 BC, when the Greeks began measuring time
+                in Olympiads, or the duration between each edition of the Olympic Games. The first Olympic Games were
+                held every four years in honour of the god Zeus. From then on, a number of artistic activities such as
+                music, singing, poetry and theatre were organised at the Pythian or Delphic Games (a separate event to
+                the Games held in Olympia), linking culture and sport right from the beginning of the Games.</source>
+        <target>Daw’r dystiolaeth ysgrifenedig gyntaf am y Gemau swyddogol o 776 CC, pan ddechreuodd y Groegiaid fesur amser mewn Olympiadau, sef y cyfnod rhwng pob rhifyn o’r Gemau Olympaidd. Cynhaliwyd y Gemau bob pedair blynedd er anrhydedd i Zeus. Yn ddiweddarach, cynhaliwyd gweithgareddau celfyddydol fel cerddoriaeth, canu, barddoniaeth a theatr yn y Gemau Pythaidd neu Ddelfaidd, digwyddiad ar wahân i’r Gemau yn Olympia, gan gysylltu diwylliant a chwaraeon o’r dechrau.</target>
+      </segment>
+    </unit>
+    <unit id="Ban of Olympic Games#1">
+      <segment>
+        <source>Ban of Olympic Games</source>
+        <target>Gwahardd y Gemau Olympaidd</target>
+      </segment>
+    </unit>
+    <unit id="In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that&#10;                they encouraged paganism. They were not revived until the modern era.#1">
+      <segment>
+        <source>In 393 AD, the Roman Emperor Theodosius I banned the Olympic Games for religious reasons, claiming that
+                they encouraged paganism. They were not revived until the modern era.</source>
+        <target>Yn 393 OC gwaharddodd yr Ymerawdwr Rhufeinig Theodosius I y Gemau Olympaidd am resymau crefyddol, gan honni eu bod yn annog paganiaeth. Ni chynhaliwyd y Gemau eto tan yr oes fodern.</target>
+      </segment>
+    </unit>
+    <unit id="Olympic Games Revived in Paris#1">
+      <segment>
+        <source>Olympic Games Revived in Paris</source>
+        <target>Y Gemau Olympaidd yn cael eu hadfywio ym Mharis</target>
+      </segment>
+    </unit>
+    <unit id="A number of initiatives to re-establish an international sporting event were attempted at the end of the&#10;                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until&#10;                one man decided to bring the main stakeholders together in Paris.#1">
+      <segment>
+        <source>A number of initiatives to re-establish an international sporting event were attempted at the end of the
+                19th century, but failed due to the lack of coordination among the worldwide sporting movement - until
+                one man decided to bring the main stakeholders together in Paris.</source>
+        <target>Ceisiwyd sawl gwaith adfer digwyddiad chwaraeon rhyngwladol ar ddiwedd y 19eg ganrif, ond methodd ymdrechion oherwydd diffyg cydlynu’r mudiad chwaraeon byd-eang — nes i un dyn benderfynu casglu’r prif randdeiliaid ym Mharis.</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de&#10;                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two&#10;                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,&#10;                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the&#10;                United States representing 13 foreign sports federations.#1">
+      <segment>
+        <source>The Olympic Games were therefore revived at the first Olympic Congress, organised by Baron Pierre de
+                Coubertin and held at the Grand Amphitheatre at the Sorbonne University from 16 to 23 June 1894. Two
+                thousand people attended, including 58 French delegates representing 24 sports organisations and clubs,
+                and 20 delegates from Belgium, Great Britain, Greece, Ireland, Italy, Russia, Spain, Sweden and the
+                United States representing 13 foreign sports federations.</source>
+        <target>Felly, adfywiwyd y Gemau Olympaidd yn y Gyngres Olympaidd gyntaf, a drefnwyd gan y Barwn Pierre de Coubertin yn Amffitheatr Fawr Prifysgol Sorbonne rhwng 16 a 23 Mehefin 1894. Daeth 2,000 o bobl: 58 o gynrychiolwyr Ffrengig 24 o sefydliadau a chlybiau chwaraeon, a 20 o gynrychiolwyr o Wlad Belg, Prydain Fawr, Gwlad Groeg, Iwerddon, yr Eidal, Rwsia, Sbaen, Sweden a’r Unol Daleithiau, yn cynrychioli 13 o ffederasiynau chwaraeon tramor.</target>
+      </segment>
+    </unit>
+    <unit id="First Modern Olympic Games#1">
+      <segment>
+        <source>First Modern Olympic Games</source>
+        <target>Y Gemau Olympaidd modern cyntaf</target>
+      </segment>
+    </unit>
+    <unit id="The first Olympic Games of the modern era took place in Athens, in the country where the original Games&#10;                took place in Antiquity, in April 1896.#1">
+      <segment>
+        <source>The first Olympic Games of the modern era took place in Athens, in the country where the original Games
+                took place in Antiquity, in April 1896.</source>
+        <target>Cynhaliwyd Gemau Olympaidd cyntaf yr oes fodern yn Athen ym mis Ebrill 1896, yn y wlad lle cynhaliwyd y Gemau hynafol.</target>
+      </segment>
+    </unit>
+    <unit id="Women Competed for the First Time in the Olympic Games#1">
+      <segment>
+        <source>Women Competed for the First Time in the Olympic Games</source>
+        <target>Menywod yn cystadlu yn y Gemau Olympaidd am y tro cyntaf</target>
+      </segment>
+    </unit>
+    <unit id="Paris hosted the second Games in 1900.#1">
+      <segment>
+        <source>Paris hosted the second Games in 1900.</source>
+        <target>Cynhaliodd Paris yr ail Gemau yn 1900.</target>
+      </segment>
+    </unit>
+    <unit id="The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was&#10;                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,&#10;                22 were women, competing in just five sports:#1">
+      <segment>
+        <source>The Paris 1900 Olympic Games saw women compete for the first time. The first female Olympic champion was
+                Charlotte Cooper, a British tennis player who won Wimbledon five times. Out of a total of 997 athletes,
+                22 were women, competing in just five sports:</source>
+        <target>Yng Ngemau Olympaidd Paris yn 1900 cystadlodd menywod am y tro cyntaf. Y bencampwraig Olympaidd gyntaf oedd Charlotte Cooper, chwaraewraig denis o Brydain a enillodd Wimbledon bum gwaith. O gyfanswm o 997 o athletwyr, roedd 22 yn fenywod, a buont yn cystadlu mewn pum camp yn unig:</target>
+      </segment>
+    </unit>
+    <unit id="tennis#1">
+      <segment>
+        <source>tennis</source>
+        <target>tenis</target>
+      </segment>
+    </unit>
+    <unit id="sailing#1">
+      <segment>
+        <source>sailing</source>
+        <target>hwylio</target>
+      </segment>
+    </unit>
+    <unit id=", croquet,#1">
+      <segment>
+        <source>, croquet,</source>
+        <target>, croce,</target>
+      </segment>
+    </unit>
+    <unit id="equestrian events#1">
+      <segment>
+        <source>equestrian events</source>
+        <target>cystadlaethau marchogaeth</target>
+      </segment>
+    </unit>
+    <unit id="and#1">
+      <segment>
+        <source>and</source>
+        <target>a</target>
+      </segment>
+    </unit>
+    <unit id="golf#1">
+      <segment>
+        <source>golf</source>
+        <target>golff</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games Open to Athletes with Disabilities#1">
+      <segment>
+        <source>First Olympic Games Open to Athletes with Disabilities</source>
+        <target>Y Gemau Olympaidd cyntaf yn agored i athletwyr ag anableddau</target>
+      </segment>
+    </unit>
+    <unit id="The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze&#10;                medals, and also included the first known disabled athlete to compete in the Olympic Games, George&#10;                Eyser. He won six medals in gymnastics, three of which were gold.#1">
+      <segment>
+        <source>The 1904 Olympic Games in St. Louis (Missouri) were the first to distribute gold, silver and bronze
+                medals, and also included the first known disabled athlete to compete in the Olympic Games, George
+                Eyser. He won six medals in gymnastics, three of which were gold.</source>
+        <target>Gemau 1904 yn St. Louis (Missouri) oedd y cyntaf i ddyfarnu medalau aur, arian ac efydd. Cymerodd yr athletwr anabl cyntaf y gwyddys amdano, George Eyser, ran hefyd. Enillodd chwe medal mewn gymnasteg, tair ohonynt yn aur.</target>
+      </segment>
+    </unit>
+    <unit id="First Olympic Games with Athletes from Five Continents#1">
+      <segment>
+        <source>First Olympic Games with Athletes from Five Continents</source>
+        <target>Y Gemau cyntaf gydag athletwyr o bum cyfandir</target>
+      </segment>
+    </unit>
+    <unit id="The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents&#10;                represented by the Olympic rings. It was also the year that women made their debut in the swimming&#10;                events.#1">
+      <segment>
+        <source>The Olympic Games in Stockholm in 1912 were the first to include competitors from all five continents
+                represented by the Olympic rings. It was also the year that women made their debut in the swimming
+                events.</source>
+        <target>Gemau Olympaidd Stockholm yn 1912 oedd y cyntaf i gynnwys cystadleuwyr o bob un o’r pum cyfandir a gynrychiolir gan y cylchoedd Olympaidd. Dyna hefyd y flwyddyn y bu menywod yn cystadlu mewn nofio am y tro cyntaf.</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

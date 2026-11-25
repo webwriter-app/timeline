@@ -3,19 +3,16 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Hai ottenuto 
-          <strong>${0}</strong> esatto 
-          <strong>${1}</strong> gli eventi correttamente.
-        `,
+      'h84e1bc2032e6a3ca': html`Hai risposto correttamente a <strong>${0}</strong> eventi su <strong>${1}</strong>.`,
+'s047e5cae353e8713': `Modifica la data per riordinare`,
 's07c0dacf93b42c9a': `Giorno non valido`,
 's1a445bc371e19b14': `Aggiungi evento`,
-'s1c417ec19e8605bf': `Quali pannelli saranno visibili ai lettori`,
 's1d449f9f444e532a': `Data di fine`,
 's1e1a1d080e3b4053': `Formato non valido`,
 's1fa60442ead25459': `L'anno zero non esiste`,
@@ -23,21 +20,24 @@
 's355b21b89ce5d9c5': `Dettagli`,
 's39f5885d883e91d9': `Anno non valido`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Pannelli visibili`,
 's6431645dad89d68e': `Abbina gli eventi alle date corrette trascinandoli sulla linea temporale.`,
 's680fc90489553ed6': `Cronologia`,
 's782f69ab5dd839e0': `Cronologia e quiz`,
 's7a4a4ef6339fe2bb': `La cronologia è vuota.`,
 's7d775183a3896b44': `Solo cronologia`,
 's8ae42ce9d674b6ce': `Invia le risposte`,
+'s8b7a3775e05375ae': `Il file deve contenere una colonna per la data e una per il titolo.`,
 's8cdcbe65c5e46f7a': `Riprova`,
+'s96d72b3e893d2136': `La data non è valida nella riga`,
+'s978b4f72cc299835': `Seleziona un evento`,
 's99f110d27e30b289': `Titolo`,
 's9a3d950ed0f37bea': `(disabilitato)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Mese non valido`,
-'sb971373f2f92a03f': `Un evento richiede una data e un titolo`,
-'scc342eb1f2b3826a': `Elimina evento`,
+'sda041725dacb5da3': `Il file non contiene eventi.`,
 'se0baa9b7fb0768e4': `Data non valida`,
+'se1a7152d9dcd4433': `Eventi non assegnati`,
 'sfab2185e1bcd629a': `Aggiungi un evento nella timeline per provare il quiz.`,
 'sfe03165961812f36': `Solo quiz`,
     };
-  

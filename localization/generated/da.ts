@@ -3,19 +3,16 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Du fik 
-          <strong>${0}</strong> ud af 
-          <strong>${1}</strong> begivenheder korrekt.
-        `,
+      'h84e1bc2032e6a3ca': html`Du svarede rigtigt på <strong>${0}</strong> ud af <strong>${1}</strong> begivenheder.`,
+'s047e5cae353e8713': `Skift datoen for at ændre rækkefølgen`,
 's07c0dacf93b42c9a': `Ugyldig dag`,
 's1a445bc371e19b14': `Tilføj begivenhed`,
-'s1c417ec19e8605bf': `Hvilke paneler vil være synlige for læserne?`,
 's1d449f9f444e532a': `Slutdato`,
 's1e1a1d080e3b4053': `Ugyldigt format`,
 's1fa60442ead25459': `År nul eksisterer ikke`,
@@ -23,21 +20,24 @@
 's355b21b89ce5d9c5': `Detaljer`,
 's39f5885d883e91d9': `Ugyldigt år`,
 's45156c13b0fb3494': `Quiz`,
+'s611e0cdb06b46c98': `Synlige paneler`,
 's6431645dad89d68e': `Match begivenhederne med deres korrekte datoer ved at trække og slippe dem på tidslinjen.`,
 's680fc90489553ed6': `Tidslinje`,
 's782f69ab5dd839e0': `Tidslinje og quiz`,
 's7a4a4ef6339fe2bb': `Tidslinjen er tom.`,
 's7d775183a3896b44': `Kun tidslinje`,
 's8ae42ce9d674b6ce': `Indsend svar`,
+'s8b7a3775e05375ae': `Filen skal have en datokolonne og en titelkolonne.`,
 's8cdcbe65c5e46f7a': `Prøv igen`,
+'s96d72b3e893d2136': `Datoen er ugyldig i rækken`,
+'s978b4f72cc299835': `Vælg hændelse`,
 's99f110d27e30b289': `Titel`,
 's9a3d950ed0f37bea': `(deaktiveret)`,
 'sac8252732f2edb19': `Dato`,
 'sb3b1ba3205c4733e': `Ugyldig måned`,
-'sb971373f2f92a03f': `En begivenhed kræver en dato og en titel`,
-'scc342eb1f2b3826a': `Slet begivenhed`,
+'sda041725dacb5da3': `Filen indeholder ingen hændelser.`,
 'se0baa9b7fb0768e4': `Ugyldig dato`,
+'se1a7152d9dcd4433': `Ikke-tildelte hændelser`,
 'sfab2185e1bcd629a': `Tilføj en begivenhed i tidslinjen for at prøve quizzen.`,
 'sfe03165961812f36': `Kun quiz`,
     };
-  

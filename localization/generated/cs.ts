@@ -3,19 +3,16 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Získali jste 
-          <strong>${0}</strong> z 
-          <strong>${1}</strong> události správně.
-        `,
+      'h84e1bc2032e6a3ca': html`Správně jste určili <strong>${0}</strong> z <strong>${1}</strong> událostí.`,
+'s047e5cae353e8713': `Změňte datum pro změnu pořadí`,
 's07c0dacf93b42c9a': `Neplatný den`,
 's1a445bc371e19b14': `Přidat událost`,
-'s1c417ec19e8605bf': `Které panely budou pro čtenáře viditelné`,
 's1d449f9f444e532a': `Datum ukončení`,
 's1e1a1d080e3b4053': `Neplatný formát`,
 's1fa60442ead25459': `Rok nula neexistuje`,
@@ -23,21 +20,24 @@
 's355b21b89ce5d9c5': `Podrobnosti`,
 's39f5885d883e91d9': `Neplatný rok`,
 's45156c13b0fb3494': `Kvíz`,
+'s611e0cdb06b46c98': `Viditelné panely`,
 's6431645dad89d68e': `Přiřaďte události ke správným datům tak, že je přetáhnete na časovou osu.`,
 's680fc90489553ed6': `Časová osa`,
 's782f69ab5dd839e0': `Časová osa a kvíz`,
 's7a4a4ef6339fe2bb': `Časová osa je prázdná.`,
 's7d775183a3896b44': `Pouze časová osa`,
 's8ae42ce9d674b6ce': `Odeslat odpovědi`,
+'s8b7a3775e05375ae': `Soubor musí obsahovat sloupec s datem a sloupec s názvem.`,
 's8cdcbe65c5e46f7a': `Zkusit znovu`,
+'s96d72b3e893d2136': `Neplatné datum v řádku`,
+'s978b4f72cc299835': `Vyberte událost`,
 's99f110d27e30b289': `Název`,
 's9a3d950ed0f37bea': `(vypnuto)`,
 'sac8252732f2edb19': `Datum`,
 'sb3b1ba3205c4733e': `Neplatný měsíc`,
-'sb971373f2f92a03f': `Událost vyžaduje datum a název.`,
-'scc342eb1f2b3826a': `Smazat událost`,
+'sda041725dacb5da3': `Soubor neobsahuje žádné události.`,
 'se0baa9b7fb0768e4': `Neplatné datum`,
+'se1a7152d9dcd4433': `Nepřiřazené události`,
 'sfab2185e1bcd629a': `Přidejte událost do časové osy a vyzkoušejte kvíz.`,
 'sfe03165961812f36': `Pouze kvíz`,
     };
-  

@@ -3,19 +3,16 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
-      'h84e1bc2032e6a3ca': html`Ai obținut 
-          <strong>${0}</strong>
-          <strong>${1}</strong> evenimentele corect.
-        `,
+      'h84e1bc2032e6a3ca': html`Ai răspuns corect la <strong>${0}</strong> din <strong>${1}</strong> evenimente.`,
+'s047e5cae353e8713': `Schimbă data pentru a reordona`,
 's07c0dacf93b42c9a': `Zi invalidă`,
 's1a445bc371e19b14': `Adăugați eveniment`,
-'s1c417ec19e8605bf': `Ce panouri vor fi vizibile pentru cititori`,
 's1d449f9f444e532a': `Data de încheiere`,
 's1e1a1d080e3b4053': `Format invalid`,
 's1fa60442ead25459': `Anul zero nu există`,
@@ -23,21 +20,24 @@
 's355b21b89ce5d9c5': `Detalii`,
 's39f5885d883e91d9': `An invalid`,
 's45156c13b0fb3494': `Chestionar`,
+'s611e0cdb06b46c98': `Panouri vizibile`,
 's6431645dad89d68e': `Potriviți evenimentele cu datele corecte, glisându-le și plasându-le pe linia temporală.`,
 's680fc90489553ed6': `Cronologie`,
 's782f69ab5dd839e0': `Cronologie și test`,
 's7a4a4ef6339fe2bb': `Cronologia este goală.`,
 's7d775183a3896b44': `Numai cronologie`,
 's8ae42ce9d674b6ce': `Trimiteți răspunsurile`,
+'s8b7a3775e05375ae': `Fișierul trebuie să aibă o coloană pentru dată și una pentru titlu.`,
 's8cdcbe65c5e46f7a': `Încercați din nou`,
+'s96d72b3e893d2136': `Data nu este validă în rândul`,
+'s978b4f72cc299835': `Selectează un eveniment`,
 's99f110d27e30b289': `Titlu`,
 's9a3d950ed0f37bea': `(dezactivat)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Lună invalidă`,
-'sb971373f2f92a03f': `Un eveniment necesită o dată și un titlu.`,
-'scc342eb1f2b3826a': `Șterge evenimentul`,
+'sda041725dacb5da3': `Fișierul nu conține evenimente.`,
 'se0baa9b7fb0768e4': `Data nevalidă`,
+'se1a7152d9dcd4433': `Evenimente neatribuite`,
 'sfab2185e1bcd629a': `Adaugă un eveniment în cronologie pentru a încerca testul.`,
 'sfe03165961812f36': `Numai test`,
     };
-  
