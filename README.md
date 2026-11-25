@@ -1,7 +1,7 @@
 # Timeline (`@webwriter/timeline@3.0.0`)
 [License: MIT](LICENSE) | Version: 3.0.0
 
-Create/learn with a digital timeline and test your knowledge.
+Create and explore timelines, then test what you know.
 
 ## Snippets
 [Snippets](https://webwriter.app/docs/snippets/snippets/) are examples and templates using the package's widgets.
@@ -56,6 +56,7 @@ npm install @webwriter/timeline
 ## Methods
 | Name | Description | Parameters |
 | :--: | :---------: | :-------: |
+| `focus` | - | `options: FocusOptions`
 | `fromElement` | Takes over the events of a copied list, description list or `details` elements. | `fragment: DocumentFragment`
 | `toDetails` | The events as `details` elements, or `null` when there are none. | -
 | `importCsv` | Reads the whole file first. The returned function replaces all events. | `file: File`
@@ -84,22 +85,7 @@ npm install @webwriter/timeline
 
 ## `WebwriterTimelineEvent` (`<webwriter-timeline-event>`)
 A single event in a `webwriter-timeline` component. Should not be used independently.
-Each event contains exactly one `<h2 slot="title">`, followed by one or more flow content elements shown in the default slot.
-The timeline's content expression accepts events directly by type. An event's `group: ""` excludes it from general flow content, preventing insertion or dropping into the document body, event contents, or other flow containers.
-Resize the timeline horizontally; individual events size themselves to their content and cannot be resized.
-In edit mode, click the left edge to select the event. Events cannot be moved or dragged: change their dates to reorder them chronologically. A grey “Change date to reorder” hint appears on the right of the date row while the event is hovered, focused or selected. A subtle background marks the edge while hovering anywhere in the event or while its content is selected. Hovering the edge itself emphasizes the line and dot. The edge is also a keyboard-accessible button.
-The end-date placeholder stays visible while the event has focus or contains the document selection.
-WebWriter's native `ww-element-selected` and `ww-element-capture-selected` states also keep the edge indicator and end-date placeholder visible when the event itself is selected. The event exposes its `ElementInternals.states` through `selectionStates` for the editor; these states are never saved in authored HTML.
-Inserting the empty snippet or adding an event puts the input caret in the new event's Date field. The horizontal tab divider follows the timeline's line color, without a separate active-tab underline.
-
-```html
-<webwriter-timeline-event date="1815-12-10">
-  <h2 slot="title">Ada Lovelace</h2>
-  <p>First program.</p>
-</webwriter-timeline-event>
-```
-
-The `./migrate.js` export converts the earlier title and details wrappers while preserving their content and authored attributes. Legacy widget exports remain available for previously saved documents.
+Contains exactly one `h2[slot="title"]` and flow content in the default slot.
 
 ### Usage
 
@@ -126,11 +112,27 @@ npm install @webwriter/timeline
 | Name (Attribute Name) | Type | Description | Default | Reflects |
 | :-------------------: | :--: | :---------: | :-----: | :------: |
 | `localize` | - | - | - | ✗ |
+| `selectionStates` | - | Native selection states maintained by WebWriter, separate from authored HTML. | - | ✗ |
 | `date` (`date`) | `TimelineDate \| null` | The (start) date of the event.<br>Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".<br>Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on. | `null` | ✓ |
 | `endDate` (`endDate`) | `TimelineDate \| null` | The end date of the event, should be after the start date.<br>Must be formatted as an ISO 8601 date as "YYYY", "YYYY-MM", or "YYYY-MM-DD".<br>Any year BCE must be represented with a negative year number, with year 0 representing 1 BCE, -1 representing 2 BCE, and so on. | `null` | ✓ |
 | `isIncomplete` | - | - | - | ✗ |
 
 *Fields including [properties](https://developer.mozilla.org/en-US/docs/Glossary/Property/JavaScript) and [attributes](https://developer.mozilla.org/en-US/docs/Glossary/Attribute) define the current state of the widget and offer customization options.*
+
+## Methods
+| Name | Description | Parameters |
+| :--: | :---------: | :-------: |
+| `focus` | - | `options: FocusOptions`
+
+*[Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) allow programmatic access to the widget.*
+
+## Slots
+| Name | Description | Content Type |
+| :--: | :---------: | :----------: |
+| `title` | Exactly one h2 containing the event title. | - |
+| *(default)* | Authored flow content describing the event. | - |
+
+*[Slots](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots) define how the content of the widget is rendered.*
 
 ## Events
 | Name | Description |
@@ -144,6 +146,7 @@ npm install @webwriter/timeline
 | :--: | :---------: |
 | marker | The dot on the timeline line. |
 | edge | The selectable left edge in edit mode. |
+| reorder-hint | Guidance to change the date to reorder the event. |
 
 *[CSS parts](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_shadow_parts) allow freely styling internals of the widget with CSS.*
 
@@ -154,7 +157,7 @@ npm install @webwriter/timeline
 
 *The [editing config](https://webwriter.app/docs/packages/configuring/#editingconfig) defines how explorable authoring tools such as [WebWriter](https://webwriter.app) treat the widget.*
 
-*No public methods, slots, or custom CSS properties.*
+*No public custom CSS properties.*
 
 
 ## `WebwriterTimelineEventTitle` (`<webwriter-timeline-event-title>`)
@@ -242,4 +245,4 @@ npm install @webwriter/timeline
 
 
 ---
-*Generated with @webwriter/build@1.14.0*
+*Generated with @webwriter/build@1.15.0*

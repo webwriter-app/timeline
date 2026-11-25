@@ -79,9 +79,7 @@
             "package": "@webwriter/lit"
           },
           "tagName": "webwriter-timeline-event-details",
-          "customElement": true,
-          "modulePath": "src/widgets/webwriter-timeline-event-details.ts",
-          "definitionPath": "src/widgets/webwriter-timeline-event-details.ts"
+          "customElement": true
         }
       ],
       "exports": [
@@ -150,9 +148,7 @@
             "package": "@webwriter/lit"
           },
           "tagName": "webwriter-timeline-event-title",
-          "customElement": true,
-          "modulePath": "src/widgets/webwriter-timeline-event-title.ts",
-          "definitionPath": "src/widgets/webwriter-timeline-event-title.ts"
+          "customElement": true
         }
       ],
       "exports": [
@@ -180,7 +176,7 @@
       "declarations": [
         {
           "kind": "class",
-          "description": "A single event in a webwriter-timeline component. Contains exactly one h2[slot=\"title\"] and flow content in the default slot.",
+          "description": "A single event in a `webwriter-timeline` component. Should not be used independently.\nContains exactly one `h2[slot=\"title\"]` and flow content in the default slot.",
           "name": "WebwriterTimelineEvent",
           "cssParts": [
             {
@@ -190,6 +186,20 @@
             {
               "description": "The selectable left edge in edit mode.",
               "name": "edge"
+            },
+            {
+              "description": "Guidance to change the date to reorder the event.",
+              "name": "reorder-hint"
+            }
+          ],
+          "slots": [
+            {
+              "description": "Exactly one h2 containing the event title.",
+              "name": "title"
+            },
+            {
+              "description": "Authored flow content describing the event.",
+              "name": ""
             }
           ],
           "members": [
@@ -209,6 +219,12 @@
               "privacy": "private",
               "readonly": true,
               "default": "new Permissions(this)"
+            },
+            {
+              "kind": "field",
+              "name": "selectionStates",
+              "readonly": true,
+              "description": "Native selection states maintained by WebWriter, separate from authored HTML."
             },
             {
               "kind": "field",
@@ -248,14 +264,58 @@
             },
             {
               "kind": "field",
+              "name": "selectionWithin",
+              "type": {
+                "text": "boolean"
+              },
+              "privacy": "private",
+              "default": "false"
+            },
+            {
+              "kind": "field",
               "name": "titleMutationObserver",
               "privacy": "private",
               "default": "new MutationObserver(() => this.checkIfTitleIsEmpty())"
             },
             {
+              "kind": "field",
+              "name": "releaseMediaStyles",
+              "type": {
+                "text": "() => void | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "selectionDocument",
+              "type": {
+                "text": "Document | undefined"
+              },
+              "privacy": "private"
+            },
+            {
+              "kind": "field",
+              "name": "updateSelectionWithin",
+              "privacy": "private",
+              "readonly": true
+            },
+            {
               "kind": "method",
               "name": "checkIfTitleIsEmpty",
               "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
             },
             {
               "kind": "field",
@@ -296,19 +356,7 @@
             "package": "@webwriter/lit"
           },
           "tagName": "webwriter-timeline-event",
-          "customElement": true,
-          "modulePath": "src/widgets/webwriter-timeline-event.ts",
-          "definitionPath": "src/widgets/webwriter-timeline-event.ts",
-          "slots": [
-            {
-              "name": "title",
-              "description": "Exactly one h2 containing the event title."
-            },
-            {
-              "name": "",
-              "description": "Authored flow content describing the event."
-            }
-          ]
+          "customElement": true
         }
       ],
       "exports": [
@@ -445,7 +493,7 @@
               "kind": "field",
               "name": "eventsObserver",
               "privacy": "private",
-              "default": "new MutationObserver((records) => { if ( records.some( ({ target }) => target === this || target.parentElement === this || (target instanceof Element ? target : target.parentElement)?.closest( \"webwriter-timeline-event-title\", ), ) ) { this.updateEventsForQuiz(); } })"
+              "default": "new MutationObserver((records) => { if ( records.some( ({ target }) => target === this || target.parentElement === this || (target instanceof Element ? target : target.parentElement)?.closest( 'h2[slot=\"title\"], webwriter-timeline-event-title', ), ) ) { this.updateEventsForQuiz(); } })"
             },
             {
               "kind": "field",
@@ -453,6 +501,19 @@
               "privacy": "private",
               "description": "The panels the author enabled in the `panels` attribute, e.g. \"timeline+quiz\". All of them if it is absent.",
               "readonly": true
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
             },
             {
               "kind": "method",
@@ -592,9 +653,7 @@
             "package": "@webwriter/lit"
           },
           "tagName": "webwriter-timeline",
-          "customElement": true,
-          "modulePath": "src/widgets/webwriter-timeline.ts",
-          "definitionPath": "src/widgets/webwriter-timeline.ts"
+          "customElement": true
         }
       ],
       "exports": [
