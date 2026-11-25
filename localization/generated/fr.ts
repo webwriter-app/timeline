@@ -3,13 +3,14 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Vous avez placé correctement <strong>${0}</strong> événements sur <strong>${1}</strong>.`,
+'s047e5cae353e8713': `Changer la date pour réorganiser`,
 's07c0dacf93b42c9a': `Jour invalide`,
 's1a445bc371e19b14': `Ajouter un événement`,
 's1d449f9f444e532a': `Date de fin`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `La chronologie est vide.`,
 's7d775183a3896b44': `Chronologie uniquement`,
 's8ae42ce9d674b6ce': `Soumettre les réponses`,
+'s8b7a3775e05375ae': `Le fichier doit contenir une colonne de date et une colonne de titre.`,
 's8cdcbe65c5e46f7a': `Réessayer`,
+'s96d72b3e893d2136': `La date n’est pas valide à la ligne`,
+'s978b4f72cc299835': `Sélectionner un événement`,
 's99f110d27e30b289': `Titre`,
 's9a3d950ed0f37bea': `(désactivé)`,
 'sac8252732f2edb19': `Date`,
 'sb3b1ba3205c4733e': `Mois invalide`,
-'sb971373f2f92a03f': `Un événement nécessite une date et un titre.`,
-'scc342eb1f2b3826a': `Supprimer l'événement`,
+'sda041725dacb5da3': `Le fichier ne contient aucun événement.`,
 'se0baa9b7fb0768e4': `Date non valide`,
+'se1a7152d9dcd4433': `Événements sans date`,
 'sfab2185e1bcd629a': `Ajoutez un événement dans la chronologie pour essayer le quiz.`,
 'sfe03165961812f36': `Quiz uniquement`,
     };

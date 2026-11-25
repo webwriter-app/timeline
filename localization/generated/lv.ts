@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Pareizi atbildējāt uz <strong>${0}</strong> no <strong>${1}</strong> notikumiem.`,
+'s047e5cae353e8713': `Mainiet datumu, lai mainītu secību`,
 's07c0dacf93b42c9a': `Neatbilstoša diena`,
 's1a445bc371e19b14': `Pievienot notikumu`,
 's1d449f9f444e532a': `Beigu datums`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Laika skala ir tukša.`,
 's7d775183a3896b44': `Tikai laika skala`,
 's8ae42ce9d674b6ce': `Iesniegt atbildes`,
+'s8b7a3775e05375ae': `Failā jābūt datuma kolonnai un virsraksta kolonnai.`,
 's8cdcbe65c5e46f7a': `Mēģināt vēlreiz`,
+'s96d72b3e893d2136': `Rindas datums nav derīgs`,
+'s978b4f72cc299835': `Atlasiet notikumu`,
 's99f110d27e30b289': `Nosaukums`,
 's9a3d950ed0f37bea': `(atspējots)`,
 'sac8252732f2edb19': `Datums`,
 'sb3b1ba3205c4733e': `Nepareizs mēnesis`,
-'sb971373f2f92a03f': `Pasākumam ir nepieciešama datums un nosaukums`,
-'scc342eb1f2b3826a': `Dzēst notikumu`,
+'sda041725dacb5da3': `Failā nav notikumu.`,
 'se0baa9b7fb0768e4': `Neatbilstošs datums`,
+'se1a7152d9dcd4433': `Nepiešķirtie notikumi`,
 'sfab2185e1bcd629a': `Pievienojiet notikumu laika joslā, lai izmēģinātu viktorīnu.`,
 'sfe03165961812f36': `Tikai tests`,
     };

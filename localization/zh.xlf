@@ -3,8 +3,8 @@
 <file target-language="zh" source-language="en" original="lit-localize-inputs" datatype="plaintext">
 <body>
 <trans-unit id="h84e1bc2032e6a3ca">
-  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
-<target>你答对了 <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> 个，共 <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> 个事件。</target></trans-unit>
+  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+<target>你答对了 <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> 个，共 <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> 个事件。</target></trans-unit>
 <trans-unit id="s8cdcbe65c5e46f7a">
   <source>Try Again</source>
 <target>重试</target></trans-unit>
@@ -35,12 +35,6 @@
 <trans-unit id="s1d449f9f444e532a">
   <source>End date</source>
 <target>截止日期</target></trans-unit>
-<trans-unit id="sb971373f2f92a03f">
-  <source>An event requires a date and a title</source>
-<target>活动需要日期和标题</target></trans-unit>
-<trans-unit id="scc342eb1f2b3826a">
-  <source>Delete event</source>
-<target>删除活动</target></trans-unit>
 <trans-unit id="s39f5885d883e91d9">
   <source>Invalid year</source>
 <target>无效年份</target></trans-unit>
@@ -83,6 +77,30 @@
 <trans-unit id="sfe03165961812f36">
   <source>Quiz only</source>
 <target>仅限测验</target></trans-unit>
+<trans-unit id="se1a7152d9dcd4433">
+  <source>Unassigned events</source>
+<target>未分配的事件</target>
+</trans-unit>
+<trans-unit id="s978b4f72cc299835">
+  <source>Select event</source>
+<target>选择事件</target>
+</trans-unit>
+<trans-unit id="s047e5cae353e8713">
+  <source>Change date to reorder</source>
+<target>更改日期以重新排序</target>
+</trans-unit>
+<trans-unit id="s8b7a3775e05375ae">
+  <source>The file needs a date column and a title column.</source>
+<target>文件需要包含日期列和标题列。</target>
+</trans-unit>
+<trans-unit id="s96d72b3e893d2136">
+  <source>The date is not valid in row</source>
+<target>该行中的日期无效</target>
+</trans-unit>
+<trans-unit id="sda041725dacb5da3">
+  <source>The file contains no events.</source>
+<target>文件中没有事件。</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

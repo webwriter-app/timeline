@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`U përgjigjët saktë për <strong>${0}</strong> nga <strong>${1}</strong> ngjarje.`,
+'s047e5cae353e8713': `Ndryshimi Datë — Ngjarjet`,
 's07c0dacf93b42c9a': `Ditë e pavlefshme`,
 's1a445bc371e19b14': `Shto ngjarje`,
 's1d449f9f444e532a': `Data e përfundimit`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Vija kohore është bosh.`,
 's7d775183a3896b44': `Vetëm vija kohore`,
 's8ae42ce9d674b6ce': `Dërgo përgjigjet`,
+'s8b7a3775e05375ae': `Skedar: Datë kolonë, Titulli kolonë`,
 's8cdcbe65c5e46f7a': `Provo sërish`,
+'s96d72b3e893d2136': `Datë e pavlefshme: rresht`,
+'s978b4f72cc299835': `Zgjidhni Ngjarjet`,
 's99f110d27e30b289': `Titulli`,
 's9a3d950ed0f37bea': `(çaktivizuar)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Muaj i pavlefshëm`,
-'sb971373f2f92a03f': `Ngjarja kërkon një datë dhe një titull`,
-'scc342eb1f2b3826a': `Fshi ngjarjen`,
+'sda041725dacb5da3': `Jo Ngjarjet: Skedar`,
 'se0baa9b7fb0768e4': `Datë e pavlefshme`,
+'se1a7152d9dcd4433': `Ngjarjet: Jo Datë`,
 'sfab2185e1bcd629a': `Shto një ngjarje në vijën kohore për të provuar kuizin.`,
 'sfe03165961812f36': `Vetëm kuizi`,
     };

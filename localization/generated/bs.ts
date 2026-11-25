@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Točno ste riješili <strong>${0}</strong> od <strong>${1}</strong> događaja.`,
+'s047e5cae353e8713': `Promijenite datum da biste promijenili redoslijed`,
 's07c0dacf93b42c9a': `Nevažeći dan`,
 's1a445bc371e19b14': `Dodaj događaj`,
 's1d449f9f444e532a': `Završni datum`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Vremenska linija je prazna.`,
 's7d775183a3896b44': `Samo vremenska crta`,
 's8ae42ce9d674b6ce': `Pošalji odgovore`,
+'s8b7a3775e05375ae': `Datoteka mora sadržavati kolonu za datum i kolonu za naslov.`,
 's8cdcbe65c5e46f7a': `Pokušajte ponovno`,
+'s96d72b3e893d2136': `Datum nije ispravan u redu`,
+'s978b4f72cc299835': `Odaberite događaj`,
 's99f110d27e30b289': `Naslov`,
 's9a3d950ed0f37bea': `(onemogućeno)`,
 'sac8252732f2edb19': `Datum`,
 'sb3b1ba3205c4733e': `Nevažeći mjesec`,
-'sb971373f2f92a03f': `Događaj mora imati datum i naslov`,
-'scc342eb1f2b3826a': `Izbriši događaj`,
+'sda041725dacb5da3': `Datoteka ne sadrži događaje.`,
 'se0baa9b7fb0768e4': `Nevažeći datum`,
+'se1a7152d9dcd4433': `Nedodijeljeni događaji`,
 'sfab2185e1bcd629a': `Dodajte događaj na vremensku liniju da biste isprobali kviz.`,
 'sfe03165961812f36': `Samo kviz`,
     };

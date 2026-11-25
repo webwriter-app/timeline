@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Teisingai atsakėte į <strong>${0}</strong> iš <strong>${1}</strong> įvykių.`,
+'s047e5cae353e8713': `Pakeiskite datą, kad pakeistumėte tvarką`,
 's07c0dacf93b42c9a': `Neteisinga diena`,
 's1a445bc371e19b14': `Pridėti renginį`,
 's1d449f9f444e532a': `Pabaigos data`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Laiko juosta yra tuščia.`,
 's7d775183a3896b44': `Tik laiko juosta`,
 's8ae42ce9d674b6ce': `Pateikti atsakymus`,
+'s8b7a3775e05375ae': `Faile turi būti datos ir pavadinimo stulpeliai.`,
 's8cdcbe65c5e46f7a': `Bandykite dar kartą`,
+'s96d72b3e893d2136': `Eilutėje nurodyta netinkama data`,
+'s978b4f72cc299835': `Pasirinkite įvykį`,
 's99f110d27e30b289': `Pavadinimas`,
 's9a3d950ed0f37bea': `(išjungta)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Neteisingas mėnuo`,
-'sb971373f2f92a03f': `Renginiui reikalinga data ir pavadinimas`,
-'scc342eb1f2b3826a': `Ištrinti įvykį`,
+'sda041725dacb5da3': `Faile nėra įvykių.`,
 'se0baa9b7fb0768e4': `Neteisinga data`,
+'se1a7152d9dcd4433': `Nepriskirti įvykiai`,
 'sfab2185e1bcd629a': `Pridėkite įvykį į laiko juostą, kad išbandytumėte viktoriną.`,
 'sfe03165961812f36': `Tik viktorina`,
     };

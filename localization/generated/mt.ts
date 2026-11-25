@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Weġibt tajjeb għal <strong>${0}</strong> minn <strong>${1}</strong> avveniment.`,
+'s047e5cae353e8713': `Bidla Data — Avvenimenti`,
 's07c0dacf93b42c9a': `Jum invalidu`,
 's1a445bc371e19b14': `Żid avveniment`,
 's1d449f9f444e532a': `Data tat-tmiem`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Il-kronoloġija hija vojta.`,
 's7d775183a3896b44': `Kronoloġija biss`,
 's8ae42ce9d674b6ce': `Ibgħat it-tweġibiet`,
+'s8b7a3775e05375ae': `Fajl: Data kolonna, Titlu kolonna`,
 's8cdcbe65c5e46f7a': `Erġa’ pprova`,
+'s96d72b3e893d2136': `Data invalida: ringiela`,
+'s978b4f72cc299835': `Agħżel Avvenimenti`,
 's99f110d27e30b289': `Titlu`,
 's9a3d950ed0f37bea': `(diżattivat)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Xahar invalidu`,
-'sb971373f2f92a03f': `Avveniment jeħtieġ data u titlu`,
-'scc342eb1f2b3826a': `Ħassar l-avveniment`,
+'sda041725dacb5da3': `Le Avvenimenti: Fajl`,
 'se0baa9b7fb0768e4': `Data invalida`,
+'se1a7152d9dcd4433': `Avvenimenti: Le Data`,
 'sfab2185e1bcd629a': `Żid avveniment fil-kronoloġija biex tipprova l-kwizz.`,
 'sfe03165961812f36': `Kwizz biss`,
     };

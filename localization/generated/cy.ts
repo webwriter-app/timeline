@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Cawsoch <strong>${0}</strong> o <strong>${1}</strong> digwyddiad yn gywir.`,
+'s047e5cae353e8713': `Newid Dyddiad — Digwyddiadau`,
 's07c0dacf93b42c9a': `Diwrnod annilys`,
 's1a445bc371e19b14': `Ychwanegu digwyddiad`,
 's1d449f9f444e532a': `Dyddiad gorffen`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Mae’r llinell amser yn wag.`,
 's7d775183a3896b44': `Llinell amser yn unig`,
 's8ae42ce9d674b6ce': `Cyflwyno atebion`,
+'s8b7a3775e05375ae': `Ffeil: Dyddiad colofn, Teitl colofn`,
 's8cdcbe65c5e46f7a': `Rhowch gynnig arall arni`,
+'s96d72b3e893d2136': `Dyddiad annilys: rhes`,
+'s978b4f72cc299835': `Dewiswch Digwyddiadau`,
 's99f110d27e30b289': `Teitl`,
 's9a3d950ed0f37bea': `(wedi’i analluogi)`,
 'sac8252732f2edb19': `Dyddiad`,
 'sb3b1ba3205c4733e': `Mis annilys`,
-'sb971373f2f92a03f': `Mae angen dyddiad a theitl ar ddigwyddiad`,
-'scc342eb1f2b3826a': `Dileu digwyddiad`,
+'sda041725dacb5da3': `Na Digwyddiadau: Ffeil`,
 'se0baa9b7fb0768e4': `Dyddiad annilys`,
+'se1a7152d9dcd4433': `Digwyddiadau: Na Dyddiad`,
 'sfab2185e1bcd629a': `Ychwanegwch ddigwyddiad at y llinell amser i roi cynnig ar y cwis.`,
 'sfe03165961812f36': `Cwis yn unig`,
     };

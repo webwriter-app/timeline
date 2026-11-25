@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Du fikk <strong>${0}</strong> av <strong>${1}</strong> hendelser riktig.`,
+'s047e5cae353e8713': `Endre datoen for å endre rekkefølgen`,
 's07c0dacf93b42c9a': `Ugyldig dag`,
 's1a445bc371e19b14': `Legg til begivenhet`,
 's1d449f9f444e532a': `Sluttdato`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Tidslinjen er tom.`,
 's7d775183a3896b44': `Kun tidslinje`,
 's8ae42ce9d674b6ce': `Send inn svar`,
+'s8b7a3775e05375ae': `Filen må ha en datokolonne og en tittelkolonne.`,
 's8cdcbe65c5e46f7a': `Prøv igjen`,
+'s96d72b3e893d2136': `Datoen er ugyldig i raden`,
+'s978b4f72cc299835': `Velg hendelse`,
 's99f110d27e30b289': `Tittel`,
 's9a3d950ed0f37bea': `(deaktivert)`,
 'sac8252732f2edb19': `Dato`,
 'sb3b1ba3205c4733e': `Ugyldig måned`,
-'sb971373f2f92a03f': `En begivenhet krever en dato og en tittel`,
-'scc342eb1f2b3826a': `Slett hendelse`,
+'sda041725dacb5da3': `Filen inneholder ingen hendelser.`,
 'se0baa9b7fb0768e4': `Ugyldig dato`,
+'se1a7152d9dcd4433': `Hendelser uten tilordning`,
 'sfab2185e1bcd629a': `Legg til en hendelse i tidslinjen for å prøve quizen.`,
 'sfe03165961812f36': `Kun quiz`,
     };

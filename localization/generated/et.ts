@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Vastuseid õigesti: <strong>${0}</strong> sündmust <strong>${1}</strong>-st.`,
+'s047e5cae353e8713': `Muuda kuupäeva järjestuse muutmiseks`,
 's07c0dacf93b42c9a': `Kehtetu päev`,
 's1a445bc371e19b14': `Lisa sündmus`,
 's1d449f9f444e532a': `Lõppkuupäev`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Ajakava on tühi.`,
 's7d775183a3896b44': `Ainult ajakava`,
 's8ae42ce9d674b6ce': `Esita vastused`,
+'s8b7a3775e05375ae': `Failis peavad olema kuupäeva- ja pealkirjaveerg.`,
 's8cdcbe65c5e46f7a': `Proovi uuesti`,
+'s96d72b3e893d2136': `Rea kuupäev ei kehti`,
+'s978b4f72cc299835': `Vali sündmus`,
 's99f110d27e30b289': `Pealkiri`,
 's9a3d950ed0f37bea': `(keelatud)`,
 'sac8252732f2edb19': `Kuupäev`,
 'sb3b1ba3205c4733e': `Kehtetu kuu`,
-'sb971373f2f92a03f': `Üritusele on vaja kuupäeva ja pealkirja`,
-'scc342eb1f2b3826a': `Kustuta sündmus`,
+'sda041725dacb5da3': `Failis pole sündmusi.`,
 'se0baa9b7fb0768e4': `Kehtetu kuupäev`,
+'se1a7152d9dcd4433': `Määramata sündmused`,
 'sfab2185e1bcd629a': `Lisa sündmus ajakavasse, et proovida viktoriini.`,
 'sfe03165961812f36': `Ainult viktoriin`,
     };

@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Siz <strong>${0}</strong> ta voqeadan <strong>${1}</strong> tasini to‘g‘ri topdingiz.`,
+'s047e5cae353e8713': `O'zgartirish Sana — Hodisalar`,
 's07c0dacf93b42c9a': `Kun noto‘g‘ri`,
 's1a445bc371e19b14': `Voqea qo‘shish`,
 's1d449f9f444e532a': `Tugash sanasi`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Vaqt chizig‘i bo‘sh.`,
 's7d775183a3896b44': `Faqat vaqt chizig‘i`,
 's8ae42ce9d674b6ce': `Javoblarni yuborish`,
+'s8b7a3775e05375ae': `Fayl: Sana ustun, Sarlavha ustun`,
 's8cdcbe65c5e46f7a': `Yana urinib ko‘ring`,
+'s96d72b3e893d2136': `Sana noto‘g‘ri: qator`,
+'s978b4f72cc299835': `Tanlang Hodisalar`,
 's99f110d27e30b289': `Sarlavha`,
 's9a3d950ed0f37bea': `(o‘chirilgan)`,
 'sac8252732f2edb19': `Sana`,
 'sb3b1ba3205c4733e': `Oy noto‘g‘ri`,
-'sb971373f2f92a03f': `Voqea uchun sana va sarlavha kerak`,
-'scc342eb1f2b3826a': `Voqeani o‘chirish`,
+'sda041725dacb5da3': `Yo‘q Hodisalar: Fayl`,
 'se0baa9b7fb0768e4': `Sana noto‘g‘ri`,
+'se1a7152d9dcd4433': `Hodisalar: Yo‘q Sana`,
 'sfab2185e1bcd629a': `Viktorinani sinash uchun vaqt chizig‘iga voqea qo‘shing.`,
 'sfe03165961812f36': `Faqat viktorina`,
     };

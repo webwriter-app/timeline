@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Acertou em <strong>${0}</strong> de <strong>${1}</strong> eventos.`,
+'s047e5cae353e8713': `Alterar Data — Eventos`,
 's07c0dacf93b42c9a': `Dia inválido`,
 's1a445bc371e19b14': `Adicionar evento`,
 's1d449f9f444e532a': `Data de término`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `A linha do tempo está vazia.`,
 's7d775183a3896b44': `Apenas cronograma`,
 's8ae42ce9d674b6ce': `Enviar respostas`,
+'s8b7a3775e05375ae': `Ficheiro: Data coluna, Título coluna`,
 's8cdcbe65c5e46f7a': `Tente novamente`,
+'s96d72b3e893d2136': `Data inválida: linha`,
+'s978b4f72cc299835': `Selecionar Eventos`,
 's99f110d27e30b289': `Título`,
 's9a3d950ed0f37bea': `(desativado)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Mês inválido`,
-'sb971373f2f92a03f': `Um evento requer uma data e um título`,
-'scc342eb1f2b3826a': `Apagar evento`,
+'sda041725dacb5da3': `Não Eventos: Ficheiro`,
 'se0baa9b7fb0768e4': `Data inválida`,
+'se1a7152d9dcd4433': `Eventos: Não Data`,
 'sfab2185e1bcd629a': `Adicione um evento na linha do tempo para experimentar o questionário.`,
 'sfe03165961812f36': `Apenas questionário`,
     };

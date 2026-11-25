@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Acertaches <strong>${0}</strong> de <strong>${1}</strong> eventos.`,
+'s047e5cae353e8713': `Cambia a data para reordenar`,
 's07c0dacf93b42c9a': `Día non válido`,
 's1a445bc371e19b14': `Engadir un evento`,
 's1d449f9f444e532a': `Data de remate`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `A liña do tempo está baleira.`,
 's7d775183a3896b44': `Só a liña do tempo`,
 's8ae42ce9d674b6ce': `Enviar respostas`,
+'s8b7a3775e05375ae': `O ficheiro precisa dunha columna de data e doutra de título.`,
 's8cdcbe65c5e46f7a': `Tentar de novo`,
+'s96d72b3e893d2136': `A data non é válida na fila`,
+'s978b4f72cc299835': `Selecciona un evento`,
 's99f110d27e30b289': `Título`,
 's9a3d950ed0f37bea': `(desactivado)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Mes non válido`,
-'sb971373f2f92a03f': `O evento precisa unha data e un título`,
-'scc342eb1f2b3826a': `Eliminar evento`,
+'sda041725dacb5da3': `O ficheiro non contén eventos.`,
 'se0baa9b7fb0768e4': `Data non válida`,
+'se1a7152d9dcd4433': `Eventos sen asignar`,
 'sfab2185e1bcd629a': `Engade un evento á liña do tempo para probar o cuestionario.`,
 'sfe03165961812f36': `Só o cuestionario`,
     };

@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Sait <strong>${0}</strong> tapahtumasta <strong>${1}</strong> oikein.`,
+'s047e5cae353e8713': `Muuta päivämäärää järjestyksen muuttamiseksi`,
 's07c0dacf93b42c9a': `Päivämäärä ei kelpaa`,
 's1a445bc371e19b14': `Lisää tapahtuma`,
 's1d449f9f444e532a': `Päättymispäivä`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Aikajana on tyhjä.`,
 's7d775183a3896b44': `Aikajana vain`,
 's8ae42ce9d674b6ce': `Lähetä vastaukset`,
+'s8b7a3775e05375ae': `Tiedostossa on oltava päivämäärä- ja otsakesarake.`,
 's8cdcbe65c5e46f7a': `Yritä uudelleen`,
+'s96d72b3e893d2136': `Päivämäärä ei kelpaa rivillä`,
+'s978b4f72cc299835': `Valitse tapahtuma`,
 's99f110d27e30b289': `Otsikko`,
 's9a3d950ed0f37bea': `(pois käytöstä)`,
 'sac8252732f2edb19': `Päivämäärä`,
 'sb3b1ba3205c4733e': `Virheellinen kuukausi`,
-'sb971373f2f92a03f': `Tapahtuma vaatii päivämäärän ja otsikon.`,
-'scc342eb1f2b3826a': `Poista tapahtuma`,
+'sda041725dacb5da3': `Tiedosto ei sisällä tapahtumia.`,
 'se0baa9b7fb0768e4': `Virheellinen päivämäärä`,
+'se1a7152d9dcd4433': `Määrittämättömät tapahtumat`,
 'sfab2185e1bcd629a': `Lisää tapahtuma aikajanalle kokeillaksesi tietokilpailua.`,
 'sfe03165961812f36': `Vain tietokilpailu`,
     };

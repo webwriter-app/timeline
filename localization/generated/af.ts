@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Jy het <strong>${0}</strong> uit <strong>${1}</strong> gebeurtenisse reg gekry.`,
+'s047e5cae353e8713': `Verander die datum om te herrangskik`,
 's07c0dacf93b42c9a': `Ongeldige dag`,
 's1a445bc371e19b14': `Voeg gebeurtenis by`,
 's1d449f9f444e532a': `Einddatum`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Die tydlyn is leeg.`,
 's7d775183a3896b44': `Slegs tydlyn`,
 's8ae42ce9d674b6ce': `Dien antwoorde in`,
+'s8b7a3775e05375ae': `Die lêer benodig ’n datumkolom en ’n titelkolom.`,
 's8cdcbe65c5e46f7a': `Probeer weer`,
+'s96d72b3e893d2136': `Die datum is ongeldig in ry`,
+'s978b4f72cc299835': `Kies gebeurtenis`,
 's99f110d27e30b289': `Titel`,
 's9a3d950ed0f37bea': `(gedeaktiveer)`,
 'sac8252732f2edb19': `Datum`,
 'sb3b1ba3205c4733e': `Ongeldige maand`,
-'sb971373f2f92a03f': `’n Gebeurtenis moet ’n datum en ’n titel hê`,
-'scc342eb1f2b3826a': `Vee gebeurtenis uit`,
+'sda041725dacb5da3': `Die lêer bevat geen gebeurtenisse nie.`,
 'se0baa9b7fb0768e4': `Ongeldige datum`,
+'se1a7152d9dcd4433': `On-toegewysde gebeurtenisse`,
 'sfab2185e1bcd629a': `Voeg ’n gebeurtenis by die tydlyn om die vasvra te probeer.`,
 'sfe03165961812f36': `Slegs vasvra`,
     };

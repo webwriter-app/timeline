@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Tama ang <strong>${0}</strong> sa <strong>${1}</strong> kaganapan.`,
+'s047e5cae353e8713': `Baguhin Petsa — Mga kaganapan`,
 's07c0dacf93b42c9a': `Di-wastong araw`,
 's1a445bc371e19b14': `Magdagdag ng kaganapan`,
 's1d449f9f444e532a': `Petsa ng pagtatapos`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Walang laman ang timeline.`,
 's7d775183a3896b44': `Timeline lang`,
 's8ae42ce9d674b6ce': `Isumite ang mga sagot`,
+'s8b7a3775e05375ae': `File: Petsa hanay, Pamagat hanay`,
 's8cdcbe65c5e46f7a': `Subukan muli`,
+'s96d72b3e893d2136': `Di-wastong petsa: hilera`,
+'s978b4f72cc299835': `Pumili Mga kaganapan`,
 's99f110d27e30b289': `Pamagat`,
 's9a3d950ed0f37bea': `(naka-disable)`,
 'sac8252732f2edb19': `Petsa`,
 'sb3b1ba3205c4733e': `Di-wastong buwan`,
-'sb971373f2f92a03f': `Kailangan ng petsa at pamagat ang isang kaganapan`,
-'scc342eb1f2b3826a': `Tanggalin ang kaganapan`,
+'sda041725dacb5da3': `Hindi Mga kaganapan: File`,
 'se0baa9b7fb0768e4': `Di-wastong petsa`,
+'se1a7152d9dcd4433': `Mga kaganapan: Hindi Petsa`,
 'sfab2185e1bcd629a': `Magdagdag ng kaganapan sa timeline para subukan ang pagsusulit.`,
 'sfe03165961812f36': `Pagsusulit lang`,
     };

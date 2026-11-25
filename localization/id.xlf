@@ -3,8 +3,8 @@
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="id">
     <body>
       <trans-unit id="h84e1bc2032e6a3ca">
-        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
-<target>Anda menjawab benar untuk <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> dari <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> peristiwa.</target></trans-unit>
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+<target>Anda menjawab benar untuk <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> dari <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> peristiwa.</target></trans-unit>
       <trans-unit id="s8cdcbe65c5e46f7a">
         <source>Try Again</source>
         <target>Coba Lagi</target>
@@ -57,18 +57,6 @@
         <source>End date</source>
         <target>Tanggal akhir</target>
       </trans-unit>
-      <trans-unit id="sb971373f2f92a03f">
-        <source>An event requires a date and a title</source>
-        <target>Sebuah acara memerlukan tanggal dan judul.</target>
-      </trans-unit>
-      <trans-unit id="scc342eb1f2b3826a">
-        <source>Delete event</source>
-        <target>Hapus acara</target>
-      </trans-unit>
-      <trans-unit id="s1c417ec19e8605bf">
-        <source>Which panels will be visible to readers</source>
-        <target>Panel mana yang akan terlihat oleh pembaca?</target>
-      </trans-unit>
       <trans-unit id="s782f69ab5dd839e0">
         <source>Timeline and Quiz</source>
         <target>Jadwal dan Kuis</target>
@@ -112,6 +100,30 @@
     <trans-unit id="s611e0cdb06b46c98">
   <source>Visible panels</source>
 <target>Panel yang ditampilkan</target></trans-unit>
+<trans-unit id="se1a7152d9dcd4433">
+  <source>Unassigned events</source>
+<target>Peristiwa yang belum ditetapkan</target>
+</trans-unit>
+<trans-unit id="s978b4f72cc299835">
+  <source>Select event</source>
+<target>Pilih peristiwa</target>
+</trans-unit>
+<trans-unit id="s047e5cae353e8713">
+  <source>Change date to reorder</source>
+<target>Ubah tanggal untuk mengurutkan ulang</target>
+</trans-unit>
+<trans-unit id="s8b7a3775e05375ae">
+  <source>The file needs a date column and a title column.</source>
+<target>Berkas memerlukan kolom tanggal dan kolom judul.</target>
+</trans-unit>
+<trans-unit id="s96d72b3e893d2136">
+  <source>The date is not valid in row</source>
+<target>Tanggal tidak valid pada baris</target>
+</trans-unit>
+<trans-unit id="sda041725dacb5da3">
+  <source>The file contains no events.</source>
+<target>Berkas tidak berisi peristiwa.</target>
+</trans-unit>
 </body>
   </file>
 </xliff>

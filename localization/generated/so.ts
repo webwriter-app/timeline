@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Waxaad si sax ah uga jawaabtay <strong>${0}</strong> dhacdo oo ka mid ah <strong>${1}</strong>.`,
+'s047e5cae353e8713': `Beddel Taariikh — Dhacdooyin`,
 's07c0dacf93b42c9a': `Maalin aan sax ahayn`,
 's1a445bc371e19b14': `Dhacdo ku dar`,
 's1d449f9f444e532a': `Taariikhda dhammaadka`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Jadwalka waqtiyeedku waa madhan yahay.`,
 's7d775183a3896b44': `Jadwalka waqtiyeed oo keliya`,
 's8ae42ce9d674b6ce': `Gudbi jawaabaha`,
+'s8b7a3775e05375ae': `Fayl: Taariikh tiir, Cinwaan tiir`,
 's8cdcbe65c5e46f7a': `Mar kale isku day`,
+'s96d72b3e893d2136': `Taariikh aan sax ahayn: saf`,
+'s978b4f72cc299835': `Dooro Dhacdooyin`,
 's99f110d27e30b289': `Cinwaan`,
 's9a3d950ed0f37bea': `(naafo ah)`,
 'sac8252732f2edb19': `Taariikh`,
 'sb3b1ba3205c4733e': `Bil aan sax ahayn`,
-'sb971373f2f92a03f': `Dhacdo waxay u baahan tahay taariikh iyo cinwaan`,
-'scc342eb1f2b3826a': `Tirtir dhacdada`,
+'sda041725dacb5da3': `Maya Dhacdooyin: Fayl`,
 'se0baa9b7fb0768e4': `Taariikh aan sax ahayn`,
+'se1a7152d9dcd4433': `Dhacdooyin: Maya Taariikh`,
 'sfab2185e1bcd629a': `Dhacdo ku dar jadwalka waqtiyeedka si aad u tijaabiso su’aalaha.`,
 'sfe03165961812f36': `Su’aalaha oo keliya`,
     };

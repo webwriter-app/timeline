@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Ka daidaita abubuwa <strong>${0}</strong> daga <strong>${1}</strong>.`,
+'s047e5cae353e8713': `Sauya Kwanan wata — Abubuwan da suka faru`,
 's07c0dacf93b42c9a': `Ranar ba daidai ba ce`,
 's1a445bc371e19b14': `Ƙara abin da ya faru`,
 's1d449f9f444e532a': `Kwanan ƙarshe`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Jadawalin lokaci babu komai.`,
 's7d775183a3896b44': `Jadawalin lokaci kawai`,
 's8ae42ce9d674b6ce': `Aika amsoshi`,
+'s8b7a3775e05375ae': `Fayil: Kwanan wata ginshiƙi, Take ginshiƙi`,
 's8cdcbe65c5e46f7a': `Sake gwadawa`,
+'s96d72b3e893d2136': `Kwanan watan bai dace ba: jere`,
+'s978b4f72cc299835': `Zaɓa Abubuwan da suka faru`,
 's99f110d27e30b289': `Take`,
 's9a3d950ed0f37bea': `(a kashe)`,
 'sac8252732f2edb19': `Kwanan wata`,
 'sb3b1ba3205c4733e': `Watan ba daidai ba ne`,
-'sb971373f2f92a03f': `Abin da ya faru yana buƙatar kwanan wata da take`,
-'scc342eb1f2b3826a': `Goge abin da ya faru`,
+'sda041725dacb5da3': `A'a Abubuwan da suka faru: Fayil`,
 'se0baa9b7fb0768e4': `Kwanan watan bai dace ba`,
+'se1a7152d9dcd4433': `Abubuwan da suka faru: A'a Kwanan wata`,
 'sfab2185e1bcd629a': `Ƙara wani abu da ya faru a jadawalin lokaci don gwada tambayoyin.`,
 'sfe03165961812f36': `Tambayoyin gwaji kawai`,
     };

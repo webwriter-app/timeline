@@ -3,13 +3,14 @@
     // Re-generate this file by running lit-localize
 
     import {html} from 'lit';
-    
+
 
     /* eslint-disable no-irregular-whitespace */
     /* eslint-disable @typescript-eslint/no-explicit-any */
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Sie haben <strong>${0}</strong> von <strong>${1}</strong> Ereignissen richtig eingeordnet.`,
+'s047e5cae353e8713': `Datum zum Neuordnen ändern`,
 's07c0dacf93b42c9a': `Ungültiger Tag`,
 's1a445bc371e19b14': `Ereignis hinzufügen`,
 's1d449f9f444e532a': `Enddatum`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Die Zeitleiste ist leer.`,
 's7d775183a3896b44': `Nur Zeitleiste`,
 's8ae42ce9d674b6ce': `Antworten einreichen`,
+'s8b7a3775e05375ae': `Die Datei benötigt eine Datumsspalte und eine Titelspalte.`,
 's8cdcbe65c5e46f7a': `Erneut versuchen`,
+'s96d72b3e893d2136': `Das Datum ist in der Zeile ungültig`,
+'s978b4f72cc299835': `Ereignis auswählen`,
 's99f110d27e30b289': `Titel`,
 's9a3d950ed0f37bea': `(deaktiviert)`,
 'sac8252732f2edb19': `Datum`,
 'sb3b1ba3205c4733e': `Ungültiger Monat`,
-'sb971373f2f92a03f': `Ein Ereignis erfordert ein Datum und einen Titel.`,
-'scc342eb1f2b3826a': `Ereignis löschen`,
+'sda041725dacb5da3': `Die Datei enthält keine Ereignisse.`,
 'se0baa9b7fb0768e4': `Ungültiges Datum`,
+'se1a7152d9dcd4433': `Ereignisse ohne Zuordnung`,
 'sfab2185e1bcd629a': `Fügen Sie ein Ereignis in der Zeitleiste hinzu, um das Quiz auszuprobieren.`,
 'sfe03165961812f36': `Nur Quiz`,
     };

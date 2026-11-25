@@ -3,8 +3,8 @@
   <file original="lit-localize-inputs" datatype="plaintext" source-language="en" target-language="sk">
     <body>
       <trans-unit id="h84e1bc2032e6a3ca">
-        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
-<target>Správne ste určili <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> z <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> udalostí.</target></trans-unit>
+        <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+<target>Správne ste určili <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> z <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> udalostí.</target></trans-unit>
       <trans-unit id="s8cdcbe65c5e46f7a">
         <source>Try Again</source>
         <target>Skúste to znovu</target>
@@ -57,18 +57,6 @@
         <source>End date</source>
         <target>Dátum ukončenia</target>
       </trans-unit>
-      <trans-unit id="sb971373f2f92a03f">
-        <source>An event requires a date and a title</source>
-        <target>Udalosť vyžaduje dátum a názov.</target>
-      </trans-unit>
-      <trans-unit id="scc342eb1f2b3826a">
-        <source>Delete event</source>
-        <target>Odstrániť udalosť</target>
-      </trans-unit>
-      <trans-unit id="s1c417ec19e8605bf">
-        <source>Which panels will be visible to readers</source>
-        <target>Ktoré panely budú viditeľné pre čitateľov</target>
-      </trans-unit>
       <trans-unit id="s782f69ab5dd839e0">
         <source>Timeline and Quiz</source>
         <target>Časová os a kvíz</target>
@@ -112,6 +100,30 @@
     <trans-unit id="s611e0cdb06b46c98">
   <source>Visible panels</source>
 <target>Viditeľné panely</target></trans-unit>
+<trans-unit id="se1a7152d9dcd4433">
+  <source>Unassigned events</source>
+<target>Nepriradené udalosti</target>
+</trans-unit>
+<trans-unit id="s978b4f72cc299835">
+  <source>Select event</source>
+<target>Vyberte udalosť</target>
+</trans-unit>
+<trans-unit id="s047e5cae353e8713">
+  <source>Change date to reorder</source>
+<target>Zmeňte dátum na zmenu poradia</target>
+</trans-unit>
+<trans-unit id="s8b7a3775e05375ae">
+  <source>The file needs a date column and a title column.</source>
+<target>Súbor musí obsahovať stĺpec s dátumom a stĺpec s názvom.</target>
+</trans-unit>
+<trans-unit id="s96d72b3e893d2136">
+  <source>The date is not valid in row</source>
+<target>Neplatný dátum v riadku</target>
+</trans-unit>
+<trans-unit id="sda041725dacb5da3">
+  <source>The file contains no events.</source>
+<target>Súbor neobsahuje žiadne udalosti.</target>
+</trans-unit>
 </body>
   </file>
 </xliff>

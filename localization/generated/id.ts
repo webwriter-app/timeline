@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Anda menjawab benar untuk <strong>${0}</strong> dari <strong>${1}</strong> peristiwa.`,
+'s047e5cae353e8713': `Ubah tanggal untuk mengurutkan ulang`,
 's07c0dacf93b42c9a': `Hari tidak valid`,
 's1a445bc371e19b14': `Tambahkan Acara`,
 's1d449f9f444e532a': `Tanggal akhir`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Jadwal kosong.`,
 's7d775183a3896b44': `Jadwal saja`,
 's8ae42ce9d674b6ce': `Kirimkan jawaban`,
+'s8b7a3775e05375ae': `Berkas memerlukan kolom tanggal dan kolom judul.`,
 's8cdcbe65c5e46f7a': `Coba Lagi`,
+'s96d72b3e893d2136': `Tanggal tidak valid pada baris`,
+'s978b4f72cc299835': `Pilih peristiwa`,
 's99f110d27e30b289': `Judul`,
 's9a3d950ed0f37bea': `(dinonaktifkan)`,
 'sac8252732f2edb19': `Tanggal`,
 'sb3b1ba3205c4733e': `Bulan tidak valid`,
-'sb971373f2f92a03f': `Sebuah acara memerlukan tanggal dan judul.`,
-'scc342eb1f2b3826a': `Hapus acara`,
+'sda041725dacb5da3': `Berkas tidak berisi peristiwa.`,
 'se0baa9b7fb0768e4': `Tanggal tidak valid`,
+'se1a7152d9dcd4433': `Peristiwa yang belum ditetapkan`,
 'sfab2185e1bcd629a': `Tambahkan acara di garis waktu untuk mencoba kuis.`,
 'sfe03165961812f36': `Kuis saja`,
     };

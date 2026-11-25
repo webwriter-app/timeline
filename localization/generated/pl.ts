@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Poprawnie wskazano <strong>${0}</strong> z <strong>${1}</strong> wydarzeń.`,
+'s047e5cae353e8713': `Zmień datę, aby zmienić kolejność`,
 's07c0dacf93b42c9a': `Nieprawidłowy dzień`,
 's1a445bc371e19b14': `Dodaj wydarzenie`,
 's1d449f9f444e532a': `Data zakończenia`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Oś czasu jest pusta.`,
 's7d775183a3896b44': `Tylko oś czasu`,
 's8ae42ce9d674b6ce': `Prześlij odpowiedzi`,
+'s8b7a3775e05375ae': `Plik musi zawierać kolumnę z datą i kolumnę z tytułem.`,
 's8cdcbe65c5e46f7a': `Spróbuj ponownie`,
+'s96d72b3e893d2136': `Nieprawidłowa data w wierszu`,
+'s978b4f72cc299835': `Wybierz wydarzenie`,
 's99f110d27e30b289': `Tytuł`,
 's9a3d950ed0f37bea': `(niepełnosprawny)`,
 'sac8252732f2edb19': `Data`,
 'sb3b1ba3205c4733e': `Nieprawidłowy miesiąc`,
-'sb971373f2f92a03f': `Wydarzenie wymaga podania daty i tytułu.`,
-'scc342eb1f2b3826a': `Usuń wydarzenie`,
+'sda041725dacb5da3': `Plik nie zawiera wydarzeń.`,
 'se0baa9b7fb0768e4': `Nieprawidłowa data`,
+'se1a7152d9dcd4433': `Nieprzypisane wydarzenia`,
 'sfab2185e1bcd629a': `Dodaj wydarzenie na osi czasu, aby wypróbować quiz.`,
 'sfe03165961812f36': `Tylko quiz`,
     };

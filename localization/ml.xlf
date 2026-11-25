@@ -3,8 +3,8 @@
 <file target-language="ml" source-language="en" original="lit-localize-inputs" datatype="plaintext">
 <body>
 <trans-unit id="h84e1bc2032e6a3ca">
-  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> events correct.</source>
-<target><x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;" /> സംഭവങ്ങളിൽ <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;" /> എണ്ണം ശരിയായി.</target></trans-unit>
+  <source>You got <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> out of <x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> events correct.</source>
+<target><x id="1" equiv-text="&lt;strong&gt;${total}&lt;/strong&gt;"/> സംഭവങ്ങളിൽ <x id="0" equiv-text="&lt;strong&gt;${correct}&lt;/strong&gt;"/> എണ്ണം ശരിയായി.</target></trans-unit>
 <trans-unit id="s8cdcbe65c5e46f7a">
   <source>Try Again</source>
 <target>വീണ്ടും ശ്രമിക്കുക</target></trans-unit>
@@ -35,12 +35,6 @@
 <trans-unit id="s1d449f9f444e532a">
   <source>End date</source>
 <target>അവസാന തീയതി</target></trans-unit>
-<trans-unit id="sb971373f2f92a03f">
-  <source>An event requires a date and a title</source>
-<target>ഒരു സംഭവത്തിന് തീയതിയും പേരും ആവശ്യമാണ്</target></trans-unit>
-<trans-unit id="scc342eb1f2b3826a">
-  <source>Delete event</source>
-<target>സംഭവം ഇല്ലാതാക്കുക</target></trans-unit>
 <trans-unit id="s39f5885d883e91d9">
   <source>Invalid year</source>
 <target>അസാധുവായ വർഷം</target></trans-unit>
@@ -83,6 +77,30 @@
 <trans-unit id="sfe03165961812f36">
   <source>Quiz only</source>
 <target>ക്വിസ് മാത്രം</target></trans-unit>
+<trans-unit id="se1a7152d9dcd4433">
+  <source>Unassigned events</source>
+<target>സംഭവങ്ങൾ: ഇല്ല തീയതി</target>
+</trans-unit>
+<trans-unit id="s978b4f72cc299835">
+  <source>Select event</source>
+<target>തിരഞ്ഞെടുക്കുക സംഭവങ്ങൾ</target>
+</trans-unit>
+<trans-unit id="s047e5cae353e8713">
+  <source>Change date to reorder</source>
+<target>മാറ്റുക തീയതി — സംഭവങ്ങൾ</target>
+</trans-unit>
+<trans-unit id="s8b7a3775e05375ae">
+  <source>The file needs a date column and a title column.</source>
+<target>ഫയൽ: തീയതി നിര, ശീർഷകം നിര</target>
+</trans-unit>
+<trans-unit id="s96d72b3e893d2136">
+  <source>The date is not valid in row</source>
+<target>അസാധുവായ തീയതി: വരി</target>
+</trans-unit>
+<trans-unit id="sda041725dacb5da3">
+  <source>The file contains no events.</source>
+<target>ഇല്ല സംഭവങ്ങൾ: ഫയൽ</target>
+</trans-unit>
 </body>
 </file>
 </xliff>

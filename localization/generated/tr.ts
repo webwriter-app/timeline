@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`<strong>${0}</strong>/<strong>${1}</strong> olayı doğru yanıtladınız.`,
+'s047e5cae353e8713': `Sıralamayı değiştirmek için tarihi değiştirin`,
 's07c0dacf93b42c9a': `Geçersiz gün`,
 's1a445bc371e19b14': `Etkinlik Ekle`,
 's1d449f9f444e532a': `Bitiş tarihi`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Zaman çizelgesi boş.`,
 's7d775183a3896b44': `Yalnızca zaman çizelgesi`,
 's8ae42ce9d674b6ce': `Cevapları gönder`,
+'s8b7a3775e05375ae': `Dosyada bir tarih sütunu ve bir başlık sütunu olmalıdır.`,
 's8cdcbe65c5e46f7a': `Tekrar Deneyin`,
+'s96d72b3e893d2136': `Satırdaki tarih geçerli değil`,
+'s978b4f72cc299835': `Etkinlik seçin`,
 's99f110d27e30b289': `Başlık`,
 's9a3d950ed0f37bea': `(devre dışı)`,
 'sac8252732f2edb19': `Tarih`,
 'sb3b1ba3205c4733e': `Geçersiz ay`,
-'sb971373f2f92a03f': `Bir etkinlik için tarih ve başlık gerekir.`,
-'scc342eb1f2b3826a': `Etkinliği sil`,
+'sda041725dacb5da3': `Dosyada etkinlik yok.`,
 'se0baa9b7fb0768e4': `Geçersiz tarih`,
+'se1a7152d9dcd4433': `Atanmamış etkinlikler`,
 'sfab2185e1bcd629a': `Zaman çizelgesine bir etkinlik ekleyerek testi deneyin.`,
 'sfe03165961812f36': `Sadece test`,
     };

@@ -10,6 +10,7 @@
 
     export const templates = {
       'h84e1bc2032e6a3ca': html`Sampeyan mangsuli <strong>${0}</strong> saka <strong>${1}</strong> kedadeyan kanthi bener.`,
+'s047e5cae353e8713': `Ganti Tanggal — Kedadéan`,
 's07c0dacf93b42c9a': `Dina ora sah`,
 's1a445bc371e19b14': `Tambah kedadeyan`,
 's1d449f9f444e532a': `Tanggal pungkasan`,
@@ -26,14 +27,17 @@
 's7a4a4ef6339fe2bb': `Garis wektu kosong.`,
 's7d775183a3896b44': `Garis wektu wae`,
 's8ae42ce9d674b6ce': `Kirim jawaban`,
+'s8b7a3775e05375ae': `Berkas: Tanggal kolom, Judhul kolom`,
 's8cdcbe65c5e46f7a': `Coba maneh`,
+'s96d72b3e893d2136': `Tanggal ora sah: baris`,
+'s978b4f72cc299835': `Pilih Kedadéan`,
 's99f110d27e30b289': `Irah-irahan`,
 's9a3d950ed0f37bea': `(dipateni)`,
 'sac8252732f2edb19': `Tanggal`,
 'sb3b1ba3205c4733e': `Sasi ora sah`,
-'sb971373f2f92a03f': `Kedadeyan mbutuhake tanggal lan irah-irahan`,
-'scc342eb1f2b3826a': `Busak kedadeyan`,
+'sda041725dacb5da3': `Ora Kedadéan: Berkas`,
 'se0baa9b7fb0768e4': `Tanggal ora sah`,
+'se1a7152d9dcd4433': `Kedadéan: Ora Tanggal`,
 'sfab2185e1bcd629a': `Tambah kedadeyan ing garis wektu kanggo nyoba kuis.`,
 'sfe03165961812f36': `Kuis wae`,
     };
