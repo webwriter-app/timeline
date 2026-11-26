@@ -1,6 +1,6 @@
 {
   "name": "@webwriter/timeline",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Create and explore timelines, then test what you know.",
   "repository": "https://github.com/webwriter-app/timeline",
   "keywords": [
@@ -192,6 +192,7 @@
     },
     "./package.json": "./package.json",
     "./icon": "./icon.svg",
+    "./preview": "./assets/preview.mp4",
     "./editing-config.json": "./editing-config.json",
     "./custom-elements.json": "./custom-elements.json",
     "./tests/exchange.*": {
