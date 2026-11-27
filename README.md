@@ -1,5 +1,5 @@
-# Timeline (`@webwriter/timeline@3.1.2`)
-[License: MIT](LICENSE) | Version: 3.1.2
+# Timeline (`@webwriter/timeline@3.1.3`)
+[License: MIT](LICENSE) | Version: 3.1.3
 
 Create and explore timelines, then test what you know.
 
